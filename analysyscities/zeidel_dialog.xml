@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This is the dialog repository for Zeidel city. 
+    For the structure and possibilities, see the associated XSD schema.
+-->
+<dialogueData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dialogData.xsd">
+    <!-- the assistant at the light railway counter -->
+    <person id="HbfMitteUndergroundCounterAssistant">
+        <stream id="0">
+            <point id="0">
+                <answer id="HbfMitteUndergroundCounterAssistant00">
+                    <de> "Guten Tag! Sie sehen etwas verloren aus! Wie kann ich Ihnen weiterhelfen?" </de>
+                    <fr>« Bonjour ! Vous avez l'air un peu perdu ! Comment puis-je vous aider ?
+                        »</fr>
+                <en>"Good afternoon! You look a bit lost! How can I help you?"</en></answer>
+                <action>
+                    <response id="HbfMitteUndergroundCounterAssistant000">
+                        <de>"Nein, es ist alles in Ordnung, danke!"</de>
+                        <fr>« Non, ça va, merci ! »</fr>
+                    <en>"No, everything alright, thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+                <action>
+                    <response id="HbfMitteUndergroundCounterAssistant001">
+                        <de>"Oh, sieht man das? In der Tat, ich möchte zur Station Télégraphe."</de>
+                    <fr>« Oh, ça se voit ? En effet, je voudrais aller à la station Télégraphe. »</fr><en>"Oh, you can see that? Indeed, I would like to go to the Télégraphe underground station."</en></response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer id="HbfMitteUndergroundCounterAssistant01">
+                    <de> "Alles klar! Gehen Sie zur Metrolinie 7 auf Gleis 39. Fahren Sie dort zwei
+                        Haltestellen Richtung Chargy." </de>
+                <fr>« Bien sûr ! Allez à la ligne 7 vers Chargy sur voie 39. Descendez aprés deux stations. »</fr><en>"Alright! Go to the underground line 7 on platform 39. Go two stations towards Chargy."</en></answer>
+                <action>
+                    <response id="HbfMitteUndergroundCounterAssistant010">
+                        <de>"Vielen lieben Dank! Auf Wiedersehen!"</de>
+                    <fr>« Merci beaucoup ! Au revoir ! »</fr><en>"Thank you very much! Bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- the vendor at the travellers centre -->
+    <person id="ZVWvendor">
+        <stream id="0">
+            <point id="0">
+                <answer id="ZVWvendor00">
+                    <de> "Herzlich willkommen bei den Zeidel'schen Verkehrswerken! Wie kann ich
+                        Ihnen helfen?" </de>
+                <fr>« Bienvenue aux compagnies des transports Zeideliens ! Comment pourrais-je vous être utile ? »</fr><en>"Welcome at the Zeidelian transport company! How may I help you?"</en></answer>
+                <action>
+                    <response id="ZVWvendor000">
+                        <de>"Ich möchte bitte eine Fahrkarte kaufen!"</de>
+                    <fr>« Je voudrais m'acheter un billet. »</fr><en>"I would like to buy a ticket!"</en></response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor001">
+                        <de>"Gar nicht, ich wollte mich nur umsehen - entschuldigen Sie bitte!"</de>
+                    <fr>« Pas du tout, je voulais juste regarder, merci ! »</fr><en>"Not at all, I am just looking - excuse me please!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer id="ZVWvendor01">
+                    <de>"Sehr gerne! Wo soll es denn hingehen?"</de>
+                <fr>« Avec plaisir ! Où est-ce que vous aimeriez partir ? »</fr><en>"With pleasure! Where would you like to go?"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKvirasim" evaluation="false">
+                        <response id="ZVWvendor010">
+                            <de>"Nach Kvirasim."</de>
+                        <fr>« À Kvirasim. »</fr><en>"To Kvirasim."</en></response>
+                        <command>
+                            <dialog point="37"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <!-- TODO #203 multiple conditioned elements do not display -->
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKarlstadt" evaluation="false">
+                        <response id="ZVWvendor011">
+                            <de>"Nach Karlstadt."</de>
+                        <fr>« À Karlstadt. »</fr><en>"To Karlstadt."</en></response>
+                        <command>
+                            <dialog point="310b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor012">
+                        <de>"Ja ... ich weiß noch nicht so recht ... können Sie vielleicht etwas
+                            empfehlen?"</de>
+                    <fr>« Ben... je ne sais pas encore... pourriez-vous me conseiller quelque chose ? »</fr><en>"Yes ... I do not really know ... can you suggest me something?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor013">
+                        <de>"Entschuldigen Sie, ich möchte doch nicht reisen! Auf Wiedersehen!"</de>
+                    <fr>« Excusez-moi... je ne veux plus voyager ! Au revoir ! »</fr><en>"Excuse me, I do not would like to travel! Good bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point pointGrp="2" id="20">
+                <answer id="ZVWvendor020">
+                    <de>"Hm ... wird schwierig. Vielleicht schauen Sie sich einwenig die Züge an und
+                        kommen später?"</de>
+                <fr>« Hm... ce sera difficile. Peut-être vous regardez un peu les trains et revenez plus tard ? »</fr><en>"Hm ... difficult. Maybe you take a look at the trains and come later?"</en></answer>
+                <action>
+                    <response id="ZVWvendor0201">
+                        <de>"Ja, das werde ich! Danke sehr!"</de>
+                    <fr>« Oui, je ferai ! Merci beaucoup ! »</fr><en>"Yes, I shall do so! Thank you very much!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- stream Kvirasim - analysis city 7 -->
+            <point disable="self,47" pointGrp="2" id="27">
+                <answer id="ZVWvendor027">
+                    <de>"Alles klar ... Hier! Seit neuestem wieder erreichbar: Die Stadt Kvirasim.
+                        Das ist zwar recht weit weg, aber Sie würden dann den ganzen Planeten
+                        durchreisen. Im Südosten der Einöde, schöne phonetische Landschaft, dort hat
+                        man sich den Tönen gewidmet. Wäre das nicht etwas für Sie?"</de>
+                <fr>« D'accord... voilà ! Desservi depuis le plus récent : la ville de Kvirasim. C'est assez loin, mais vous traverseriez toute la planète. Dans le sud-est du désert, beau paysage phonétique, on s'est consacré aux sons. Ceci ne serait pas quelque chose pour vous ? »</fr><en>"Alright ... here! Very recently opened: the city of Kvirasim. That is quite far away, but you would travel through the whole planet. In the south east of the wasteland, beautiful phonetic landscape, they consacred themselves to the sounds. Would that not be something for you?"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKvirasim" evaluation="false">
+                        <response id="ZVWvendor0270">
+                            <de>"Nach Kvirasim! Die Laute, die Vokale, super. Da will ich hin!"</de>
+                        <fr>« À Kvirasim ! Les sons, les voyelles, super. C'est là où je veux y aller ! »</fr><en>"To Kvirasim! The sounds, the vocals, awesome. I would like to go there!"</en></response>
+                        <command>
+                            <dialog point="37"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0271">
+                        <de>"Hm, das ist echt sehr interessant, aber haben Sie nicht noch etwas
+                            anderes?"</de>
+                    <fr>« Hm, c'est fort intéressant, mais est-ce que vous n'avez pas d'autre chose ? »</fr><en>"Hm, that is surely interesting, but do you not have anything else?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0272">
+                        <de>"Ähm ... Ich schaue mich doch lieber um. Vielen Dank!"</de>
+                    <fr>« Euh... je veux regarder encore un peu. Merci beaucoup ! »</fr><en>"Er ... I prefer looking. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="37" disable="27,47">
+                <answer id="ZVWvendor037">
+                    <de>"O ja, gute Wahl! Warten Sie einen Moment ..."!NLDie Verkäuferin tippt etwas
+                        auf der Tastatur.!NL "Also. Sie würden den Schnellzug 2011 nach Metza
+                        nehmen, dort wird der Zug mit einem anderen Nachtzug aus Eichlinghausen
+                        vereinigt. Sie müssen aber nicht aus dem Zug steigen, sondern fahren so
+                        weiter bis nach Cité d'Orcive. Dort müssen Sie umsteigen in den IN 045
+                        Richtung Kvirasim. Würde Ihnen das zusagen?"</de>
+                <fr>« Oh oui,  bonne choix ! Attendez un instant... »!NLLa vendeuse tape quelque chose sur la claviature.!NL« Alors. Vous prendriez le train rapide 2011 vers Metza, là, le train sera réuni avec un autre train en provenance de Eichlinghausen. Vous ne devez donc pas changer de train mais continuerez vers Cité d'Orcive. Là, vous devriez changer dans le IN 045. Cela vous conviendrait ? »</fr><en>"Oh yes, good choice! Wait one moment ..."!NL!NLThe assistant types someting on the keyboard.!NL
+"So. You would take the rapid train 2011 towards Metza, there, the trail will be coupled to another night train from Eichlinghausen. You do not need to leave the train because you continue that way towards Cité d'Orcive. There, you need to change to the IN 045 towards Kvirasim. Would that be convenient for you?"</en></answer>
+                <action>
+                    <response id="ZVWvendor0370">
+                        <de>"Ähm ... nein, danke. Hätten Sie vielleicht andere Städte im
+                            Angebot?"</de>
+                    <fr>« Euh... non, merci. Auriez-vous des autres villes dans l'offert? »</fr><en>"Er ... no, thank you. Do you have other towns to offer?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0371">
+                        <de>"Ja, das würde gehen."</de>
+                    <fr>« Oui, cela marche. »</fr><en>"Yes, that would go."</en></response>
+                    <command>
+                        <dialog point="57"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0372">
+                        <de>"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</de>
+                    <fr>« Peut-être je ne veux pas voyager. Merci beaucoup ! »</fr><en>"Maybe I do not want to travel any more. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="47" pointGrp="4" disable="self,27">
+                <answer id="ZVWvendor047">
+                    <de>"Gut ... dann sehen wir nochmal ... vielleicht die Landschaft der Laute und
+                        der Lautgesetze, Kvirasim, vor Kurzem erst wiedereröffnet. Der Weg ist zwar
+                        lang, aber Sie sehen den ganzen Planeten."</de>
+                <fr>« Bien... verrons encore une fois... peut-être le paysage des sons et des lois du sons, Kvirasim, reouvert il y n'y a pas longtemps. Le chemin est long, mais vous verriez toute la planète. »</fr><en>"Well ... then let's look again ... maybe the sound and sound rule region, Kvirasim, just reopened. The way is long but you see the whole planet."</en></answer>
+                <action>
+                    <response id="ZVWvendor0470">
+                        <de>"Nach Kvirasim! Ja, das sagt mir schon viel lieber zu!"</de>
+                    <fr>« À Kvirasim ! Oui, cela me plaît beaucoup plus ! »</fr><en>"To Kvriasim! Yes, that sounds way more interesting!"</en></response>
+                    <command>
+                        <dialog point="37"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0471">
+                        <de>"Nein ... das auch nicht. Welche Orte haben Sie noch?"</de>
+                    <fr>« Non... cela non plus. Quels lieux est-ce que vous auriez encore ? »</fr><en>"No ... neither. What more places do you have?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0472">
+                        <de>"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</de>
+                    <fr>« Peut-être je ne veux plus voyager. Merci beaucoup ! »</fr><en>"Maybe I do not would like to travel. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="57">
+                <answer id="ZVWvendor057">
+                    <de>"In Ordnung ... Aus betrieblich-programmtechnischen Gründen können wir zur
+                        Zeit nur Hinfahrten anbieten. Haben Sie gegebenenfalls einen
+                        Gutschein?"</de>
+                <fr>« D'accord. À cause des raisons de service-téchniques de logiciel, on ne peut offrir que des billets aller simple. Avez-vous un bon peut-être ? »</fr><en>"Alright ... due to service and program-technical reasons, we can only offer outward bound tickets. Do you maybe have a voucher?"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" evaluation="true" requirement="ZVWcoupon">
+                        <response id="ZVWvendor0570">
+                            <de>"Ja, ich habe einen Gutschein."</de>
+                        <fr>« Oui, j'ai un bon. »</fr><en>"Yes, I have a voucher."</en></response>
+                        <command>
+                            <dialog point="67"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="ZVWvendor0571">
+                            <de>"Nein, habe ich nicht."</de>
+                        <fr>« Non, je n'en ai pas. »</fr><en>"No, I do not."</en></response>
+                        <command>
+                            <dialog point="77"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0572">
+                        <de>"Hmm ... wenn ich es mir so recht überlege, möchte ich doch nicht
+                            fahren."</de>
+                    <fr>« Hmm... si j'en réfléchis bien, je ne veux plus partir. »</fr><en>"Hmm ... if I think it over, I do not would like to travel."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="67">
+                <answer id="ZVWvendor067">
+                    <de>"Alles klar, dann geben Sie her ..."</de>
+                <fr>« D'accord, passez-le, s'il vous plaît... »</fr><en>"Alright, then please hande it to me ..."</en></answer>
+                <action>
+                    <response id="ZVWvendor0670">
+                        <de>"Hier, bitte sehr ..."</de>
+                    <fr>« Voilà, allez-y... »</fr><en>"Here you go ..."</en></response>
+                    <command>
+                        <giveItem triggeredItem="ZVWcoupon" eliminateAction="speakVendor"/>
+                        <dialog point="77"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0671">
+                        <de>"Entschuldigen Sie bitte, ich möchte den Gutschein jetzt nicht
+                            einsetzen."</de>
+                    <fr>« Excusez, je ne veux pas utiliser le bon maintenant... »</fr><en>"Excuse, I do not would like to use the voucher right now."</en></response>
+                    <command>
+                        <dialog point="97"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0672">
+                        <de>"Äh, es tut mir Leid, ich möchte doch nicht reisen."</de>
+                    <fr>« Euh, je suis désolé(e), je ne veux plus voyager. »</fr><en>"Er, I am sorry, I do not want to travel any more."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="77">
+                <answer id="ZVWvendor077">
+                    <de>"Gut ... Ihr Gutschein gilt für einen Liegewagenplatz. Ihre Reiseverbindung
+                        wäre also folgende: Schnellzug 2011 nach Metza, dort wird Ihr Zug vereinigt
+                        und fährt weiter nach Cité d'Orcive. Dort steigen Sie bitte um in den
+                        Internight 045 nach Kvirasim. Wagenangaben entnehmen Sie bitte diesem
+                        Fahrschein ..."!NL Die Verkäuferin nimmt den Ausdruck aus dem Drucker und
+                        gibt ihn dir. "Hier, bitte sehr. Gute Reise, haben Sie eine angenehme Zeit
+                        unterwegs und in der Stadt!"</de>
+                <fr>« Bien... votre bon est valable pour une place couchette. Votre connection de voyage serait donc la suivante : train rapide 2011 à Metza, là, votre train sera réuni et continuera à Cité d'Orcive. Changez là dans l'Intercités de nuit 045 à Kvirasim. Veuillez trouver les données de voiture dans cette billet... »!NLL'assistante prend l'imprime de l'imprimeur et te le donne. « Voilà. Bon voyage et passez un séjour agréable dans le train et dans la ville ! »</fr><en>"Well ... your voucher is valid for a couchette coach place. Your travel connection would thus be the following: rapid train 2011 to Metza, there, your train will be coupled and continues to Cité d'Orcive. There, you please change to the Internight 045 to Kvirasim. Please take details to the car from this ticket ..."!NL!NLThe assistant takes the printout from the printer and hands it to you. "Here you go. Have a nice trip, a nice time on journey and in the city!"</en></answer>
+                <action>
+                    <response id="ZVWvendor0770">
+                        <de>"Danke sehr! Vielen Dank und auf Wiedersehen!"</de>
+                    <fr>« Merci bien ! Merci pour tout et au revoir ! »</fr><en>"Thank you! Thank you very much and good bye!"</en></response>
+                    <command>
+                        <getItem triggeredItem="ticketToKvirasim"/>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="97">
+                <answer id="ZVWvendor097">
+                    <de>"In Ordnung ... das kostet 270 Z."</de>
+                <fr>« D'accord... ça coute 270 Z. »</fr><en>"Alright, that costs 270 Z."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="270" evaluation="true">
+                        <response id="ZVWvendor0970">
+                            <de>"Hier, bitte sehr."</de>
+                        <fr>« Voilà, tenez. »</fr><en>"Here you go."</en></response>
+                        <command>
+                            <giveMoney amount="270"/>
+                            <dialog point="77"/>
+                        </command>
+                    </if>
+                    <else-if conditionToTest="checkMoney" requirement="270" evaluation="false">
+                        <response id="ZVWvendor0971">
+                            <de>"O weh ... ich habe das Geld nicht!"</de>
+                        <fr>« Oh mince... je n'ai pas l'argent ! »</fr><en>"Oh no ... I do not have the money!"</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else-if>
+                    <if conditionToTest="checkItem" requirement="ZVWcoupon" evaluation="true">
+                        <response id="ZVWvendor0972">
+                            <de>"Oh ... dann möchte ich doch den Gutschein einlösen."</de>
+                        <fr>« Oh... dans ce cas, j'aimerais utiliser le voucher quand même. »</fr><en>"Oh ... then, I would like to use the voucher."</en></response>
+                        <command>
+                            <giveItem triggeredItem="ZVWcoupon" eliminateAction="speakVendor"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0973">
+                        <de>"O je ... dann möchte ich lieber doch nicht reisen ... ganz herzlichen
+                            Dank! Auf Wiedersehen!"</de>
+                    <fr>« Oh... dans ce cas, je ne veux pas voyager... merci beaucoup ! Au revoir ! »</fr><en>"Oh no ... then, I would not like to travel ... thank you really much! Good bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- stream Karlstadt - analysis city 10b -->
+            <point disable="self,210b" pointGrp="2" id="210b">
+                <answer id="ZVWvendor0210b">
+                    <de>"Ein Virtuose der Politiker, dessen Geschichte gerade der Öffentlichkeit
+                        zugänglich gemacht wurde! Ich rede von niemand Geringerem, als Friedrich von
+                        Gentz, von welchem entfernte Zeugen sich jetzt öffnen, um Spuren seines
+                        Lebens zu offenbaren. Sehr interessant, finde ich, und hochspannend!"</de>
+                <fr>« Un virtuose des hommes politiques, son histoire vient juste d'être accessible au public ! Je ne parle de personne en moins comme de Frédéric de Gentz, dont des témoins lointains s'ouvrent pour relever des traces de sa vie. Je trouve que c'est très intéressant et excitant ! »</fr><en>"A virtuoso among the politics whose story is just being made accessible to the public! I do talk about no one less than Friedrich von Gentz, whose distant witnesses are opening up to reveal traces of his life. I find it very interesting and highly exciting!"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" evaluation="false" requirement="ticketToKarlstadt">
+                        <response id="ZVWvendor0210b0">
+                            <de>"Nach Karlstadt! Eine Stadt über einen Virtuosen, da möchte ich mehr
+                                zu erfahren."</de>
+                        <fr>« À Karlstadt ! Une ville sur un monstre sacré, là, j'aimerais en savoir plus. »</fr><en>"To Karlstadt! A city about a virtuoso, there, I would like to learn more."</en></response>
+                        <command>
+                            <dialog point="310b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0210b1">
+                        <de>"Hm, das ist echt sehr interessant, aber haben Sie nicht noch etwas
+                            anderes?"</de>
+                    <fr>« Hm, c'est fort intéressant, mais n'auriez pas autre chose ? »</fr><en>"Hm, that is really interesting, but do you not have something else?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0210b2">
+                        <de>"Ähm ... Ich schaue mich doch lieber um. Vielen Dank!"</de>
+                    <fr>« Euh... je regarderai plutôt. Merci beaucoup ! »</fr><en>"Er ... I prefer looking. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="310b" disable="210b,410b">
+                <answer id="ZVWvendor0310b">
+                    <de>"In Ordnung, in Ordnung, lassen Sie mich suchen ..."!NL Die Verkäuferin
+                        tippt etwas auf der Tastatur.!NL "Da haben wir ihn schon, den Schnellzug
+                        153, über Otastadt und Darborough Colony. Er fährt in 45 Minuten ab. Ist das
+                        in Ihrem Sinn?"</de>
+                <fr>« D'accord, d'accord, laissez-moi chercher... »!NLL'assistante tape quelque chose sur la claviature.!NL « Le voilà, le train rapide 153 par Otastadt et Darborough Colony. Il partira en 45 minutes. Est-ce que cela vous convient ? »</fr><en>"Alright, alright, let me have a look ..."!NL!NLThe assistant types something on the keyboard.!NL
+"There we have it already, the rapid train 153, via Otastadt and Darborough Colony. It departs in 45 minutes. Would that be convenient for you?"</en></answer>
+                <action>
+                    <response id="ZVWvendor0310b0">
+                        <de>"Ne, lieber doch nicht ... was für andere Städte würden Sie mir
+                            empfehlen?"</de>
+                    <fr>« Non, je préfère pas... quelles autres villes pourriez-vous me conseiller ? »</fr><en>"No, I would not like ... what other towns can you offer me?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0310b1">
+                        <de>"Aber natürlich!"</de>
+                    <fr>« Mais bien sûr ! »</fr><en>"Of course!"</en></response>
+                    <command>
+                        <dialog point="510b"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0310b2">
+                        <de>"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</de>
+                    <fr>« Peut-être je ne voudrais plus voyager. Merci beaucoup ! »</fr><en>"Maybe I do not wish to travel any more. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point pointGrp="4" id="410b" disable="self,210b">
+                <answer id="ZVWvendor0410b">
+                    <de>"Hm ... vielleicht dann Karlstadt, soeben erst eröffnet für die
+                        Öffentlichkeit! Sie können den Neubau der Stadt live verfolgen und dabei
+                        über Friedrich von Gentz viel lernen, zu dessen Leben sich jetzt entfernte
+                        Zeugen melden."</de>
+                <fr>« Hm... peut-être Karlstadt, juste ouvert pour le public ! Vous pouvez suivre en direct la reconstruction de la ville et apprendre beaucoup sur Frédéric de Gentz, des témoins lointains racontent sur sa vie ! »</fr><en>"Hm ... maybe Karlstadt, just opened for the public! You may follow live the reconstruction of the town and learn much about Friedrich von Gentz about whose life, distant witnesses are reporting."</en></answer>
+                <action>
+                    <response id="ZVWvendor0410b0">
+                        <de>"Soeben erst eröffnet? Hm ... Karlstadt klingt doch viel
+                            interessanter!"</de>
+                    <fr>« Juste ouvert ? Hm... Karlstadt s'entend nettement plus intéressant ! »</fr><en>"Just reopened? Hm ... Karlstadt sounds much more exciting!"</en></response>
+                    <command>
+                        <dialog point="310b"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0410b1">
+                        <de>"Nun, die Stadt ist vielleicht noch gar nicht fertig. Haben Sie
+                            Alternativen?"</de>
+                    <fr>« Eh bien, la ville n'est pas encore finie peut-être. Avez-vous des alternatives ? »</fr><en>"Maybe thw town is not even finished yet. Do you have alternatives?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor0410b2">
+                        <de>"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</de>
+                    <fr>« Je ne voudrais plus voyager peut-être. Merci beaucoup ! »</fr><en>"Maybe I would not like to travel. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="510b">
+                <answer id="ZVWvendor0510b">
+                    <de>"Gut. Wenn Sie eine Zeitkarte des Zeidel-Karlstädter Verkehrsverbundes
+                        besitzen, dann können Sie mit dem Eilzug rauf. Lediglich für den Schnellzug
+                        müssen Sie Zuschlag zahlen. Möchten Sie das?"</de>
+                <fr>« Bon. Si vous avez un billet forfaitaire de la société tarifaire de Zeidel-Karlstadt (ZDKAVV), vous pouvez y aller avec le train express régional. Seulement pour le train rapide, il vous faudra payer le supplément. Est-ce que vous le voudrez ? »</fr><en>"Well. If you have a season ticket for the Zeidel-Karlstadt transport society, you may take the regional express train. Only for the express train, you have to pay a supplement. Would you like that?"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ZVWticket" evaluation="true">
+                        <response id="ZVWvendor0510b0">
+                            <de>"In Ordnung, ich möchte bitte den Schnellzugzuschlag zahlen."</de>
+                        <fr>« D'accord, je voudrais payer le supplément pour le train rapide. »</fr><en>"Alright, I would like to pay the rapid train supplement."</en></response>
+                        <command>
+                            <dialog point="610b"/>
+                        </command>
+                    </if>
+                    <else-if conditionToTest="checkItem" requirement="ZVWticket" evaluation="false">
+                        <response id="ZVWvendor0510b1">
+                            <de>"Oh ... die habe ich nicht."</de>
+                        <fr>« Oh... je n'en ai pas. »</fr><en>"Oh ... I do not have that."</en></response>
+                        <command>
+                            <dialog point="710b"/>
+                        </command>
+                    </else-if>
+                    <if conditionToTest="checkItem" requirement="ZVWcoupon" evaluation="true">
+                        <response id="ZVWvendor0510b2">
+                            <de>"Kann ich mit diesem Gutschein bezahlen?"</de>
+                        <fr>« Pourrais-je payer avec ce bon ? »</fr><en>"May I pay with this voucher?"</en></response>
+                        <command>
+                            <dialog point="910b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0510b3">
+                        <de>"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</de>
+                    <fr>« Peut-être je ne veux plus voyager. Merci beaucoup ! »</fr><en>"Maybe I do not want to travel. Thank you!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="610b">
+                <answer id="ZVWvendor0610b">
+                    <de>"Okay ... das kostet dann 5 Z."</de>
+                <fr>« D'accord... cela coûte 5 Z. »</fr><en>"Alright ... it costs then 5 Z."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="5" evaluation="true">
+                        <response id="ZVWvendor0610b0">
+                            <de>"Hier, bitte sehr ..."</de>
+                        <fr>« Voilà... »</fr><en>"Here you go ..."</en></response>
+                        <command>
+                            <giveMoney amount="5"/>
+                            <dialog point="1010b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="ZVWvendor0610b1">
+                            <de>"Oh, ich habe nicht mehr genug Geld ..."</de>
+                        <fr>« Oh, je n'ai plus assez d'argent... »</fr><en>"Oh, I do not have enough money any more ..."</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0610b2">
+                        <de>"Äh, es tut mir Leid, ich möchte doch nicht reisen."</de>
+                    <fr>« Euh, je suis désolé(e), je ne veux plus voyager. »</fr><en>"Er, I am sorry, I do not want to travel."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="710b">
+                <answer id="ZVWvendor0710b">
+                    <de>"Alles klar ... dann wird es teurer: 55 Z. Aus
+                        betrieblich-programmtechnischen Gründen kann ich Ihnen zur zeit nur
+                        Hinfahrten anbieten."</de>
+                <fr>« D'accord... cela sera cher dans ce cas : 55 Z. À cause des raisons de service et téchnique de logiciel, je ne peux vous offrir que des billets aller simple. »</fr><en>"Alright ... then, it gets expensive: 55 Z. Due to service and program-technical reasons, I can offer you only outward bound tickets."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="55" evaluation="true">
+                        <response id="ZVWvendor0710b0">
+                            <de>"Alles klar, hier, bitte sehr."</de>
+                        <fr>« D'accord, voilà, allez-y. »</fr><en>"Alright, here you go."</en></response>
+                        <command>
+                            <giveMoney amount="55"/>
+                            <dialog point="1010b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="ZVWvendor0710b1">
+                            <de>"Oh, das tut mir Leid, ich habe das Geld nicht beisammen ..."</de>
+                        <fr>« Oh, je suis désolé(e), je n'ai pas tant sur moi... »</fr><en>"Oh, I am sorry, I do not have the money ..."</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0710b2">
+                        <de>"Okay ... ich glaube ich überlege mir das nochmal. Danke vielmals!"</de>
+                    <fr>« D'accord... je crois que je vais en réfléchir. Merci encore ! »</fr><en>"Okay ... I think I reconsider it. Thank you very much!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="910b">
+                <answer id="ZVWvendor0910b">
+                    <de>"Zeigen Sie mal her ..." Die Verkäuferin nimmt den Gutschein und gibt ihn
+                        dir zurück.!NL "Können Sie schon. Gelten tut er allerdings nur für einen
+                        Liegewagenplatz. Und an Ihrer Stelle würde ich eine weitere Strecke damit
+                        zurücklegen, als ein Ziel, das praktisch noch im Nahverkehr liegt."</de>
+                <fr>« Montrez-le moi... » L'assistante prend le bon et te le rend.!NL« Vous pourriez bien. Mais il n'est valable que pour une place couchette. Et à votre place, je ferais une plus grande distance que pour une destination qui est presqu'encore dans le réseau locale. »</fr><en>"Show that to me ..." The assistant takes the voucher and hands it back to you.!NL!NL"You can. But it is valid only for a couchette coach place. And at your place, I would use it for a longer travel than just for a place which is almost in the local area."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ZVWticket" evaluation="true">
+                        <response id="ZVWvendor0910b0">
+                            <de>"Oh okay. Dann lieber doch ohne. Ich habe hier eine Zeitkarte für
+                                den Verbundraum."</de>
+                        <fr>« Oh, d'accord. Vaut mieux sans. J'ai voici un billet forfaitaire pour le réseau locale. »</fr><en>"Oh okay. Then better without. Here I have a season ticket for the society area."</en></response>
+                        <command>
+                            <dialog point="610b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="ZVWvendor0910b1">
+                            <de>"Oh okay. Dann doch lieber ohne. Leider habe ich auch keine
+                                Fahrkarte für den Verbund ..."</de>
+                        <fr>« Oh, d'accord. Vaut mieux sans. Malheureusement, je n'ai pas de billet pour le réseau non plus... »</fr><en>"Oh okay. Then better without. Unfortunately, I do not have a season ticket for the society area."</en></response>
+                        <command>
+                            <dialog point="710b"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="ZVWvendor0910b2">
+                        <de>"Hmmm ... vielleicht überlege ich mir das doch noch einmal. Vielen
+                            lieben Dank, auf Wiedersehen!"</de>
+                    <fr>« Hmmm... je vais en encore réfléchir peut-être. Merci bien, au revoir ! »</fr><en>"Hmmm ... maybe I reconsider that all. Thank you very much, good bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1010b">
+                <answer id="ZVWvendor01010b">
+                    <de>"Okay ... hier eine Fahrkarte für den Schnellzug 153 nach Karlstadt
+                        Hauptbahnhof. Er fährt von Gleis 13 ab in gut 40 Minuten. Sie fahren
+                        umsteigefrei."!NL Der Drucker arbeitet währenddessen. Nach einiger Zeit
+                        kommt ein Ausdruck, deine Fahrkarte, den dir die Verkäuferin aushändigt:
+                        "Gute Reise! Und haben Sie eine schöne Zeit in Karlstadt!"</de>
+                <fr>« D'accord... voici un billet pour le train rapide 153 vers Karlstadt centrale. Il partira à quai voie 13 en 40 minutes environ. Vous irez dirèctement. »!NL!NLL'imprimeur travaille pendant ce temps. Après un temps, un imprime arrive, ton billet que l'assistante te donne : « Bon voyage ! Et ayez un beau séjour à Karlstadt ! »</fr><en>"Alright ... here a ticket for the rapid train 153 to Karlstadt central station. It departs from platform 13 in around 40 minutes. You travel directly."!NL!NLThe printer is working meanwhile. After some time, a printout arrives, your ticket, which the assistant hands to you: "Good journey! And have a nice time in Karlstadt!"</en></answer>
+                <action>
+                    <response id="ZVWvendor01010b0">
+                        <de>"Danke, werde ich haben! Auf Wiedersehen!"</de>
+                    <fr>« Merci, j'en aurai ! Au revoir ! »</fr><en>"Thank you, I will have! Good bye!"</en></response>
+                    <command>
+                        <getItem triggeredItem="ticketToKarlstadt"/>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- point 40 externally because not belonging to any parallel stream -->
+            <point id="40" pointGrp="4">
+                <answer id="ZVWvendor040">
+                    <de>"Tja, dann kann ich Ihnen nicht weiterhelfen!"</de>
+                <fr>« Eh bien là, je ne peux pas vous aider ! »</fr><en>"Well, then, I cannot help you!"</en></answer>
+                <action>
+                    <response id="ZVWvendor0400">
+                        <de>"Hm ... vielleicht will ich dann doch nicht reisen. Danke für Ihre
+                            Mühen! Auf Wiedersehen!</de>
+                    <fr>« Hm... peut-être je ne voudrais plus voyager. Merci pour vos efforts ! Au revoir ! »</fr><en>"Hm ... maybe I just would not like to travel any more. Thank you for your efforts! Good bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- point 8 externally because not belonging to any parallel stream -->
+            <point id="8">
+                <answer id="ZVWvendor08">
+                    <de>"Okay ... möchten Sie vielleicht ein anderes Ziel?"</de>
+                <fr>« D'accord... aimeriez-vous une autre destination ? »</fr><en>"Alright, would you like another destination?"</en></answer>
+                <action>
+                    <response id="ZVWvendor080">
+                        <de>"Ja, was hätten Sie denn im Angebot?"</de>
+                    <fr>« Qu'est-ce que vous auriez à offrir ? »</fr><en>"Well, what could you offer me?"</en></response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="ZVWvendor081">
+                        <de>"Nein ... ich denke, lieber doch nicht."</de>
+                    <fr>« Non... je pense que vaut mieux pas. »</fr><en>"No ... I do not think so."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- the group of girls on the left -->
+    <person id="TelegrapheGroupA1">
+        <stream id="0">
+            <point id="0">
+                <answer id="TelegrapheGroupA100">
+                    <de>"Ist ja auch egal. Oh! Wer sind Sie denn?"</de>
+                <fr>« Peu importe. Oh ! Mais qui êtes vous ? »</fr><en>"Does not matter anyway. Oh! Who are you?"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA1000">
+                        <de>"Sie können ruhig du zu mir sagen. Ich heiße und suche einen entlaufenen
+                            Freund."</de>
+                    <fr>« Vous pouvez bien me tutoyer. J'appelle !NOM! et cherche un ami échappé. »</fr><en>"My name is !NAME and I am looking for a friend who ran away."</en></response>
+                    <command>
+                        <dialog point="10"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupA1001">
+                        <de>"Wo kann ich hier übernachten? Gibt's hier eine Herberge?"</de>
+                    <fr>« Où est-ce que je peux passer la nuit ? Est-ce qu'il y a un auberge ici ? »</fr><en>"Where can I pass the night here? Is there a hostel?"</en></response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupA1002">
+                        <de>"Erm ... wo kann man hier gut feiern?"</de>
+                    <fr>« Euh... où peut-on fêter par ici ? »</fr><en>"Er ... where are good parties?"</en></response>
+                    <command>
+                        <dialog point="30"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupA1003">
+                        <de>"Och, ich schaue mich nur um. Wollte nicht stören!"</de>
+                    <fr>« Euh, je juste regarde. Je ne veux pas déranger. »</fr><en>"Oh, I am just looking. I did not want to disturb!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="10">
+                <answer id="TelegrapheGroupA1010">
+                    <de>"Ooh. Wie spannend! Deine Liebe ist dir entlaufen?"</de>
+                <fr>« Ooh. Intéressant ! Ton amour t'est échanppé(e) ? »</fr><en>"Ooh. How exciting! Your love ran away?"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA10100">
+                        <de>"Nein, nur ein guter Freund. Er ist einfach so in einer Haltestelle
+                            verschwunden."</de>
+                    <fr>« Non, il n'est qu'un bon ami. Il a tout simplement disparu dans une station. »</fr><en>"No, just a good friend. He has just disappeared in a station."</en></response>
+                    <command>
+                        <dialog point="11"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupA10101">
+                        <de>"Ja, meine große Liebe ist mir entschwunden ..."</de>
+                    <fr>« Oui, mon grand amour m'a disparu... »</fr><en>"Yes, my great love has disappeared ..."</en></response>
+                    <command>
+                        <dialog point="101"/>
+                    </command>
+                </action>
+            </point>
+            <point id="11">
+                <answer id="TelegrapheGroupA1011">
+                    <de>"Wie, einfach verschwunden?" "Ja, ruf' ihn doch an!"</de>
+                <fr>« Comment, tout simplement disparu ? » « Ben, appelle-le ! »</fr><en>"What, just disappeared?" "Well, call him!"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA10110">
+                        <de>"Wär' schön, wenn ich hier Netz hätte ... ich komme aus ... woanders
+                            her."</de>
+                    <fr>« Eh bien, si j'avais de réseau ici... je viens de... d'ailleurs. »</fr><en>"Would be nice if I had network ... I am coming from ... somewhere else."</en></response>
+                    <command>
+                        <dialog point="12"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupA10111">
+                        <de>"Alles klar, mache ich sofort!" (zu dir selbst: bloß wie?)</de>
+                    <fr>« D'accord, je ferai tout de suite ! » (à toi-même : juste comment ?)</fr><en>"Alright, I will!" (to yourself: but how?)</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="12">
+                <answer id="TelegrapheGroupA1012">
+                    <de>"Ja ... woher denn?" Jetzt schauen dich die Mädchen sehr aufmerksam an.</de>
+                <fr>« Ben... d'où ? » Maintenant, les filles te regardent très attentivement.</fr><en>"Well ... from where?" Now, the girls are looking attentively to you.</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA10120">
+                        <de>"Das glaubt ihr nicht ... von der Erde!"</de>
+                    <fr>« Vous ne me croyez pas... de la Terre ! »</fr><en>"You do not believe it ... from Earth!"</en></response>
+                    <command>
+                        <dialog point="13"/>
+                    </command>
+                </action>
+            </point>
+            <point id="13">
+                <answer id="TelegrapheGroupA1013">
+                    <de>"Och! Da ein so großes Federlesens zu machen?! Die Irdischen wissen halt
+                        nichts, aber es gibt regelmäßige Verbindungen zur Erde! Oder bist du nicht
+                        mit dem Raumschiff gekommen?"</de>
+                <fr>« Ha ! En faire une si grande affaire ?! Les Terriennes n'en savent rien, mais il y a des connections régulières avec la Terre ! Ou tu n'es pas venu avec un vaisseau interstellaire ? »</fr><en>"Oh! Making such a great thing of it?! The Terrestrians do not know anything, but there are regular connections to Earth! Or did you not come by craft?"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA10130">
+                        <de>"Nein! Ich bin mit der Straßenbahn gekommen!"</de>
+                    <fr>« Non ! Je suis venu(e) avec le métro léger ! »</fr><en>"No! I came by light railway!"</en></response>
+                    <command>
+                        <dialog point="14"/>
+                    </command>
+                </action>
+            </point>
+            <point id="14">
+                <answer id="TelegrapheGroupA1014">
+                    <de>"Ach nee! Du bist bestimmt noch benommen von der Reise!" "Mit der Stadtbahn,
+                        tz! Das geht doch gar nicht!"</de>
+                <fr>« Ah bon ! Tu es sûrement ensuqué(e) du voyage ! » « Avec le métro léger, ts ! Ça ne marche pas ! »</fr><en>"Oh no! You are just a bit dazed by the journey!" "By light railway, tz! That does not work!"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA10140">
+                        <de>"Lacht ruhig ..."</de>
+                    <fr>« Rigolez bien... »</fr><en>"Laugh all you want ..."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- the group of girls on the right -->
+    <person id="TelegrapheGroupA2">
+        <stream id="0">
+            <point id="0">
+                <answer id="TelegrapheGroupA200">
+                    <de>
+                        "Ich weiß zwar nicht, woher, aber die Gruppe rechts wird dir eher 
+                        helfen können. Da, wo nicht nur Mädchen sind."
+                    </de>
+                <fr>« Je ne sais pas d'où je le sais, mais le groupe à droite va mieux pouvoir t'aider. Là où il n'y a pas que des filles. »</fr><en>"I do not know from where but the group over there, on the right, is more able to help you. There, where there are not only girls."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupA2000">
+                        <de>"Hm ... okay ..."</de>
+                    <fr>« Hm... d'accord... »</fr><en>"Hm ... alright ..."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- the group around Pascal -->
+    <person id="TelegrapheGroupB">
+        <stream id="0">
+            <point id="0">
+                <answer id="TelegrapheGroupB00">
+                    <de>"Hallo! Können wir helfen? Du siehst ein bisschen verloren aus."</de>
+                <fr>« Salut ! Pouvons-nous t'aider ? Tu as l'air un peu perdu(e). »</fr><en>"Hello! Can we help? You look a bit lost."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB000">
+                        <de>"Ja ... ich suche eine Herberge!"</de>
+                    <fr>« Oui... je cherche un auberge. »</fr><en>"Yes ... I am looking for a hostel!"</en></response>
+                    <command>
+                        <dialog point="10"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupB001">
+                        <de>"Allerdings ... ich bin etwas verloren. Ich suche einen guten
+                            Freund."</de>
+                    <fr>« En effet... je suis un peu perdu. Je cherche un bon ami. »</fr><en>"Yes indeed ... I am. I am looking for a good friend."</en></response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupB002">
+                        <de>"Nein, ist alles okay, danke ..."</de>
+                    <fr>« Non, ça va, merci... »</fr><en>"No, everything is alright, thank you ..."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer id="TelegrapheGroupB01">
+                    <de>"Können wir dir sonstwie helfen?"</de>
+                <fr>« Pouvons-nous t'aider autrement ? »</fr><en>"May we help you otherwise?"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupBr010">
+                        <de>"Ja ... vielleicht könnt ihr mir helfen, einen Freund zu finden?"</de>
+                    <fr>« Oui... peut-être vous pouvez m'aider à trouver un ami ? »</fr><en>"Yes ... may you help me to find a friend?"</en></response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupB011">
+                        <de>"Nein, das war alles!"</de>
+                    <fr>« Non, c'était tout ! »</fr><en>"No, that is everything!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- YHA stream -->
+            <point id="10">
+                <answer id="TelegrapheGroupB010">
+                    <de>"Okay ... Freunde - wisst ihr was?" "Ja, einige Straßen weiter müsste eine
+                        bezahlbare Herberge sein." "Aber du kannst da zur Zeit nicht hin."</de>
+                <fr>« D'accord... amis – savez-vous quelque chose ? » « Oui, quelques rues plus tard, il devrait y avoir un auberge payable. » « Mais tu ne peux pas y aller pour l'instant. »</fr><en>"Alright ... Friends – you do know something?" "Yes, some streets away, there should be an affordable hostel." "But you cannot get there for the moment."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0101">
+                        <de>"Naja, da kann man nichts machen."</de>
+                    <fr>« Ben ouais, là, on ne peut rien faire. »</fr><en>"Well, there is nothing to be done about it."</en></response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+            </point>
+            <!-- PSL stream -->
+            <point id="20">
+                <answer id="TelegrapheGroupB020">
+                    <de>Eine antwortet scherzhaft: "Du willst, dass er zurückkommt? Ist er etwa von
+                        dir davongerannt?"</de>
+                <fr>Une répond plaisamment : « Tu veux qu'il revienne ? Est-ce qu'il t'est parti en courant ? »</fr><en>One replies humorously: "You would like that he returns? Did he run away?"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0200">
+                        <de>"Zuerst ist er nicht mein fester Freund, dann wollte er einer Gruppe
+                            hinterherrennen, die angeblich entführt sein soll."</de>
+                    <fr>« D'abord, il n'est pas mon petit-ami, puis, il voulait courir après un groupe qui apparemment était enlevé. »</fr><en>"First, s/he is not my beloved, then, s/he wanted to chase a group which is supposed to be abducted."</en></response>
+                    <command>
+                        <dialog point="21"/>
+                    </command>
+                </action>
+            </point>
+            <point id="21">
+                <answer id="TelegrapheGroupB021">
+                    <de> Das Mädchen unten ist erstaunt: "Entführt? Du scherzt wohl?"!NL "Da
+                        solltest du lieber zur Polizei gehen, denkst du nicht?" fragt eine andere.
+                        Ein Junge bemerkt darauf: "Sie werden ihm nicht glauben ... die haben andere
+                        Sachen zu tun." </de>
+                <fr>La fille en bas est étonnée : « Enlevé ? C'est un blague ? »!NL!NL« Tu vas mieux à la police, tu penses pas ? » demande une autre. Un garçon y répond : « Ils ne vont pas lui croire... ils ont des autres choses à faire. »</fr><en>The girl at the bottom is astonished: "Abducted? You're having me on!"!NL!NL"You should better go to the police, don't you?" asks another. A boy replies to that: "They will not believe him ... they have other things to do."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0210">
+                        <de> "Eine Se- jemand sagte mir, dass ich hierher kommen soll. Hier würde
+                            mir weitergeholfen werden." </de>
+                    <fr>« Une â- quelqu'un m'a dit(e) de venir ici. On m'aidera par ici. »</fr><en>"A so- someone told me that I should come here. I would get help here."</en></response>
+                    <command>
+                        <dialog point="22"/>
+                    </command>
+                </action>
+            </point>
+            <point id="22">
+                <answer id="TelegrapheGroupB022">
+                    <de> Die Gruppe schaut dich verwirrt an, bis ein Junge, etwas abseits an der
+                        Seite, sich gegen die Stirn schlägt:!NL "Verdammt! Sie sind also doch so
+                        weit gegangen!" </de>
+                <fr>Le groupe te regarde en déroute, jusqu'à ce qu'un garçon, un peu à part, se frappe contre le front :!NL « Mince ! Ils sont donc allés si loin ! »</fr><en>The group looks confusedly at you until one boy, a bit apart on the side, smites his forehead:!NL!NL"Damn it! They thus went this far!"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0220">
+                        <de> "Was?" </de>
+                    <fr>« Quoi ? »</fr><en>"What?"</en></response>
+                    <command>
+                        <dialog point="23"/>
+                    </command>
+                </action>
+            </point>
+            <point id="23">
+                <answer id="TelegrapheGroupB023">
+                    <de> Das erste Mädchen entgegnet ihm: "Nein, Pascal, das ist nicht deren Tempo
+                        ... die stürzen sich doch auf die Politiker! Nerve ihn nicht mit deinen
+                        Ideen!" Pascal bleibt energisch: "Aber es muss diese Gruppe sein! Ich habe
+                        etwas von einer Entführung eines Zuges gehört!" </de>
+                <fr>La première fille lui répond : « Non, Pascal, c'est pas leur style... ils se jètent sur les hommes politiques ! Ne l'énerve pas avec tes idées ! » Pascal reste énergique : « Mais cela doit être ce groupe ! J'ai entendu parler quelque chose d'un enlèvement d'un train ! »</fr><en>The first girl answers: "No, Pascal, that is not their kind of way ... they aim the politicians! Do not bother him with your ideas!" Pascal remains energical: "But it must be that group! I have heared something about an abduction of a train!"</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0230">
+                        <de> "Was ist los? Ich verstehe gar nichts!" </de>
+                    <fr>« Qu'est-ce qu'il y a ? Je ne comprend rien ! »</fr><en>"What's on? I don't understand!"</en></response>
+                    <command>
+                        <dialog point="24"/>
+                    </command>
+                </action>
+            </point>
+            <point id="24">
+                <answer id="TelegrapheGroupB024">
+                    <de> Pascal antwortet: "Es gibt eine Gruppe von Terroristen, die früher mal
+                        versucht hatte, das Ende von Kriegen zu erzwingen. Allerdings haben sie sich
+                        verlagert ... man weiß immer weniger, was hinter den politischen Bühnen
+                        passiert."" </de>
+                <fr>Pascal répond : « Il y a un groupe qui avait essayé auparavant de forcer la fin des guerres. Mais ils se sont  »</fr><en>Pascal replies: "There is a group of terrorists which tried in the past to force the end of wars. But they changed ... one knows less and less that is going on behind the political scenes."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0240">
+                        <de> "Erzähl mir mehr von ihnen!" </de>
+                    <fr>« Raconte-moi en plus ! »</fr><en>"Tell me more about them!"</en></response>
+                    <command>
+                        <dialog point="25"/>
+                    </command>
+                </action>
+            </point>
+            <point id="25">
+                <answer id="TelegrapheGroupB025">
+                    <de>"Gerne, aber nicht hier. Man könnte uns zuhören. Hier gab es einige
+                        verdächtige Leute."</de>
+                <fr>« Avec plaisir, mais pas par ici. On pourrait nous entendre. Il y a eu quelques gens suspects par ici. »</fr><en>"Of course, but not here. One could listen to us. There were some suspect people here."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0250">
+                        <de>"Alles klar. Aber ... wie kann ich Ihnen vertrauen? Ich kenne Sie
+                            nicht."</de>
+                    <fr>« D'accord. Mais... comment pourrais-je avoir confiance en vous ? Je ne vous connaîs pas ! »</fr><en>"Alright. But ... how could I trust you? I do not know you."</en></response>
+                    <command>
+                        <dialog point="26"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupB0251">
+                        <de>"Ach nee ... und wir reden hier so frei? Da kann doch was nicht
+                            stimmen!"</de>
+                    <fr>« Ah bon... et on parle si librement ici ? Quelque chose ne va pas par ici ! »</fr><en>"No kidding ... and we speak so freely here? Something is wrong here!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="26">
+                <answer id="TelegrapheGroupB026">
+                    <de> Ein Mädchen antwortet: "Das nenne ich gesundes Misstrauen! Aber mache dir
+                        keine Sorgen, wir sind nicht auf der Erde. Wir haben verstanden, dass Lügen
+                        und Betrügen sich früher oder später gegen uns wenden." </de>
+                <fr>Une fille répond : « Cela j'appelle une saine méfiance ! Mais ne t'inquiète pas, nous ne sommes pas sur Terre. Nous avons compris que mentir et tromper se tourneront contre nous un jour. »</fr><en>A girl answers: "That I call healthy mistrust! But do not worry, we are not on Earth. We understood that lying and betraying turn sooner or later against us."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0260">
+                        <de>"Ach nee. Und ich soll jetzt die Einladung annehmen?"</de>
+                    <fr>« Ah non. Et il me faut accepter maintenant l'invitation ? »</fr><en>"Duh. And I should accept this invitation?"</en></response>
+                    <command>
+                        <dialog point="27"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="TelegrapheGroupB0261">
+                        <de>"Nehmt es nicht persönlich ... das ist mir zu heiß."</de>
+                    <fr>« Ne me le prenez trop personellement... cela m'est trop chaud. »</fr><en>"Do not take it too personally ... that is too hot for me."</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="27">
+                <answer id="TelegrapheGroupB027">
+                    <de> Pascal lächelt. "Allerdings, wenn das eine Anmache sein sollte, so war sie
+                        wirklich schlecht. Aber, nein, ich möchte dir weiterhelfen." </de>
+                <fr>Pascal sourit. « Mais oui, si c'était juste pour draguer, c'était franchement mal. Mais non, je voudrais t'aider. »</fr><en>Pascal laughs. "Indeed, if that should be a pick-up line, it is really a bad one. But no, I really would like to help you."</en></answer>
+                <action>
+                    <response id="TelegrapheGroupB0270">
+                        <de>"Alles klar, aber ... können deine Freunde mitkommen?"</de>
+                    <fr>« D'accord, mais... est-ce que tes amis pourraient venir aussi ? »</fr><en>"Alright, but ... may your friends come with you?"</en></response>
+                    <command>
+                        <event base="zeidel_stadtbahn" stream="whiteSeaQuarter" id="ws_01"/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+</dialogueData>

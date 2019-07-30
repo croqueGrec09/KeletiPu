@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="bustypeDB">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bus">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="producer">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="marcomedes"/>
+                                        <xs:enumeration value="nemoplan"/>
+                                        <xs:enumeration value="zeidel-diesel"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="marcomedesModel">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="O 305"/>
+                                        <xs:enumeration value="O 305 G"/>
+                                        <xs:enumeration value="O 405"/>
+                                        <xs:enumeration value="O 405 G"/>
+                                        <xs:enumeration value="O 405 N"/>
+                                        <xs:enumeration value="O 405 GN"/>
+                                        <xs:enumeration value="O 405 N2"/>
+                                        <xs:enumeration value="O 405 GN2"/>
+                                        <xs:enumeration value="O 530 N"/>
+                                        <xs:enumeration value="O 530 GN"/>
+                                        <xs:enumeration value="O 530 N2"/>
+                                        <xs:enumeration value="O 530 GN2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nemoplanModel">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="N 416"/>
+                                        <xs:enumeration value="N 421 SG II"/>
+                                        <xs:enumeration value="N 421 SG III"/>
+                                        <xs:enumeration value="N 4014 NF"/>
+                                        <xs:enumeration value="N 4500 NF"/>
+                                        <xs:enumeration value="N 4515 NF"/>
+                                        <xs:enumeration value="N 4517 NF"/>
+                                        <xs:enumeration value="N 4021 NF"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="zeidel-dieselModel">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="SL 200"/>
+                                        <xs:enumeration value="SG 192"/>
+                                        <xs:enumeration value="SL 202"/>
+                                        <xs:enumeration value="SG 242"/>
+                                        <xs:enumeration value="NL 202"/>
+                                        <xs:enumeration value="NG 272"/>
+                                        <xs:enumeration value="NL 202.2"/>
+                                        <xs:enumeration value="NG 272.2"/>
+                                        <xs:enumeration value="EL 202"/>
+                                        <xs:enumeration value="EL 252"/>
+                                        <xs:enumeration value="SG 312"/> 
+                                        <xs:enumeration value="NL 222"/>
+                                        <xs:enumeration value="NL 262"/>
+                                        <xs:enumeration value="NL 312"/>
+                                        <xs:enumeration value="NG 262"/>
+                                        <xs:enumeration value="NG 312"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="type">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="solo"/>
+                                        <xs:enumeration value="articulated"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="kom" type="xs:int"/>
+                            <xs:element name="engine">
+                                
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<happening idPrefix="ka" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="happening.xsd">
+    <stream id="bus1101" name="Linie 1101">
+        <event id="bus1">
+            <eventBody>
+                <image lang="all">empty.jpg</image>
+                <text>
+                    <de>Nun kommst du zurück zum Hauptbahnhof, dem Ausgangspunkt in der Stadt.</de>
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>ZKBay3_4a</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

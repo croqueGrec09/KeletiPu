@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<happening xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="happening.xsd" idPrefix="iv">
+    <stream id="Dh2011" name="Schnellzug Zeidel-Cité d'Orcive-Kvirasim">
+        <event id="ZDKV01">
+            <eventBody>
+                <image lang="all">kvirasim/events/ZDKV01.jpg</image>
+                <text lang="de">
+                    Du besteigst den Liegewagen nach Kvirasim und schläfst sofort nach Bezug deiner Kabine ein. Es ist 
+                    viel mehr passiert, als an so manchen Tagen in deinem studentischen Leben. Die neue Welt, die 
+                    eigentlich keine neue Welt ist, sie sieht ja so aus, wie die Erde, aber irgendwie doch ganz anders ...
+                    Mit diesem Gefühl wachst du auf, als es in Cité d'Orcive plötzlich heißt: "Alle aussteigen!" Wie gut, 
+                    dass du dem Schaffner zugehört hast, als er dir sagte, dass du in den Internight 045 umsteigen musst ...
+                    Du schaust dich etwas in der Stadt um, kannst den Bahnhof aber nicht verlassen - denn auch hier befindet 
+                    sich eine Analysestadt im Bau.
+                </text>
+            </eventBody>
+            <nextEvent pointRef="ZDKV02"/>
+        </event>
+        <event id="ZDKV02">
+            <eventBody>
+                <image lang="all">kvirasim/events/ZDKV02.jpg</image>
+                <text lang="de">
+                    Nach einer endlos langen Wartezeit besteigst du den Liegewagen im Internight 045 nach Kvirasim. Und 
+                    nach mehrtägiger Fahrt kommst du in der Stadt der Phonetik und der Phonologie an. Diese Stadt hat sich 
+                    dem Studienkomplex Phonetik + Phonologie gewidmet und die Fächer sind versorgt, die in diesem Studienmodul 
+                    angeboten werden. Besteige die Linie U11, um zu sehen, was dich dort erwartet.
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>kvirasim</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_platform6_7a</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+    <stream id="Dh153" name="Schnellzug Darborough-Karlstadt">
+        <event id="ZDKA00">
+            <eventMultimedia>
+                <baseFile>voyage/voyage_Dh153_Bmee_0.mp4</baseFile>
+                <setImages>
+                    <assocData dataType="image" filePath="karlstadt/ChristianGarveAntonGraff.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/EdmundBurke1771.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/Elisabeth_von_Staegemann_Selbstportraet_1808.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/Friedrich_Gentz.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/Jean_Pierre_Frederic_Ancillon_Rinck.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/Kant_gemaelde_1.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/TEI-400.jpg"/>
+                    <assocData dataType="image" filePath="karlstadt/kvag_zeidel_diesel_ng_542_2.png"/>
+                    <assocData dataType="image" filePath="karlstadt/kvag_zeidel_diesel_nl_202_2.png"/>
+                    <assocData dataType="image" filePath="karlstadt/RolleDesFahrkartenautomaten.jpg"/>
+                </setImages>
+                <imgInterval>10</imgInterval>
+            </eventMultimedia>
+            <exitStream>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>Dh153_arrival</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

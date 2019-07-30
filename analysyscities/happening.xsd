@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This is the schema for a happening repository. A happening is a stream of points the 
+    player may click through. Trips with public transports are also defined as a stream of 
+    happenings where each station represents a point. At each point, a video or a still 
+    image may be shown.
+    Each point may trigger a chain of other events.
+    
+    author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+    current version: 0.701 from July 7th, 2018
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+    <xs:include schemaLocation="town.xsd"/>
+    <xs:element name="happening">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="stream" type="stream" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="idPrefix" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="stream">
+        <xs:sequence>
+            <xs:element name="event" type="event" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="event" mixed="true">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="eventBody" type="page" />
+                <xs:element name="eventMultimedia" type="multimediaPage" />
+            </xs:choice>
+            <xs:element name="nextEvent" type="streamPoint" minOccurs="0"/>
+            <xs:element name="previousEvent" type="streamPoint" minOccurs="0"/>
+            <xs:element name="exitStream" type="newPlace" minOccurs="0"/>
+            <xs:element name="otherHappenings" type="command" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="page">
+        <xs:sequence>
+            <xs:element name="image" type="image" maxOccurs="4"/>
+            <xs:element name="text" type="text"/>
+            <xs:element name="sound" type="sound" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="multilingual" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:complexType name="multimediaPage">
+        <xs:sequence>
+            <xs:element name="baseFile" type="videoFileName" />
+            <xs:element name="setImages" type="assocList"/>
+            <xs:element name="imgInterval" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="assocList">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="assocData" type="assoc"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="assoc">
+        <xs:attribute name="dataType" type="dataTypeRestriction" use="required"/>
+        <xs:attribute name="filePath" type="fileTypeRestriction" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="dataTypeRestriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="image"/>
+            <xs:enumeration value="sound"/>
+            <xs:enumeration value="video"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="fileTypeRestriction">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".*\.(mp4|mp3|jpg|png)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="streamPoint">
+        <xs:attribute name="pointRef" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="newPlace">
+        <xs:sequence>
+            <xs:element name="nextCity" type="xs:string"/>
+            <xs:element name="nextStation" type="xs:int"/>
+            <xs:element name="nextPlace" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="command">
+        <xs:sequence>
+            <xs:element name="addItem" type="itemManipulation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="removeItem" type="itemManipulation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="addMoney" type="moneyManipulation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="deductMoney" type="moneyManipulation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="addQuest" type="questManipulation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="updateQuest" type="updateQuest" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="completeQuest" type="completeQuest" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="itemManipulation">
+        <xs:attribute name="itemID" type="xs:NCName" use="required"/>
+        <xs:attribute name="valid" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="true"/>
+                    <xs:enumeration value="false"/>
+                    <xs:enumeration value="none"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="moneyManipulation">
+        <xs:attribute name="amount" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

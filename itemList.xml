@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item.xsd">
+    <!-- Repository of all items. For the element documentations, please check the underlying schema item.xsd. -->
+    <item id="bag" cost="35" onload="false" valid="none" bagNeeded="false" countable="false" itemClass="container">
+        <name>
+            <de>Rucksack</de>
+            <hu>hátizsák</hu>
+            <fr>sac à dos</fr>
+            <en>rucksack</en>
+        </name>
+        <description>
+            <de>Dein überdimensionaler Rucksack zum Transportieren von nützlichen Dingen wie Proviant, Pässe, Geld - und unnützen wie Kosmetika, Smartphones und schlechten Klausuren.</de>
+            <hu>A túlméretezett hátizsákod, amely alkalmas hasznos dolgok szállítására mint uzsonna, igazolványok, pénz - és haszontalan, mint szépségápolási cucc, okostelefonok vagy gyenge dolgozatok.</hu>
+            <fr>Ton sac à dos surdimensioné pour transporter des trucs utils comme un repas, des passeports, de l'argent - et inutils comme des cosmétiques, des smartphones ou des mauvaises copies.</fr>
+            <en>Your oversized rucksack to transport useful things such as lunchboxes, passes, money - and useless, such as cosmetics, smartphones or bad class tests.</en>
+        </description>
+    </item>
+    <item id="finalTicketToTraumdorf" cost="3500" onload="false" valid="true" bagNeeded="false" countable="true" itemClass="singleFareTicket">
+        <name>
+            <de>Fahrkarte für zwei nach Traumdorf</de>
+            <hu>két személyre szóló jegy Traumdorf állomásra</hu>
+            <fr>billet pour deux personnes à Traumdorf</fr>
+            <en>ticket for two persons to Traumdorf</en>
+        </name>
+        <description>
+            <de>Eine Fahrkarte für zwei Reisende in die Stadt Traumdorf ab Courtois Thessy. Markiert ist ein Liegewagenabteil.</de>
+            <hu>Egy két személyre szóló jegy Traumdorfba, Courtois Thessy állomástól. Egy fekvőhelyes fülke van bejelölve.</hu>
+            <fr>Un billet pour deux personnes dans la ville de Traumdorf. Marqué est un compartement de couchettes.</fr>
+            <en>A ticket for two persons to Traumdorf. A couchette compartment is indicated.</en>
+        </description>
+    </item>
+    <item id="gloves" cost="45" onload="false" valid="none" bagNeeded="true" countable="true" itemClass="accessoire">
+        <name>
+            <de>Schwarze Smartphone-Lederhandschuhe</de>
+            <hu>fekete okostelefon-bőrkesztyű</hu>
+            <fr>gants en cuir noir pour smartphone</fr>
+            <en>black smartphone leather gloves</en>
+        </name>
+        <description>
+            <de>Butterweiche schwarze Lederhandschuhe, unbedingt nötig für warme Hände! Selbst beim Bedienen von Smartphones keine kalten Hände mehr!</de>
+            <hu>Puha fekete bőrkesztyű, föltétlenül szükséges meleg kezekre! Még okostelefonok kezelésekor se fázzék a kezed!</hu>
+            <fr>Des gants en cuir noir très moelleux, nécessaire pour des mains chaudes ! Plus de froid pour les mains, même pas en maniant des smartphones !</fr>
+            <en>Buttery soft black leather gloves, absolutely necessary for warm hands! No freezing hands, even when operating smartphones!</en>
+        </description>
+        <itemImage src="zeidel/stadtbahn/gibniemalsauf_gloves.JPG" cx1="235" cy1="320" xl="267" yl="210"/>
+    </item>
+    <item id="karlstadtNetworkPlan" cost="0" onload="false" valid="none" bagNeeded="false" countable="false" itemClass="map">
+        <name>
+            <de>Liniennetzplan für Karlstadt</de>
+            <hu>Karlstadt vasúthálózata</hu>
+            <fr>plan du réseau ferroviaire de Karlstadt</fr>
+            <en>railway network map of Karlstadt</en>
+        </name>
+        <description>
+            <de>Diese Karte zeigt die Metro-, Stadtbahn- und Nahverkehrslinien von Karlstadt.</de>
+            <hu>Ez Karlstadt metró, villamos és helyi vasútvonal térképe.</hu>
+            <fr>C'est un plan de métro, tramway et chemin de fer régional de Karlstadt.</fr>
+            <en>This is a metro, tram and local railway network plan of Karlstadt.</en>
+        </description>
+        <mapFile forTown="karlstadt">karlstadt/DetailkarteX_2.jpg</mapFile>
+    </item>
+    <item id="notebook" cost="5" onload="false" valid="none" bagNeeded="true" countable="false" itemClass="notebook">
+        <name>
+            <de>Notizblock</de>
+            <hu>jegyzettömb</hu>
+            <fr>carnet de notes</fr>
+            <en>notebook</en>
+        </name>
+        <description>
+            <de>Dieses unscheinbare Heft ist die Erweiterung deines Gedächtnisses. Hier werden deine Missionen, deine Errungenschaften und deine eigenhändigen Notizen eingetragen.</de>
+            <hu>Ez a jelentéktelen füzet az eszed bővítése. A feladataidat, eredményeidet és saját jegyzeteidet itt találhatod meg.</hu>
+            <fr>Ce carnet qui n'a l'air de rien est l'extension de ta mémoire. Ici sont notés tes missions, tes résultats et tes notes personnels.</fr>
+            <en>This unimpressive notebook is the extension of your memory. Your missions, results and personal notes are written here.</en>
+        </description>
+    </item>
+    <item id="ticketToKvirasim" cost="0" onload="false" valid="true" bagNeeded="false" countable="true" itemClass="singleFareTicket">
+        <name>
+            <de>Fahrkarte nach Kvirasim</de>
+            <hu>jegy Kvirasimba</hu>
+            <fr>billet pour Kvirasim</fr>
+            <en>ticket to Kvirasim</en>
+        </name>
+        <description>
+            <de>Dies ist ein Fahrschein für eine Fahrt nach Kvirasim. Es steht hier eine kleine Notiz: An den Entwickler: er soll ein Regexp für Fahrkartendaten und Fahrplandaten einbauen, hierfür wird auch eine DB vonnöten sein.</de>
+            <hu>Ez egy egyszeri jegy Kvirasimba.</hu>
+            <fr>C'est un billet aller simpler à Kvirasim.</fr>
+            <en>This is a single ride ticket to Kvirasim.</en>
+        </description>
+    </item>
+    <item id="ticketToKarlstadt" cost="0" onload="false" valid="true" bagNeeded="false" countable="true" itemClass="singleFareTicket">
+        <name>
+            <de>Fahrkarte nach Karlstadt</de>
+            <hu>jegy Karlstadtba</hu>
+            <fr>billet pour Karlstadt</fr>
+            <en>ticket to Karlstadt</en>
+        </name>
+        <description>
+            <de>Dies ist ein Fahrschein für eine Fahrt nach Karlstadt. Es steht hier eine kleine Notiz: An den Entwickler: es wird zudem vonnöten sein, Start und Ziel anzugeben. Die DB nach Fahrkarten, gegliedert nach Start und Ziel muß kommen.</de>
+            <hu>Ez egy egyszeri jegy Karlstadtba.</hu>
+            <fr>C'est un billet aller simpler à Karlstadt.</fr>
+            <en>This is a single ride ticket to Karlstadt.</en>
+        </description>
+    </item>
+    <item id="zeidelNetworkPlan" cost="0" onload="false" valid="none" bagNeeded="false" countable="false" itemClass="map">
+        <name>
+            <de>Liniennetzplan Bahn für Zeidel-Stadt</de>
+            <hu>Zeidel város vasúthálózata</hu>
+            <fr>plan du réseau ferroviaire de Zeidel ville</fr>
+            <en>railway network map of Zeidel city</en>
+        </name>
+        <description>
+            <de>Diese Karte zeigt die Metro-, Stadtbahn- und Nahverkehrslinien von Zeidel-Stadt.</de>
+            <hu>Ez Zeidel város metró, villamos és helyi vasútvonal térképe.</hu>
+            <fr>C'est un plan de métro, tramway et chemin de fer régional de Zeidel ville.</fr>
+            <en>This is a metro, tram and local railway network plan of Zeidel city.</en>
+        </description>
+        <mapFile forTown="zeidel">zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg</mapFile>
+    </item>
+    <item id="ZVWcoupon" cost="0" onload="false" valid="true" bagNeeded="false" countable="true" itemClass="singleUseCoupon">
+        <name>
+            <de>Gutschein für eine Fahrt mit den Zügen der Zeidel'schen Verkehrswerke</de>
+            <hu>kupon egy útra a Zeidel'sche Verkehrswerke vasútaival</hu>
+            <fr>voucher pour un voyage avec les trains du Zeidel'sche Verkehrswerke</fr>
+            <en>voucher for a ride with the trains of the Zeidel'sche Verkehrswerke</en>
+        </name>
+        <description>
+            <de>Dieser Gutschein gilt für eine beliebige Fahrt in der zweiten Klasse. Markiert ist der Anspruch auf einen Liegewagenplatz. Ein Ablaufdatum fehlt auch hier.</de>
+            <hu>Ezt beválthatod egy fekvőhelyes helyjegyre bármely vasútra, másodosztályra. Nincs lejárási dátuma.</hu>
+            <fr>C'est un voucher pour un voyage gratuit sur n'importe quel train en deuxième classe. Une place en voiture-couchettes est marquée. Il n'y a pas de date d'expiration.</fr>
+            <en>This is a voucher for a gratis ride on every train in second class. Marked is a place in a couchette coach. There is no date of expiry.</en>
+        </description>
+    </item>
+    <item id="ZVWticket" cost="250" onload="false" valid="true" bagNeeded="false" countable="false" itemClass="unlimitedFareTicket">
+        <name>
+            <de>Jahreskarte für das ZD-KA-VVerbundnetz</de>
+            <hu>évi bérlet a ZD-KA-VV hálozatára</hu>
+            <fr>billet annuel pour le réseau du ZD-KA-VV</fr>
+            <en>annual ticket for the ZD-KA-VV network</en>
+        </name>
+        <description>
+            <de>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt, Zeidel-Kreis, sogar bis nach Karlstadt hoch reisen. Gilt für Bus, Metro/Stadtbahn, S-Bahn, Regionalbahn, Regionalexpress und Eilzug innerhalb des Zeidel-Karlstädter Verkehrsverbundes. Schnellzüge und erste Klasse können mit Zuschlag in Anspruch genommen werden. Er gilt ein Jahr ab Erwerbsdatum, welches natürlich nirgendwo festgehalten wird ... </de>
+            <hu>Ezzel a bérlettel Zeidel város és megye területés utazhat, egészen fel Karlstadtig. Érvényes buszra, metró/villamosra, S-Bahnra, személy- és gyorsított személyvonatra, sebesvonatra valamint felárral gyorsvonatra és/vagy első osztályra. A vásárlási dátumától egy évig érvényes - csak sehol sincs rögzítve a dátum ...</hu>
+            <fr>Avec ce billet annuel, tu peux voyager par tout Zeidel-Ville, Zeidel-Département, même jusqu'à Karlstadt. Il est valable pour bus, métro/tramway, réseau transurban (S/RB/RE), TER, puis, avec supplément, pour train rapide et/ou 1ère classe. Il est valable pour un an à partir de la date de l'achat, juste que celle-ci n'est fixée nulle part...</fr>
+            <en>With this annual ticket, you can travel through Zeidel-City, Zeidel-county, up to Karlstadt. You can use it on bus, metro/tramway, transurban network (S/RB/RE), fast regional train and with supplement on rapid train or 1st class. It is valid for one year from the date of purchase - but that is stored nowhere ...</en>
+        </description>
+    </item>
+</itemList>

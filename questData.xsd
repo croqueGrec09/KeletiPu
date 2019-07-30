@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the underlying schema for the quest repository file. It is divided into mandatory and optional quest sections. The identifiers are built up as follows:
+'q'+townPrefix+running number starting from zero.
+
+See the quest repository file to see some concretely defined quests. Later on, the repository should be filled.
+
+author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+current version: 0.701 from July 7th, 2018
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="item.xsd">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Dependency to the item data schema - because we refer to items as well and need the text definition.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <!-- root element -->
+    <xs:element name="questData">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="mandatory" type="questSet">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The mandatory quests are being listed here.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="optional" type="questSet">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The optional quests are being listed here.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <!-- complex type definitions -->
+    <xs:complexType name="questSet">
+        <xs:sequence>
+            <xs:element name="quest" type="quest" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        A quest element. It may be optional or mandatory and is divided into one or more chapters. Each of them may have a reward.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="quest">
+        <xs:sequence>
+            <xs:element name="name" type="text"/>
+            <xs:element name="chapter" type="chapter" maxOccurs="unbounded"/>
+            <xs:element name="reward" type="reward" minOccurs="0"/>
+            <xs:element name="fail" type="reward" minOccurs="0"/><!-- penalty is expressed as negative reward -->
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="chapter">
+        <xs:sequence>
+            <xs:element name="description" type="text"/>
+            <xs:element name="place" type="xs:string" minOccurs="0"/>
+            <xs:element name="reward" type="reward" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="n" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="reward">
+        <xs:choice>
+            <xs:element name="money" type="xs:int"/>
+            <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the schema file for the item repository, including an abstract definition of an item which are occuring during the game.
+
+See the item data file to see the items in detail.
+
+author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+current version: 0.701 from July 7th, 2018
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- root element -->
+    <xs:element name="itemList">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The item list container, under which the items are organised.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="item" type="item" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- single item, complex type definitions -->
+    <xs:complexType name="item">
+        <xs:sequence>
+            <xs:element name="name" type="text" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The name of the item, given in all four languages of the game.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="text" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The description of the item, given in all four languages of the game. It will be displayed when acquiring an item and in the inventory listing.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="itemImage" type="smallerImage" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        When an item may be picked up at a place, it may be shown by an overlay image. The path to this image and its relative coordinates on the screen are stored here.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mapFile" type="mapData" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        For maps, the map file path is indicated here, so that the player may call the map from any place in the game.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The identifier for the given item which will be served as reference in other parts of the application.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="cost" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A default price for purchase.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="onload" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A flag to indicate whether an item has to be given upon arrival on a given place.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="valid" type="validity" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This is the three-position validity flag, indicating for a ticket whether it is valid or not. If the given item is not a ticket, the validity is set to 'none'.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="bagNeeded" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This flag indicates for an item whether a bag is needed to transport it. Important to consider because in later parts of the game, the player may lose his bag!
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="countable" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This flag shows whether an item may be stacked in an inventory (= if the player can have several pieces of it or not).
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="itemClass" type="itemClass" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The class of the item is important to indicate its use. A bag for example may carry items. Maps and notebooks can be used from the inventory.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- single type definitions -->
+    <xs:simpleType name="itemClass">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                An enumeration of currently implemented item types.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="accessoire"/>
+            <xs:enumeration value="container"/>
+            <xs:enumeration value="map"/>
+            <xs:enumeration value="notebook"/>
+            <xs:enumeration value="singleFareTicket"/>
+            <xs:enumeration value="singleUseCoupon"/>
+            <xs:enumeration value="unlimitedFareTicket"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="mapData" mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Contains additional information for a map item.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="forTown" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This is a key for the city the map shows. Given is the id prefix.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="smallerImage">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Here, additional informations are stored for an item image appearing on a field where it may be picked up.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="src" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The source file for the image. Recommended is PNG for the alpha value storage.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="cx1" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The left x position for the image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="cy1" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The top y position for the image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="xl" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The scale width for the image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="yl" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The scale height for the image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="text">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                For texts which are being displayed for the user, each translation is shown in the element named by the language the text is written in.
+                Translations may be added later on; the translation helper collects all undone translations.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:all minOccurs="0">
+            <xs:element name="de" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The text for the German version.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hu" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The text for the Hungarian version.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fr" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The text for the French version.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="en" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The text for the English version.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:simpleType name="validity">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The three positions of the validity flag - valid (true), invalid (false) or none - are being enumerated here.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="none"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

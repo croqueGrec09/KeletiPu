@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<voyage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="voyage.xsd">
+    <line number="S1" name="S-Bahn S1">
+        <station id="2">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_S1.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_S1.JPG</lineImage>  
+                <image>karlstadt/xWagen_interieur.JPG</image>
+                <text>Nächste Station: Karlstadt Englisch-Französischer Konflikt.!NL
+                Diese Baustelle widmet sich dem Briefverkehr betreffs der napoleonischen Krise, die sich um 1800 abgespielt hat. 
+                Derzeit sind nur zwei Briefe dazu zu lesen, einer an Heinrich Fröhlich und einer an Gustav Mauritz Armfelt.!NL
+                Sie können mit der Linie 301 erreicht werden. Es besteht auch eine Schnellbusverbindung nach Persönliche Beziehungen.</text>
+                <sound>karlstadt/SBahn_EF_Konflikt.mp3</sound>
+            </stationBody>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>2</nextStation>
+                <nextPlace>st2_platform3_4a</nextPlace>
+            </onExit>
+        </station>
+        <station id="0">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_S1.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_S1.JPG</lineImage>
+                <image>karlstadt/xWagen_interieur.JPG</image>
+                <text>Nächste Station: Karlstadt Hbf.!NL
+                Hier kannst du andere S-Bahnen besteigen sowie Fahrkarten lösen, um andere Städte zu bereisen. Auch hält hier die Buslinie 123.</text>
+                <sound>karlstadt/SBahn_KarlstadtHbf.mp3</sound>
+            </stationBody>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>0</nextStation>
+                <nextPlace>platform7_8a</nextPlace>
+            </onExit>
+        </station>
+        <station id="3">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_S1.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_S1.JPG</lineImage>
+                <image>karlstadt/xWagen_interieur.JPG</image>
+                <text></text>
+                <sound></sound>
+            </stationBody>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>3</nextStation>
+                <nextPlace></nextPlace>
+            </onExit>
+        </station>
+    </line>
+    <line number="123" name="Bus 123">
+        <station id="1231">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Die Endhaltestelle dieser Linie enthält einen privaten Brief an Elisabeth und Florentine Gentz.</text>
+                <sound>karlstadt/123_06051832.mp3</sound>
+            </stationBody>
+            <nextStation type="station">1232</nextStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1231</nextStation>
+                <nextPlace>bay1231</nextPlace>
+            </onExit>
+        </station>
+        <station id="1232">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Jetzt fährst du die Wiener Straße entlang; Wien war der Geburts- und Sterbeort von Gentz 
+                    und hier erfährst du alles über sein Privatleben.!NL
+                    Die nächste Haltestelle ist der Brief vom 30. Mai 1832, einer der letzten Briefe von 
+                Gentz und schon unter großer Krankheit an Carl Leiden verfasst. Trotz seiner Krankheit 
+                versuchte er, am politischen Geschehen teilzuhaben.</text>
+                <sound>karlstadt/123_30051832.mp3</sound>
+            </stationBody>
+            <nextStation type="station">0</nextStation>            
+            <previousStation type="station">1231</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1232</nextStation>
+                <nextPlace>bay1232</nextPlace>
+            </onExit>
+        </station>
+        <station id="0">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Nächster Halt ist der Hauptbahnhof, von wo aus du zu den Zügen gelangst.</text>
+                <sound>karlstadt/123_KarlstadtHbf.mp3</sound>
+            </stationBody>
+            <nextStation type="station">1233</nextStation>
+            <previousStation type="station">1232</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>0</nextStation>
+                <nextPlace>stationEntrance</nextPlace>
+            </onExit>
+        </station>
+        <station id="1233">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>                
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Nächster Halt ist die Madame L.-Straße. Madame L., vollständiger Name wird nachgereicht, 
+                ist oft erwähnt in den Briefen an Armfelt, vor allem um 1806.</text>
+                <sound>karlstadt/123_MadameL.mp3</sound>
+            </stationBody>
+            <nextStation type="station">1</nextStation>
+            <previousStation type="station">0</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1233</nextStation>
+                <nextPlace>bay1233</nextPlace>
+            </onExit>
+        </station>
+        <station id="1">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Nächster Halt: Persönliche Beziehungen S-Bahn.!NL
+                Neben der S-Bahn besteht hier Umsteigemöglichkeit zu den Buslinien 124, 200 und 201.</text>
+                <sound>karlstadt/123_PersBeziehungen.mp3</sound>
+            </stationBody>
+            <nextStation type="station">1234</nextStation>
+            <previousStation type="station">1233</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>st1_bay1a</nextPlace>
+            </onExit>
+        </station>
+        <station id="1234">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Gentz reist nach London, er hat Geldprobleme. Er ist sich zwar sicher, in London welches aufzutreiben, !NL
+                    bittet Armfelt allerdings um finanzielle Hilfe (einen „Gutschein“ im Wert von 40 ₤). Armfelt tut dies auch. !NL
+                    In einem darauffolgenden Brief bedankt sich Gentz für den Vorschuss von Armfelt. Er weist jedoch auch darauf hin, dass er von Armfelt noch einen weiteren Brief bekommen soll. !NL
+                    „Mais veuillez-bien Vous souvenir aussi, que Vous m'avez promis une lettre pour Londres, et que tout ce qui me vient de Vous, m'est trop précieux pour que je puisse l'abandonner“. !NL
+                    Gentz drückt Armfelt seine Verbundenheit aus; gleichzeitig stellt er klar, dass er die Dokumente von Armfelt dringend braucht. !NL
+                    Er ist auf Armfelts Hilfe angewiesen, stellt ihn einer Art 'Schutzengel' gleich. !NL
+                    „Puissiez-Vous Vous trouver en état de devenir un de ces anges tutélaires qui sauvent quelquefois la société lorsqu'elle est prête à tomber dans les derniers abymes“. !NL
+                    Gentz legt sogar noch einen drauf: „et puissé-je être un instrument entre Vos mains“, was soviel heißt wie: Möge ich ein Instrument in Ihren Händen sein.</text>
+                <sound></sound>
+            </stationBody>
+            <nextStation type="station">1235</nextStation>
+            <previousStation type="station">1</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1234</nextStation>
+                <nextPlace></nextPlace>
+            </onExit>
+        </station>
+        <station id="1235">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_123b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_123.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text> Diesen Brief schreibt Gentz nach einer längeren Pause, in der er keine Briefe von Armfelt bekommen hat. !NL
+                    „Voici encore, Mon Général, une lettre dont on me charge pour Vous, malgré les inquiétudes !NL
+                    qui nous donne Votre silence prolongé.“
+                    Er macht sich zwar Sorgen, dass etwas passiert sein könnte, „crainte que quelque revers n'ait dérangé notre correspondance“ !NL
+                    aber eine Freundin ist da und spendet Trost. Ihre Anwesenheit ist „un baume pour mon ame“, also Balsam für seine Seele! !NL
+                </text>
+                <sound></sound>
+            </stationBody>
+            <previousStation type="station">1234</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1235</nextStation>
+                <nextPlace></nextPlace>
+            </onExit>
+        </station>
+    </line>
+    <line number="124" name="Bus 124">
+        <station id="1">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_124.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_124b.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Die nächste Haltestelle ist Persönliche Beziehungen Bushof. Hier kannst du Auskunft über Gentz persönliche Verhältnisse erhalten - daher enden hier sehr viele Busse.!NL
+                Die Haltestelle selbst ist wenig informativ; viel eher ist dies ein Sammelpunkt verscheidener Busse. Du kannst von hier aus zum Beispiel!NL
+                die Linie 200 zur Ottenfels-Gschwind-Straße oder die Linie 201 zur Strangfordstraße nehmen. Auch die Linie 123 bringt dich zu konkreten Personen aus Gentz Briefverkehr.</text>
+                <sound>karlstadt/124_PersBeziehungen.mp3</sound>
+            </stationBody>
+            <nextStation type="station">2</nextStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>st1_bay2b</nextPlace>
+            </onExit>
+        </station>
+        <station id="2">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_124.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_124b.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Der nächste Halt ist Englisch-Französischer Konflikt.!NL
+                An dir huschen die Häuser und Bürotürme nur so vorbei; die Baustellen nehmen immer mehr zu.!NL
+                Die Gegend rund um die Jahrhundertwende 18./19. Jahrhundert naht. Und hier geht es einerseits!NL
+                prunkvoll, andererseits brandgefährlich zu.</text>
+                <sound>karlstadt/124_EF_Konflikt.mp3</sound>
+            </stationBody>
+            <previousStation type="station">1</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>2</nextStation>
+                <nextPlace>st2_hall</nextPlace>
+            </onExit>
+        </station>
+    </line>
+    <line number="200" name="Bus 200">
+        <station id="1">
+            <stationBody>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_200.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Die nächste Haltestelle ist zugleich Endhaltestelle; hier kannst du weitere persönliche Beziehungen von Gentz nachvollziehen.</text>
+                <sound>karlstadt/200_PersBeziehungen.mp3</sound>
+            </stationBody>
+            <nextStation type="station">2001</nextStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>st1_bay3b</nextPlace>
+            </onExit>
+        </station>
+        <station id="2001">
+            <stationBody>
+                <lineImage stationNumberGrowing="true">karlstadt/Linienverlauf_200b.JPG</lineImage>
+                <lineImage stationNumberGrowing="false">karlstadt/Linienverlauf_200.JPG</lineImage>
+                <image>karlstadt/bus_platzhalter.JPG</image>
+                <text>Nächster Halt: Ottenfels-Gschwind.
+                Hier werden Auszüge aus seiner Biographie vorgestellt.</text>
+                <sound>karlstadt/200_PersBeziehungen.mp3</sound>
+            </stationBody>
+            <nextStation type="station">2002</nextStation>
+            <previousStation type="station">1</previousStation>
+            <onExit>
+                <nextCity>karlstadt</nextCity>
+                <nextStation>2001</nextStation>
+                <nextPlace>bay2001</nextPlace>
+            </onExit>
+        </station>
+    </line>
+</voyage>

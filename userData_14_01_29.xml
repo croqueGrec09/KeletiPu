@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<userData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="userData.xsd">
+    <user name="TestPerson">
+        <love>
+            <loveInterest>Geschichte</loveInterest>
+            <sex>w</sex>
+        </love>
+        <currentMoney>0</currentMoney>
+        <currentPlace>
+            <town>zeidel</town>
+            <number>1</number>
+            <place>startupScreen</place>
+        </currentPlace>
+        <inventory>
+            <item id="bag" valid="none">
+                <name>Rucksack</name>
+                <description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description>
+            </item>
+            </inventory>
+        <memory>
+            <actionsPassed/>
+            <questsCompulsory/>
+            <questsOptional/>
+        </memory>
+    </user>
+    <user name="Andris Gálffy">
+        <love>
+            <loveInterest>Französisch</loveInterest>
+            <loveInterest>Geschichte</loveInterest>
+            <loveInterest>Gentz</loveInterest>
+            <loveInterest>Sprachen</loveInterest>
+            <sex>w</sex>
+        </love>
+        <currentMoney>0</currentMoney>
+        <currentPlace>
+            <town>karlstadt</town>
+            <number>1</number>
+            <place>st1_platform1_2a</place>
+        </currentPlace>
+        <inventory>
+            <item id="bag" valid="none">
+                <name>Rucksack</name>
+                <description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description></item><item id="ZVWticket" valid="true"><name>Jahreskarte für das Z.V.W.-Stadtnetz</name><description>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt reisen. Gilt für Bus, Stadtbahn, S-Bahn, Regionalbahn und Regionalexpress innerhalb der Stadt ein Jahr ab Erwerbsdatum.</description></item><item id="gloves" valid="none"><name>Schwarze Smartphone-Lederhandschuhe</name><description>Butterweiche schwarze Lederhandschuhe, unbedingt nötig für warme Hände! Selbst beim Bedienen von Smartphones keine kalten Hände mehr!</description>
+                </item>
+        </inventory>
+        <memory>
+            <actionsPassed>
+                <action name="toTicketAutomat"/>
+                <action name="closeUpDoor"/>
+            </actionsPassed>
+            <questsCompulsory/>
+            <questsOptional/>
+        </memory>
+    </user>
+    <user name="Test 01">
+        <love>
+            <loveInterest>Gentz</loveInterest>
+            <loveInterest>usw</loveInterest>
+            <sex>w</sex>
+        </love>
+        <currentMoney>0</currentMoney>
+        <currentPlace>
+            <town>karlstadt</town>
+            <number>2</number>
+            <place>st2_platform3_4noTrain</place>
+        </currentPlace>
+        <inventory>
+            <item id="bag" valid="">
+                <name>Rucksack</name>
+                <description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description>
+            </item>
+            <item id="ZVWticket" valid="true">
+                <name>Jahreskarte für das Z.V.W.-Stadtnetz</name>
+                <description>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt reisen. Gilt für Bus, Stadtbahn, S-Bahn, Regionalbahn und Regionalexpress innerhalb der Stadt ein Jahr ab Erwerbsdatum.</description>
+            </item>
+        </inventory>
+        <memory>
+            <actionsPassed>
+                <action name="toTicketAutomat"/>
+            </actionsPassed>
+            <questsCompulsory/>
+            <questsOptional/>
+        </memory>
+    </user>
+    <user name="Test 02">
+        <love>
+            <loveInterest>Gentz</loveInterest>
+            <loveInterest>digitale Editionen</loveInterest>
+            <sex>w</sex>
+        </love>
+        <currentMoney>0</currentMoney>
+        <currentPlace>
+            <town>karlstadt</town>
+            <number>1</number>
+            <place>st1_platform1_2noTrain</place>
+        </currentPlace>
+        <inventory>
+            <item id="bag" valid="">
+                <name>Rucksack</name>
+                <description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description>
+            </item>
+            <item id="gloves" valid="">
+                <name>Schwarze Smartphone-Lederhandschuhe</name>
+                <description>Butterweiche schwarze Lederhandschuhe, unbedingt nötig für warme Hände! Selbst beim Bedienen von Smartphones keine kalten Hände mehr!</description></item><item id="ZVWticket" valid="true"><name>Jahreskarte für das Z.V.W.-Stadtnetz</name><description>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt reisen. Gilt für Bus, Stadtbahn, S-Bahn, Regionalbahn und Regionalexpress innerhalb der Stadt ein Jahr ab Erwerbsdatum.</description></item></inventory><memory><actionsPassed><action name="closeUpDoor"/><action name="closeUpDoor"/><action name="toTicketAutomat"/></actionsPassed><questsCompulsory/><questsOptional/></memory></user><user name=" "><love><loveInterest/><sex>w</sex></love><currentMoney>0</currentMoney><currentPlace><town>karlstadt</town><number>0</number><place>floor12west</place></currentPlace><inventory><item id="bag" valid=""><name>Rucksack</name><description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description></item><item id="ZVWticket" valid="true"><name>Jahreskarte für das Z.V.W.-Stadtnetz</name><description>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt reisen. Gilt für Bus, Stadtbahn, S-Bahn, Regionalbahn und Regionalexpress innerhalb der Stadt ein Jahr ab Erwerbsdatum.</description></item></inventory><memory><actionsPassed><action name="closeUpDoor"/><action name="toTicketAutomat"/></actionsPassed><questsCompulsory/><questsOptional/></memory></user><user name="P S"><love><loveInterest/><sex>w</sex></love><currentMoney>0</currentMoney><currentPlace><town>karlstadt</town><number>1</number><place>platform1_2noTrain</place></currentPlace><inventory><item id="bag" valid=""><name>Rucksack</name><description>Dein überdimensionaler Rucksack zum Transportieren von nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie Kosmetika, Smartphones oder schlechten Klausuren.</description>
+            </item>
+            <item id="ZVWticket" valid="true">
+                <name>Jahreskarte für das Z.V.W.-Stadtnetz</name>
+                <description>Mit dieser Jahreskarte kannst du durch ganz Zeidel-Stadt reisen. Gilt für Bus, Stadtbahn, S-Bahn, Regionalbahn und Regionalexpress innerhalb der Stadt ein Jahr ab Erwerbsdatum.</description>
+            </item>
+        </inventory>
+        <memory>
+            <actionsPassed>
+                <action name="toTicketAutomat"/>
+            </actionsPassed>
+            <questsCompulsory/>
+            <questsOptional/>
+        </memory>
+    </user>
+</userData>

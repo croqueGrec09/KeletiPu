@@ -1,0 +1,43 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+line {
+	stroke: black;
+}
+
+/* different stroke widths for minute and hour */
+
+#background {
+	width: 80%;
+	height: 80%;
+}
+
+#clock {
+	position: absolute;
+	z-index: 1;
+	top: 5%;
+	left: 15%;
+	width: 20%;
+	height: 20%;
+}
+
+#clockField {
+	position: absolute;
+	z-index: 2;
+	top: 5%;
+	left: 15%;
+	width: 50%;
+	height: 50%;
+}
+
+#hour {
+	stroke-width: 6;
+}
+
+#minute {
+	stroke-width: 3;
+}

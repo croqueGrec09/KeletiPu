@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>B-Wagen-Experimentierkasten</title>
+		<meta charset="UTF-8">
+		<script src="richtungswender.js"></script>
+	</head>
+	<body onload="drawBackground('betriebsartenwahlschalter_b_wagen.jpg',480,165)">
+		<h1>Der Betriebsartenwahlschalter</h1>
+		<canvas id="steuerfeld" width="720" height="576" onmousedown="setupListener()" onmouseup="handFromReverser()"></canvas>
+		<div id="anzeige">
+			Richtungswender steht zur Zeit auf 0
+		</div>
+		<div id="ohr">
+		
+		</div>
+	</body>
+</html>

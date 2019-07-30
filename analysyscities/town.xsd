@@ -1,0 +1,1026 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the abstract definition of an analysis city document. It takes a key role in the game since in such documents, all the stations with their respective fields are being organised.
+An analysis city is a mind map made interactively traversable by using the metaphor of a public transport system.
+To see the currently implemented analysis cities, see zeidel.xml, karlstadt.xml and kvirasim.xml. 
+
+author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+current version: 0.701 from July 7th, 2018
+
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" >
+    <!-- to avoid multiple definition of element types, these two dependencies has been defined, pointing to the user data schema and the item data schema. -->
+    <xs:include schemaLocation="../userData.xsd">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This is the user data schema, needed for the text definition.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="../item.xsd"/>
+    <!-- root element -->
+    <xs:element name="town">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The topmost element, encompassing all the elements which may be accessed in a town.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="station" type="station" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            A town must have at least one station, this is in general the central station.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="idPrefix" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        To keep the station numbering unique over all towns, each town has been assigned a prefix.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <!-- complex type definitions -->
+    <xs:complexType name="station">
+        <xs:all>
+            <xs:element name="name" type="xs:string" >
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The station's name. It is the same in all languages.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="discoveryContent" minOccurs="0" type="discovery">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This is the container for the content in the discovery mode.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="examContent" minOccurs="0" type="exam">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This is the container for the content in the exam mode. It will be defined once a city based upon a course with exam will be implemented.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="number" type="xs:ID" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Each station has a number which is used for identification. This is unique together with the town prefix.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="additionalMoney" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Payoff for completion of the station in exam mode.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="mapPointX" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The relative x coordinate of this station on a map image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="mapPointY" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The relative y coordinate of this station on a map image.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- discovery mode -->
+    <xs:complexType name="discovery">
+        <xs:sequence>
+            <xs:element name="place" type="place" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Each station has at least one place which is a field where the player may take different actions or move to one or several other neighboring fields.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- discovery mode contents -->
+    <xs:complexType name="place">
+        <xs:sequence>
+            <xs:element name="content" type="text">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Each field is described by a description text. This is available in all languages of the game.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="form" type="form" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        There may be forms at a place a player may need to fill out.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="imagePath" type="image" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This is the mandatory image path for the place. If the image has not been drawn yet, empty.jpg may be used as dummy.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="action" type="action" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This element defines an action a player can take. It is not bound to any conditions, means it will be loaded in every case. On the other hand, there may be client-side verifications; those are done when the player should get a 
+                        feedback of an unfulfilled condition.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="condAction" type="actionControlBlock" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This block has to be chosen for actions which should not be loaded in every case. If a player does not fulfill the given conditions, an alternative action may be displayed or no action at all. The player does thus NOT get ANY FEEDBACK 
+                        if he does not meet the conditions for the action to be displayed. If the player should get one, the condition check has be done on client side, when the player wants to take the action. That is the moment the feedback mechanism should 
+                        be triggered.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="video" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Instead of a still image or in addition to it, a video may be displayed at the given place. Video displays are not implemented in this version since the game is not in the state when motion pictures could be shown.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sound" type="sound" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The field may be underlined with a sound file, e.g. with background noise, to further illustrate the atmosphere of a place.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newItem" type="item" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        One or more items may be picked up at a given place; their definitions follow here. The schema is in item.xsd.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    To be addressable uniquely, each place has an ID.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="monolingual" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Certain fields are restricted to a single translation version (such are the starting places). In such a case, the PHP wrapper does not search for translations. This flag has to be set to mark a limitation of a place to a language.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- content definitions -->
+    <xs:complexType name="action">
+        <xs:sequence>
+            <xs:element name="execute" type="execute">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The action that will happen when the player clicks the given field. The key is passed as an HTML class to the svg &lt;polygon&gt; element.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hover" type="text">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This text will be displayed when the player moves the mouse over the action field.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actionImage" type="smallerImage" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        An action field may be illustrated with an overlay image; this is useful when the action may be done only once during the whole game. When the action is done, the image will not show up when the player accesses the place the next time.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:Name" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Each action may be addressed by its name.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="coords" type="coordinatesPattern" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A set of relative coordinates indicating the edges of the polygon to be drawn on the canvas. Initially, it may be set to 0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0 to mark the action as undone. Such undone actions may get their coordinates in a much 
+                    easier way than calculating it per hand: they are listed in the coordinates helper app where the edges may be set by clicking upon the image the action belongs to.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="actionControlBlock">
+        <xs:sequence>
+            <xs:element name="if" type="condAction">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        This is the main action for a conditioned action block. It follows the logic adopted by the common programming language: if-then, else-if, else.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="else-if" type="condAction" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        If the first condition fails, alternatives may be listed here, each of them with alternative conditions.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="else" type="condAction" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        When all conditions fail, this is a default action taking place.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="condAction">
+        <xs:complexContent>
+            <xs:extension base="action">
+                <xs:choice>
+                    <xs:element name="condition" type="condition" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                Each conditioned action may have 1-n conditions that will be checked. Conditions listed on node level are OR-linked, so at least one of the clauses listed here must evaluate to true for the whole clause to be true.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="condition">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Moreover, several conditions may be listed under one condition element. This ensures the AND-connected clauses, means: all of them must evaluate to true to make the whole clause true.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="checkItem" type="checkItem"/>
+            <xs:element name="checkTicketValidity" type="checkTicketValidity"/>
+            <xs:element name="checkQuest" type="checkQuest"/>
+            <xs:element name="checkActionMemory" type="checkActionMemory"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="checkActionMemory">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Checks if the name of the action should appear in the users memory or not.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="triggeredAction" type="xs:Name" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The name of the action to be checked
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="actionInMemory" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Should the action be in the memory: yes or no?
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="checkItem">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Checks if the triggered item should be in the inventory or not.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="triggeredItem" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The item to be checked.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="itemInInventory" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Should the item be in the inventory or not?
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="checkTicketValidity">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Checks if the triggered ticket should be valid or not.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="triggeredTicket" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The ticket whose validity should be verified.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="validity" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Should the ticket be valid or not?
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="checkQuest">
+        <xs:attribute name="triggeredQuest" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Checks the triggered quest for its completion. If the currentChapter 
+                    attribute is set, the completion of the given chapter is being checked.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="questCompleted" type="completion" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Should the quest (or the given chapter) be completed or not?
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="currentChapter" type="xs:int">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    If this attribute is set, the completion of the given chapter is 
+                    being checked.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="execute">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                In this enumeration, all the actions are listed which are currently doable 
+                (= implemented) in the game. See the complex type definitions for the 
+                argumtens they take. They will be handed to the client by wrapping the 
+                elements in arrays and unwrapped onto event handling functions on client 
+                side. See the event handler section under town.js to see what happens to 
+                them. The unwrapping takes place in the global updateScreen() function.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:all>
+            <xs:element name="movement" type="movement" minOccurs="0"/>
+            <xs:element name="itemPickup" type="itemPickup" minOccurs="0"/>
+            <xs:element name="seekForm" type="seekForm" minOccurs="0"/>
+            <xs:element name="happening" type="happening" minOccurs="0"/>
+            <xs:element name="mountLine" type="mountLine" minOccurs="0"/>
+            <xs:element name="dialog" type="dialog" minOccurs="0"/>
+            <xs:element name="random" type="random" minOccurs="0"/>
+            <xs:element name="showMap" type="showMap" minOccurs="0"/>
+            <xs:element name="callLink" type="callLink" minOccurs="0"/>
+            <xs:element name="askUser" type="askUser" minOccurs="0"/>
+            <xs:element name="setLang" type="setLang" minOccurs="0"/>
+            <xs:element name="noAction" type="noAction" minOccurs="0"/>
+            <xs:element name="addQuest" type="questManipulation" minOccurs="0"/>
+            <xs:element name="updateQuest" type="updateQuest" minOccurs="0"/>
+            <xs:element name="completeQuest" type="completeQuest" minOccurs="0"/>
+            <xs:element name="missingItemReport" type="missingItemReport" minOccurs="0"/>
+            <xs:element name="invalidTicketReport" type="invalidTicketReport" minOccurs="0"/>
+            <xs:element name="useMachine" type="useMachine" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="movement">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Indicates a movement to a next place. Expected are the next city, station 
+                and place identifiers. Upon execution, this new place is going to be 
+                stored.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="nextStation" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The next station number, without town prefix!
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="nextCity" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The next city (yes, it is possible such way that the player gets 
+                    teleported from Zeidel to Çonoi what is a distance of approx. 30 000 
+                    km!)
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="nextPlace" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The next field key.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="itemPickup">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The triggered item is being picked up. Since the validity needs to be 
+                stored, the three-position flag has to be set as well for the given item. 
+                Optionally, an action name can be specified to prevent its further 
+                execution, e.g. to prevent multiple pickup of the same item.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="triggeredItem" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The item to be picked up.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="triggeredValidity" type="validity" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The initial validity of the triggered item. For non-ticket items, set 
+                    it to "none".
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="actionToEliminate" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The key of the action to be prevented from execution. It will be 
+                    inserted into the user's memory under &lt;actionsPassed&gt;.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="seekForm">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This action triggers the loading of a given form. They are stored in the 
+                town files, so, the triggered city has to be specified as well.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="city" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The city in whose file the form is stored.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="formID" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The identifier of the requested form.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="happening">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This method triggers the entering into the happening mode.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="happeningBase" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The file (without extension!) 
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="stream" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The stream of events. May be a bus/rail line as well, see mountLine.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="startID" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The identifier of the entry point.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="forward" type="xs:boolean" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A flag, indicating whether the events happen from start to end or 
+                    the other way round.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="enableAction" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    An disabled action may be reenabled here.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="mountLine">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This is an action extending happening, for bus and rail lines. Naturally, 
+                it expects as additional argument the ticket whose vailidity is going to 
+                be checked on client side!
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="happening">
+                <xs:attribute name="usedTicket" type="xs:string" use="required">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The ticket needed to use the line. It is going to be checked 
+                            whether the player has the ticket and if it is valid. These 
+                            checks are done on client side because the feedback is going 
+                            to be reported in case of check failure.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="dialog">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Triggers the entering in the dialog mode.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="dialogBase" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The dialog base file without extension.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="character" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The NPC id or who will become the partner(s) of the player.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="stream" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The stream of dialog which will be run through.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="point" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The next point to be requested.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="random">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This action determines if a train arrives and if so, which train will 
+                arrive.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="station" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The station the player is waiting at.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="city" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The city in which the station is.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="platformGroup" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The train departures are grouped in a platform group. This key is 
+                    expected here.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="situationCount" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The number of situations at a platform. Means the number of lines 
+                    calling at this platform.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="probabilityOfArrival" type="xs:double" default="0.2">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Specifies a default probability that a train arrives.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="showMap">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Triggers the opening of a map file at a platform.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="mapFile" type="imageFileName" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The image file of the map to be loaded.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="forTown" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Specify the town the map is displaying. Needed for the correct display 
+                    of locations.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="callLink">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Triggers the loading of an external page in a new tab or window.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="linkToCall" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The URL to be called in the German version. This is default.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="linkToCallHu" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The URL to be called in the Hungarian version.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="linkToCallFr" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The URL to be called in the French version.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="linkToCallEn" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The URL to be called in the English version.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="askUser">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The trigger to ask the user for his/her name. Takes no arguments.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+    <xs:complexType name="setLang">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This method pickes a language for the future gameplay.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="lang" type="lang" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The language to be picked.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="useMachine">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Enters the ticket machine mode, currently only for Karlstadt.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="machineImage" type="imageFileName" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The background image file representing the ticket machine.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="noAction">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                For unimplemented action stubs, this is a dummy showing that the action 
+                is not implemented yet.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="whatShouldHappen" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A text, basically for the developer, calling his mind upon the action  
+                    that should take place here.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="form">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The form container, keeping all the elements the user may or should fill 
+                out. On server side, there is no marking as mandatory; validation is done 
+                entirely on client side (and that mostly in the town scripts).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="textInput" type="textInput" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="radio" type="choice" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="checkbox" type="choice" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="dropdown" type="choice" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="button" type="button" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="finish" type="button" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="fname" use="required" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The name of the form, is used for addressal in the scripts.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="lang" use="required" type="lang">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The language of the form input fields.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="textInput" mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                A text input field.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="label" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    A label for the field.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="size" type="xs:int" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The size of the input field.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="choice">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Lists a choice of different values.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="label" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The label of the choice.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="choice" type="choiceValue" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The name of the choice field.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="choiceValue" mixed="true">
+        <xs:attribute name="value" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The chosen value in case of select.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="button" mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                A button field.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="label" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The label printed on the button.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="name" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The DOM name of the button, for script addressal.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="onclick" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The function taking place on click.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>                                                       
+    </xs:complexType>
+    <xs:simpleType name="coordinatesPattern">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The regex pattern in which coordinates have to be defined, e.g.
+                0.0,0.0 100.0,0.0 25.0,50.0
+                The minimum number of edges in the polygon is three.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(\d{1,3}[.]\d{1,}[,]\d{1,3}[.]\d{1,} *){3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="image">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                An image object. It has to be specified for which language interfaces it 
+                will be shown.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="imageFileName">
+                <xs:attribute name="lang" type="lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="imageFileName">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Restriction to JPG images based upon the extension of the path.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".*\.(jpg|JPG)"/>
+        </xs:restriction>        
+    </xs:simpleType>
+    <xs:complexType name="sound" mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                A sound element with its path and an action taking place when it is ended.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="soundFileName">
+                <xs:attribute name="onended" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="soundFileName">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Restriction to MPEG-3 sound files based upon the extension of the path.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".*\.(mp3)"/>
+        </xs:restriction>        
+    </xs:simpleType>
+    <xs:complexType name="video" mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                A video element with its path and an action taking place when it is ended.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="videoFileName">
+                <xs:attribute name="onended" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="videoFileName">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Restriction to MPEG-4 video files based upon the extension of the path.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".*\.mp4"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="questManipulation">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Parent element for quest manipulation, keeping the target quest as 
+                common argument.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="targetQuest" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The quest identifier to be manipulated.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- it may occur in future that the assigning of one quest blocks another one.
+    <xs:complexType name="addQuest">
+        <xs:complexContent>
+            <xs:extension base="questManipulation">
+                <xs:sequence>
+                    <xs:element name="questBlocked" minOccurs="0" maxOccurs="unbounded" type="xs:IDREF"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>-->
+    <xs:complexType name="updateQuest">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Updates a quest to a given chapter.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="questManipulation">
+                <xs:attribute name="chapter" type="xs:int" use="required">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The chapter number to be set.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="completeQuest">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Marks a quest completed in any way. It cannot be reopened afterwards.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="questManipulation">
+                <xs:attribute name="success" type="xs:boolean" use="required">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The flag indicating a success or a failure.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="missingItemReport">
+        <xs:attribute name="triggeredItem" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This is a trigger to report on client side that an action is missing.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="invalidTicketReport">
+        <xs:attribute name="triggeredTicket" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    This is a trigger to report on client side that a ticket is missing.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- currently not implemented -->
+    <xs:complexType name="exam">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This complex type stub keeps the station definitions for the exam mode when instead of pictures, exam questions are presented to the user in the style he/she may be asked in a course examination.
+                Cities whose subjects are under research will not have such an exam mode until the research discussions reach a state that an objective measurement base may be estabilished. A such one is mandatory for an exam.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+</xs:schema>

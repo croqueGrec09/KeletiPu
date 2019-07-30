@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>ZVW-Analysespiel</title>
+		<link rel="stylesheet" type="text/css" href="town.css" />
+		<script type="text/javascript" src="town_ajax.js">	
+		</script>
+		<meta charset="UTF-8" >
+	</head>
+		<body onload="synchronWarn()">
+			<h1 class="normal" id="stationname">
+				
+			</h1>
+			<br>
+			<div id="fliesstext">
+
+			</div>
+			<br>
+			<div id="bilder">
+				<img id="schild" src="zeidel/Zeidel_HBF.jpg" alt="Kein Schild geladen oder Schild fehlerhaft geladen! Bitte AJAX konsultieren!" /> 
+				<br>
+				<img id="auge" src="zeidel/Test.jpg" alt="Kein Schild geladen oder Schild fehlerhaft geladen! Bitte AJAX konsultieren!" usemap="#aktion"/>
+				<map id="aktion" name="aktion"> 
+				
+				</map>
+			</div>
+			<br>
+			<div id="ohr">
+			</div>
+			<br>
+			<div id="formular">
+			</div>
+			<br>
+			<div id="buttons">
+				<input type="button" value="Inventar anzeigen" onclick="showInventory()" />
+			</div>
+			<br>
+			<div id="richtungsanzeige">
+				Kein Feld angew&auml;hlt
+			</div>
+		</body>
+</html>

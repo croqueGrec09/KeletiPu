@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<happening xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="happening.xsd" idPrefix="kv">
+    <stream id="u11" name="Stadtbahnlinie 11">
+        <event id="u1101">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_01.jpg</image>
+                <text>
+               <de>
+                    Der Stadtführer begrüßt die Fahrgäste, die interessiert die neue Stadtbahn betrachten: 
+                    "Herzlich willkommen in der Stadtbahn! Wir sind glücklich, Ihnen diesen kleinen Abschnitt 
+                    zeigen zu dürfen - bereiten Sie sich auf eine spannende Fahrt vor und abonnieren Sie fleißig! 
+                    Denn dann haben Sie bei der Eröffnung die Möglichkeit auf eine Freifahrt durch das gesamte 
+                    Verbundgebiet!"!NL
+                    Er holt danach Luft und erklärt:
+                    "Der nächste Halt ist die Erzeugung von Sprache. Lassen Sie sich hier die aerodynamisch-myoelastische 
+                    Theorie der Spracherzeugung anhand unseres Modells erklären - das Haus der Vokale und das Haus der 
+                    Konsonanten eröffnen demnächst und stellen ihr interaktives Lungenmodell dar!"
+                </de>
+            <fr>Le guide touristique salue des voyageurs qui regardent intéressé le nouveau métro léger : « Bienvenue dans le métro léger ! Nous sommes heureux de pouvoir vous montrer cette petite section - préparez-vous à un voyage captivant et souscrivez-vous bien ! Parce que vous auriez la possibilité d'un voyage gratuit à l'ouverture par le réseau entier ! »!NL!NLIl respire profondément et explique : « Le prochain arrêt est la production du langage. Laissez-vous expliquer la théorie aérodynamique-myoélastique de la production de langage à travers de notre modèle - la maison des voyelle et la maison des consonnes ouvriront prochainement et présenteront leur modèle de poumon interactif ! »</fr><en>The guide to the city greets the passengers who are looking interestedly the new light railway: "Welcome in the light railway! We are glad to present you this little section – prepare yourself to an exciting ride and subscribe! Because then, upon opening, you have the possiblity to a free journey throughout the whole society area!"!NL!NLHe takes then a deep breath and explains: "The next stop is the speech production. Let explain yourself the aerodynamic myoelastic theory of speech production at our model – the houses of vowels and of consonants are opening soon and present their interactive lung model!"</en></text>
+            </eventBody>
+            <nextEvent pointRef="u1102"/>
+        </event>
+        <event id="u1102">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_02.jpg</image>
+                <text>
+               <de>
+                    "Der nun folgende Halt ist die Schallformstraße. Auf diesem Bild sehen Sie die unterschiedlichen Formen 
+                    von Schall - ganz vorn den quasi-periodischen Schall, danach ein Friktionsrauschen und nach erneutem 
+                    quasi-periodischem Schall die Stille. Quasi-periodisch, weil die menschliche Stimme keine klaren Sinustöne 
+                    erzeugt, sondern Obertöne im Schall enthalten sind - mehr dazu an den folgenden Haltestellen."
+                </de>
+            <fr>« L'arrêt suivant est la rue des formes du son. Sur cet image, vous verrez les formes différents de son - tout devant, le son quasiment périodique, ensuite un bruit de friction et après encore un son quasiment périodique, la silence. Quasiment périodique car la voix humaine ne génère pas de voix de sine claire mais il y a des harmoniques - plus à cela aux prochaines stations. »</fr><en>"The stop which is now coming up is the sound form street. On this picture, you can see the different forms of sound – quasi-periodic sound at the very beginning, then, a friction noise, and after another piece of quasi-periodic sound the silence. Quasi-periodical, because the human voice does not produce clear sine tones but the sound contains overtones – more upon that at the following stations."</en></text>
+            </eventBody>
+            <nextEvent pointRef="u1103"/>
+        </event>
+        <event id="u1103">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_03.jpg</image>
+                <text>
+               <de>
+                    "Ein wenig überdimensioniert ist dieses Bild von der Frequenzstraße. Schall verbreitet sich, indem 
+                    sich ein bestimmtes Medium verdünnt und verdichtet - in der Luft zum Beispiel löst der Druck unseres 
+                    Zwerchfelles eine Bewegung der Luftmoleküle aus. Diese bewegen sich in einem bestimmten Zeitabstand 
+                    gewisse Male hin und her - und diese Bewegung -Luftverdichtung bzw. -verdünnung- können wir hören. 
+                    Und wie oft in einer Sekunde sich diese Bewegung wiederholt, das gibt die Frequenz an."
+                </de>
+            <fr>« Cet image de la rue des fréquences est un peu surdimensioné. Le son s'élargit parce qu'un certain moyen désépaissit et épaissit - dans l'air par éxemple, la pression de notre diphragme cause un mouvement des molécules de l'air. Ceux-ci vont et viennent dans un intervalle déterminé - et ce mouvement -épaissement resp. désépaissement-, on peut entendre. Et la fréquence indique combien de fois ce mouvement se répète dans la seconde. »</fr><en>"A bit oversized is this image from the frequency street. Sound spreads because a certain medium thickens and thins down again – in the air for example, the pressure of our diaphragm causes a movement of the air molecules. They move within a certain span of time a certain amount of times back and forth – and this movement -air thickening resp. thinning- we can hear. And how much times this movement is repeated in a second, that is indicated by the frequency."</en></text>
+            </eventBody>
+            <nextEvent pointRef="u1104"/>
+        </event>
+        <event id="u1104">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_04.jpg</image>
+                <text>
+               <de>
+                    "Die nächste kurz gestreifte Haltestelle ist der Diagrammenplatz. In der Phonetik werden Messungen 
+                    unterschiedlichster Art durchgeführt und die Sprache, die wir aufzeichnen, lässt sich auf unterschiedliche 
+                    Art und Weise abbilden. Hier sehen wir zwei Arten von Diagrammen: oben ein Oszillogramm, unten ein Spektragramm. 
+                    Für den nächsten Halt wird das letztere von Bedeutung sein."
+                </de>
+            <fr>« Le prochain arrêt brièvement évoqué est la place de diagrammes. Dans la phonétique, on fait des différents mesures et la langue qu'on enrégistre se représente de différentes façons. Ici, on voit deux genres de diagrammes : en haut, un oscillogramme et en bas un spectragramme. Pour l'arrêt prochain, ci-dernier aura importance. »</fr><en>"The next shortly touched stop is the diagram square. In the phonetics, most different kinds of measurements are being executed and the language recorded can be displayed in different ways, too. We can see here two different kinds of diagramms: on top, an oscillogram, on the bottom, a spectragram. Latter will be of significance for the next stop."</en></text>
+            </eventBody>
+            <nextEvent pointRef="u1105"/>
+        </event>
+        <event id="u1105">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_05.jpg</image>
+                <text>
+               <de>
+                    "Hier kommen wir zum Formantenweg. Wie ich an der Haltestelle Schallformstraße sagte, setzt sich 
+                    der Schall der menschlichen Sprache aus verschiedenen Obertönen zusammen, die sich über dem F0 - 
+                    dem Grundton - lagern. Anhand der Formanten F1 und F2 - von unten die zweite und dritte rot 
+                    gepunktete Linie - können wir wahrnehmen, welcher Laut gesprochen wurde, denn sie formen sich durch 
+                    unsere Artikulatoren: der Zungenposition und dem Öffnungsgrad."
+                </de>
+            <fr>« Ici, nous arrivons au chemin des formants. Comme je l'ai dit à la station rue des formes de son, le son du langage humaine se compose des harmonies différents qui se comblent au-dessus du F0 - le son de base. D'après les formantes F1 et F2 - les deuxième et troisième lignes à pastille rouge de bas - nous pouvons discerner quel son a été parlé car ils se forment à travers des nos articulateurs : la position de langue et le degré de l'ouverture. »</fr><en>"Here, we get to the format way. Like I said at the sound form street, the sound of human voice is being composed by different overtones which overlap above the F0 – the base sound. Due to the formants F1 and F2 – the second and third red dotted line from below – we can distinguish which sound has been spoken because they are formed by our articulators: the tongue position and the degree of aperture."</en></text>
+            </eventBody>
+            <nextEvent pointRef="u1106"/>
+        </event>
+        <event id="u1106">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_06.jpg</image>
+                <text>
+               <de>
+                    "Der letzte Halt unseres Demos ist der Platz der Artikulation. Hier lernen Sie in naher Zukunft 
+                    über die verschiedenen Wege, die Vorgänge der Artikulation aufzuzeichnen - hier sehen Sie 
+                    ein Artikulogramm. Auf den fünf Spuren sind unsere Artikulatoren aufgezeichnet: Lippen, 
+                    Zungenspitze, Zungenkörper, Velum und Stimmritze. Jedem Laut wird ein Bewegungsmuster dieser 
+                    Artikulatoren zugeordnet und hier sehen Sie, welche Abläufe sich bei der Aussprache des Wortes 
+                    "bitte" abspielen.!NL
+                    Leider war es das, aus Zeitgründen sind wir mit dem Bau nicht fertig geworden. Aber freuen Sie sich: 
+                    in der nächsten Version werden Sie viel besser verstehen und nachempfinden können, was die Stadt 
+                    zu bieten hat!"
+                </de>
+            <fr>« Le dernier arrêt de notre démonstration est la place de l'articulation. Ici, vous apprendrez dans l'avenir prochain les différents chemins d'enrégistrer les procédés de l'articulation - voici, un articulogramme. Sur les cinq traces, nos articulateurs sont enrégistrés : langue, bout de la langue, corps de la langue, velum et glotte. On associe à chaque son un modèle de mouvement de ces articulateurs et vous voyez ici ce qui se passe dans la prononciation du mot allemant &lt; bitte &gt;.!NL !NLMalheureusement, c'est tout, à cause des raisons, nous n'avons pas pu finir la construction. Mais la version prochaine où vous allez comprendre et partager beaucoup mieux ce que cette ville peut vous offrir ! »</fr><en>"The last stop of our demonstration is the articulation square. In near future, you will learn here the different ways to record the processes of articulation – you can see here an atriculogramm. On the five tracks, our articulators are recorded: lips, tongue tip, tongue body, velum and glottis. Each sound is assigned a movement pattern of these articulators and here, you can see which processes are taking part in the pronounciation of the German word "bitte".!NL!NLUnfortunately, that is all, we could not finish construction in time. But stay tuned: in the next version, you will understand and have a felling for what this city has to offer!"</en></text>
+            </eventBody>
+            <exitStream>
+                <nextCity>kvirasim</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_underground_platform1a</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

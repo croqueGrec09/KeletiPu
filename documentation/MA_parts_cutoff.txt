@@ -1,0 +1,209 @@
+parts which got victim of the stringency scissors
+
+ex 1.1
+
+Nach Thissen 1997 ist das Gehirn ein relativ abgeschlossenes System, das die Sinneseindrücke sich zu einem Bild zusammeninterpretiert und der Denkprozess durch das Zusammenschalten von Neuronen abläuft. Interessant für diese Arbeit ist ganz besonders dieser Aspekt:
+
+"Wissen als Ergebnis von Lernprozessen ist im Gehirn ein komplexes, vernetztes, dynamisches System, das sich in der Vernetzung von Neuronen manifestiert. Wir speichern Muster und Strukturen. Hingewiesen sei hier nur auf das Konzept der Semantischen Netzwerke aus der Kognitionspsychologie sowie auf der Theorie der Kognitiven Landkarten, die ebenfalls Wissensstrukturen als dreidimensionales Netzwerk beschreiben." (Thissen 1997: 71)
+
+
+ex 1.3
+
+In beiden Fällen handelt es sich um ein Fortkommen von einem Startort A zu einem Zielort B.
+Der erste Fall, der für die Forschungslandschaft interessant ist, ist die Transparenz - die bloße Tatsache, dass die Arbeit zitierbar ist, ist nicht selbstverständlich. Herr Betriebsleiter Chamnahn Yusa-Ard stellt seine Arbeit, die er im Busbetriebsbereich 6 der Bangkoker Verkehrsbetriebe (BMTA) macht, per Facebook für einen breiten Leserkreis vor . Die potentiellen Nutzer sollen stets wissen, was der Infrastrukturdienstleister gerade macht. Damit geht er mit gutem Beispiel in bezug auf Kommunikation und Transparenz voran. Einige Beispiele sollen hier erwähnt werden, mit Erklärungen, die stets im Rahmen von persönlicher Kommunikation entstanden sind :
+
+
+"15. März 2018, 13:30 
+
+Herr Betriebsleiter Chamnahn Yusa-Ard (Betriebsleiter Bereich 6) kontrollierte den Baufortschritt des neuen Btf. Boromratchachonnani. Stand heute: Elektriker kontrollierte die Elektrik im Gebäude nach Funktion, Vorbereitung Einbau Fenster und Türen und Boden gießen." (Facebook-Post vom 15. März 2018)
+
+Hierzu sei erwähnt, dass der Betrieb im Bereich 6 in zwei baulich desolaten Betriebshöfen  stattfindet und der Betriebshof Phuttamonton Sai 2 dafür geschlossen und abgerissen werden soll. Für die Forschungsdateninfrastruktur heißt das: entweder Neubau einer baufälligen Bibliothek oder Abschaltung und Erneuerung alter bzw. veralteter Rechnersysteme, Einrichtung neuer Serverräume anstelle von alten.
+
+"14. März 2018, 13 Uhr
+
+Herr Betriebsleiter Chamnahn Yusa-Ard (Betriebsleiter Bereich 6) besprach in der Konferenz mit dem stellvertretender Betriebsleiter Bereich 6, Gruppenleitern Busbetriebsgruppe 16, 26 und 36, Abteilungsleiter Verwaltung Bereich 6, Leiter Risikomanagement Bereich 6, Leiter Unfallabteilung Bereich 6 und alle Betroffenen über
+
+"	Unfallreduzierungskampagne während des Neujahrsfest und im Regelbetrieb.
+"	Betriebskonzept und Personalsteuerung während des Neujahrsfest.
+"	Corporate Gorvernance Strategie
+"	Nutzung GPS zum Überwachen Busverkehr.
+
+Stattgefunden im Vorgesetzten-Konferenzraum des Btf. Phuttamonton Sai 2, Bereich 6, Bangkoker Verkehrsbetriebe." (Facebook-Post vom 14. März 2018)
+
+Hier sehen wir die Besprechung des Betriebsablaufes, ganz besonders der Unfallverhütung. Im Falle der digitalen (Forschungs-)datenstruktur hieße das: Reflexion bei Brand, Unfall, Tod beteiligter Leute (Nachlassfragen, etc.), Vorkehrungen gegen Bugs (ganz besonders bei Dependenzien im Programmcode - eine verwendete Programmbibliothek fällt plötzlich aus) und Hardwareschäden sowie Überwachen der Dienste. Das "Neujahrsfest" könnte auf Konferenzen, Webinare oder Gutachten übertragen werden, bei denen viel Traffic zu erwarten ist und es ganz besonders wichtig ist, dass die Plattform (oder der Verbund von Plattformen) erreichbar bleibt.
+
+"14. März 2018, 8:45 Uhr
+
+Herr Betriebsleiter Chamnahn Yusa-Ard (Betriebsleiter Bereich 6)
+weist 4 neue Schaffner/in ein bevor sie ab morgen ihren ersten
+Arbeitstag auf dem Fahrzeug antreten werden. Die Gruppenleitern
+Busbetriebsgruppe 26 und 36 nahmen mit teil.
+
+Stattgefunden im Vorgesetzten-Konferenzraum des Btf. Phuttamonton
+Sai 2, Bereich 6, Bangkoker Verkehrsbetriebe." (Facebook-Post vom
+14. März 2018)
+
+Man denke an dieser Stelle an das Handlungsfeld Informationskompetenz/Ausbildung der KII, vgl. Seite 45 des Berichts von 2011:
+
+"Es muss geeignetes Personal in informationswissenschaftlichen Disziplinen ausgebildet werden, das zum einen die Anforderungen bzgl. der Etablierung und Fortführung der neuen Aufgaben (Technologien und organisatorisch-methodische Aspekte) realisieren kann. Zum anderen ist eine forschungsbasierte Perspektive nötig, damit neue, innovative Entwicklungen stets Eingang finden." (KII 2011: 45)
+
+Das geeignete Personal, das sind flexible Webentwickler, die auch gewisses Interesse und Kenntnisse aus idealerweise allen Disziplinen einbringen können. Benutzer müssen eingeführt werden, ebenso ist das Warten und Weiterentwickeln bestehender Systeme ebenfalls mit Kenntnissen verbunden. Der "Schaffner" kann auch Nutzern bei Bedarf helfen (Support) und sorgt auch dafür, dass lizenzrechtliche Nutzungsbedingungen eingehalten werden.
+
+Der zweite Teil ist für den nächsten Post ebenfalls interessant:
+
+"15. Janaur 2018, 13 Uhr
+
+Herr Betriebsleiter Chamnahn Yusa-Ard (Betriebsleiter Bereich 6) und Herr Mongkol Jamnongpith (Stellvertretender Betriebsleiter Bereich 6) rief alle Betroffenen zur Besprechung. Folgende Thermen wurden besprochen:
+
+- Interne Revision nach ISO 9001: 2008
+- Analyse Betriebsablauf der Busbetriebsgruppe 18 vom 1. bis zum 14. Januar 2018 
+- Übergabe Verantwortung für die Verbesserungen der Linie 515 nach "Just-in-time" Methode an den Gruppenleiter Busbetriebsgruppe 36, da ein Subunternehmer die Ausschreibung Linie E70Y gewonnen hat, die einen ähnlichen Linienweg wie die Linie 515 hat.
+
+Stattgefunden im Konferenzraum des Btf. Phuttamonton Sai 2, Bereich 6, Bangkoker Verkehrsbetriebe." (Facebook-Post vom 15. Januar 2018)
+
+Hier aus dem gleichen Handlungsfeld eine weiterer Anspruch:
+
+"Für alle Angebote [...] muss eine fundierte Qualitätssicherung etabliert werden." (KII 2011: 45)
+
+Die ISO 9001 ist die Richtilinie für Dienstleistungen jeglicher Art, ein Unternehmen, das ISO 9001-zertifiziert arbeiten will, muss sich über die Art der Bereitstellung Gedanken machen. Sind das in einem Verkehrsbetrieb der technische Zustand der Busse oder dessen Sauberkeit, so sind es in einer Bibliothek die Übersichtlichkeit und schnelle Auffindbarkeit von Literatur, in einem digitalen Repositorium die Erreichbarkeit, einigermaßen performante Leistung und Bedienbarkeit der Plattform (wie sie es sich die TR32DB zum Ziel gesetzt hat). Auch eine regelmäßige Auswertung der Nutzerzahlen - die Analyse des Betriebsablaufes - hat für einen Infrastrukturleister wichtige Aufschlüsse, nämlich über Nachfrage der Nutzer. Der Verkehrsbetrieb hat sein Angebot entsprechend der Fahrgastnachfrage anzupassen. Einen Aufschluss darüber liefern die von den Spezialisten mit Spannung erwarteten langen Berichte über die Änderungen zum Fahrplanwechsel. Dieser stellt dar, welche Linien sich wie zum europaweiten Stichtag - es ist in jedem Jahr der zweite Dezembersonntag, dieses Jahr also der 9. Dezember - ändern werden. Dass dies mit erheblichem Aufwand verbunden ist, zeigt die Tatsache, dass stets nach Fahrplanwechsel sofort die Vorbereitungen für das nächste Fahrplanjahr laufen.
+
+"12. März 2018, 6:30 Uhr
+
+Herr Betriebsleiter Chamnahn Yusa-Ard (Betriebsleiter Bereich 6) und Liniensprecher Linie 515 kontrollierten den morgendlichen Verkehr am Victory Monument. Ebenso halfen sie den Fahrdienstleiter die Fahrgäste zu informieren." (Facebook-Post vom 12. März 2018)
+
+Dieses Zitat stellt ein ganz besonders wichtigen Aspekt dar: die zwischenmenschliche Kommunikation. Der Betriebsleiter, der gewiss mit organisatorischen Aufgaben ausgelastet ist, überwacht selbst den alltäglichen Regelbetrieb und geht dabei seinen Untergebenen und Fahrgästen zur Hand. Ein solcher Support, um den äquivalenten Begriff in der Bibliothek/Dateninfrastruktur zu verwenden, hat Vorbildcharakter. Es ist ein wünschenswerter Zustand, dass der Entwickler persönlich den Nutzern zur Hand geht, wie sie die Plattform zu verwenden haben oder gar der Chef eines Unternehmens zu seiner Supportabteilung geht und die Beschäftigten bei ihrer Arbeit unterstützt. Grundsätzlich zeugen alle Beiträge des Betriebsleiters von einem derartigen Betriebsklima, das die Fahrgäste gewiss zu schätzen wissen.
+
+Was Bangkok derzeit nicht hat, ist ein Verkehrsverbund. Dort gilt noch pro Verkehrsmittel unterschiedliche Fahrpreise. Selbst innerhalb des Verkehrsmittels (Bus: BMTA vs. Subunternehmer) gibt es Unterschiede. Auch in Köln und Umkreis war dies die gleiche Lage bis zum 1. September 1987. Dies ist die Einleitung zum nächsten Vergleich öffentlicher Nahverkehr - Datendienstleistung: der Verbund. Die "Nationale Forschungsdateninfrastruktur" ist ein Desiderat des Rates für Informationsinfrastruktur. Sie könnte sich in ihrer Arbeit am Verkehrsverbund Rhein-Sieg orientieren, der am 1. September 1987 gegründet wurde und aus der Verkehrs- und Tarifgesellschaft Rhein-Sieg hervorging. Der Fahrgast, der sich einen Fahrplan in einem der Teilbereiche dieser neuen Organisation erwarb, wurde auf der ersten Seite folgenderweise begrüßt:
+
+"Dreizehn Unternehmen haben sich zum Verkehrsverbund Rhein-Sieg, dem
+VRS, zusammengeschlossen, einem der größten im Bundesgebiet. Er
+umfaßt die Städte Köln, Bonn, Leverkusen und Monheim sowie den
+Rhein-Sieg-Kreis, den Rheinisch-Bergischen-Kreis, den
+Oberbergischen Kreis und den Erftkreis.
+
+Im Verkehrsverbund können Sie künftig mit einem Fahrschein die
+öffentlichen Verkehrsmittel benutzen, auch die Bundesbahn." (Fahrplan VRS 1987: 1)
+
+Musste man für eine Reise von Köln nach bspw. Wiehl bis zu diesem Stichtag drei verschiedene Fahrscheine bei drei verschiedenen Verkehrsbetrieben (Kölner Verkehrs Betriebe AG, Deutsche Bundesbahn, Regionalverkehr Köln GmbH) lösen, so genügte für diese Strecke ein Fahrschein des Verkehrsverbundes. Entsprechend breit gefächert war auch das Angebot parallel laufender Verbindungen. Es gab lange Direktverbindungen der RVK parallel zu kürzeren Angeboten der Bundesbahn. Durch den Verkehrsverbund konnten Angebote gebündelt und umgeleitet werden, sodass die Betriebe wirtschaftlicher arbeiten konnten und der Fahrgast einen größeren Überblick hatte. Für die Relation Köln - Oberbergisches Land gab es bei Start des VRS folgende Linienangebote:
+
+"	RVK: 
+o	Linie 305 (Köln-Bensberg-Overath-Much-Wiehl),  Linie 310 (Köln-Bensberg-Overath-Dieringhausen-Gummersbach)
+o	Linie 313 (Köln-Bensberg-Immekeppel-Lindlar-Gummersbach)
+o	Linie 420 (Bergisch Gladbach- oder Köln-Bensberg-Overath-Much) und 
+o	Linie 421 (Bergisch Gladbach- oder Köln-Bensberg-Immekeppel-Lindlar)
+"	Daneben die CityBahn der Bundesbahn: Köln-Rösrath-Overath-Dieringhausen-Gummersbach
+
+Diese Angebotsvielfalt blieb bis zum 25. September 1994 so bestehen, einzig die Linie 313 wurde eingestellt. Am 26. September 1994, sieben Jahre nach Inkrafttreten des Verbundes, wurden diese Linien in Overath/Lindlar abgebunden (bzw. die Linien 420/421 verkehrten nur noch nach Bergisch Gladbach statt auch nach Köln) und ab Bensberg wurden zwei über die Autobahn verkehrende SchnellBuslinien 31 und 42 eingerichtet. So sah das Angebot folgendermaßen aus:
+
+"	Linie SB 31 (Köln-Refrath-Bensberg-Overath Bf.)
+"	Linie SB 42 (Köln-Refrath-Bensberg-Immekeppel-Lindlar)
+"	Linie 305 (Overath Bf.-Much-Wiehl)
+"	Linie 310 (Overath Bf.-Dieringhausen-Gummersbach)
+"	Linie 313 (eingestellt, ab Lindlar übernimmt die Linie 316, später 307 der Oberbergischen Verkehrsaktiengesellschaft)
+"	Linie 420 (Bergisch Gladbach-Bensberg-Overath Bf.-Much)
+"	Linie 421 (Bergisch Gladbach-Bensberg-Immekeppel-Lindlar)
+"	Anschlüsse an die CityBahn wurden in Overath hergestellt
+
+Entsprechend der Bedürfnisse der Fahrgäste wurde das Angebot in den Jahren danach weiter zusammengefasst. Es werden nicht alle Änderungen aufgelistet, lediglich der heutige Zustand. Einzig zur nunmehrigen Linie SB 40 sei angemerkt, dass die Schnellbusse ursprünglich nach Bensberg an die Stadtbahn abgebunden, als SB 40 zusammengefasst und von dort aus Anschlüsse an die aus Bergisch Gladbach kommenden Linien 420 und 421 hergestellt wurden. Mittlerweile jedoch sind die Linien SB 31 und 42 wiederhergestellt worden, wenn auch als Linienwechsler SB 40 in 420 und SB 40 in 421. Offiziell besteht also folgendes Angebot (mit Stand 10. Dezember 2017):
+
+"	RB 25 von DB Regio AG (Köln Hansaring-Rösrath-Overath-Dieringhausen-Gummersbach-Meinerzhagen-Lüdenscheid)
+"	RVK: 
+o	Linie SB 40 (Köln-Refrath-Bensberg)
+o	Linie 310 (Overath Bf.-Dieringhausen-Gummersbach)
+o	Linie 400 (Bergisch Gladbach-Bensberg)
+o	Linie 420 (Bensberg-Overath)
+o	Linie 421 (Bensberg-Immekeppel-Lindlar)
+
+Dieser Exkurs in die Liniengeschichte des Kölner Umlandes soll beispielhaft darstellen, wie Angebote dank eines einheitlichen Tarifsystems gebündelt werden können. Der Umstieg ermöglicht Flexibilität und Konzentration der Verkehrsbetriebe auf ihre jeweiligen Einzugsgebiete: während die Eisenbahn (oder auch die Stadtbahn) eine schnelle Direktverbindung zwischen möglichst vielen Orten herstellt, kann der Bus die Aufgabe als Zubringer wahrnehmen, ganz im Sinne 
+
+ex 3.2.1 Die Familie der X-Technologien
+
+In diesem Projekt wurde auf XML  gesetzt, weil es am einfachsten un effektivsten diese Phänomene auszeichnet und maschinenprozessierbar macht:
+ 
+ 
+Abbildungen 7 und 8: XML eines Briefkörpers und Ausgabe desselben auf der Webseite
+
+Ein XML-Dokument kann anhand seiner Tags erkannt werden. Das sind die Ausdrücke, die zwischen spitzen Klammern stehen. <emph> beispielsweisen zeigt an, dass hier eine Hervorhebung beginnt und </emph> bedeutet, dass diese dort endet.
+
+Mittels Transformationstechnologien wie XSLT oder auch Prozessierung durch Java oder PHP (durch das Document Object Model DOM), können diese Tags ausgelesen und weiterverarbeitet werden, sei es, wie am Beispiel unterstrichener Texte durch ein Kaskadierendes Stylesheet (CSS) oder am Beispiel von Verweisen durch Hyperlinks. Der große Vorteil durch diese Auszeichnungsmethode ist, dass implizite Information explizit gemacht werden kann. Der Leser weiß zwar, wie unterstrichene (oder im Falle des hier vorliegenden Quellmaterials in Sperrschrift gesetzte) Texte zu verstehen sind und ebenso kann er sich einen Reim darauf machen, wenn ein Eigenname im Zusammenhang mit einem Verkauf genannt wird. Aber der Rechner kennt diese Zusammenhänge nicht und deshalb müssen sie mit dem Text mitgegeben werden - gewissermaßen "entpackt" werden. Auch folgt jedes Dokument einer hierarchischen Baumstruktur, d.h. es gibt genau ein Wurzelelement und darunter sind weitere Elemente angeordnet. Das bedeutet gleichzeitig, dass Elemente weitere Elemente verschachteln können. Dann spricht man von Eltern-Kind-Beziehung. Das folgende Beispiel verdeutlicht dies:
+ 
+Abbildung 9: Ausschnitt aus einem Header. Die Bedeutung der Tags wird später erläutert
+
+Das oberste Element ist <teiHeader>. Es wird beschlossen durch </teiHeader> und bedeutet, dass in diesem Abschnitt die beschreibenden Metadaten enthalten sind . Es folgt das <fileDesc>-Element, beschlossen durch </fileDesc>. Hierin sind alle Elemente enthalten, die diese elektronische Datei beschreiben. <titleStmt> enthält eine Aussage zum Titel. Beschlossen ist es durch </titleStmt>. Zwischen <title> und </title> steht der Titel dieses Dokumentes, das mit dem in ihm enthaltenen Brief übereinstimmt. Unter <editor> ist der oder sind die verantwortlichen Transkribenden beschrieben, ihr Name steht zwischen <editor> und </editor>. In diesem Falle ist es der Autor der Arbeit. Zusätzlich können die Elemente mit Attributen versehen werden. Diese folgen hinter dem Elementnamen und enthalten den Wert direkt hinter ihnen. So kann genauer typisiert werden, z.B. bezeichnet <emph rend="underlined"></emph> einen unterstrichenen Text.
+
+XML hat zudem den Vorteil, dass die durch sie beschriebenen Dokumente gemäß zweier Kriterien überprüft werden können: Wohlgeformtheit und Validität. Die Wohlgeformtheit stellt sicher, dass grundsätzliche Regeln eines XML-Dokumentes eingehalten werden. Diese sind:
+
+"	die hierarchische Baumstruktur wird eingehalten (bei genau einem Wurzelelement)
+"	jedes Element ist korrekt geschlossen
+"	das Dokument beginnt mit der korrekt geschriebenen Prozessanweisung <?xml version="1.0" encoding="UTF-8"?>
+
+Durch die Wohlgeformtheit erkennt der Rechner ein korrektes XML-Dokument und kann darauf weiterführende Technologien anwenden (DOM, XPath), mithilfe dessen die Dokumente weiter prozessiert werden können. Diese weitere Prozessierung ist für den weiteren Verlauf unerlässlich. 
+Jenseits der Wohlgeformtheit können die Dokumente auch hinsichtlich ihrer Validität hin überprüft werden. Hierfür ist ein zweites XML-Dokument notwendig, das jedoch mit einer Besonderheit versehen ist: es ist ein Schema. Ein XML-Schema beschreibt einen abstrakten Bauplan eines XML-Dokumentes und es können beliebig viele Schemata hintereinander geschaltet werden. Dieser abstrakte Bauplan beschreibt:
+
+"	wie die Elemente (also die Tags) heißen dürfen
+"	wie die Attribute heißen dürfen
+"	ob diese vorkommen müssen, und wenn ja, wie oft
+"	welche Kindsknoten (Element, Attribute oder Text ) sie haben dürfen
+"	welche Reihenfolge diese Elemente haben
+
+Durch diese Begrenzung wird der Hierarchie noch eine weitere strukturgebende Komponente hinzugefügt: die Typisierung. Mit der Begrenzung der verfügbaren Elemente auf eine Teilmenge wird eine Inkonsistenz beträchtlich verringert, sodass weniger Sonderfälle bei der weiteren Prozessierung berücksichtigt werden müssen.
+Bevor ein Schema, nämlich das der Text Encoding Initiative, näher erläutert wird, abschließend zu den X-Technologien noch XPath und XSLT. XPath ist eine Abfrageprache, mithilfe dessen sich Abfragen in XML-Dokumenten durchführen lassen. Es kann angegeben werden, welche Knoten befragt werden, ebenso können Bedingungen angegeben werden. Einige häufig vorkommende Abfragen im Gentz-Korpus sind beispielsweise:
+
+"	//listPerson/person - liste alle Personen auf
+"	//listBibl[@type="defRep"]/biblStruct - liste alle Repräsentationen  auf
+
+Diese liefern NodeLists, also Listen von Knoten aus, die anschließend durch weitere, genauer spezifizierte Abfragen ausgelesen oder direkt ausgegeben werden können.
+
+XSLT (eXtensible Stylesheet Language Transformations) ist eine Sprache zur Umwandlung von XML-Dateien in jegliche andere Dateiformate. In diesem Projekt wird XSLT zur Umwandlung nach HTML eingesetzt. Ein XSLT-Template enthält demnach Abbildungsvorschriften für XML-Dokumente, auf die es eingesetzt werden soll. Diese Vorschriften beschreiben, wie welches Element in der Zielsprache ausgegeben werden soll. Die Elementadressierung benutzt XPath-Anweisungen zur Definition. Die folgenden Beispiele verdeutlichen dies:
+
+<xsl:template match="TEI:title">
+  <h4>
+    <xsl:value-of select="."/>
+  </h4>
+</xsl:template>
+
+Dieses Fragment eines Templates beschreibt, dass der Wert aus dem TEI:title -Element in eine Überschrift vierter Ordnung (<h4></h4>) gesetzt werden soll.
+
+<xsl:for-each select="//TEI:postscript">
+  <div>
+    <xsl:attribute name="data-n">
+      <xsl:value-of select="count(//TEI:div[@corresp])+position()"/>
+    </xsl:attribute>
+    <xsl:attribute name="data-cat">
+      <xsl:value-of select="@corresp"/>
+    </xsl:attribute>
+    <xsl:apply-templates select="TEI:p"/>
+  </div>
+</xsl:for-each>
+
+Diese Anweisung wählt alle Postscripts eines Briefes aus, schreibt sie in ein HTML-<div>-Element, setzt zwei Attribute data-n und data-cat, um die Nummer des Sinnabschnittes sowie den Sinnabschnittsverweis zu definieren und schickt dann den Text im Paragraphen (zwischen <p> und </p> des <postscript>-Elementes) nochmal durch das ganze (hier nicht gezeigte) Template, um Auszeichnungsphänomene (wie Hervorhebungen, Verweise, etc.) auszugeben.
+Ein weiteres Beispiel, das speziell mit Verweisen umgeht, findet sich im Teilabschnitt 3.2.5.
+
+
+ex 3.2.4 Das TR32DB-Metadatenschema
+
+Weshalb es vorteilhaft sein kann, auf standardisierte Schemen zurückzugreifen, wird bei Curdt 2016 deutlich. Das von ihr konzipierte Metadatenschema findet sich seit über zehn Jahren in Einsatz und wird kontinuierlich weiter entwickelt. Es ist flexibel nach verschiedenen anderen Metadatenschemata und auch nach verschiedenen Datentypen, die durch diese Metadaten beschrieben werden können:
+
+"With aim to describe all project data, grouped in six data type categories (geodata, data, publications, presentations, pictures, reports), with accurate, standardized, interoperable metadata, the TR32DB Metadata Schema was designed and implemented in the TR32DB data repository." (Curdt 2016: 360)
+
+Curdt schreibt weiter, dass zur Umsetzung des Metadatenschemas zunächst existente Schemata beobachtet worden sind. Keines aber genügte den Anforderungen der Daten in TR32DB, sodass eine Kombination verschiedener Schemata das Ergebnis war (vgl. Curdt 2016: 360), aus denen verschiedene Typen von Eigenschaften entnommen wurden:
+
+"(i) The general properties should enable to describe the data with basic information with the aim to make the data findable and citable. (ii) The data type specific properties should facilitate to describe the data with specific properties of a certain data type category. Finally, (iii) the project specific properties should allow to describe the data with details focusing on the CRC/TR32 project background and demands of the scientist." (Curdt 2016: 360)
+
+Diese Eigenschaften sind in zwei Ebenen aufgeteilt:
+
+"In detail, the schema is organized in a structured list of metadata properties, arranged in two layers: (i) the general and (ii) the specific layer [...] The general layer has the purpose to describe all data with the basic details such as a title, description, creator or subject. It is required and uniform for all data types. All involved metadata properties of the general layer are classified into seven categories [...] The second layer is the specific layer. This layer enables the documentation of all data type categories with their specific metadata properties." (Curdt 2016: 361)
+
+Diese sind wie folgt organisiert (vgl. Curdt 2014: 261ff.):
+Allgemeine Ebene:
+"	General: Title, Description, Identifier, Relation (mit relationType und identifier, dieser mit identifierType), CitationAdvice und AdditionalDescription
+"	Responsible Party: Creator (unterteilt in CreatorPerson und CreatorOrganisation, Contributor, Publisher
+"	Topic: Subject, TR32Topic, TR32keyword, GEMETThesaurus, INSPIRETheme, DDC
+"	File Details: DataType, DataFormat, DataSize, Date, Language und DataStatus
+"	Constraints: Download, Constraints
+"	Geographic Information: MeasuringSite, GeographicBoundingBox
+"	Metadata Details (automatisch erzeugt bei Absenden der Metadaten): TR32DBIdentifier, TR32DBUrl, TR32MetaDataType, MetadataCreator, MetadataCreatorInstitution, MdCreationDate, MdLastUpdateDate, MdWebVersion, MdLanguage, FileInformation und Conformity
+
+Die spezifische Ebene (vgl. Curdt 2014: 269ff.) gliedert sich in Data, Geodata, Report, Picture, Presentation und Publication (diese unterteilt sich nochmal in Article, Book, BookSection und EventPaper). Für den Datentyp Report sollen hier ebenfalls die Felder aufgezählt werden: ReportDate, ReportType, ReportCity, ReportInstitution, ReportVolume, NumberOfPages, PageRange (mit startPage und endPage) und FurtherInformation.
+Die Felder können entweder durch Freitextangaben, numerische Werte (Ganzzahlen oder Bruchzahlen) belegt werden oder vorgegebene Werte aus kontrollierten Listen enthalten. Diese Listen sind samt Definition im Anhang D.5 von Curdt 2014 einsehbar.
+Diese Organisation mit zwei Ebenen, die ihrerseits in abgegrenzte Felder unterteilt ist, soll auch bei dem Schema Eingang finden, nach welchem die Briefe von Gentz enkodiert sind.

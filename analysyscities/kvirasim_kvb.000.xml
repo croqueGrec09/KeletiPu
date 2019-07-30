@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<happening xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="happening.xsd" idPrefix="kv">
+    <stream id="u11" name="Stadtbahnlinie 11">
+        <event id="u1101">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_01.jpg</image>
+                <text lang="de">
+                    Der Stadtführer begrüßt die Fahrgäste, die interessiert die neue Stadtbahn betrachten: 
+                    "Herzlich willkommen in der Stadtbahn! Wir sind glücklich, Ihnen diesen kleinen Abschnitt 
+                    zeigen zu dürfen - bereiten Sie sich auf eine spannende Fahrt vor und abonnieren Sie fleißig! 
+                    Denn dann haben Sie bei der Eröffnung die Möglichkeit auf eine Freifahrt durch das gesamte 
+                    Verbundgebiet!"!NL
+                    Er holt danach Luft und erklärt:
+                    "Der nächste Halt ist die Erzeugung von Sprache. Lassen Sie sich hier die aerodynamisch-myoelastische 
+                    Theorie der Spracherzeugung anhand unseres Modells erklären - das Haus der Vokale und das Haus der 
+                    Konsonanten eröffnen demnächst und stellen ihr interaktives Lungenmodell dar!"
+                </text>
+            </eventBody>
+            <nextEvent pointRef="u1102"/>
+        </event>
+        <event id="u1102">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_02.jpg</image>
+                <text lang="de">
+                    "Der nun folgende Halt ist die Schallformstraße. Auf diesem Bild sehen Sie die unterschiedlichen Formen 
+                    von Schall - ganz vorn den quasi-periodischen Schall, danach ein Friktionsrauschen und nach erneutem 
+                    quasi-periodischem Schall die Stille. Quasi-periodisch, weil die menschliche Stimme keine klaren Sinustöne 
+                    erzeugt, sondern Obertöne im Schall enthalten sind - mehr dazu an den folgenden Haltestellen."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="u1103"/>
+        </event>
+        <event id="u1103">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_03.jpg</image>
+                <text lang="de">
+                    "Ein wenig überdimensioniert ist dieses Bild von der Frequenzstraße. Schall verbreitet sich, indem 
+                    sich ein bestimmtes Medium verdünnt und verdichtet - in der Luft zum Beispiel löst der Druck unseres 
+                    Zwerchfelles eine Bewegung der Luftmoleküle aus. Diese bewegen sich in einem bestimmten Zeitabstand 
+                    gewisse Male hin und her - und diese Bewegung -Luftverdichtung bzw. -verdünnung- können wir hören. 
+                    Und wie oft in einer Sekunde sich diese Bewegung wiederholt, das gibt die Frequenz an."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="u1104"/>
+        </event>
+        <event id="u1104">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_04.jpg</image>
+                <text lang="de">
+                    "Die nächste kurz gestreifte Haltestelle ist der Diagrammenplatz. In der Phonetik werden Messungen 
+                    unterschiedlichster Art durchgeführt und die Sprache, die wir aufzeichnen, lässt sich auf unterschiedliche 
+                    Art und Weise abbilden. Hier sehen wir zwei Arten von Diagrammen: oben ein Oszillogramm, unten ein Spektragramm. 
+                    Für den nächsten Halt wird das letztere von Bedeutung sein."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="u1105"/>
+        </event>
+        <event id="u1105">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_05.jpg</image>
+                <text lang="de">
+                    "Hier kommen wir zum Formantenweg. Wie ich an der Haltestelle Schallformstraße sagte, setzt sich 
+                    der Schall der menschlichen Sprache aus verschiedenen Obertönen zusammen, die sich über dem F0 - 
+                    dem Grundton - lagern. Anhand der Formanten F1 und F2 - von unten die zweite und dritte rot 
+                    gepunktete Linie - können wir wahrnehmen, welcher Laut gesprochen wurde, denn sie formen sich durch 
+                    unsere Artikulatoren: der Zungenposition und dem Öffnungsgrad."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="u1106"/>
+        </event>
+        <event id="u1106">
+            <eventBody>
+                <image lang="all">kvirasim/events/u11_06.jpg</image>
+                <text lang="de">
+                    "Der letzte Halt unseres Demos ist der Platz der Artikulation. Hier lernen Sie in naher Zukunft 
+                    über die verschiedenen Wege, die Vorgänge der Artikulation aufzuzeichnen - hier sehen Sie 
+                    ein Artikulogramm. Auf den fünf Spuren sind unsere Artikulatoren aufgezeichnet: Lippen, 
+                    Zungenspitze, Zungenkörper, Velum und Stimmritze. Jedem Laut wird ein Bewegungsmuster dieser 
+                    Artikulatoren zugeordnet und hier sehen Sie, welche Abläufe sich bei der Aussprache des Wortes 
+                    "bitte" abspielen.!NL
+                    Leider war es das, aus Zeitgründen sind wir mit dem Bau nicht fertig geworden. Aber freuen Sie sich: 
+                    in der nächsten Version werden Sie viel besser verstehen und nachempfinden können, was die Stadt 
+                    zu bieten hat!"
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>kvirasim</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_underground_platform1a</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

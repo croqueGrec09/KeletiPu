@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="town.xsd" idPrefix="ka">
+    <station number="ka1" additionalMoney="200" mapPointX="-1" mapPointY="-1">
+        <name>Karlstadt Hauptbahnhof</name>
+        <discoveryContent>
+            <!-- Im Bahnhof -->
+            <!-- Gleise 1-2 -->
+            <place id="Dh153_arrival">
+                <content lang="de">
+                    Du bist soeben aus dem Zug ausgestiegen, als du sofort ein reges Gespräch vernimmst: !NL
+                    "Taxonomie ist unklar definiert. Muss das denn tatsächlich nur auf Bibliographien begrenzt sein?"!NL
+                    "Nein, es arbeiten genug Leute damit außerhalb der Bibliographiekontexten." "Aber es steht so in den Richtlinien"!NL
+                    "Ja, Zeidel war da engstrinig. Ich sollte mich da melden ..."!NL
+                    "Natürlich! Wir sollten uns in Zeidel melden, Taxonomien können auch anderweitig verwendet werden!"
+                    !NL !NL
+                    Da dich aber das nicht recht interessiert, beschließt du, dich in der Stadt einwenig umzusehen.
+                </content>
+                <imagePath lang="de">karlstadt/karlstadt_gleise_1_2_Dh_153.JPG</imagePath>
+                <action name="toFloorWest" coords="41.5,70.2 28.8,87.2 51.5,87.2 51.5,70.2">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12west"/></execute>
+                    <hover lang="de">Richtung Westausgang</hover>
+                </action>
+                <action name="toFloorEast" coords="51.0,70.2 51.0,87.2 72.1,87.2 59.8,70.2">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12east"/></execute>
+                    <hover lang="de">Richtung Ostausgang</hover>
+                </action>
+            </place>
+            <!-- Treppenaufgang Gleise 1-2 -->
+            <place id="floor12west">
+                <content lang="de">
+                    Du stehst an der Treppe zu den Gleisen 1-2.
+                </content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_1_2_west.jpg</imagePath>
+                <action name="turnLeft" coords="0.0,84.0 0.0,100.0 100.0,100.0 100.0,84.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12east"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+                <action name="toBusstation" coords="30.8,39.5 30.8,56.7 73.0,57.8 73.3,40.2 50.9,31.5">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewWest"/></execute>
+                    <hover lang="de">Zum Bushof</hover>
+                </action>
+            </place>
+            <place id="floor12east">
+                <content lang="de">
+                    Du stehst an der Treppe zu den Gleisen 1-2. Ein Schmierfink hat das Schild abmontiert, sodass sich 
+                    die Bahnhofsmitarbeiter kurzerhand zu den Sprayern gesellten. 
+                </content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_1_2_ost.jpg</imagePath>
+                <action name="turnRight" coords="0.0,0.0 100.0,0.0 5.0,100.0 6.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12west"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+                <action name="toStairs34" coords="5.3,35.8 4.8,63.5 37.8,64.5 38.1,46.8 23.6,39.2 12.1,38.5">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor34east"/></execute>
+                    <hover lang="de">Zu den Gleisen 3-4</hover>
+                </action>
+            </place>
+            <!-- Treppenaufgang Gleise 3-4 -->
+            <place id="floor34west">
+                <content lang="de">Du stehst an der Treppe zu den Gleisen 3-4.</content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_3_4_west.jpg</imagePath>
+                <action name="turnRight" coords="90.1,0.0 88.4,72.0 97.3,91.3 100.0,91.5 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor34east"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+                <action name="toPlatform34" coords="0.0,0.0 0.0,100.0 15.8,100.0 23.5,91.0 21.5,0.0">
+                    <execute><noAction whatShouldHappen="Trains on platform 3-4"/></execute>
+                    <hover lang="de">Zu den Gleisen 3-4</hover>
+                </action>
+                <action name="toStairs12" coords="46.4,16.8 46.1,66.7 88.0,71.2 90.1,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12west"/></execute>
+                    <hover lang="de">Zu den Gleisen 1-2</hover>
+                </action>
+            </place>
+            <place id="floor34east">
+                <content lang="de">Du stehst an der Treppe zu den Gleisen 3-4.</content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_3_4_ost.jpg</imagePath>
+                <action name="turnLeft" coords="0.0,0.0 0.0,100.0 13.9,100.0 20.6,88.5 20.9,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor34west"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+                <action name="toPlatform34" coords="57.4,24.0 57.4,77.7 61.8,83.7 64.1,81.2 64.4,21.3">
+                    <execute><noAction whatShouldHappen="Trains on platform 3-4"/></execute>
+                    <hover lang="de">Zu den Gleisen 3-4</hover>
+                </action>
+                <action name="toStairs56" coords="20.6,30.7 20.4,75.8 57.4,77.5 52.8,44.0 37.9,34.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor56east"/></execute>
+                    <hover lang="de">Zu den Gleisen 5-6</hover>
+                </action>
+            </place>
+            <!-- Treppenaufgang Gleise 5-6 -->
+            <place id="floor56west">
+                <content lang="de">Du stehst an der Treppe zu den Gleisen 5-6.
+                Auch hier hat man sich der Sprühdose bedient, um das fehlende Schild zu erstzen ...</content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_5_6_west.jpg</imagePath>
+                <action name="toStairs34" coords="5.1,32.0 4.6,56.3 34.0,57.3 34.1,42.2 21.1,33.8 11.6,32.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor34west"/></execute>
+                    <hover lang="de">Zu den Gleisen 3-4</hover>
+                </action>
+                <action name="turnLeft" coords="0.0,0.0 0.0,89.7 4.5,81.5 5.5,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor56east"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+            </place>
+            <place id="floor56east">
+                <content lang="de">Du stehst an der Treppe zu den Gleisen 5-6.!NL
+                In der Bahnhofsgaststätte "Zum Frölichen Brinckmann" findet eine lebhafte
+                Diskussion statt, die bis hinaus zu hören ist.</content>
+                <imagePath lang="de">karlstadt/karlstadt_aufgang_5_6_ost.jpg</imagePath>
+                <action name="turnRight" coords="77.9,0.0 77.1,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor56west"/></execute>
+                    <hover lang="de">umdrehen</hover>
+                </action>
+                <action name="toEastHall" coords="63.3,36.7 63.0,61.5 77.4,61.8 77.8,36.5">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="eastHall"/></execute>
+                    <hover lang="de">Zur Osthalle</hover>
+                </action>
+                <action name="toPub" coords="44.3,38.3 44.0,72.0 48.0,68.7 48.4,40.0">
+                    <execute><noAction whatShouldHappen="enter pub"/></execute>
+                    <hover lang="de">In die Gaststätte (nicht implementiert)</hover>
+                </action>
+            </place>
+            <!-- Osthalle -->
+            <place id="eastHall">
+                <content lang="de">
+                    Nun stehst du in der Osthalle. Links ist das Kundenzentrum der Karlstädter Verkehrsactiengesellschaft.!NL
+                    Die wickeln den Busverkehr ab. Rechts ist das zur Zeit geschlossene Reisezentrum der Eisenbahn.
+                </content>
+                <imagePath lang="de">karlstadt/karlstadt_osthalle.jpg</imagePath>
+                <action name="toKVAGCentre" coords="32.8,34.5 32.6,53.2 43.1,50.0 43.0,36.7">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="kvag_centre"/></execute>
+                    <hover lang="de">In das Kundenzentrum</hover>
+                </action>
+                <action name="toFloor" coords="43.6,32.3 43.9,49.7 74.3,50.5 74.5,32.8 59.6,26.3">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12west"/></execute>
+                    <hover lang="de">Zu den Zügen</hover>
+                </action>
+            </place>
+            <!-- Kundenzentrum KVAG -->
+            <place id="kvag_centre">
+                <content lang="de">
+                    Du bist im Kundenzentrum der KVAG. Die Mitarbeiterin am Schalter möchte dir gerne helfen, kann es aber nicht:
+                    "Unsere Stadt ist im völligen Umbau. Der Entwickler dieses Spiels sitzt gerade dabei, die Inhalte dieser Stadt 
+                    völlig umzubauen. Drei Jahrgänge sollen wir bis Mitte 2018 präsentieren ... Drei Jahrgänge aus den Briefen von 
+                    Friedrich von Gentz. Eigentlich sollte die Stadt noch nicht zugänglich sein, leider aber hat die Zahl der 
+                    Touristen stark zugenommen, sodass wir provisorisch etwas zeigen müssen. Gehen Sie doch in die Gaststätte, 
+                    um mehr zu erfahren!"
+                </content>
+                <imagePath lang="de">karlstadt/kvag_kundenzentrum.jpg</imagePath>
+                <action name="askAssistant" coords="49.6,25.7 41.8,37.0 36.8,48.8 34.0,77.5 61.8,78.7 58.1,53.0 59.9,48.7 56.0,33.7 53.8,28.8">
+                    <execute><noAction whatShouldHappen="You cannot read, can you?"/></execute>
+                    <hover lang="de">Halt! Noch nicht! Die Fahrgastauskunft funktioniert noch nicht!!!</hover>
+                </action>
+                <action name="toEastHall" coords="0.0,93.0 0.0,100.0 100.0,100.0 93.0,100.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="eastHall"/></execute>
+                    <hover lang="de">Gehen</hover>
+                </action>
+            </place>
+            <!-- Am Bahnhof -->
+            <!-- Westausgang: Z.O.B. -->
+            <place id="centralStationExitWest_viewWest">
+                <content lang="de">
+                    Du stehst jetzt vor dem Hauptbahnhof, mit Blick auf den zentralen Omnibusbahnhof.
+                </content>
+                <imagePath lang="all">karlstadt/exitViewWest.jpg</imagePath>
+                <action name="turnAround" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Umdrehen</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+            </place>
+            <place id="centralStationExitWest_viewEast">
+                <content lang="de">
+                    Du stehst jetzt vor dem Hauptbahnhof, mit Blick auf den Eingangsbereich.
+                </content>
+                <imagePath lang="all">karlstadt/exitViewEast.jpg</imagePath>
+                <action name="turnAround" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewWest"/></execute>
+                    <hover lang="de">Umdrehen</hover>
+                </action>
+                <action name="enterStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="floor12east"/></execute>
+                    <hover lang="de">Station betreten</hover>
+                </action>
+            </place>
+            <!-- Busstieg 1/2 -->
+            <place id="ZKBay1_2noTrain">
+                <content lang="de">
+                    Du stehst an den Bussteigen 1 und 2. Derzeit ist kein Bus zu sehen.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2noTrain.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6"/></execute>
+                    <hover lang="de">warten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+            </place>
+            <place id="ZKBay1_2a">
+                <content lang="de">
+                    An Bussteig 1 ist soeben ein Bus der Linie 1102 angekommen und endet hier.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2a.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+            </place>
+            <place id="ZKBay1_2b">
+                <content lang="de">
+                    An Bussteig 2 ist soeben ein Bus der Linie 1102 zum Munizipialbibliothek über Pariser Platz eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2b.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+                <action name="mount1102" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1102" startID="1" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">Die Linie 1102 in Richtung Munizipialbibliothek besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <place id="ZKBay1_2c">
+                <content lang="de">
+                    An Bussteig 1 ist soeben ein Bus der Linie 1104 eingefahren und endet hier.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2c.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+            </place>
+            <place id="ZKBay1_2d">
+                <content lang="de">
+                    An Bussteig 2 ist soeben ein Bus der Linie 1104 zum Zeitungsviertel eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2d.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+                <action name="mount1104" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1104" startID="1" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">Die Linie 1104 in Richtung Zeitungsviertel besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <place id="ZKBay1_2e">
+                <content lang="de">
+                    An Bussteig 2 ist soeben ein Bus der Linie 1109 zum Zeitungsviertel eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2e.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+                <action name="mount1109" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1109" startID="1" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">Die Linie 1109 in Richtung Zeitungsviertel besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <place id="ZKBay1_2f">
+                <content lang="de">
+                    An Bussteig 1 ist soeben ein Bus der Linie 1109 zum Londoner Platz eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2f.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay3_4" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">zu den Bussteigen 3 und 4</hover>
+                </action>
+                <action name="toStation" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="centralStationExitWest_viewEast"/></execute>
+                    <hover lang="de">Zum Bahnhof</hover>
+                </action>
+                <action name="mount1109" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1109" startID="1" usedTicket="ZVWticket" forward="false"/></execute>
+                    <hover lang="de">Die Linie 1109 in Richtung Londoner Platz besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <!-- Busstieg 3/4 -->
+            <place id="ZKBay3_4noTrain">
+                <content lang="de">
+                    Du stehst an den Bussteigen 3 und 4. Derzeit ist kein Bus zu sehen.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay3_4noTrain.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">warten</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+            </place>
+            <place id="ZKBay3_4a">
+                <content lang="de">
+                    An Bussteig 3 ist soeben ein Bus der Linie 1101 angekommen und endet hier.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay3_4a.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+            </place>
+            <place id="ZKBay3_4b">
+                <content lang="de">
+                    An Bussteig 4 ist soeben ein Bus der Linie 1101 zum Werksviertel über Breslauer Platz eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay3_4b.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+                <action name="mount1101" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1101" startID="1" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">Die Linie 1101 in Richtung Werksviertel besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <place id="ZKBay3_4c">
+                <content lang="de">
+                    An Bussteig 3 ist soeben ein Bus der Linie 1108 eingefahren und endet hier.
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay3_4c.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+            </place>
+            <place id="ZKBay3_4d">
+                <content lang="de">
+                    An Bussteig 4 ist soeben ein Bus der Linie 1108 zum Werksviertel über Beamtenplatz eingefahren!
+                </content>
+                <imagePath lang="all">karlstadt/ZKBay1_2d.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay3_4" situationCount="4" probabilityOfArrival="0.4"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="toBay1_2" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><random station="1" city="karlstadt" platformGroup="ZKBay1_2" situationCount="6" probabilityOfArrival="0.5"/></execute>
+                    <hover lang="de">zu den Bussteigen 1 und 2</hover>
+                </action>
+                <action name="mount1108" coords="0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0">
+                    <execute><mountLine happeningBase="karlstadt_kvag" stream="1108" startID="1" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">Die Linie 1108 in Richtung Werksviertel besteigen</hover>
+                    <actionImage src="karlstadt/" cx1="0" cy1="0" xl="0" yl="0"/>
+                </action>
+            </place>
+            <!-- Ostausgang: Königsberger Platz -->
+        </discoveryContent>
+    </station>
+</town>

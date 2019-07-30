@@ -1,0 +1,1285 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="town.xsd" idPrefix="ka">
+    <station number="ka1" additionalMoney="200">
+        <name>Karlstadt Hauptbahnhof</name>
+        <discoveryContent>
+            <!-- Gleise 1-2 -->
+            <place id="Dh151_arrival">
+                <text lang="de">
+                    Du bist soeben aus dem Zug ausgestiegen, als du sofort ein reges Streitgespräch vernimmst: !NL
+                    Jemand: "Verdammt sei diese semantische Technologie, sie führt uns alle in den Wahnsinn! Wir blicken jetzt schon nicht mehr durch unsere Dokumente durch und jetzt das! Ich sage es euch: bloß keine zusätzlichen Attribute! Die TEI-Vorgabe reicht uns!"!NL
+                    Da entgegnet jemand anderes: "Ach hör auf, was die sich in Zeidel da wieder zusammengereimt haben ... "!NL
+                    Ein Dritter versucht zu beschwichtigen: "Mann, die haben das doch noch gar nicht festgelegt! Und wenn ihr mich fragt, macht das mit den Attributen durchaus Sinn, da das Schema unter Umständen gar nicht ausreicht."
+                    Der Erste antwortet schroff: "Da sollten wir lieber gleich unser eigenes Ding aufziehen und die Briefe nach eigenem Schema kodieren." Lebhafte Zustimmung. "Die in Zeidel haben keine Ahnung!"
+                    Ein Vierter, der offensichtlich angesprochen fühlt, schreit von der Gegenseite: "Das sehe ich aber anders! Nicht umsonst hat sich das Konsortium durchsetzen können! Und nun beruhigen Sie sich; Sie müssen ja nicht auf RDF-Attribute zurückgreifen!"
+                    !NL !NL
+                    Da dich aber das nicht recht interessiert, beschließt du, dich in der Stadt einwenig umzusehen.</text>
+                <image>karlstadt/karlstadt_gleise_1_2_Dh_151.JPG</image>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>345</x1>
+                    <y1>500</y1>
+                    <x2>500</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover lang="de">directionChange('Zum Flur')</hover>
+                </action>
+            </place>
+            <place id="floor12west">
+                <text>Hier kannst du zu den übrigen Gleisen wechseln. Von Gleisen 7-8 fahren S-Bahnen ab.</text>
+                <image>karlstadt/karlstadt_gleise_1_2_west.JPG</image>
+                <action name="floor12ToPlatform78" itemRequired="none" onlyOnce="false">
+                    <x1>341</x1>
+                    <y1>407</y1>
+                    <x2>394</x2>
+                    <y2>444</y2>
+                    <execute>random(0,'karlstadt','platform7_8',3)</execute>
+                    <hover>directionChange('Zu den Gleisen 7-8')</hover>
+                </action>
+                <action name="floor12ToStars" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>530</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','entryHall')</execute>
+                    <hover>directionChange('Zum Ausgang und Reisezentrum')</hover>
+                </action>
+            </place>
+            <!-- Gleise 7-8 -->
+            <place id="platform7_8a">
+                <text>Es steht zufällig eine S 1 nach Türkisch-Russischer Konflikt bereit (was auch immer das bedeutet).!NL !NL
+                Klicke oben, um einige Minuten zu warten, oder unten, um zur Treppe zurückzukehren.</text>
+                <image>karlstadt/karlstadt_gleise_7_8_S_2.JPG</image>
+                <action name="mountS1" itemRequired="none" onlyOnce="false">
+                    <x1>572</x1>
+                    <y1>298</y1>
+                    <x2>603</x2>
+                    <y2>373</y2>
+                    <execute>mountLine('karlstadt_kvag','S1',0,true)</execute>
+                    <hover>directionChange('Die S 1 nach Türkisch-Russischer Konflikt besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8b">
+                <text>Da kommt gerade eine S 1 nach Englisch-Französischer Konflikt! !NL
+                Engländer und Franzosen vertrugen sich nie so recht, mal sehen, was Gentz dazu zu schreiben hat! !NL !NL
+                Oben klicken, um zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_1.JPG</image>
+                <action name="mountS1" itemRequired="none" onlyOnce="false">
+                    <x1>221</x1>
+                    <y1>309</y1>
+                    <x2>249</x2>
+                    <y2>401</y2>
+                    <execute>mountLine('karlstadt_kvag','S1',0,false)</execute>
+                    <hover>directionChange('Die S 1 nach Englisch-Französischer Konflikt besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8c">
+                <text>Jetzt kommt eine S 2 nach Persönliche Beziehungen. Beziehungsgeschichten interessieren uns doch immer, oder? !NL !NL
+                Oben klicken, um zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_3.JPG</image>
+                <action name="mountS2" itemRequired="none" onlyOnce="false">
+                    <x1>7</x1>
+                    <y1>271</y1>
+                    <x2>95</x2>
+                    <y2>487</y2>
+                    <execute>mountLine('karlstadt_kvag','S2',0,true)</execute>
+                    <hover>directionChange('Die S 2 nach Persönliche Beziehungen besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8d">
+                <text>Jetzt ist eine S 2 nach Englisch-Französischer Konflikt eingefahren!NL !NL
+                    Klicke oben, um einige Minuten zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_1.JPG</image>
+                <action name="mountS2" itemRequired="none" onlyOnce="false">
+                    <x1>223</x1>
+                    <y1>307</y1>
+                    <x2>248</x2>
+                    <y2>398</y2>
+                    <execute>mountLine('karlstadt_kvag','S2',0,false)</execute>
+                    <hover>directionChange('Die S 2 nach Englisch-Französischer Konflikt besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8e">
+                <text>Da kommt gerade eine S 3 nach Persönliche Beziehungen! !NL
+                    Oben klicken, um zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_3.JPG</image>
+                <action name="mountS3" itemRequired="none" onlyOnce="false">
+                    <x1>226</x1>
+                    <y1>298</y1>
+                    <x2>256</x2>
+                    <y2>403</y2>
+                    <execute>mountLine('karlstadt_kvag','S3',0,true)</execute>
+                    <hover>directionChange('Die S 3 nach Persönliche Beziehungen besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8f">
+                <text>Jetzt kommt eine S 3 nach Türkisch-Russischer Konflikt. Zündstoff damals wie heute. !NL !NL
+                    Oben klicken, um zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_2.JPG</image>
+                <action name="mountS3" itemRequired="none" onlyOnce="false">
+                    <x1>578</x1>
+                    <y1>308</y1>
+                    <x2>602</x2>
+                    <y2>374</y2>
+                    <execute>mountLine('karlstadt_kvag','S3',0,false)</execute>
+                    <hover>directionChange('Die S 3 nach Persönliche Beziehungen besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <place id="platform7_8noTrain">
+                <text>Derzeit steht kein Zug am Bahnstieg. Oben kannst du klicken, wenn du warten möchtest. Weg kommst du, indem du unten klickst.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_noTrain.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(0,'karlstadt','platform7_8',6)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>160</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zur Treppe')</hover>
+                </action>
+            </place>
+            <!-- Eingangshalle -->
+            <place id="entryHall">
+                <text>Du stehst derzeit am Treppenabgang zu den Zügen. Nach rechts gelangst du zu den Gleisen, geradeaus ist der Fahrkartenschalten, wo du deine nächste Fahrkarte kaufen oder in den Prüfungsmodus gehen kannst.!NL
+                Daneben steht der Fahrkartenautomat sowie der Fahrplan, der dir sicherlich bei der Fahrt durch Gentz' Stadt weiterhelfen wird.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_eingang_halle.JPG</image>
+                <action name="toTicketOffice" itemRequired="none" onlyOnce="false">
+                    <x1>355</x1>
+                    <y1>73</y1>
+                    <x2>420</x2>
+                    <y2>130</y2>
+                    <execute>noAction('toTicketOffice')</execute>
+                    <hover>directionChange('In das Reisebüro (nicht implementiert)')</hover>
+                </action>
+                <action name="toTicketMachine" itemRequired="none" onlyOnce="false">
+                    <x1>316</x1>
+                    <y1>58</y1>
+                    <x2>353</x2>
+                    <y2>154</y2>
+                    <execute>writeStation(0,'karlstadt','centralTicketMachine')</execute>
+                    <hover>directionChange('Zum Fahrkartenautomaten')</hover>
+                </action>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>465</x1>
+                    <y1>260</y1>
+                    <x2>520</x2>
+                    <y2>500</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zu den Zügen')</hover>
+                </action>
+                <action name="toExit" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>500</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationExit')</execute>
+                    <hover>directionChange('Ausgang')</hover>
+                </action>
+            </place>
+            <!-- Fahrkartenautomat -->
+            <place id="centralTicketMachine">
+                <text>Hier stehst Du nun vor dem Fahrkartenautomaten sowie dem Liniennetzplan der Karlstädter Verkehrs-Actiengesellschaft (KVAG).</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_fahrplan.JPG</image>
+                <action name="closeUpMachine" itemRequired="none" onlyOnce="false">
+                    <x1>40</x1>
+                    <y1>370</y1>
+                    <x2>138</x2>
+                    <y2>457</y2>
+                    <execute>writeStation(0,'karlstadt','ticketMachine0_1')</execute>
+                    <hover>directionChange('Den Fahrkartenautomaten nutzen')</hover>
+                </action>
+                <action name="showMap" itemRequired="none" onlyOnce="false">
+                    <x1>315</x1>
+                    <y1>200</y1>
+                    <x2>675</x2>
+                    <y2>475</y2>
+                    <execute>showMap('karlstadt\/karlstadt_kvag_14_15.JPG',388,287)</execute>
+                    <hover>directionChange('Karte anzeigen')</hover>
+                </action>
+                <action name="toHall" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','entryHall')</execute>
+                    <hover>directionChange('Zurück zur Halle')</hover>
+                </action>
+            </place>
+            <place id="ticketMachine0_1">
+                <text>Hier kannst du dir mittels des Fahrkartenautomaten dir die Elemente aussuchen, 
+                    die du als Nächstes untersuchen möchtest. Berühre dazu den Bildschirm, um das Eingabeformular abzurufen. Drücke 
+                    danach auf die Knöpfe, um die Briefe anzeigen zu lassen.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/kvag_automat.JPG</image>
+                <action name="activateMachine" itemRequired="none" onlyOnce="false">
+                    <x1>70</x1>
+                    <y1>100</y1>
+                    <x2>640</x2>
+                    <y2>540</y2>
+                    <execute>activateMachine('ticketMachine0_1')</execute>
+                    <hover>directionChange('Den Automaten benutzen')</hover>
+                </action>
+                <action name="toBoard" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>540</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>clear("writeStation(0,'karlstadt','centralTicketMachine')")</execute>
+                    <hover>directionChange('Zurück zur Tafel')</hover>
+                </action>
+            </place>
+            <!-- Blick vom Bahnhof auf Bushof -->
+            <place id="stationExit">
+                <text>Der Bushof erstreckt sich vor dir.!NL
+                Zur Zeit sind nur die Busstiege 1 und 2 in Betrieb. Dort hält die Linie 123 Richtung Wiener Straße/6. Mai 1832 oder Armfelt/25. August 1806.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_ausgang.JPG</image>
+                <action name="toBay1" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>430</y1>
+                    <x2>720</x2>
+                    <y2>476</y2>
+                    <execute>random(0,'karlstadt','bay1',1)</execute>
+                    <hover>directionChange('Zum Busstieg 1')</hover>
+                </action>
+                <action name="toBay2" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>390</y1>
+                    <x2>720</x2>
+                    <y2>410</y2>
+                    <execute>random(0,'karlstadt','bay2',1)</execute>
+                    <hover>directionChange('Zum Busstieg 2')</hover>
+                </action>
+                <action name="toRailways" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationEntrance')</execute>
+                    <hover>directionChange('Zurück zum Bahnhof')</hover>
+                </action>
+            </place>
+            <!-- Blick vom Bushof auf Bahnhof -->
+            <place id="stationEntrance">
+                <text>Nun stehst du vor dem Eingang zum Hauptbahnhof.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_eingang.JPG</image>
+                <action name="enterStation" itemRequired="none" onlyOnce="false">
+                    <x1>442</x1>
+                    <y1>305</y1>
+                    <x2>656</x2>
+                    <y2>427</y2>
+                    <execute>writeStation(0,'karlstadt','entryHall')</execute>
+                    <hover>directionChange('Das Bahnhofsgebäude betreten')</hover>
+                </action>
+                <action name="toBuses" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationExit')</execute>
+                    <hover>directionChange('Zurück zum Bushof')</hover>
+                </action>
+            </place>
+            <!-- Busstieg 1 -->
+            <place id="bay1noTrain">
+                <text>Hier, am Busstieg 1 hält die Linie 123 Richtung Armfelt-Allee (25. August 1806) über Persönliche Beziehungen.!NL
+                Zur Zeit ist kein Bus da.!NL
+                Klicke auf das Haltestellenschild, um einige Minuten zu warten.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_bushof_stg1_noBus.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>115</x1>
+                    <y1>108</y1>
+                    <x2>216</x2>
+                    <y2>257</y2>
+                    <execute>random(0,'karlstadt','bay1',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toStation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationEntrance')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+            </place>
+            <place id="bay1a">
+                <text>Jetzt ist ein Bus eingefahren. Steige ein, um mehr über Gentz' persönliche Verhältnisse und über G. M. Armfelt zu erfahren!
+                    !NLKlicke auf das Haltestellenschild, um einige Minuten zu warten.</text>
+                <sign>karlstadt/karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_bushof_stg1_123.JPG</image>
+                <action name="mount123" itemRequired="none" onlyOnce="false">
+                    <x1>532</x1>
+                    <y1>231</y1>
+                    <x2>720</x2>
+                    <y2>518</y2>
+                    <execute>mountLine('karlstadt_kvag','123',0,true)</execute>
+                    <hover>directionChange('Die Linie 123 Richtung Armfelt-Allee besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>115</x1>
+                    <y1>108</y1>
+                    <x2>216</x2>
+                    <y2>257</y2>
+                    <execute>random(0,'karlstadt','bay1',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toStation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationEntrance')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+            </place>
+            <!-- Busstieg 2 -->
+            <place id="bay2noTrain">
+                <text>Von hier aus (Busstieg 2) fährt der 123er Richtung Wiener Straße (6. Mai 1832)!NL
+                Zur Zeit steht kein Bus in der Haltestelle.!NL
+                Klicke auf das Haltestellenschild, um einige Minuten zu warten.</text>
+                <sign>karlstadt/karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_bushof_stg2_noBus.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>132</x1>
+                    <y1>130</y1>
+                    <x2>186</x2>
+                    <y2>203</y2>
+                    <execute>random(0,'karlstadt','bay2',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toStation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationEntrance')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+            </place>
+            <place id="bay2a">
+                <text>Hier steht der Bus, der dich zu Gentz' letzten Briefen fährt.</text>
+                <sign>karlstadt/karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_bushof_stg2_123.JPG</image>
+                <action name="mount123" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>200</y1>
+                    <x2>173</x2>
+                    <y2>550</y2>
+                    <execute>mountLine('karlstadt_kvag','123',0,false)</execute>
+                    <hover>directionChange('Die Linie 123 Richtung Wiener Straße besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>132</x1>
+                    <y1>130</y1>
+                    <x2>186</x2>
+                    <y2>203</y2>
+                    <execute>random(0,'karlstadt','bay2',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toStation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>550</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','stationEntrance')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="1" additionalMoney="60">
+        <name>Persönliche Beziehungen</name>
+        <discoveryContent>
+            <place id="st1_platform1_2noTrain">
+                <text>Du bist jetzt an der Haltestelle Persönliche Beziehungen, wo du viel Interessantes über Gentz' Briefverkehr erfahren kannst. Du hast zudem ein Forschungsfeld betreten. !NL
+                Suche dir hier den Weg zu deinem Brief ... der Fahrkartenautomat wird dir weiterhelfen können. !NL !NL
+                Solltest du weiterfahren wollen, musst du einige Minuten auf einen Zug warten ... klicke dazu auf den oberen Rand des Steuerfeldes.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_gleise_1_2_noTrain.JPG</image>
+                <action name="toTicketMachine1_1" itemRequired="none" onlyOnce="false">
+                    <x1>276</x1>
+                    <y1>212</y1>
+                    <x2>413</x2>
+                    <y2>454</y2>
+                    <execute>writeStation(1,'karlstadt','ticketMachine1_1')</execute>
+                    <hover>directionChange('Zum Fahrkartenautomat')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(1,'karlstadt','st1_platform1_2',3)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toStairs" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>540</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','station1Entrance')</execute>
+                    <hover>directionChange('Zu den Treppen')</hover>
+                </action>
+            </place>
+            <place id="st1_platform1_2a">
+                <text>Es kommt eine Regionalbahn, die dich direkt zum Hauptbahnhof zurückbringt.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_gleise_1_2_RB_11.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(1,'karlstadt','st1_platform1_2',3)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="mountRB11" itemRequired="none" onlyOnce="false">
+                    <x1>594</x1>
+                    <y1>281</y1>
+                    <x2>618</x2>
+                    <y2>417</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Die RB 11 Richtung Karlstadt Hbf. besteigen')</hover>
+                </action>
+            </place>
+            <place id="st1_platform1_2b">
+                <text>Jetzt kommt eine S 2 Richtung Englisch-Französischer Konflikt.!NL
+                </text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/dokumentenuebergabe_gleise_1_2_S_2.JPG</image>
+                <action name="mountS2" itemRequired="none" onlyOnce="false">
+                    <x1>646</x1>
+                    <y1>254</y1>
+                    <x2>713</x2>
+                    <y2>455</y2>
+                    <execute>mountLine('karlstadt_kvag','S2',1,false)</execute>
+                    <hover>directionChange('Die S 2 Richtung Englisch-Französischer Konflikt besteigen')</hover>
+                </action>                    
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>120</y2>
+                    <execute>random(1,'karlstadt','st1_platform1_2',3)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+            </place>
+            <place id="st1_platform1_2c">
+                <text>Da steht jetzt eine S 3 nach Türkisch-Russischer Konflikt.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/dokumentenuebergabe_gleise_1_2_S_3.JPG</image>
+                <action name="mountS3" itemRequired="none" onlyOnce="false">
+                    <x1>622</x1>
+                    <y1>276</y1>
+                    <x2>647</x2>
+                    <y2>402</y2>
+                    <execute>mountLine('karlstadt_kvag','S3',1,false)</execute>
+                    <hover></hover>
+                </action>
+                <action name="toTicketMachine1_1" itemRequired="none" onlyOnce="false">
+                    <x1>276</x1>
+                    <y1>212</y1>
+                    <x2>413</x2>
+                    <y2>454</y2>
+                    <execute>writeStation(1,'karlstadt','ticketMachine1_1')</execute>
+                    <hover>directionChange('Zum Fahrkartenautomat')</hover>
+                </action>
+            </place>
+            <place id="ticketMachine1_1">
+                <text>Hier kannst du dir mittels des Fahrkartenautomaten dir die Elemente aussuchen, 
+                die du als Nächstes untersuchen möchtest. Berühre dazu den Bildschirm, um das Eingabeformular abzurufen. Drücke 
+                danach auf die Knöpfe, um die Briefe anzeigen zu lassen.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/kvag_automat.JPG</image>
+                <action name="activateMachine" itemRequired="none" onlyOnce="false">
+                    <x1>70</x1>
+                    <y1>100</y1>
+                    <x2>640</x2>
+                    <y2>540</y2>
+                    <execute>activateMachine('ticketMachine1_1')</execute>
+                    <hover>directionChange('Den Automaten benutzen')</hover>
+                </action>
+                <action name="machineToPlatform12" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>540</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>clear("random(1,'karlstadt','st1_platform1_2',3)")</execute>
+                    <hover>directionChange('Zurück zum Bahnstieg')</hover>
+                </action>
+            </place>
+            <place id="station1Entrance">
+                <text>Du stehst jetzt vor dem Aufgang zum S-Bahnstieg Persönliche Beziehungen. Rechts kommst du zum Bushof.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_treppe.JPG</image>
+                <action name="toBusStation" itemRequired="none" onlyOnce="false">
+                    <x1>540</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Bushof')</hover>
+                </action>
+                <action name="toPlatform" itemRequired="none" onlyOnce="false">
+                    <x1>209</x1>
+                    <y1>281</y1>
+                    <x2>458</x2>
+                    <y2>576</y2>
+                    <execute>random(1,'karlstadt','st1_platform1_2',3)</execute>
+                    <hover>directionChange('Zum Bahnstieg')</hover>
+                </action>
+            </place>
+            <!-- Bushof -->
+            <place id="busStationEntrance">
+                <text>Jetzt stehst du vor Busstieg 2 des Bushofes Persönliche Beziehungen. 
+                Von hier fahren die Linien 123, 200 und 201 ab.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_eingang_123.JPG</image>
+                <action name="toRailStation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>500</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','station1Entrance')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+                <action name="toBay1" itemRequired="none" onlyOnce="false">
+                    <x1>282</x1>
+                    <y1>267</y1>
+                    <x2>324</x2>
+                    <y2>352</y2>
+                    <execute>random(1,'karlstadt','st1_bay1',1)</execute>
+                    <hover>directionChange('Zum Busstieg 1 (Linie 123 Richtung 25. August 1806)')</hover>
+                </action>
+                <action name="toBay2" itemRequired="none" onlyOnce="false">
+                    <x1>535</x1>
+                    <y1>260</y1>
+                    <x2>590</x2>
+                    <y2>360</y2>
+                    <execute>random(1,'karlstadt','st1_bay2',2)</execute>
+                    <hover>directionChange('Zum Busstieg 2 (Linie 123 Richtung Hbf./Wiener Straße, Linie 124 Richtung Englisch-Französischer Konflikt)')</hover>
+                </action>
+                <action name="toBay3" itemRequired="none" onlyOnce="false">
+                    <x1>480</x1>
+                    <y1>280</y1>
+                    <x2>510</x2>
+                    <y2>330</y2>
+                    <execute>random(1,'karlstadt','st1_bay3',2)</execute>
+                    <hover>directionChange('Zum Busstieg 3 (Linie 200 Richtung , Linie 124 Richtung Englisch-Französischer Konflikt)')</hover>
+                </action>                
+            </place>
+            <!-- Busstieg 1 -->
+            <place id="st1_bay1noTrain">
+                <text>Hier fährt die Linie 123 Richtung 25. August 1806. Zurzeit steht kein Bus in der Haltestelle.!NL
+                Klicke auf das Haltestellenschild, um einige Minuten zu warten.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg1_noBus.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>265</x1>
+                    <y1>80</y1>
+                    <x2>340</x2>
+                    <y2>195</y2>
+                    <execute>random(1,'karlstadt','st1_bay1',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>                
+            </place>
+            <place id="st1_bay1a">
+                <text>Hier fährt die Linie 123 Richtung 25. August 1806. Steig ein, und du gelangst zu Briefen an Gustav Mauritz Armfelt.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg1_123.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>265</x1>
+                    <y1>80</y1>
+                    <x2>340</x2>
+                    <y2>195</y2>
+                    <execute>random(1,'karlstadt','st1_bay1',1)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="mount123" itemRequired="none" onlyOnce="false">
+                    <x1>417</x1>
+                    <y1>300</y1>
+                    <x2>420</x2>
+                    <y2>480</y2>
+                    <execute>mountLine('karlstadt_kvag','123',1,true)</execute>
+                    <hover>directionChange('Die Linie 123 Richtung 25. August 1806 besteigen')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>                
+            </place>
+            <!-- Busstieg 2 -->
+            <place id="st1_bay2noTrain">
+                <text>Hier kannst du mit dem 123er zu Madame L., zum Hauptbahnhof oder zur Wiener Straße.!NL
+                    Auch hält hier die Linie 124 zum Englisch-Französischen Konflikt.!NL 
+                    Zurzeit steht kein Bus in der Haltestelle.!NL
+                    Klicke auf das Haltestellenschild, um einige Minuten zu warten.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg2_noBus.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>415</x1>
+                    <y1>65</y1>
+                    <x2>495</x2>
+                    <y2>180</y2>
+                    <execute>random(1,'karlstadt','st1_bay2',2)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+            <place id="st1_bay2a">
+                <text>Hier fährt die Linie 123 Richtung 6. Mai 1832. Steig ein, und du gelangst zur Madame L-Straße oder zu den Briefen an Verwandte.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg2_123.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>415</x1>
+                    <y1>65</y1>
+                    <x2>495</x2>
+                    <y2>180</y2>
+                    <execute>random(1,'karlstadt','st1_bay2',2)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="mount123" itemRequired="none" onlyOnce="false">
+                    <x1>320</x1>
+                    <y1>270</y1>
+                    <x2>340</x2>
+                    <y2>400</y2>
+                    <execute>mountLine('karlstadt_kvag','123',1,false)</execute>
+                    <hover>directionChange('Die Linie 123 Richtung 6. Mai 1832 besteigen')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+            <place id="st1_bay2b">
+                <text>Hier fährt die Linie 124 Richtung Englisch-Französischer Konflikt.!NL
+                    Dies ist ein Schnellbus, er bringt dich direkt dorthin - zu den Brennpunkten der Jahrhundertwende.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg2_124.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>415</x1>
+                    <y1>65</y1>
+                    <x2>495</x2>
+                    <y2>180</y2>
+                    <execute>random(1,'karlstadt','st1_bay2',2)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+                <action name="mount124" itemRequired="none" onlyOnce="false">
+                    <x1>320</x1>
+                    <y1>270</y1>
+                    <x2>340</x2>
+                    <y2>530</y2>
+                    <execute>mountLine('karlstadt_kvag','124',1,true)</execute>
+                    <hover>directionChange('Die Linie 124 Richtung Englisch-Französischer Konflikt besteigen')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+            <!-- Busstieg 3 -->
+            <place id="st1_bay3noTrain">
+                <text>Hier halten die Linien 200 und 201, jeweils zu Briefen von 1824.!NL
+                Linie 200 fährt über Ottenfels-Gschwind zum Brief vom 17. Dezember 1824,!NL
+                Linie 201 fährt über die Strangfordstraße zum 5. Mai 1824.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg3_noBus.JPG</image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>240</x1>
+                    <y1>30</y1>
+                    <x2>317</x2>
+                    <y2>147</y2>
+                    <execute>random(1,'karlstadt','st1_bay3',2)</execute>
+                    <hover>directionChange('Einige Minuten warten')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+            <place id="st1_bay3a">
+                <text>Hier steht jetzt eine 200 zum Brief vom 17. Dezember 1824.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg3_200.JPG</image>
+                <action name="mount200" itemRequired="none" onlyOnce="false">
+                    <x1>170</x1>
+                    <y1>280</y1>
+                    <x2>190</x2>
+                    <y2>560</y2>
+                    <execute>mountLine('karlstadt_kvag','200','1',true)</execute>
+                    <hover>directionChange('Die Linie 200 Richtung Ottenfels-Gschwind besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>240</x1>
+                    <y1>30</y1>
+                    <x2>317</x2>
+                    <y2>147</y2>
+                    <execute>random(1,'karlstadt','st1_bay3',2)</execute>
+                    <hover>directionChange('Einige Minuten warten')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+            <place id="st1_bay3b">
+                <text>Hier steht die Linie 201, die über die Strangfordstraße zum 5. Mai 1824 fährt.</text>
+                <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign>
+                <image>karlstadt/persoenliche_beziehungen_bushof_stg3_noBus.JPG</image>
+                <action name="mount201" itemRequired="none" onlyOnce="false">
+                    <x1>220</x1>
+                    <y1>300</y1>
+                    <x2>230</x2>
+                    <y2>470</y2>
+                    <execute>mountLine('karlstadt_kvag','201','1',true)</execute>
+                    <hover>directionChange('Die Linie 201 Richtung Strangford besteigen')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>240</x1>
+                    <y1>30</y1>
+                    <x2>317</x2>
+                    <y2>147</y2>
+                    <execute>random(1,'karlstadt','st1_bay3',2)</execute>
+                    <hover>directionChange('Einige Minuten warten')</hover>
+                </action>
+                <action name="toEntrance" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>400</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(1,'karlstadt','busStationEntrance')</execute>
+                    <hover>directionChange('Zum Eingang')</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="2" additionalMoney="60">
+        <name>Englisch-Französischer Konflikt</name>
+        <discoveryContent>
+            <!-- Bahnstieg 1-2 -->
+            <place id="st2_platform1_2a">
+                <text>Gerade ist eine RB 12 Richtung Türkisch-Russischer Konflikt gekommen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gleise_1_2_RB_12.JPG</image>
+                <action name="mountRB12" itemRequired="none" onlyOnce="false">
+                    <x1>484</x1>
+                    <y1>230</y1>
+                    <x2>524</x2>
+                    <y2>428</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Die RB 12 Richtung Karlstadt Hauptbahnhof besteigen')</hover>
+                </action>
+            </place>
+            <!-- Bahnstieg 3-4 -->
+            <place id="st2_platform3_4noTrain">
+                <text>Derzeit steht kein Zug im Bahnstieg. !NL
+                Oben kannst du klicken, um einige Minuten zu warten oder rechts, um zum Flur zu gelangen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gleise_3_4_noTrain.JPG</image>
+                <action name="pl3_4toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>600</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_floor')</execute>
+                    <hover>directionChange('Zum Flur')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>600</x2>
+                    <y2>120</y2>
+                    <execute>random(2,'karlstadt','st2_platform3_4')</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+            </place>
+            <place id="st2_platform3_4a">
+                <text>Da kommt ein Zug Richtung Türkisch-Russischer Konflikt über Hauptbahnhof! !NL
+                    Oben kannst du klicken, um einige Minuten zu warten oder rechts, um zum Flur zu gelangen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gleise_3_4_S_4.JPG</image>
+                <action name="mountS4" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>254</y1>
+                    <x2>184</x2>
+                    <y2>498</y2>
+                    <execute>mountLine('karlstadt','S1',2,false)</execute>
+                    <hover>directionChange('Die S 1 Richtung Türkisch-Russischer Konflikt besteigen')</hover>
+                </action>
+                <action name="pl3_4toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>600</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_floor')</execute>
+                    <hover>directionChange('Zum Flur')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>600</x2>
+                    <y2>120</y2>
+                    <execute>random(2,'karlstadt','st2_platform3_4')</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+            </place>
+            <place id="st2_platform3_4b">
+                <text>Du hast eine Vision ... sie ist grauenhaft ... sie zeigt ...!NL
+                    EINE WEITERE ANALYSESTADT!!!!!!! !NL
+                    Oben kannst du klicken, um einige Minuten zu warten oder rechts, um zum Flur zu gelangen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gleise_3_4_noTrain.JPG</image>
+                <action name="pl3_4toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>600</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_floor')</execute>
+                    <hover>directionChange('Zum Flur')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>600</x2>
+                    <y2>120</y2>
+                    <execute>random(2,'karlstadt','st2_platform3_4')</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                    <actionImage src="ninaciudad/JakobsonHochhaus.JPG" cx1="20" cy1="20" xl="400" yl="300"/>
+                </action>
+            </place>
+            <place id="st2_platform3_4c">
+                <text>Du hast eine Vision ... sie ist grauenhaft ... sie zeigt ...!NL
+                    EINE WEITERE ANALYSESTADT!!!!!!! !NL
+                    Oben kannst du klicken, um einige Minuten zu warten oder rechts, um zum Flur zu gelangen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gleise_3_4_noTrain.JPG</image>
+                <action name="pl3_4toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>600</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_floor')</execute>
+                    <hover>directionChange('Zum Flur')</hover>
+                </action>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>600</x2>
+                    <y2>120</y2>
+                    <execute>random(2,'karlstadt','st2_platform3_4')</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                    <actionImage src="cite_d_orcive/cite_d_orcive_interchange2.JPG" cx1="20" cy1="20" xl="400" yl="300"/>
+                </action>
+            </place>
+            <!-- Bahnhofsgebäude -->
+            <place id="st2_floor">
+                <text>Hier stehst du im Flur und kannst zu den Zügen. !NL
+                Von Gleisen 1-2 fahren Regionalbahnen ab. Der Stadtexpress verkehrt hier nicht mehr.!NL
+                Von Gleisen 3-4 fahren S-Bahnen ab.!NL
+                Unten klicken, um zur Halle und zum Fahrkartenautomaten zu gelangen.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_gang.JPG</image>
+                <action name="floorToPlatform1_2" itemRequired="none" onlyOnce="false">
+                    <x1>302</x1>
+                    <y1>389</y1>
+                    <x2>406</x2>
+                    <y2>458</y2>
+                    <execute>writeStation(2,'karlstadt','st2_platform1_2a')</execute>
+                    <hover>directionChange('Zu den Gleisen 1-2')</hover>
+                </action>
+                <action name="floorToPlatform3_4" itemRequired="none" onlyOnce="false">
+                    <x1>518</x1>
+                    <y1>150</y1>
+                    <x2>585</x2>
+                    <y2>478</y2>
+                    <execute>random(2,'karlstadt','st2_platform3_4')</execute>
+                    <hover>directionChange('Zu den Gleisen 3-4')</hover>
+                </action>
+                <action name="floorToHall" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>500</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_hall')</execute>
+                    <hover>directionChange('Zur Halle')</hover>
+                </action>
+            </place>
+            <place id="st2_hall">
+                <text>Vor dir steht ein Fahrkartenautomat zur Ausgabe von Gentz-Briefen! !NL
+                Benutze den, um Briefe zu finden sowie um anzuzeigen, welche Briefe sich in deiner Nähe befinden.!NL
+                Klicke nach rechts, um zu den Zügen zu gelangen oder nach unten, um zum Bushof zu gehen.</text>
+                <image>karlstadt/englisch_franzoesischer_konflikt_halle.JPG</image>
+                <action name="hallToFloor" itemRequired="none" onlyOnce="false">
+                    <x1>650</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_floor')</execute>
+                    <hover>directionChange('Zum Flur zu den Zügen')</hover>
+                </action>
+                <action name="hallToBusstation" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>520</y1>
+                    <x2>650</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','busstation2_1')</execute>
+                    <hover>directionChange('Zum Bushof')</hover>
+                </action>
+                <action name="ticketMachine2_1" itemRequired="none" onlyOnce="false">
+                    <x1>485</x1>
+                    <y1>115</y1>
+                    <x2>667</x2>
+                    <y2>484</y2>
+                    <execute>writeStation(2,'karlstadt','ticketMachine2_1')</execute>
+                    <hover>directionChange('Den Fahrkartenautomaten benutzen')</hover>
+                </action>
+            </place>
+            <place id="ticketMachine2_1">
+                <text>Hier kannst du dir mittels des Fahrkartenautomaten dir die Elemente aussuchen, 
+                    die du als Nächstes untersuchen möchtest. Berühre dazu den Bildschirm, um das Eingabeformular abzurufen. Drücke 
+                    danach auf die Knöpfe, um die Briefe anzeigen zu lassen.</text>
+                <image>karlstadt/kvag_automat.JPG</image>
+                <action name="activateMachine" itemRequired="none" onlyOnce="false">
+                    <x1>70</x1>
+                    <y1>100</y1>
+                    <x2>640</x2>
+                    <y2>540</y2>
+                    <execute>activateMachine('ticketMachine2_1')</execute>
+                    <hover>directionChange('Den Automaten benutzen')</hover>
+                </action>
+                <action name="machineToPlatform12" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>540</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>clear("writeStation(2,'karlstadt','st2_hall')")</execute>
+                    <hover>directionChange('Zurück zur Halle')</hover>
+                </action>
+            </place>
+            <!-- Bushof -->
+            <place id="busstation2_1">
+                <text>Hier stehst du vor Busstieg 1 der Haltestelle Englisch-Französischer Konflikt.</text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign>
+                <image>karlstadt/englisch_franzoesischer_konflikt_busstieg_1.JPG</image>
+                <action name="to18000308" itemRequired="none" onlyOnce="false">
+                    <x1>546</x1>
+                    <y1>369</y1>
+                    <x2>576</x2>
+                    <y2>438</y2>
+                    <execute>writeStation(2,'karlstadt','Gentz18000308')</execute>
+                    <hover>directionChange('Den Brief vom 8. März 1800 ansehen')</hover>
+                </action>
+                <action name="to18020212" itemRequired="none" onlyOnce="false">
+                    <x1>576</x1>
+                    <y1>369</y1>
+                    <x2>605</x2>
+                    <y2>438</y2>
+                    <execute>writeStation(2,'karlstadt','Gentz18020212')</execute>
+                    <hover>directionChange('Den Brief vom 12. Februar 1802 ansehen')</hover>
+                </action>
+                <action name="busstationToHall" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>520</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','st2_hall')</execute>
+                    <hover>directionChange('Zum Bahnhof')</hover>
+                </action>
+            </place>
+            <place id="Gentz18000308">
+                <text> Gentz schreibt diesen Brief an Lord Hawkesbury, um ihm in gewisser Weise ein "Friedensangebot" zu unterbreiten; !NL
+                    Er distanziert sich von seinen "compatriotes" und macht deutlich, dass er die Vorurteile und Vorbehalte seiner Landsleute !NL
+                    nicht teilt.
+                </text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign> 
+                <image>karlstadt/00000090.JPG</image>
+                <action name="back" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','busstation2_1')</execute>
+                    <hover>directionChange('Zurück')</hover>
+                </action>
+            </place>
+            <place id="Gentz18020212">
+                <text> Von seinem Brieffreund Heinrich Frölich hat Gentz ein Buch erhalten, in dem Briefe zwischen England und Frankreich enthalten sind, !NL
+                    die Gentz sehr inspiriert haben und mit seinen Denkweisen teils übereinstimmen. Er möchte sich daran setzen, diese Briefe ins Deutsche zu übersetzen, !NL
+                    um anschließend selbst seine Meinung darüber zu schreiben. Gleichzeitig bittet er ihn (mal wieder) um Geld.
+                </text>
+                <sign>karlstadt/Englisch_Franzoesischer_Konflikt.JPG</sign> 
+                <image>karlstadt/00000097.JPG</image>
+                <action name="back" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>720</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(2,'karlstadt','busstation2_1')</execute>
+                    <hover>directionChange('Zurück')</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="3" additionalMoney="60">
+        <name>Türkisch-Russischer Konflikt</name>
+        <discoveryContent>
+            <place id="st3_platform3_4noTrain">
+                <text>Du stehst zur Zeit auf dem leeren Bahnsteig zwischen den Gleisen 3 und 4.!NL
+                Oben klicken, um einige Minuten zu warten.</text>
+                <sign></sign>
+                <image></image>
+                <action name="wait" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>160</x2>
+                    <y2>576</y2>
+                    <execute>random(3,'karlstadt','st3_platform3_4',2)</execute>
+                    <hover>directionChange('einige Minuten warten')</hover>
+                </action>
+            </place>
+            <place id="Gentz18240417">
+                    <text> Gentz versucht sich nicht nur als Editor, sondern auch als Diplomat - hier schildert er seinem Kollegen von Ottenfels-Gschwind den Verlauf der Friedensgespräche !NL
+                        zwischen den Briten und den Franzosen. Er moniert die Sturheit des britischen Vertreters, der den Fortlauf der Verhandlungen blockiert. !NL
+                        Auch das seit Tagen schlechte Wetter trägt seinen Teil dazu bei, dass er zum Zeitpunkt des Briefwechsels relativ übelgelaunt ist.
+                        Ferner geht es um einen Bericht seines erkrankten Freundes Lebzeltern, der ein russisches Communiqué über die Befriedung Griechenlands !NL
+                        vorliegen hat, welches er ihm aber nicht in Kopie zukommen lassen konnte, weil er zu gestresst war. Gentz selbst ist auch nicht viel entspannter. !NL
+                        Er sehnt sich nach Urlaub, und, vor allem: besserem Wetter. !NL
+                    </text>
+                    <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign> 
+                    <image></image>
+                    <action name="a" itemRequired="none" onlyOnce="false">
+                        <x1>0</x1>
+                        <y1>0</y1>
+                        <x2>0</x2>
+                        <y2>0</y2>
+                        <execute></execute>
+                        <hover></hover>
+                    </action>
+                </place>
+                <place id="Gentz18240505">
+                    <text> In diesem Brief thematisiert Gentz weiter die Lage der Friedensverhandlungen, insbesondere ein Schreiben der britischen Regierung, !NL
+                        die den britischen Vertreter Lord Stanthorpe zurückbeordern. Gentz hält zwar Stanthorpes Mitwirken für eine !NL
+                        "Verletzung des [Völkerrechts](sic!)". Er ist allerdings enttäuscht, dass das britische Parlament durch eine Kultur des Schmeichelns !NL
+                        geprägt wird, und offensivfreudige Avancen eines Stanthorpe mit der Rückberufung "bestraft" werden. 
+                    </text>
+                    <sign>karlstadt/Persoenliche_Beziehungen.JPG</sign> 
+                    <image></image>
+                    <action name="a" itemRequired="none" onlyOnce="false">
+                        <x1>0</x1>
+                        <y1>0</y1>
+                        <x2>0</x2>
+                        <y2>0</y2>
+                        <execute></execute>
+                        <hover></hover>
+                    </action>
+                </place>
+        </discoveryContent>
+    </station>
+    <station number="1232" additionalMoney="20">
+        <name>30. Mai 1832</name>
+        <discoveryContent>
+            <place id="bay1232">
+                <text>Gentz' Zustand hat sich verschlimmert durch ein falsches Medikament seines Arztes Türkheim. 
+                Seine Kraft ist deutlich geschwunden. Im Brief versichert Gentz Carl Leiden, dass seine Klagen 
+                berücksichtigt und seinen Wünschen Genüge getan wird. Er schickt diesen Brief mit einem gewissen 
+                Rohmann, dessen Beförderung unmittelbar bevorsteht.!NL
+                Leider gibt es zu diesem Brief keine Faksimiles.!NL
+                Klicke unterhalb der Karte auf eine der beiden Aushänge, um den Bus zu besteigen.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/aushangkasten_ohne_umstieg.JPG</image>
+                <action name="showMap" itemRequired="none" onlyOnce="false">
+                    <x1>106</x1>
+                    <y1>83</y1>
+                    <x2>418</x2>
+                    <y2>274</y2>
+                    <execute>showMap('karlstadt\/karlstadt_kvag_14_15.JPG',326,255)</execute>
+                    <hover>directionChange('Karte zeigen')</hover>
+                    <actionImage src="karlstadt/karlstadt_kvag_14_15.JPG" cx1="106" cy1="83" xl="312" yl="191"/>
+                </action>
+                <action name="mountLine1" itemRequired="none" onlyOnce="false">
+                    <x1>110</x1>
+                    <y1>278</y1>
+                    <x2>307</x2>
+                    <y2>488</y2>
+                    <execute>mountLine('karlstadt_kvag','123',1232,false)</execute>
+                    <hover>directionChange('Die 123 Richtung 6. Mai 1832 besteigen')</hover>
+                </action>
+                <action name="mountLine2" itemRequired="none" onlyOnce="false">
+                    <x1>332</x1>
+                    <y1>279</y1>
+                    <x2>542</x2>
+                    <y2>493</y2>
+                    <execute>mountLine('karlstadt_kvag','123',1232,true)</execute>
+                    <hover>directionChange('Die 123 Richtung 25. August 1806 besteigen')</hover>
+                </action>
+                <sound>karlstadt/Bus_besteigbar.mp3</sound>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="1233" additionalMoney="20">
+        <name>Madame L.-Straße</name>
+        <discoveryContent>
+            <place id="bay1233">
+                <text>Bitte dem Verfasser melden, dass er bitte nachschauen möge, wer Madame L. nochmal war!</text>
+                <sign></sign>
+                <image></image>
+                <action name="showMap" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>0</x2>
+                    <y2>0</y2>
+                    <execute></execute>
+                    <hover></hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+</town>

@@ -1,0 +1,24 @@
+Dies sind die Quelldateien zum Spiel "Power of Data - die Macht
+der Daten". Stand: 7. Juli 2018.
+
+Um das Spiel zum Laufen zu bringen, muss ein Webserver XAMPP
+installiert und der Inhalt dieser CD in das Verzeichnis htdocs
+kopiert werden. Wichtig: die Verzeichnisse "vendor" und
+"PowerOfData" müssen dabei direkt unter "htdocs" folgen! Das Spiel
+ist dann sofort lauffähig. Dazu muss in einem Browser der Pfad
+http://localhost/PowerOfData/ aufgerufen werden.
+
+Alternativ kann die stets aktualisierte Version unter
+http://www.studiodesessais.org/PowerOfData abgerufen werden.
+
+Das beigefügte Java-Projekt "GentzApp_local_20180716.zip" ist in ein
+Eclipse (www.eclipse.org)-Workspace zu importieren. Beachten Sie,
+dass dazu Maven (aus Eclipse heraus installierbar) in Eclipse
+integriert sein muss, um die Dependenzen (externen
+Programmbibliotheken) zu laden! Danach muss die protoype.launch aus
+Eclipse mit dem Befehl "Run as > prototype" gestartet werden.
+Anschließend kann die Webanwendung unter localhost:8080/KtM
+genutzt werden.
+
+Das Projekt kann alternativ in stets aktuell gehaltener Version
+unter studiodesessais.org:8080/GentzApp/KtM betrachtet werden.

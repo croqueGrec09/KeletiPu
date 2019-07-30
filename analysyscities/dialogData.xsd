@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This is the schema for a dialog document. Each city has a such one. It is divided 
+    into different NPCs (non player characters) where an NPC element may mean several 
+    actual participants. To each point, a set of possible responses is connected from 
+    which the player may pick one. They may be conditioned or randomised.
+    
+    author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+    current version: 0.701 from July 7th, 2018
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="town.xsd"/>
+    <xs:include schemaLocation="../item.xsd"/>
+    <xs:element name="dialogueData" type="dialogueData">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The dialog root.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="dialogueData">
+        <xs:sequence>
+            <xs:element name="person" type="person" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The different NPCs that may occur in a town.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="person">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Definition of an NPC (non playing character). A person may mean several 
+                actual people who respond as group before the player may take an action.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="stream" type="stream" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The different streams of speech turns.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Each person has an identifier to be addressable.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- definition of a stream of speech turns -->
+    <xs:complexType name="stream">
+        <xs:sequence>
+            <xs:element name="point" type="point" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        A point, consisting of action and reaction
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Each stream has an identifier to be addressable.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- a point of answer and reaction -->
+    <xs:complexType name="point">
+        <xs:sequence>
+            <xs:element name="answer" type="dialogText"/>
+            <xs:element name="conditionedAction" type="conditionedAction" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="action" type="dialogAction" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="pointGrp" type="xs:string"/>
+        <xs:attribute name="disable" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="dialogAction">
+        <xs:sequence>
+            <xs:element name="response" type="dialogText"/>
+            <xs:element name="command" type="command"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="conditionedAction">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="if" type="condAnswer" maxOccurs="unbounded"/>
+            <xs:element name="else-if" type="condAnswer" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="else" type="dialogAction" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="condAnswer">
+        <xs:complexContent>
+            <xs:extension base="dialogAction">
+                <xs:attribute name="conditionToTest" type="xs:string" use="required"/>
+                <xs:attribute name="requirement" type="xs:string" use="required"/>
+                <xs:attribute name="evaluation" type="xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="command">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="dialog" type="nextDialog"/>
+            <xs:element name="dialogChoice" type="dialogChoice"/>
+            <xs:element name="getItem" type="itemManipulation"/>
+            <xs:element name="giveItem" type="itemManipulation"/>
+            <xs:element name="getMoney" type="moneyManipulation"/>
+            <xs:element name="giveMoney" type="moneyManipulation"/>
+            <xs:element name="event" type="event"/>
+            <xs:element name="exit">
+                <xs:complexType/>
+            </xs:element>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="nextDialog">
+        <xs:attribute name="point" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="dialogChoice">
+        <xs:attribute name="pointGrp" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="event">
+        <xs:attribute name="base" type="xs:string" use="required"/>
+        <xs:attribute name="stream" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="itemManipulation">
+        <xs:attribute name="triggeredItem" type="xs:string" use="required"/>
+        <xs:attribute name="eliminateAction" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="moneyManipulation">
+        <xs:attribute name="amount" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="dialogText">
+        <xs:sequence>
+            <xs:element name="de" type="textElement" minOccurs="0"/>
+            <xs:element name="hu" type="textElement" minOccurs="0"/>
+            <xs:element name="fr" type="textElement" minOccurs="0"/>
+            <xs:element name="en" type="textElement" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="textElement" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="userName" />
+            <xs:element name="currentMoney" />
+            <xs:element name="loveInterest" type="randomisedUserEnumeration" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="randomisedUserEnumeration">
+        <xs:attribute name="n" type="nControlledValue" default="randomNumber"/>
+    </xs:complexType>
+    <xs:simpleType name="nControlledValue">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d|randomNumber"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the schema file for the user data file. Since the user data file itself is frequently changed and resetted, the documentation for that file will be done here as well.
+
+author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+current version: 0.701 from July 7th, 2018
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- root element -->
+    <xs:element name="userData">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The root for the user data. May contain 1-n users. When resetting the user data file, user with ID TestPerson must remain in file!
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <!-- an abstract user -->
+                <xs:element name="user" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            A collecting entry for a player playing the game. Needed purely for the gameplay process, such are the elements stored within this container.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="firstname" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        The first name of a given player. It does not need to be real at all and used only by NPCs that they may call the player properly.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="lastname" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        The last name of a given player. Just as the first name, this has not to be real at all and is only needed for the NPCs to call the player properly.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="love" type="love">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The container element for the given player's beloved person.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="currentMoney" type="xs:int">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        The amount of money a given player currently has.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="currentPlace" type="currentPlace">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        The place, i.e. field in game the player currently is at. See currentPlace type descriptions to see the details. On each movement, the current place of the player is recorded.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="inventory" type="inventory">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        Container element for the player's possessions.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="memory" type="memory">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        Container element for the actions and quests a given player encounters and for his/her notes.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="examPassed" type="xs:boolean" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en">
+                                        This is a container where passed exams are stored. If a line has already been passed in exam mode, it can be run only in discovery mode again!
+                                        Karlstadt, Zeidel and the Zeidel-Karlstadt area (including later Mainz, Schweinfurt and Tiefensyburg) are exceptions because those fields are under research and no exam mode 
+                                        can be implemented for them, lacking an objective examination base.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:ID" use="required">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The player's user name. Used for login. Following the unwritten rules for RPGs, this is a pseudonym and must not (at least should not) have any relationships to the user's real name.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute> 
+                        <xs:attribute name="userLang" type="lang" use="required">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The language the given player has chosen.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="useName" type="xs:boolean" use="required">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    This flag says the NPCs which name they should use for appellation (first/lastname or username?).
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- complex type definitions -->
+    <xs:complexType name="love">
+        <xs:sequence>
+            <xs:element name="loveInterest" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The player's playground for drawing his/her ideal love. This interests should play a role later when e.g. appropriate metaphors are being chosen to illustrate certain content.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sex">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Determines the gender of the beloved one, regardless of the player's gender (which is of no interest). Is currently stored in German 'm'ännlich vs. 'w'eiblich.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[mw]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>    
+    <xs:complexType name="currentPlace">
+        <xs:sequence>
+            <xs:element name="town" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The town the player currently is in.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The last station number of the player. For the station numbers, please check the town definitions!
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="place" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The ID of the actual place / field the player has lastly entered.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>    
+    </xs:complexType>
+    <xs:complexType name="inventory">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="id" type="xs:Name" use="required">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                The ID of a given item, used for identifying it in the item data file. This ID is being passed also to the client side.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="valid" use="required">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                A three-sign flag to indicate whether an item is a ticket or not. If not, valid can only be 'none'. If it is a ticket, it may be either valid or invalid.
+                            </xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="true"/>
+                                <xs:enumeration value="false"/>
+                                <xs:enumeration value="none"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="memory">
+        <xs:sequence>
+            <xs:element name="notes">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Subcontainer for all personal notes, on a map or in the note book.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="mapNotes" type="mapNotes">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Container for all maps to which notes are linked.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="notebookNotes" type="notebookNotes">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Container for all notes linked to the notebook.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="actionsPassed">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Subcontainer for all actions the player passed and should not be passed any more by this player.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="action" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The name of an action already passed and locked afterwards.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:attribute name="name" type="xs:string" use="required"/>
+                            </xs:complexType>
+                        </xs:element>                        
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="questsMandatory" type="questList">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Container for the mandatory quests already assigned to a given player.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="questsOptional" type="questList">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Container for the optional quests already assigned to a given player.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="townsToVisit" type="cityEnum">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Enumeration container for all the towns the player wants to visit (i.e. the subjects interesting him/her).
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="cityEnum">
+        <xs:sequence>
+            <xs:element name="townToVisit" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The name of a town the user picked. 'zeidel' is always inside.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="questList">
+        <xs:sequence>
+            <xs:element name="quest" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        A reference for a quest that has been assigned to a player. As text, it contains the quest key to identify the details in the quest data file.
+                        As attributes, the current chapter and the completion flag are been stored.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType mixed="true">
+                    <xs:attribute name="currChapter" type="xs:int" use="required">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                The chapter of the quest the player currently is at.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="completed" type="completion" use="required">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                The for-position flag to indicate whether a quest is not assigned yet, open, succeded or failed.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mapNotes">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="map" type="mapContainer" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The container for the notes linked to one certain map.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="notebookNotes">
+        <xs:sequence>
+            <xs:element name="note" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        A simple text note.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType mixed="true">
+                    <xs:attribute name="noteTitle" type="xs:string" use="required">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                The title which serves as identifier of the given note.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mapContainer">
+        <xs:sequence>
+            <xs:element name="note" type="coordinateNote" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        A note with a pair of relative coordinates to which it is attached.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="city" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The town prefix of the map whose notes are contained
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="coordinateNote" mixed="true">
+        <xs:attribute name="noteTitle" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The title which serves as identifier of the given note.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="x" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The x coordinate of the note pin.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="y" type="xs:double" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The y coordinate of the note pin.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- simple type definitions -->
+    <xs:simpleType name="completion">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The four positions the completion flag may take: yes, no, failed and not assigned.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+            <xs:enumeration value="failed"/>
+            <xs:enumeration value="notAssigned"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="lang">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The enumeration for the language attriubte values, ranging from German, Hungarian, French and English and all to show that the same element/text goes for all languages.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="de"/>
+            <xs:enumeration value="hu"/>
+            <xs:enumeration value="fr"/>
+            <xs:enumeration value="en"/>
+            <xs:enumeration value="all"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

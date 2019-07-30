@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the event repository for Zeidel city.
+To see the definition of the elements, please check the underlying schema happening.xsd.
+-->
+<happening xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" idPrefix="zd" xsi:noNamespaceSchemaLocation="happening.xsd">
+    <stream id="intro" name="Linie 21">
+        <event id="i01">
+            <eventBody>
+                <image lang="all">zeidel/events/i01.jpg</image>
+                <text>
+                    <de>
+                        Willkommen auf Zeidel, dem Planeten des ewigen Winters.!NL
+                        Es ist natürlich nicht immer überall kalt. Aber dort, wo die Kälte 
+                        über das Land zieht, trotzt die Wärme der Kleidung und der Herzen 
+                        die eisigen Temperaturen.!NL
+                        Auf Zeidel leben fast-menschliche Wesen, die die Erde verlassen 
+                        haben, weil sie genug Unrecht und Heuchelei gesehen haben. Dies 
+                        geschah vor 3018 Jahren.
+                    </de>
+                    <fr>
+                        Bienvenue sur Zeidel, le planète de l'hiver éternel.!NL
+                        Bien sûr qu'il n'est pas froid partout. Mais là, où le froideur 
+                        traverse le pays, le chaleur des vêtements et des cœurs surpassent les températures froides.!NL
+                        Sur Zeidel, des gens presque-humains vivent, qui ont quitté la Terre parce qu'ils ont vu assez 
+                        d'injustice et de mensonges. Ceci s'est passé il y a 3018 ans.
+                    </fr>
+                    <en>
+                        Welcome on Zeidel, the planet of eternal winter.!NL
+                        Of course it is not cold everywhere. But there, where the cold passes the land, the warmth of the 
+                        clothes and of the hearts defy the freezing temperatures.!NL
+                        On Zeidel, almost-human people are living who left Earth because they saw enough injustice and 
+                        dissimulation. This happened 3018 years ago.
+                    </en>
+                </text>
+            </eventBody>
+            <nextEvent pointRef="i02"/>
+        </event>
+        <event id="i02">
+            <eventBody>
+                <image lang="all">zeidel/events/i02.jpg</image>
+                <text>
+                    <de>
+                    Der Planet teilt sich in neun Regionen auf:!NL
+                    Nordwest, Nord, Nordost!NL
+                    West, Mitte-zentral, Ost!NL
+                    Südwest, Süd, und Südost!NL
+                    Die Polarregionen im Süden und Norden sind am ehesten von der Kälte betroffen, 
+                    aber aufgrund der Entfernung zur Sonne gehen die Temperaturen im Schnitt 
+                    nirgendwo über 15 °C. 
+                </de>
+                <fr>La planète est divisée en neuf régions :!NL!NLNord-ouest, nord, nord-est!NL
+Ouest-centrale, centrale, Est-centrale!NL
+Sud-ouest, sud et sud-est!NL
+Les régions polaires dans le sud et nord sont les plus touchées par le froid, mais à  cause de la distance envers le soleil, les températures moyennes ne dépasseront nulle part 15 °C.</fr><en>The planet is divided in nine regions:!NL!NLnorth west, north central, north east!NL
+west-central, central, east-central!NL
+south west, south central and south east!NL
+The polar regions in south and north are mostly concerned by the frost but due to the distance to the sun, temperatures are not going above 15 °C (59 °F) in average.</en></text>
+            </eventBody>
+            <nextEvent pointRef="i03"/>
+        </event>
+        <event id="i03">
+            <eventBody>
+                <image lang="all">zeidel/events/i03.jpg</image>
+                <text>
+                    <de>
+                        Du bist nicht der Einzige, der dieses Portal und auf diese Weise 
+                        Zeidel gefunden hat. Eine Gruppe von Chorsängern und Orchesterspielern von 
+                        der Erde, eingeladen, eine Tournee durch Zeidel zu machen, wurde auf ihrem 
+                        Weg nach Zeidel von bösartigen Menschen entführt. Die Zwecke sind noch 
+                        unklar und es ist an dir, sie zu befreien.
+                    </de>
+                <fr>Tu n'es pas le seul ayant trouvé ce portail et à travers celui Zeidel. Un groupe de choristes et des membres d'un orchestre de la Terre, invité à faire une tournée par Zeidel, a été enlevé sur leur voyage à Zeidel par des gens malicieux. Leurs buts ne sont pas clairs et il est à toi de les libérer.</fr><en>You are not alone having discovered this portal and by the same way Zeidel. A group of choire singers and orchestre players from Earth, invited to make a tour through Zeidel, has been abducted by evil people. Their aims are not clear yet and it is up to you to free them.</en></text>
+            </eventBody>
+            <nextEvent pointRef="i04"/>
+            <otherHappenings>
+                <addQuest targetQuest="qzd1"/>
+            </otherHappenings>
+        </event>
+        <event id="i04">
+            <eventBody>
+                <image lang="all">zeidel/events/i04.jpg</image>
+                <text>
+                    <de>
+                    Dein Weg führt dich nach Zeidel-Stadt, der Hauptstadt von Zeidel-Land. Dies ist 
+                    ein Schmelztiegel von zehn Millionen Einwohnern, mit den Vororten bis zu 60 Millionen, 
+                    entstanden aus einem der ersten Dörfer und groß geworden durch den Silber- und 
+                    Kupferbergbau, der in den umliegenden Bergen heute noch betrieben wird. Aber Zeidel 
+                    ist auch puliserender kultureller Ort, mit vielen Theatern, Konzerthallen und 
+                    Stadtviertel, die durch verschiedene Nationen bevölkert werden, die dort ihre Kultur 
+                    erhalten haben. Auch die Bildung wird in Zeidel groß geschrieben - zehn Universitäten 
+                    und viel mehr Hochschuleinrichtungen, Schulen und Fortbildungseinrichtungen weisen den 
+                    Weg für bildungshungrige Leute.
+                </de>
+                <fr>Ton chemin t'amène à Zeidel-ville, la capitale de Zeidel-pays. Ceci est un creuset de dix millions d'habitants, avec les banlieues jusqu'à 60 millions, développé d'un des premiers villages et agrandi par l'exploitation de l'argent et du cuivre qui est faite encore aujourd'hui dans les monts autour de la ville. Mais Zeidel est aussi un lieu animé de culture, avec beaucoup de théâtres, salles de concert et des quartiers qui sont habités des nations différentes qui ont maintenu leur culture. Aussi l'éducation est un facteur important à Zeidel - dix universités et beaucoup plus d'institutions universitaires, écoles et organes de formation indiquent le chemin pour des gens soif de connaissance.</fr><en>Your way leads to Zeidel-city, capital of Zeidel-land. That is a melting pot of ten million inhabitants, with the suburbs, even up to 60 million, emerged from one of the first villages and grown up with the silver and copper ore mining which is done until today. But Zeidel is also a pulsatile cultural spot with many theatres, concert halls and quarters inhabited by different nations who maintained their culture. Also the education is a key factor for Zeidel – ten universities and many more high school facilities, schools and training institutes show the way for people thirsting for education.</en></text>
+            </eventBody>
+            <nextEvent pointRef="i05"/>
+        </event>
+        <event id="i05">
+            <eventBody>
+                <image lang="all">zeidel/events/i05.jpg</image>
+                <text>
+                    <de>
+                    Der nächste Ort, an dem du ankommst, ist der Hauptbahnhof. Von dort aus bahne dir den 
+                    Weg weiter in das Weißseeviertel. Dort wirst du einem Studenten begegnen, der eine 
+                    eigenartige Eingebung hat und dich weiterweisen wird.
+                </de>
+                <fr>Le prochain lieu où tu arrives est la gare centrale. Chemine-toi vers le quartier du lac blanc. Là, tu rencontreras un étudiant qui a une inspiration étrange et indiquera la suite de ton chemin.</fr><en>The next place at which you arrives is the central station. Find your way from there to the white sea quarter. There, you will meet a student who has an odd inspiration and will guide you further.</en></text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_platform40_41noTrain</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+    <stream id="whiteSeaQuarter" name="Im Weißseeviertel">
+        <event id="ws_01">
+            <eventBody>
+                <image lang="all">zeidel/telegraphe_groupe_b.jpg</image>
+                <text>
+                    <de>
+                    Die Freunde antworten darauf: "Nein, ich kann nicht. Ich habe keine Zeit für solche Geschichten."!NL
+                    Ein anderer will aber mitkommen: "Ich bin mir nicht mehr so sicher!"
+                    Und ein Mädchen sagt: "Ja, wir kommen mit!"
+                </de>
+                <fr>Les amis y répondent : « Non, je peux pas. Je n'ai pas le temps pour des telles histoires. »!NL!NLQuelqu'un d'autre veut venir : « Je n'en suis plus sûr ! » Et une fille dit : « Oui, nous venons avec toi ! »</fr><en>The friends answer: "No, I cannot. I do not have time for such stories."!NL!NLBut someone else would like to join: "I am not so sure any more!" And a girl says: "Yes, we come with you!"</en></text>
+            </eventBody>
+            <nextEvent pointRef="ws_02"/>
+        </event>
+        <event id="ws_02">
+            <eventBody>
+                <image lang="all">zeidel/events/bus413.jpg</image>
+                <text>
+                    <de>
+                    Pascal nimmt euch daraufhin zu einer Bushaltestelle. "Gut, dann müssen wir mit der Buslinie 413 zur 
+                    Haltestelle Les Écoles fahren. Stelle dich schonmal darauf ein, dass du viel mit Bus und Bahn fahren musst, 
+                    um zu dein Ziel zu gelangen! Denn es gibt hier Städte, die sind eigenartig aufgebaut. Dort haben 
+                    die Stadtteile keine normalen Namen, sondern sind einem Thema gewidmet. Vielleicht kennst du Ray 
+                    Bradburys Fahrenheit 451? Das ist hier sowas Ähnliches, nur sind nicht die Bewohner die Bücher, sondern 
+                    die Stadtteile sind Teile des Kurs- oder Unterrichtsthemas, denen sie sich gewidmet haben. Die sind allemal 
+                    eine Reise wert."
+                </de>
+                <fr>Pascal vous emmène à une station de bus. « Bien, il nous faut donc prendre la ligne 413 à la station Les Écoles. Prépare-toi d'aller beaucoup avec des trains et des bus pour arriver à ton but ! Parce qu'il y a des villes construites de manière insolite. Les quartiers n'ont pas de noms normaux mais sont consacrés à un sujet. Tu connaîs peut-être Fahrenheit 451 de Ray Bradbury ? Ceci rassemble tout à fait, juste ce sont pas les habitants les livres mais les quartiers font partie du sujet des cours dont ils se sont consacrés. Ils valent tous un voyage. »</fr><en>Pascal take you then to a bus stop. "Well, we have then to go with the line 413 to the Les Écoles bus stop. Prepare to take often buses and trains to get to your aim! Because here are cities which are built up a special way. The quarters do not have normal names but are consecratedto a subject. Maybe you know Ray Bradburys Fahrenheit 451? That is somewhat like that, just not the inhabitants are books but the city quarters are parts of the course subject to whom they are dedicated. They are always worth a trip."</en></text>
+            </eventBody>
+            <nextEvent pointRef="ws_03"/>
+        </event>
+        <event id="ws_03">
+            <eventBody>
+                <image lang="all">zeidel/events/sst4_salle_de_sejours.jpg</image>
+                <text>
+                    <de>
+                    In der Wohnung von Pascal angekommen, erzählt er dir lange von deiner Mission:
+                    "Die Terroristen möchten die Bildung auf Zeidel kappen und dafür sorgen, dass die Bevölkerung 
+                    von der Bildung abgeschnitten und manipulierbar wird. Vor 739 Jahren hat sich nämlich die 
+                    Bevölkerung an den Rand des Verderbens gebracht, indem eine Schicht die breite Bevölkerung  
+                    dumm und manipulierbar gehalten hat und es stets dem Einfluss der Konsumindustrie aussetzte. 
+                    Diesen Einfluss möchten nun eine Gruppe von Terroristen wieder einführen und hierzu die 
+                    Regierungen der Verwaltungskreise unter Druck setzen. Hierfür wollten sie und haben sie offensichtlich 
+                    deine Gruppe von Leuten entführt ... von denen man dir in Gib niemals auf erzählt hat."!NL
+                    Du wunderst dich, woher er von der Seele weiß.!NL
+                    "Du wirst die Analysestädte bereisen müssen. Für welche Prüfungen musst du wiederholen? 
+                    Gib mir mal deine Fahrkarte."!NL
+                    Mit fachmännischem Blick mustert er deine Fahrkarte, gibt sie dir danach wieder und geht zu einem 
+                    Schrank, von wo er Karten herauskramt. "Verdammt!", schlägt sich Pascal danach den Kopf, "die sind 
+                    nicht aktuell! Verflixt!" Die Freunde beruhigen ihn und du schaust ihn verwundert an. Du verstehst 
+                    mittlerweile gar nichts mehr. "Einerlei. Du musst in die Analysestädte. Dort wird man dir weiterhelfen können. 
+                    Hier." Pascal sucht ein Notizblock heraus und kritzelt darin einige Angaben. "Hier kannst du deine Quests 
+                    notieren, ich habe dir einige Orte aufgeschrieben, wo du hin sollst."
+                </de>
+                <fr>Arrivé dans l'appartement de Pascal, il te raconte longuement de la mission : « Les terroristes voudraient couper l'éducation sur Zeidel et faire que la population soit séparé de l'information et devienne manipulable. Il y a 739 ans, le peuple s'est notamment manœuvré au limite du péril quand un couche a tenu une large partie de la population bête et manipulable et l'a posée toujours sous influence de l'industrie de consommation. Un groupe de terroristes voudrait rétablir cette influence et mettre les gouvernements des départements sous pression. C'est apparemment pour cela qu'ils voulaient et ont enlevé ton groupe de gens... dont on t'a raconté à Ne renonce jamais. »!NL !NLTu t'étonnes d'où il sait de l'âme.!NL
+« Tu vas devoir voyager par les villes d'analyse. Pour quels examens dois-tu reviser ? Passe-moi ton billet. »!NL 
+Avec un regard expert, il examine attentivement ton billet, te le rend et va ensuite à un placard d'où il dégotte des cartes. « Au diable ! », Pascal se frappe le front, « Ils ne sont pas actuel ! Mince ! » Les amis le calment et tu le regardes étonné. Tu ne comprends plus rien. « Tant pis. Tu vas devoir voyager dans les villes d'analyse. Là, on va pouvoir t'aider. Voici. » Pascal cherche un carnet des notes et gratte quelques renseignements. « Ici, tu peux noter tes quêtes, je t'ai noté quelques lieux où tu dois y aller. »</fr><en>Arrived in Pascal's flat, he tells you long about your mission: "The terrorists would like to cut Zeidel off education and people become manipulable. People namely brought at the edge of peril 739 years ago because a part of it kept large parts of the population dumb and manipulable and exposed it to the ongoing influence of consuming industry. A group of terrorists would like to restore this influence and put the county governments under pressure. Obviously, it is for that that they abducted the group ... about which you have been told in Never give up."!NL!NLYou wonder how he knows about the soul.!NL
+"You will have to travel through the analysis cities. For which exams do you have to revise? Give me your ticket."!NL
+With an expert view, he looks closely your ticket, returns that to you and goes to a cupboard to get out maps. "Damn it!", he shouts, "they are not up to date! Shoot!" The friends calm him and you look at him puzzled. You understand nothing at all. "No matter. You have to go to the analysis cities. There you will get more help. Here." Pascal searches a note book and scribbles some advices. "Here you may note your quests, I have written some places where you should go."</en></text>
+            </eventBody>
+            <nextEvent pointRef="ws_04"/>
+            <otherHappenings>
+                <addItem itemID="notebook" valid="none"/>
+                <addQuest targetQuest="qzdAn102"/>
+                <updateQuest targetQuest="qzd1" chapter="2"/>
+            </otherHappenings>
+        </event>
+        <event id="ws_04">
+            <eventBody>
+                <image lang="all">zeidel/events/les_ecoles.jpg</image>
+                <text>
+                    <de>
+                    Völlig verstört verlässt du das Haus, nachdem du von Pascal mit ermunternden Worten entlassen worden 
+                    bist. Die Freunde sind danach ihrer Wege gegangen. Sie merkten, dass du etwas alleine sein möchtest. 
+                    Na toll. Du wolltest eigentlich mit deinem Freund einen Abstecher durch das Kölner Stadtbahnnetz 
+                    machen, müsstest schon längst zu Hause sein und für deine Prüfungen lernen - und bist kurzerhand zum 
+                    Weltretter à la Adventure-Game ernannt worden. Nun denn. Da dir offensichtlich in den Analysestädten weitergeholfen 
+                    werden wird, bleibt dir nichts anderes übrig, als dir einen Weg dorthin zu suchen. Wie gerufen kommt 
+                    ein Bus der Linie 401 zum Hauptbahnhof. Du besteigst ihn und setzt dich auf den bequemen Stuhl und 
+                    stellst fest, dass das Reisen hier deutlich angehemer ist, als auf der Erde ...
+                </de>
+                <fr>Tu quittes la maison complètement hagardement après être envoyé par Pascal avec des mots encourageants. Les amis sont partis chacun à son chemin. Ils ont remarqué que tu voudrais être seul(e) un peu. Génial. Tu voulais franchement faire une randonnée avec ton ami par le réseau de banlieue de Paris, devrais être à la maison il y a longtemps et reviser pour tes examens - et étais tout de go dénommé(e) pour sauveteur/euse du monde de façon jeu d'aventure. Bon alors. Comme apparemment, on t'aide dans les villes d'analyse, il ne te reste rien d'autre que d'y chercher un chemin. Un bus de la ligne 401 arrive à point vers la gare centrale. Tu le montes et t'asseois sur la siège agréable et constates que voyager par ici est nettement plus agréable que sur Terre...</fr><en>You leave the house entirely deranged after you have been dismissed by Pascal with encouraging words. The friends went on their own ways. They noticed that you would like to be alone a bit. Awesome. You wanted to make a trip through the London suburbs with your friends, would have to be at home for a long time now, revising for your exams – and have been without further ado designed to world saver à la adventure game. Okay. As obviously, further help is to be expected in the analysis cities, you don not have any chance to look for a way there. Right on cue, a bus of line 401 towards the central station arrives. You board it, sit on the comfortable seat and remark that travelling is much more comfortable as on Earth ...</en></text>
+            </eventBody>
+            <nextEvent pointRef="ws_05"/>
+        </event>
+        <event id="ws_05">
+            <eventBody>
+                <image lang="all">zeidel/events/bus401.jpg</image>
+                <text>
+                    <de>
+                    Gerade als du dich bequem gemacht hast, merkst du, dass dich ein heruntergekommener Mann mit Latzhose 
+                    sehr aufmerksam studiert. Er kommt nach einer Zeit auf dich zu und wird noch mysteriöser, als er so 
+                    schon war: "Sie kennen mich nicht, aber ich kenne Sie. Sie kommen aus Gib niemals auf und möchten die 
+                    Gruppe retten, die vor Ihnen das Portal durchquert hat. Sie sind derzeit auf dem Weg in die Analysestädte 
+                    und wissen weder ein- noch aus. Machen Sie sich da nichts draus. Ich bin auf Ihrer Seite und helfe Ihnen - 
+                    nehmen Sie diesen Briefumschlag und stellen Sie keine Fragen. Wir sehen uns später noch."!NLNach diesem 
+                    kurzen Vortrag steigt der Mann aus und verschwindet. Allerdings liegt ein Briefumschlag auf deinem Schoß, 
+                    mit 100 zeidel'schen Euro (Z) und einem Gutschein für eine Fahrkarte.!NL
+                    Kurze Zeit danach kommst du am Hauptbahnhof an.
+                </de>
+                <fr>Juste quand tu as pris tes aises, tu remarques un homme sur le retour en salopette t'examine très attentivement. Après un temps, il t'approche et devient encore plus mystérieux comme il a été sans cela : « Vous ne me connaissez pas mais je vous connais. Vous venez de Ne renonce jamais et aimeriez sauvegarder le groupe qui a passé avant vous le portail. Vous êtes sur le chemin envers les villes d'analyse et ne savez plus à quel saint vous vouer. Ne vous en faîtes rien - prenez cet enveloppe et ne posez pas de questions. Nous nous verrons encore. »!NL!NLAprès cette présentation courte, l'homme déscend et a disparu. Mais un enveloppe est sur tes genoux, avec cent euros zeideliens (Z) et un bon pour un billet.!NL
+Peu après, tu arrive à la gare centrale.</fr><en>Just as you made yourself comfortable, you notice a down-and-out man in a bib who observes you closely. After a time, he approaches you and becomes even more mysterious than he was even before: "You do not know me but I know you. You come from Never give up and would like to save the group which passed the portal before you. You are currently on the way to the analysis cities and can not tell up from down. Do not worry. I am on your side and help you – take this envelope and do not ask any questions. We will meet later."!NL!NLAfter this short presentation, the man gets out and disappears. But an envelope lies on your lap, with 100 Zeidelian euros (Z) and a voucher for a ticket.!NL
+A short time after, you arrive at the central station.</en></text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_busstation_noTrain</nextPlace>
+            </exitStream>
+            <otherHappenings>
+                <addItem itemID="ZVWcoupon" valid="true"/>
+                <addMoney amount="100"/>
+            </otherHappenings>
+        </event>
+    </stream>
+    <!-- voyages -->
+    <stream id="m7" name="Metrolinie M7">
+        <event id="m701">
+            <eventBody>
+                <image lang="de">zeidel/events/m701.jpg</image>
+                <text>
+                    <de>
+                    Du kommst nun zurück zum Hauptbahnhof, dem zentralen Knotenpunkt der Stadt.
+                    Von hier erreichst du eine große Zahl an Zielen in Nah und Fern.
+                </de>
+                <fr>Tu rentres sur la gare centrale, le nœud routier centrale de la ville. D'ici, tu arrives à un grand nombre des destinations proche et loin.</fr><en>You return now to the central station, the central hub of the city. From here, you can reach a large amount of close and far destinations.</en></text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_platform38_39e</nextPlace>
+            </exitStream>
+        </event>
+        <event id="m703">
+            <eventBody>
+                <image lang="all">zeidel/events/m703.jpg</image>
+                <text>
+                    <de>
+                    Das Weißseeviertel, wohin dich diese Metro jetzt bringt, ist das experimentelle Viertel 
+                    Zeidels. Für jeden, der experimentelle Aufführungen sehen will oder einfach nur "feiern", 
+                    der gehe abends in dieses Viertel. Bereits an der nächsten Haltestelle, am Platz der Feste - 
+                    oder, weil hier hauptsächlich französischsprachige Einwohner wohnen - "Place des fêtes", beginnen 
+                    die Straßen und Gassen von Cafés und Bistrots sowie kleineren Theatern. 
+                </de>
+                <fr>Le quartier du lac blanc où ce métro t'amène est le quartier expérimental de Zeidel. Tout le monde qui veut voir des représentations expérimentales ou tout simplement &lt; fêter &gt; aille dans ce quartier. Déjà à la station prochaine, à la place des fêtes, commencent les rues et ruelles des bistrots comme petits théâtres.</fr><en>The white sea quarter where this metro is taking you is the experimental quarter of Zeidel. Everyone who wants to see experimental representations or simply "make party" should go there in the evenings. Already at the next station, at the festival square – or, because mainly French speaking people are living here – "Place des fêtes", start the streets and alleys of cafés, bistros and smaller theatres.</en></text>
+            </eventBody>
+            <nextEvent pointRef="m704"/>
+            <previousEvent pointRef="m701"/>
+        </event>
+        <event id="m704">
+            <eventBody>
+                <image lang="all">zeidel/events/m704.jpg</image>
+                <text>
+                    <de>
+                    Vom Platz der Feste beginnt die Telegraphenstraße, die "Rue de télégraphe". Sie ist Zentrum 
+                    des Vergnügungsviertels. Hier tummeln sich Menschen, hauptsächlich Studierende, die Begleitung 
+                    suchen. Wenn du dich also mit jemandem kuscheln möchtest, findest du hier in jedem Fall 
+                    Begleitung. Allerdings ist dir zur Zeit nicht nach Kuscheln.!NL!NL
+                    Als der Wagen in die kahle Station einfährt, erlebst du ein mulmiges Gefühl, als ob dich 
+                    die Seele aus "Gib niemals auf" eingeholt hätte und dich beobachten würde ... du bist nervös und 
+                    gespannt, was hier auf dich zukommt.
+                </de>
+                <fr>La rue de télégraphe commence de la place des fêtes. Elle est centre du quartier de l'amusement. Des gens, principalement des étudiants, folâtrent ici qui cherchent de l'accompagnie. Si tu veux donc te câliner avec quelqu'un, tu trouves en tout cas de l'accompagnie. Mais maintenant, tu n'as pas envie de te câliner.!NL!NL!NLQuand la voiture entre la station chauve, tu as un sentiment comme si l'âme de &lt; Ne renonce jamais &gt; t'aurait rattrappé(e) et t'observe... tu es nerveux(se) et curieux(se) à ce qui t'arrivera.</fr><en>From the festival square starts the telegraph street, the "Rue de télégraphe". It is the centre of the amusement quarter. People are scrimmaging here, mainly students who seek for accompany. If you thus would like to cuddle up to someone, here you find accompany in every case.!NL!NL!NLWhen the car enters the bald station, you have a friable feeling as if the soul of "Never give up" had caught you and observed you ... you are nervous and excited what will come up to you.</en></text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>704</nextStation>
+                <nextPlace>telegraphe_platform1_2noTrain</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

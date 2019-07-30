@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This is the dialog repository for detail map/analysis city X.b - Karlstadt.
+    For the dialog strucutre schema, see the XSD this file is validated against.
+-->
+<dialogueData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dialogData.xsd">
+    <!-- the assistant in the customer centre -->
+    <person id="KVAGcounterAssistant">
+        <stream id="0">
+            <point id="0">
+                <!-- ID regex: person+stream+point -->
+                <answer id="KVAGcounterAssistant00">
+                    <de>"Was kann ich denn weiter für Sie tun?"</de>
+                <fr>« Que puis-je faire encore pour vous ? »</fr><en>"What else may I do for you?"</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="karlstadtNetworkPlan" evaluation="false">
+                        <!-- ID regex: person+stream+point+running number -->
+                        <response id="KVAGcounterAssistant000">
+                            <de>"Haben Sie vielleicht einen Liniennetzplan der Stadt?"</de>
+                        <fr>« Avez-vous un plan de réseau de la ville ? »</fr><en>"Do you have a network plan of the town?"</en></response>
+                        <command>
+                            <dialog point="1"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response id="KVAGcounterAssistant001">
+                        <de>"Erzählen Sie mir mehr über diesen Friedrich von Gentz!"</de>
+                    <fr>« Racontez-moi plus de ce Frédéric de Gentz ! »</fr><en>"Tell me more about that Friedrich von Gentz!"</en></response>
+                    <command>
+                        <dialog point="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant002">
+                        <de>"Gar nichts, ich schaue mich noch etwas um! Danke!"</de>
+                    <fr>« Rien, je juste regarde encore. Merci ! »</fr><en>"Nothing, I will look around a bit! Thanks!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer id="KVAGcounterAssistant01">
+                    <de>"Ja ... hier, bitte sehr! Hier der aktuellste Liniennetzplan!"</de>
+                <fr>« Oui... voici, allez-y ! Voilà le plan de réseau le plus actuel ! »</fr><en>"Yes ... here you go! Here is the most up-to-date network plan."</en></answer>
+                <action>
+                    <response id="KVAGcounterAssistant010">
+                        <de>"Vielen herzlichen Dank!"</de>
+                    <fr>« Merci beaucoup ! »</fr><en>"Many thanks!"</en></response>
+                    <command>
+                        <getItem triggeredItem="karlstadtNetworkPlan"/>
+                        <dialog point="0"/>
+                    </command>
+                </action>
+            </point>
+            <point id="2">
+                <answer id="KVAGcounterAssistant02">
+                    <de>
+                        "Friedrich von Gentz, geobren am 2. Mai 1764 in Breslau, war ... 
+                        ein Tausendsassa und ein unverbesserlicher Spieler. Er hat in 
+                        seinem Leben genau so viele Werke wie Liebschaften und Schulden, 
+                        wie beides zusammen. Den Adelstitel hat er sich übrigens erst 
+                        später dazuverdient, ursprünglich war er als Friedrich Gentz(e) 
+                        bekannt. Aufgewachsen in Breslau, ab 1783 Studium in Königsberg, 
+                        das er aber aus nicht ganz geklärten Gründen 1785 abbrach, um 
+                        in Berlin eine Beamtenlaufbahn anzutreten. 1793 wurde er Kriegsrat, 
+                        ein Titel, der ihm allerdings schon '87 versprochen wurde. Auch 
+                        wollte er '91 nach Breslau zurück, was er '94 wiederum entschieden 
+                        verneinte. Und es gibt noch viele von solchen interessanten 
+                        Vergleichen."!NL
+                    </de>
+                <fr>« Frédéric de Gentz, né le 2 mai 1764 à Breslau, c'est aujourd'hui en Pologne et connu sous le nom de Wrocław, était... un touche-à-tout et un joueur inaméliorable. Dans sa vie, il a eu des œuvres commes des amours et des dettes comme le deux ensemble. Il a gagné le titre de noblesse plus tard, il était connu d'abord sous le nom de Frédéric Gentz(e). Agrandi à Breslau, fait ses études depuis 1783 à Königsberg, c'est Kaliningrad aujourd'hui, mais à cause des raisons qui ne sont pas entièrement claires, il l'a interrompu en 1785 pour commencer une vie de fonctionnaire à Berlin. En 1793, il est devenu &lt; conseiller de guerre &gt;, un titre, qui lui a été promis déjà en '87. Il voulait rentrer à Breslau en '91 ce qu'il a décidément refusé en '94. Et il y a encore pas mal de telles comparaisons intéressantes. »!NL</fr><en>"Friedrich von Gentz, born on May 2nd, 1764 in Breslau (today called Wrocław and in Poland) was ... a jack of all trades and an incorrigible player. He had in his life as much works as love affairs and debts as much as both together. He earned the title of nobility later, first, he was known as Friedrich Gentz(e). Grown up in Breslau, from 1783 studies in Königsberg (today called Kaliningrad) what he cancelled in 1785 for reasons which are not cleared until today to start in Berlin a carreer as a civil servant. He became 'war consellor' in 1793, a title which has been promised to him already in '87. He also wanted to return to Breslau in '91 what he refused resolutely again in '94. And there are many more of those interesting comparisons."!NL</en></answer>
+                <action>
+                    <response id="KVAGcounterAssistant020">
+                        <de>*weiter*</de>
+                    <fr>*suite*</fr><en>*next*</en></response>
+                    <command>
+                        <dialog point="3"/>
+                    </command>
+                </action>
+            </point>
+            <point id="3">
+                <answer id="KVAGcounterAssistant03">
+                    <de>
+                        "Seine Tätigkeit als Publizist begann er 1790/'91, nachdem ihm 
+                        ein Artikel über die Menschenrechte ihn derart entsetzte, dass er 
+                        eine Gegenschrift verfasste. Dies war der Beginn einer langen 
+                        Liste an Werken. Zugleich wurde er von einem Enthusiasten zu einem 
+                        Kritiker der eben angelaufenen Französischen Revolution."!NL
+                        "Bald wird auch das Fremdenverkehrsamt eröffnet, dann gibt es noch 
+                        mehr einführende Data!"
+                    </de>
+                <fr>« Il a commencé ses acitivités comme publiciste en 1790/'91 après un article sur les droits de l'homme lui a tellement énervé qu'il a rédigé un traîtement contre. C'était le début d'une longue liste des œuvres. En même temps, il est passé d'un enthusiaste en un critique de la révolution française récemment déclenchée. »!NL !NL« Bientôt, on ouvrira aussi l'office du tourisme, il y aura encore plus des données introduisantes ! »</fr><en>"He started his activities as a publicist in 1790/'91 after an article about the human rights appaled him to such an extent that he wrote a refutation. This was in the same time a start of a long list of works. Meanwhile, he turned from an enthusiast to a critic of the French Revolution which just broke out."!NL!NL"Soon, the tourist office will be reopened, too, there will be more introductive data!"</en></answer>
+                <action>
+                    <response id="KVAGcounterAssistant030">
+                        <de>"Das ist ja interessant, zuerst Anhänger, dann Gegner! Da will ich mehr darüber wissen!"</de>
+                    <fr>« C'est intéressant, d'abord suivant, ensuite opponent ! Là, j'aimerais en savoir plus ! »</fr><en>"That is interesting, first follower, then opponent! I would like to know more about it!"</en></response>
+                    <command>
+                        <dialog point="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant031">
+                        <de>"Wo kann ich denn mehr über seine Werke erfahren?"</de>
+                    <fr>« Où est-ce que je peux apprendre plus de ses œuvres ? »</fr><en>"Where can I learn more about his works?"</en></response>
+                    <command>
+                        <dialog point="5"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant032">
+                        <de>"Angeblich soll er immer verschuldet gewesen sein ..."</de>
+                    <fr>« On dit qu'il était toujours endetté... »</fr><en>"He was supposed to be indebted all time ..."</en></response>
+                    <command>
+                        <dialog point="6"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant033">
+                        <de>"Die Stadt macht doch auch wegen seiner Datenhaltung Werbung ..."</de>
+                    <fr>« La ville fait de la publicité aussi pour sa gestion des données... »</fr><en>"The city makes ads also for his data management ..."</en></response>
+                    <command>
+                        <dialog point="7"/>
+                    </command>
+                </action>
+            </point>
+            <point id="4">
+                <answer id="KVAGcounterAssistant04">
+                    <de>
+                        "Da empfehle ich Ihnen den Pariser Platz. Nehmen Sie hierzu 
+                        die Linie 1102."
+                    </de>
+                <fr>« Là, je vous conseille la place de Paris. Prenez la ligne 1102. »</fr><en>"There I would suggest you the Paris square. Just take the line 1102."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="karlstadtNetworkPlan" evaluation="true">
+                        <response id="KVAGcounterAssistant0400">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, c'était tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="KVAGcounterAssistant0401">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, c'était tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="9"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="KVAGcounterAssistant041">
+                        <de>"Wo kann ich denn mehr über seine Werke erfahren?"</de>
+                    <fr>« Où est-ce que je peux apprendre plus de ses œuvres ? »</fr><en>"Where can I learn more about his works?"</en></response>
+                    <command>
+                        <dialog point="5"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant042">
+                        <de>"Angeblich soll er immer verschuldet gewesen sein ..."</de>
+                    <fr>« On dit qu'il a toujours été endetté... »</fr><en>"He was supposed to be indebted all time ..."</en></response>
+                    <command>
+                        <dialog point="6"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant043">
+                        <de>"Die Stadt macht doch auch wegen seiner Datenhaltung Werbung ..."</de>
+                    <fr>«  »</fr><en>"The city makes ads also for his data management ..."</en></response>
+                    <command>
+                        <dialog point="7"/>
+                    </command>
+                </action>
+            </point>
+            <point id="5">
+                <answer id="KVAGcounterAssistant05">
+                    <de>
+                        "Nun, da empfehle ich Ihnen das Werksviertel, zu erreichen mit 
+                        den Linien 1101 und 1108. Auch sollten Sie sich das 
+                        Zeitungsviertel, die Monatsschriften und das Historische Journal 
+                        ansehen. Da kommen Sie mit den Linien 1102, 1104 oder 1109 hin."
+                    </de>
+                <fr>« Dans ce cas, je vous recommande le quartier des œuvres, à atteindre avec les lignes 1101 et 1108. Vous devriez aussi voir le quartier des journaux, les revues mensuelles et le Journal Historique. Vous y arriverez avec les lignes 1102, 1104 ou 1109. »</fr><en>"Well, I would suggest you for that the works quarter, to reach with the lines 1101 and 1108. You should also take a look at the journal quarter, the monthly reviews and the Historical Journal. You can get there with the lines 1102, 1104 and 1109."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="karlstadtNetworkPlan" evaluation="true">
+                        <response id="KVAGcounterAssistant0500">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="KVAGcounterAssistant0501">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="9"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="KVAGcounterAssistant051">
+                        <de>"Das mit der Französischen Revolution fand ich auch interessant ..."</de>
+                    <fr>« Ça avec la révolution française, je trouvais intéressant aussi... »</fr><en>"That thing about the French Revoultion sounded interesting, too ..."</en></response>
+                    <command>
+                        <dialog point="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant052">
+                        <de>"Angeblich soll er immer verschuldet gewesen sein ..."</de>
+                    <fr>« On dit qu'il a toujours été endetté... »</fr><en>"He was supposed to be indebted all time ..."</en></response>
+                    <command>
+                        <dialog point="6"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant053">
+                        <de>"Die Stadt macht doch auch wegen seiner Datenhaltung Werbung ..."</de>
+                    <fr>« La ville fait de la publicité aussi avec sa gestion des données... »</fr><en>"The city makes ads also for his data management ..."</en></response>
+                    <command>
+                        <dialog point="7"/>
+                    </command>
+                </action>
+            </point>
+            <point id="6">
+                <answer id="KVAGcounterAssistant06">
+                    <de>
+                        "Oooh, da sollten Sie sich über seine Leidenschaften und 
+                        Dienstherren erkundigen. Fahren Sie dazu zum Schlegelweg, oder 
+                        zum Berliner Platz; Linien 1101 und 1106. Oder das Beamtenviertel, 
+                        erreichbar mit der 1108."
+                    </de>
+                <fr>« Oooh, là, vous devriez vous renseigner sur ses passions et ses chefs. Allez pour cela au chemin Schlegel ou la place de Berlin ; lignes 1101 et 1106. Ou le quartier des fonctionnaires, desservi par la 1108. »</fr><en>"Oooh, then, you should learn more about his passions and supervisors. Go for that to Schlegel way or to Berlin square; lines 1101 and 1106. Or the civil servants quarter, to reach with the 1108."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="karlstadtNetworkPlan" evaluation="true">
+                        <response id="KVAGcounterAssistant0600">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="KVAGcounterAssistant0601">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you again!"</en></response>
+                        <command>
+                            <dialog point="9"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="KVAGcounterAssistant061">
+                        <de>"Das mit der Französischen Revolution fand ich auch interessant ..."</de>
+                    <fr>« Ça avec la révolution française, je trouvais intéressant aussi... »</fr><en>"That thing about the French Revoultion sounded interesting, too ..."</en></response>
+                    <command>
+                        <dialog point="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant062">
+                        <de>"Wo kann ich mehr über sein Schaffen erfahren?"</de>
+                    <fr>« Où est-ce que je peux apprendre plus sur sa création ? »</fr><en>"Where can I learn more about his producing?"</en></response>
+                    <command>
+                        <dialog point="5"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant063">
+                        <de>"Die Stadt macht doch auch wegen seiner Datenhaltung Werbung ..."</de>
+                    <fr>« La ville fait de la publicité aussi avec sa gestion des données... »</fr><en>"The city makes ads also for his data management ..."</en></response>
+                    <command>
+                        <dialog point="7"/>
+                    </command>
+                </action>
+            </point>
+            <point id="7">
+                <answer id="KVAGcounterAssistant07">
+                    <de>
+                        "Tatsache. Darum kümmert sich keiner. Alle wollen Daten, Daten, Output, 
+                        Diskussionen, Forschungsfragen. Aber wir hier, wir legen auch die 
+                        Funktion der Infrastruktur offen! Über TEI, Forschungsdatenmanagement 
+                        und die neue Welle der Digital Humanities gibt's mehr an der 
+                        Munizipialbibliothek, da ist auch der Betriebshof der KVAG. Oft aber 
+                        stehen Mitarbeiter an Knotenpunkten Rede und Antwort."
+                    </de>
+                <fr>« En effet. Personne s'en charge. Tout le monde veut des données, données, output, discussions, questions de recherche. Mais nous ici, nous mettons au nu aussi la fonction de l'infrastructure ! Il y a plus sur TEI, gestion des données de recherche et la nouvelle vague des humanités numériques à la bibliothèque municipale, là, il y a aussi le dépôt de la société anonyme des transports de Karlstadt (KVAG). Mais les collaborateurs aux nœuds répondent aussi souvent à des questions. »</fr><en>"Indeed. No one cares about that. Everybody wants data, data, output, discussions, research questions. But we here, we lay the function of the infrastructure open, too! About the TEI, research data management and the new wave of Digital Humanities, there is more at the municipial library, there is also the depot of the KVAG. But their staff answers to you often at the junctions, too."</en></answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="karlstadtNetworkPlan" evaluation="true">
+                        <response id="KVAGcounterAssistant0700">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you later!"</en></response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response id="KVAGcounterAssistant0701">
+                            <de>"Danke, das wäre alles! Auf wiedersehen!"</de>
+                        <fr>« Merci, ce serait tout ! Au revoir ! »</fr><en>"Thanks, that's all! See you later!"</en></response>
+                        <command>
+                            <dialog point="9"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response id="KVAGcounterAssistant071">
+                        <de>"Das mit der Französischen Revolution fand ich auch interessant ..."</de>
+                    <fr>« Ça avec la révolution française, je trouvais intéressant aussi... »</fr><en>"That thing about the French Revoultion sounded interesting, too ..."</en></response>
+                    <command>
+                        <dialog point="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant072">
+                        <de>"Wo kann ich mehr über sein Schaffen erfahren?"</de>
+                    <fr>« Où est-ce que je peux apprendre plus sur sa création ? »</fr><en>"Where can I learn more about his production?"</en></response>
+                    <command>
+                        <dialog point="5"/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant073">
+                        <de>"Und was hat es mit diesen Schulden auf sich?"</de>
+                    <fr>« Et qu'est-ce qu'il y a avec ces dettes ? »</fr><en>"And what about those debts?"</en></response>
+                    <command>
+                        <dialog point="6"/>
+                    </command>
+                </action>
+            </point>
+            <point id="8">
+                <answer id="KVAGcounterAssistant08">
+                    <de>
+                        "Vielleicht schauen Sie sich auch den südlichen Teil der Stadt an. 
+                        Der Londoner und der Wiener Platz zeigen an, was nach Gentz' Ausscheiden 
+                        1802 - denn die Spannungen zwischen ihm und seinen Arbeitgebern am 
+                        Preußsischen Generaldirektorium nahmen stetig zu - mit ihm passiert und 
+                        was noch alles in Gentz' Leben steckt."
+                    </de>
+                <fr>« Peut-être vous regarderez aussi le sud de la ville. Les places de Londres et de Vienne indiquent ce qui s'est passé après la démission de Gentz 1802 – car les tensions entre lui et ses patrons au directoire générale de la Prusse se sont intensifiées – et ce qu'il y a encore dans la vie de Gentz. »</fr><en>"Maybe you also take a look at the southern parts of the town. The London and Vienna squares show what happened to Gentz after his dismission in 1802 and what more is in Gentz' life – because the tensions between him and his employers at the Prussian general directory increased."</en></answer>
+                <action>
+                    <response id="KVAGcounterAssistant080">
+                        <de>"Alles klar, ich werde daran denken! Danke und auf Wiedersehen!"</de>
+                    <fr>« D'accord, je vais y penser ! Merci et au revoir ! »</fr><en>"Alright, I will consider! Thank you and good bye!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="9">
+                <answer id="KVAGcounterAssistant09">
+                    <de>
+                        "Auch sehr reizend: der Teil südlich von hier, mit der Linie 1109. 
+                        Möchten Sie keinen Liniennetzplan? Dann sehen Sie alle Haltestellen 
+                        im Überblick."
+                    </de>
+                <fr>« Aussi très incitant : la partie au sud d'ici, avec la ligne 1109. Aimeriez-vous un plan de réseau ? Vous y verrez toutes les staions. »</fr><en>"Very exciting, too: the part south form here with the line 1109. You do not would like a network plan? Then you see all stops in an overview."</en></answer>
+                <action>
+                    <response id="KVAGcounterAssistant090">
+                        <de>"O ja, danke! Da sage ich nicht nein!"</de>
+                    <fr>« Oh oui, merci ! Là, je ne dis pas non ! »</fr><en>"Oh yes, thanks! I do not say no to that!"</en></response>
+                    <command>
+                        <getItem triggeredItem="karlstadtNetworkPlan"/>
+                        <exit/>
+                    </command>
+                </action>
+                <action>
+                    <response id="KVAGcounterAssistant091">
+                        <de>"Danke für den Hinweis; den Plan nehme ich später!"</de>
+                    <fr>« Merci pour l'astuce ; je prendrai le plan plus tard ! »</fr><en>"Thanks for the advice; I shall take the plan later!"</en></response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+</dialogueData>

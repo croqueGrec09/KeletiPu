@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogueData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dialogData.xsd">
+    <!-- Die Mitarbeiterin am Schalter der Stadtbahn -->
+    <person id="HbfMitteUndergroundCounterAssistant">
+        <stream id="0">
+            <point id="0">
+                <answer lang="de" id="HbfMitteUndergroundCounterAssistant00"> 
+                    "Guten Tag! Sie sehen etwas verloren aus! Wie kann ich Ihnen weiterhelfen?"
+                </answer>
+                <action>
+                    <response lang="de" id="HbfMitteUndergroundCounterAssistant000">"Nein, es ist alles in Ordnung, danke!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="HbfMitteUndergroundCounterAssistant001">"Oh, sieht man das? In der Tat, ich möchte zur Station Télégraphe."</response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer lang="de" id="HbfMitteUndergroundCounterAssistant01">
+                    "Alles klar! Gehen Sie zur Metrolinie 7 auf Gleis 39. Fahren Sie dort zwei Haltestellen Richtung Chargy."
+                </answer>
+                <action>
+                    <response lang="de" id="HbfMitteUndergroundCounterAssistant010">"Vielen lieben Dank! Auf Wiedersehen!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- Die Mitarbeiterin im Reisezentrum -->
+    <person id="ZVWvendor">
+        <stream id="0">
+            <point id="0">
+                <answer lang="de" id="ZVWvendor00">
+                    "Herzlich willkommen bei den Zeidel'schen Verkehrswerken! Wie kann ich Ihnen helfen?"
+                </answer>
+                <action>
+                    <response lang="de" id="ZVWvendor000">"Ich möchte bitte eine Fahrkarte kaufen!"</response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor001">"Gar nicht, ich wollte mich nur umsehen - entschuldigen Sie bitte!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer lang="de" id="ZVWvendor01">
+                    "Sehr gerne! Wo soll es denn hingehen?"
+                </answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKvirasim" evaluation="false">
+                        <response lang="de" id="ZVWvendor010">"Nach Kvirasim."</response>
+                        <command>
+                            <dialog point="37"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKarlstadt" evaluation="false">
+                        <response lang="de" id="ZVWvendor011">"Nach Karlstadt."</response>
+                        <command>
+                            <dialog point="310b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor012">"Ja ... ich weiß noch nicht so recht ... können Sie vielleicht etwas empfehlen?"</response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor013">"Entschuldigen Sie, ich möchte doch nicht reisen! Auf Wiedersehen!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point pointGrp="2" id="20">
+                <answer lang="de" id="ZVWvendor020">"Hm ... wird schwierig. Vielleicht schauen Sie sich einwenig die Züge an und kommen später?"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0201">"Ja, das werde ich! Danke sehr!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- stream Kvirasim - analysis city 7 -->
+            <point disable="self,47" pointGrp="2" id="27">
+                <answer lang="de" id="ZVWvendor027">"Alles klar ... Hier! Seit neuestem wieder erreichbar: Die Stadt Kvirasim. Das ist zwar recht weit weg, aber Sie würden dann den ganzen Planeten durchreisen. Im Südosten der Einöde, schöne phonetische Landschaft, dort hat man sich den Tönen gewidmet. Wäre das nicht etwas für Sie?"</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ticketToKvirasim" evaluation="false">
+                        <response lang="de" id="ZVWvendor0270">"Nach Kvirasim! Die Laute, die Vokale, super. Da will ich hin!"</response>
+                        <command>
+                            <dialog point="37"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0271">"Hm, das ist echt sehr interessant, aber haben Sie nicht noch etwas anderes?"</response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0272">"Ähm ... Ich schaue mich doch lieber um. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="37" disable="27,47">
+                <answer lang="de" id="ZVWvendor037">"O ja, gute Wahl! Warten Sie einen Moment ..."!NLDie Verkäuferin tippt etwas auf der Tastatur.!NL
+                "Also. Sie würden den Schnellzug 2011 nach Metza nehmen, dort wird der Zug mit einem anderen Nachtzug aus Eichlinghausen vereinigt. 
+                Sie müssen aber nicht aus dem Zug steigen, sondern fahren so weiter bis nach Cité d'Orcive. Dort müssen Sie umsteigen in den IN 045 
+                Richtung Kvirasim. Würde Ihnen das zusagen?"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0370">"Ähm ... nein, danke. Hätten Sie vielleicht andere Städte im Angebot?"</response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0371">"Ja, das würde gehen."</response>
+                    <command>
+                        <dialog point="57"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0372">"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="47" pointGrp="4" disable="self,27">
+                <answer lang="de" id="ZVWvendor047">"Gut ... dann sehen wir nochmal ... vielleicht die Landschaft der Laute und der Lautgesetze, Kvirasim, vor Kurzem erst wiedereröffnet. Der Weg ist zwar lang, aber Sie sehen den ganzen Planeten."</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0470">"Nach Kvirasim! Ja, das sagt mir schon viel lieber zu!"</response>
+                    <command>
+                        <dialog point="37"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0471">"Nein ... das auch nicht. Welche Orte haben Sie noch?"</response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0472">"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="57">
+                <answer lang="de" id="ZVWvendor057">"In Ordnung ... Aus betrieblich-programmtechnischen Gründen können wir zur Zeit nur Hinfahrten anbieten. Haben Sie gegebenenfalls einen Gutschein?"</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" evaluation="true" requirement="ZVWcoupon">
+                        <response lang="de" id="ZVWvendor0570">"Ja, ich habe einen Gutschein."</response>
+                        <command>
+                            <dialog point="67"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response lang="de" id="ZVWvendor0571">"Nein, habe ich nicht."</response>
+                        <command>
+                            <dialog point="77"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0572">"Hmm ... wenn ich es mir so recht überlege, möchte ich doch nicht fahren."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="67">
+                <answer lang="de" id="ZVWvendor067">"Alles klar, dann geben Sie her ..."</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0670">"Hier, bitte sehr ..."</response>
+                    <command>
+                        <giveItem triggeredItem="ZVWcoupon" eliminateAction="speakVendor"/>
+                        <dialog point="77"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0671">"Entschuldigen Sie bitte, ich möchte den Gutschein jetzt nicht einsetzen."</response>
+                    <command>
+                        <dialog point="97"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0672">"Äh, es tut mir Leid, ich möchte doch nicht reisen."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="77">
+                <answer lang="de" id="ZVWvendor077">"Gut ... Ihr Gutschein gilt für einen Liegewagenplatz. Ihre Reiseverbindung wäre also folgende: Schnellzug 2011 nach Metza, dort wird Ihr Zug vereinigt und fährt weiter nach Cité d'Orcive. Dort steigen Sie bitte um in den Internight 045 nach Kvirasim. Wagenangaben entnehmen Sie bitte diesem Fahrschein ..."!NL
+                Die Verkäuferin nimmt den Ausdruck aus dem Drucker und gibt ihn dir. "Hier, bitte sehr. Gute Reise, haben Sie eine angenehme Zeit unterwegs und in der Stadt!"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0770">"Danke sehr! Vielen Dank und auf Wiedersehen!"</response>
+                    <command>
+                        <getItem triggeredItem="ticketToKvirasim"/>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="97">
+                <answer lang="de" id="ZVWvendor097">"In Ordnung ... das kostet 270 Z."</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="270" evaluation="true">
+                        <response lang="de" id="ZVWvendor0970">"Hier, bitte sehr."</response>
+                        <command>
+                            <giveMoney amount="270"/>
+                            <dialog point="77"/>
+                        </command>
+                    </if>
+                    <else-if conditionToTest="checkMoney" requirement="270" evaluation="false">
+                        <response lang="de" id="ZVWvendor0971">"O weh ... ich habe das Geld nicht!"</response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else-if>
+                    <if conditionToTest="checkItem" requirement="ZVWcoupon" evaluation="true">
+                        <response lang="de" id="ZVWvendor0972">"Oh ... dann möchte ich doch den Gutschein einlösen."</response>
+                        <command>
+                            <giveItem triggeredItem="ZVWcoupon" eliminateAction="speakVendor"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0973">"O je ... dann möchte ich lieber doch nicht reisen ... ganz herzlichen Dank! Auf Wiedersehen!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- stream Karlstadt - analysis city 10b -->
+            <point disable="self,210b" pointGrp="2" id="210b">
+                <answer lang="de" id="ZVWvendor0210b">"Ein Virtuose der Politiker, dessen Geschichte gerade der Öffentlichkeit zugänglich gemacht wurde! Ich rede von niemand Geringerem, als Friedrich von Gentz, von welchem entfernte Zeugen sich jetzt öffnen, um Spuren seines Lebens zu offenbaren. Sehr interessant, finde ich, und hochspannend!"</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" evaluation="false" requirement="ticketToKarlstadt">
+                        <response lang="de" id="ZVWvendor0210b0">"Nach Karlstadt! Eine Stadt über einen Virtuosen, da möchte ich mehr zu erfahren."</response>
+                        <command>
+                            <dialog point="310b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0210b1">"Hm, das ist echt sehr interessant, aber haben Sie nicht noch etwas anderes?"</response>
+                    <command>
+                        <dialogChoice pointGrp="2"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0210b2">"Ähm ... Ich schaue mich doch lieber um. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="310b" disable="210b,410b">
+                <answer lang="de" id="ZVWvendor0310b">"In Ordnung, in Ordnung, lassen Sie mich suchen ..."!NL
+                Die Verkäuferin tippt etwas auf der Tastatur.!NL
+                "Da haben wir ihn schon, den Schnellzug 153, über Otastadt und Darborough Colony. Er fährt in 45 Minuten ab. Ist das in Ihrem Sinn?"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0310b0">"Ne, lieber doch nicht ... was für andere Städte würden Sie mir empfehlen?"</response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0310b1">"Aber natürlich!"</response>
+                    <command>
+                        <dialog point="510b"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0310b2">"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point pointGrp="4" id="410b" disable="self,210b">
+                <answer lang="de" id="ZVWvendor0410b">"Hm ... vielleicht dann Karlstadt, soeben erst eröffnet für die Öffentlichkeit! Sie können den Neubau der Stadt live verfolgen und dabei über Friedrich von Gentz viel lernen, zu dessen Leben sich jetzt entfernte Zeugen melden."</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0410b0">"Soeben erst eröffnet? Hm ... Karlstadt klingt doch viel interessanter!"</response>
+                    <command>
+                        <dialog point="310b"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0410b1">"Nun, die Stadt ist vielleicht noch gar nicht fertig. Haben Sie Alternativen?"</response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor0410b2">"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="510b">
+                <answer lang="de" id="ZVWvendor0510b">"Gut. Wenn Sie eine Zeitkarte des Zeidel-Karlstädter Verkehrsverbundes besitzen, dann können Sie mit dem Eilzug rauf. Lediglich für den Schnellzug müssen Sie Zuschlag zahlen. Möchten Sie das?"</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ZVWticket" evaluation="true">
+                        <response lang="de" id="ZVWvendor0510b0">"In Ordnung, ich möchte bitte den Schnellzugzuschlag zahlen."</response>
+                        <command>
+                            <dialog point="610b"/>
+                        </command>
+                    </if>
+                    <else-if conditionToTest="checkItem" requirement="ZVWticket" evaluation="false">
+                        <response lang="de" id="ZVWvendor0510b1">"Oh ... die habe ich nicht."</response>
+                        <command>
+                            <dialog point="710b"/>
+                        </command>
+                    </else-if>
+                    <if conditionToTest="checkItem" requirement="ZVWcoupon" evaluation="true">
+                        <response lang="de" id="ZVWvendor0510b2">"Kann ich mit diesem Gutschein bezahlen?"</response>
+                        <command>
+                            <dialog point="910b"/>
+                        </command>
+                    </if>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0510b3">"Vielleicht möchte ich doch nicht reisen. Vielen Dank!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="610b">
+                <answer lang="de" id="ZVWvendor0610b">"Okay ... das kostet dann 5 Z."</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="5" evaluation="true">
+                        <response lang="de" id="ZVWvendor0610b0">"Hier, bitte sehr ..."</response>
+                        <command>
+                            <giveMoney amount="5"/>
+                            <dialog point="1010b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response lang="de" id="ZVWvendor0610b1">"Oh, ich habe nicht mehr genug Geld ..."</response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0610b2">"Äh, es tut mir Leid, ich möchte doch nicht reisen."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="710b">
+                <answer lang="de" id="ZVWvendor0710b">"Alles klar ... dann wird es teurer: 55 Z. Aus betrieblich-programmtechnischen Gründen kann ich Ihnen zur zeit nur Hinfahrten anbieten."</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkMoney" requirement="55" evaluation="true">
+                        <response lang="de" id="ZVWvendor0710b0">"Alles klar, hier, bitte sehr."</response>
+                        <command>
+                            <giveMoney amount="55"/>
+                            <dialog point="1010b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response lang="de" id="ZVWvendor0710b1">"Oh, das tut mir Leid, ich habe das Geld nicht beisammen ..."</response>
+                        <command>
+                            <dialog point="8"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0710b2">"Okay ... ich glaube ich überlege mir das nochmal. Danke vielmals!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="910b">
+                <answer lang="de" id="ZVWvendor0910b">"Zeigen Sie mal her ..." Die Verkäuferin nimmt den Gutschein und gibt ihn dir zurück.!NL
+                "Können Sie schon. Gelten tut er allerdings nur für einen Liegewagenplatz. Und an Ihrer Stelle würde ich eine weitere Strecke damit zurücklegen, als ein Ziel, das praktisch noch im Nahverkehr liegt."</answer>
+                <conditionedAction>
+                    <if conditionToTest="checkItem" requirement="ZVWticket" evaluation="true">
+                        <response lang="de" id="ZVWvendor0910b0">"Oh okay. Dann lieber doch ohne. Ich habe hier eine Zeitkarte für den Verbundraum."</response>
+                        <command>
+                            <dialog point="610b"/>
+                        </command>
+                    </if>
+                    <else>
+                        <response lang="de" id="ZVWvendor0910b1">"Oh okay. Dann doch lieber ohne. Leider habe ich auch keine Fahrkarte für den Verbund ..."</response>
+                        <command>
+                            <dialog point="710b"/>
+                        </command>
+                    </else>
+                </conditionedAction>
+                <action>
+                    <response lang="de" id="ZVWvendor0910b2">"Hmmm ... vielleicht überlege ich mir das doch noch einmal. Vielen lieben Dank, auf Wiedersehen!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1010b">
+                <answer lang="de" id="ZVWvendor01010b">"Okay ... hier eine Fahrkarte für den Schnellzug 153 nach Karlstadt Hauptbahnhof. Er fährt von Gleis 13 ab in gut 40 Minuten. Sie fahren umsteigefrei."!NL
+                Der Drucker arbeitet währenddessen. Nach einiger Zeit kommt ein Ausdruck, deine Fahrkarte, den dir die Verkäuferin aushändigt:
+                "Gute Reise! Und haben Sie eine schöne Zeit in Karlstadt!"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor01010b0">"Danke, werde ich haben! Auf Wiedersehen!"</response>
+                    <command>
+                        <getItem triggeredItem="ticketToKarlstadt"/>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- point 40 externally because not belonging to any parallel stream -->
+            <point id="40" pointGrp="4">
+                <answer lang="de" id="ZVWvendor040">"Tja, dann kann ich Ihnen nicht weiterhelfen!"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor0400">"Hm ... vielleicht will ich dann doch nicht reisen. Danke für Ihre Mühen! Auf Wiedersehen!</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point> 
+            <!-- point 8 externally because not belonging to any parallel stream -->
+            <point id="8">
+                <answer lang="de" id="ZVWvendor08">"Okay ... möchten Sie vielleicht ein anderes Ziel?"</answer>
+                <action>
+                    <response lang="de" id="ZVWvendor080">"Ja, was hätten Sie denn im Angebot?"</response>
+                    <command>
+                        <dialogChoice pointGrp="4"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="ZVWvendor081">"Nein ... ich denke, lieber doch nicht."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- Die Mädchengruppe links -->
+    <person id="TelegrapheGroupA1">
+        <stream id="0">
+            <point id="0">
+                <answer lang="de" id="TelegrapheGroupA100">"Ist ja auch egal. Oh! Wer sind Sie denn?"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA1000">"Sie können ruhig du zu mir sagen. Ich heiße <userName/> und suche einen entlaufenen Freund."</response>
+                    <command>
+                        <dialog point="10"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA1001">"Wo kann ich hier übernachten? Gibt's hier eine Herberge?"</response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA1002">"Erm ... wo kann man hier gut feiern?"</response>
+                    <command>
+                        <dialog point="30"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA1003">"Och, ich schaue mich nur um. Wollte nicht stören!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="10">
+                <answer lang="de" id="TelegrapheGroupA1010">"Ooh. Wie spannend! Deine Liebe ist dir entlaufen?"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10100">"Nein, nur ein guter Freund. Er ist einfach so in einer Haltestelle verschwunden."</response>
+                    <command>
+                        <dialog point="11"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10101">"Ja, meine große Liebe ist mir entschwunden ..."</response>
+                    <command>
+                        <dialog point="101"/>
+                    </command>
+                </action>
+            </point>
+            <point id="11">
+                <answer lang="de" id="TelegrapheGroupA1011">"Wie, einfach verschwunden?" "Ja, ruf' ihn doch an!"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10110">"Wär' schön, wenn ich hier Netz hätte ... ich komme aus ... woanders her."</response>
+                    <command>
+                        <dialog point="12"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10111">"Alles klar, mache ich sofort!" (zu dir selbst: bloß wie?)</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="12">
+                <answer lang="de" id="TelegrapheGroupA1012">"Ja ... woher denn?" Jetzt schauen dich die Mädchen sehr aufmerksam an.</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10120">"Das glaubt ihr nicht ... von der Erde!"</response>
+                    <command>
+                        <dialog point="13"/>
+                    </command>
+                </action>
+            </point>
+            <point id="13">
+                <answer lang="de" id="TelegrapheGroupA1013">"Och! Da ein so großes Federlesens zu machen?! Die Irdischen wissen halt nichts, aber es gibt regelmäßige Verbindungen zur Erde! Oder bist du nicht mit dem Raumschiff gekommen?"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10130">"Nein! Ich bin mit der Straßenbahn gekommen!"</response>
+                    <command>
+                        <dialog point="14"/>
+                    </command>
+                </action>
+            </point>
+            <point id="14">
+                <answer lang="de" id="TelegrapheGroupA1014">"Ach nee! Du bist bestimmt noch benommen von der Reise!" "Mit der Stadtbahn, tz! Das geht doch gar nicht!"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupA10140">"Lacht ruhig ..."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+    <!-- Die Mädchengruppe rechts -->
+    <!-- Die Gruppe um Pascal -->
+    <person id="TelegrapheGroupB">
+        <stream id="0">
+            <point id="0">
+                <answer lang="de" id="TelegrapheGroupB00">"Hallo! Können wir helfen? Du siehst ein bisschen verloren aus."</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB000">"Ja ... ich suche eine Herberge!"</response>
+                    <command>
+                        <dialog point="10"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB001">"Allerdings ... ich bin etwas verloren. Ich suche einen guten Freund."</response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB002">"Nein, ist alles okay, danke ..."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="1">
+                <answer lang="de" id="TelegrapheGroupB01">"Können wir dir sonstwie helfen?"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupBr010">"Ja ... vielleicht könnt ihr mir helfen, einen Freund zu finden?"</response>
+                    <command>
+                        <dialog point="20"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB011">"Nein, das war alles!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <!-- Strang Herberge -->
+            <point id="10">
+                <answer lang="de" id="TelegrapheGroupB010">"Okay ... Freunde - wisst ihr was?" "Ja, einige Straßen weiter müsste eine bezahlbare Herberge sein." "Aber du kannst da zur Zeit nicht hin."</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0101">"Naja, da kann man nichts machen."</response>
+                    <command>
+                        <dialog point="1"/>
+                    </command>
+                </action>
+            </point>
+            <!-- Strang PSL -->
+            <point id="20">
+                <answer lang="de" id="TelegrapheGroupB020">Eine antwortet scherzhaft: "Du willst, dass er zurückkommt? Ist er etwa von dir davongerannt?"</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0200">"Zuerst ist er nicht mein fester Freund, dann wollte er einer Gruppe hinterherrennen, die angeblich entführt sein soll."</response>
+                    <command>
+                        <dialog point="21"/>
+                    </command>
+                </action>
+            </point>
+            <point id="21">
+                <answer lang="de" id="TelegrapheGroupB021">
+                    Das Mädchen unten ist erstaunt: "Entführt? Du scherzt wohl?"!NL
+                    "Da solltest du lieber zur Polizei gehen, denkst du nicht?" fragt eine andere. 
+                    Ein Junge bemerkt darauf: "Sie werden ihm nicht glauben ... die haben andere Sachen zu tun."
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0210">
+                        "Eine Se- jemand sagte mir, dass ich hierher kommen soll. Hier würde mir 
+                        weitergeholfen werden."
+                    </response>
+                    <command>
+                        <dialog point="22"/>
+                    </command>
+                </action>
+            </point>
+            <point id="22">
+                <answer lang="de" id="TelegrapheGroupB022">
+                    Die Gruppe schaut dich verwirrt an, bis ein Junge, etwas abseits an der Seite, sich gegen die Stirn schlägt:!NL
+                    "Verdammt! Sie sind also doch so weit gegangen!"
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0220">
+                        "Was?"
+                    </response>
+                    <command>
+                        <dialog point="23"/>
+                    </command>
+                </action>
+            </point>
+            <point id="23">
+                <answer lang="de" id="TelegrapheGroupB023">
+                    Das erste Mädchen entgegnet ihm: "Nein, Pascal, das ist nicht deren Tempo ... die stürzen sich doch auf die Politiker!
+                    Nerve ihn nicht mit deinen Ideen!" Pascal bleibt energisch: "Aber es muss diese Gruppe sein! Ich habe etwas von einer 
+                    Entführung eines Zuges gehört!"
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0230">
+                        "Was ist los? Ich verstehe gar nichts!"
+                    </response>
+                    <command>
+                        <dialog point="24"/>
+                    </command>
+                </action>
+            </point>
+            <point id="24">
+                <answer lang="de" id="TelegrapheGroupB024">
+                    Pascal antwortet: "Es gibt eine Gruppe von Terroristen, die früher mal versucht hatte, das Ende von Kriegen 
+                    zu erzwingen. Allerdings haben sie sich verlagert ... man weiß immer weniger, was hinter den politischen Bühnen passiert.""
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0240">
+                        "Erzähl mir mehr von ihnen!"
+                    </response>
+                    <command>
+                        <dialog point="25"/>
+                    </command>
+                </action>
+            </point>
+            <point id="25">
+                <answer lang="de" id="TelegrapheGroupB025">"Gerne, aber nicht hier. Man könnte uns zuhören. Hier gab es einige verdächtige Leute."</answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0250">"Alles klar. Aber ... wie kann ich Ihnen vertrauen? Ich kenne Sie nicht."</response>
+                    <command>
+                        <dialog point="26"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0251">"Ach nee ... und wir reden hier so frei? Da kann doch was nicht stimmen!"</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="26">
+                <answer lang="de" id="TelegrapheGroupB026">
+                    Ein Mädchen antwortet: "Das nenne ich gesundes Misstrauen! Aber mache dir keine Sorgen, 
+                    wir sind nicht auf der Erde. Wir haben verstanden, dass Lügen und Betrügen sich früher oder 
+                    später gegen uns wenden."
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0260">"Ach nee. Und ich soll jetzt die Einladung annehmen?"</response>
+                    <command>
+                        <dialog point="27"/>
+                    </command>
+                </action>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0261">"Nehmt es nicht persönlich ... das ist mir zu heiß."</response>
+                    <command>
+                        <exit/>
+                    </command>
+                </action>
+            </point>
+            <point id="27">
+                <answer lang="de" id="TelegrapheGroupB027">
+                    Pascal lächelt. "Allerdings, wenn das eine Anmache sein sollte, so war sie wirklich schlecht. 
+                    Aber, nein, ich möchte dir weiterhelfen."
+                </answer>
+                <action>
+                    <response lang="de" id="TelegrapheGroupB0270">"Alles klar, aber ... können deine Freunde mitkommen?"</response>
+                    <command>
+                        <event base="zeidel_stadtbahn" stream="whiteSeaQuarter" id="ws_01"/>
+                    </command>
+                </action>
+            </point>
+        </stream>
+    </person>
+</dialogueData>

@@ -1,0 +1,1060 @@
+1. Einleitung
+
+In unserer schnelllebigen Zeit häuft sich immer mehr Information an, das gelernt und dokumentiert werden will. Das heißt aber auch, dass mehr Stoff in weniger Zeit gelernt werden
+muss, um mit der rasanten Entwicklung mithalten zu können. Eine Konsequenz davon ist, dass viele Lernende angesichts der Masse an Stoff ihre Lust verlieren und ihre Studienzeiel
+abbrechen. Von Interesse am Kursinhalt kann keine Rede sein. Eine Methode, die hier Abhilfe schafft, ist der Unterricht über Spiele. In dieser Arbeit wird, anhand von Projekten,
+das Konzept Gamification -Tätigkeiten über Spiele auszuführen- anhand mehrerer Projekte vorgestellt und dabei erstens aufgezeigt, dass das Einführen von spielerischen Elementen
+einem wissenschaftlichen Projekt hilfreich ist und eine breitere Öffentlichkeit bindet, zweitens dass Spiel der Lehre speziell sehr förderlich ist, da ein Gebrauchskontext für den
+Lerninhalt geschaffen wird, mit Hilfe dessen die Spieler diesen verinnerlichen können. Den Hauptteil jedoch bildet ein Spiel, welches auf das Lernen und Wiederholen von
+Kursinhalten abzielt. Dort muss der Spieler eine Mission erfüllen und dabei durch verschiedene Städte reisen. In diesen Städten findet er weitere Spiele, die ihm helfen, Themen aus
+verschiedenen Kursen zu lernen oder zu wiederholen. Ziel des Spiels ist es, den Lerninhalt aus den öden "Büffel-"Kontext herauszureißen und in eine lebende Kulisse einzubauen, die
+dem Spieler eine konkrete Vorstellung von dem Thema einerseits vermittelt, andererseits den Lernvorgang mit einem Erlebnis verbindet und so das Merken erleichtert.
+
+1.1 Crowdsourcing - die Öffnung der Forschung für die breite Öffentlichkeit
+
+Manche Institute verfügen über einen immensen Satz von Daten, die nicht katalogisiert, geschweige denn in maschinenlesbarer Form abgespeichert sind. Es handelt sich hierbei
+entweder um Manuskripte verschiedenen Alters oder um anderweitige Aufzeichnungen, sei es um Logbücher von Schiffen oder Fotografien von Galaxien oder seltenen Tierarten. Diese
+Institute sind sich darüber bewusst, dass sie über diese Daten nicht ohne Weiteres Herr werden. Wenn die Daten in digitaler Form vorliegen, dann müssen diese in maschinenlesbare
+Form umkodiert werden, damit Suche, Verwaltung und Verwendung von ihnen möglich wird. Dies wäre leicht getan, wenn es sich nicht um mehrere zehntausend Dokumente handeln würde. Die
+Beschäftigung ausgebildeter Fachkräfte ist hier ein nicht zu vernachlässigender Kostenfaktor. Mathias Müller von der Universität Zürich hat eine Kostenaufstellung für ein zu
+annotierendes Korpus von 20 Millionen Beziehungen zwischen 500 000 Begriffen aufgestellt. Er geht für einer hypothetischen professionellen Arbeitskraft von einer Geschwindigkeit
+von 6 Beziehungen pro Minute und einem Stundenlohn von 30 CHF pro Minute aus. Dieser würde demnach 55 555 Arbeitsstunden abrechnen und 1 666 650 CHF verlangen (Müller 2015: 22-23).
+
+Chris Lintott ist einen anderen Weg gegangen. Er beschloss 2008, die Daten seines Instituts einer breiteren Öffentlichkeit zur Verfügung zu stellen. Diese sollte nicht bezahlt
+werden, sondern die Klassifizierung von Aufnahmen, die mittels Teleskopen gemacht worden sind, auf freiwilliger Basis durchführen. Für das Projekt werden keine fachspezifischen
+Kenntnisse vorausgesetzt, jeder kann mitmachen. Es wurde eine benutzerfreundliche Umgebung geschaffen und die Fragen sind leicht gehalten: Den Nutzern wird ein Bild einer Galaxie
+auf dem Bildschirm gezeigt und er wird gefragt, was er auf dem Bild sieht:
+
+"The questions are purposefelly kept simple and do not require specialised scientific knowledge in order for the participant to engage with the project." (Greenhill et al. 2014: 1)
+
+Die Nutzer können mittels einer Checkliste von Eigenschaften antworten:
+
+"The interface of the website[: ...] an image of the galaxy to be classified on the right and multiple choice questions about the features and characteristics of the galaxy on the
+left." (Greenhill et al. 2014: 1)
+
+Das Projekt hatte Erfolg: aus einem einzelnen Projekt ist eine Plattform von Projekten (zooniverse.org) entstanden. Sie stellt zur Zeit 42 Projekte [*
+https://www.zooniverse.org/projects, aufgerufen am 23. Februar 2016] mit dem gleichen Aufbau bereit. Die Themenvielfalt jedoch hat sich deutlich erweitert, beispielsweise
+"Shakespeare's World", das sich auf Handschriften von und um Shakespeare konzentriert, also einem Projekt, das rein gar nichts mit Astronomie zu tun hat. Einige Zahlen, die den
+Erfolg der zooniverse.org-Projekte verdeutlichen, die Daten stammen von https://www.zooniverse.org/about, aufgerufen am 23. Feburar 2016:
+
+- über 100 000 Leute arbeiten in 42 Projekten mit
+
+- in vier großen Themenbereichen Weltall, Klimaforschung, Geisteswissenschaften und Naturwissenschaften sind 89 Publikationen entstanden und 14 beschäftigen sich mit der Plattform
+als solche
+
+- 2015 sind für "Galaxy Zoo" 4 755 448 Klassifikationen für 209 291 unterschiedliche Bilder von Galaxien eingegangen
+[http://blog.galaxyzoo.org/2016/01/11/galaxy-zoo-highlights-from-2015/, aufgerufen am 1. März 2016, 10:05]
+
+- selbst neue Projekte sind sehr schnell akzeptiert - das oben erwähnte Projekt "Shakespeare's World", gestartet am 9. Dezember 2015, verbuchte am 28. Februar 1 792 Freiwillige,
+die 36 072 Seiten klassifiziert haben. 792 Dokumente sind vollständig transkribiert. 
+
+Das Projekt "Shakespeare's World" sei im Folgenden, stellvertretend für alle zooniverse.org-Projekte, genauer beschrieben. Es weist einige Unterschiede zu anderen textbasierten
+Projekten (wie Old Weather) auf, so zählt hier viel, wenn bereits ein Wort transkribiert wurde. Es besteht also die Möglichkeit, die Transkription unterwegs zu unterbrechen - so
+sollen Leute angelockt werden, die keine Zeit oder Lust haben, eine vollständige Seite zu transkribieren:
+
+"I wanted to create a new method that [...] encourages [...] those who might only have a few minutes to do a few lines on their lunch break." ("Shakespeare's World" FAQ-Beitrag "Is
+the architecture of the project described anywhere?", https://www.zooniverse.org/projects/zooniverse/shakespeares-world/talk/229/20878?comment=43161, aufgerufen am 1. März 2016, 11:51) [*
+Auch einige Nutzer des "Transcribe Bentham"-Projektes sahen ihre Transkriptionsarbeit als Freizeitbeschäftigung wie Sudokus lösen an, vgl. hierzu Causer & Wallace 2012: 17]
+
+Auch wird mit den Herausgebern des Oxford English Dictionary, die das bekannte Wörterbuch des Englischen um neue Wörter und Schreibweisen erweitern möchten.
+ 
+Zu Beginn des Spiels wählt der Spieler das Genre der Texte, die er transkribieren möchte: Rezepte oder Briefe. Dann erscheint das Steuerfeld. Links oben stehen Metaangaben zum
+Text. Darunter folgen Knöpfe "Transcribe Text", "Indentify Graphic" und "Tutorial". [*4 Wenn der Spieler sich ein Nutzerprofil erstellt hat, erscheint über "Transcribe Text" auch
+"A Snapshot".] Darunter befindet sich der Knopf, dass man seine Arbeit an der Seite abgeschlossen hat. Rechts neben den Metaangaben, am oberen linken Rand des eigentlichen
+Spielfeldes, wo das Faksimile erscheint, befinden sich sechs Knöpfe. Der oberste führt zu Beispielbuchstaben. Darunter liegt ein Knopf, der eine Liste von Stellen enthält, die der
+Spieler eigens zur späteren Verwendung gespeichert hat. Der dritte Knopf dreht das Faksimile um 90° im Uhrzeigersinn. Durch die restlichen Knöpfe kann das Bild in seine
+ursprüngliche Lage zurückversetzt, vergrößert oder verkleinert werden. Wenn man das Spielfeld zum ersten Mal betritt, bekommt man einen Wegweiser, der die Elemente des Steuerfeldes
+erklärt. Wenn der Spieler sich den Wegweiser durchgelesen hat, kann er mit seiner Arbeit beginnen. Hierzu drückt er auf "Transcribe Text" und hebt die Stelle hervor, die er
+transkribieren möchte. Es erscheinen blaue Punkte, die die Stelle umrahmen. Der rechte Punkt ruft die Eingabekonsole auf, wo das Transkribat eingegeben werden soll. Diese Konsole
+soll auch genutzt werden, um geläufige Abkürzungen und Streichungen, Einschübe, Randnotizen oder unleserliche Stellen einzutragen. Dies macht er, indem er zuerst das, was er sieht,
+einträgt, die Stelle markiert und auf den entsprechenden Knopf in der Konsole klickt. Sollte im Faksimile eine Grafik auftauchen, kann der Spieler sie mittels "Identify Graphic"
+identifizieren. Nachdem er besagten Knopf gedrückt hat, zieht er ein Rechteck um die Grafik und in der Konsole gibt er an, um welche Art von Grafik es sich handelt. Möchte der
+Nutzer das Transkribat an der entsprechenden Stelle nochmal bearbeiten, so klickt er auf den blauen Punkt und wählt dort "Edit" aus. Mittels "delete" verwirft er das Transkribat an
+der Stelle. Der Nutzer kann auch Stellen aus dem Faksimile markieren und zu einer späteren Einsichtnahme verwahren. Hierzu klickt er links auf "A Snapshot" [*5 Nur, wenn der Nutzer
+sich angemeldet hat!], zieht einen Kasten um die zu speichernde Stelle und benennt diese. Durch den Knopf, der sich über dem "Bild zurücksetzen"-Knopf befindet, kann er seine
+hinterlegten Stellen einsehen. Der Klick auf "I'm done" markiert das (vorläufige) Ende einer Arbeit. Der Spieler wird hier aufgefordert, anzugeben, ob er die Seite vollständig oder
+nur teilweise transkribiert hat oder die Seite leer war. Er kann hier auch ein PDF-Dokument des Transkribats erhalten.
+Die Qualitätsprüfung findet statt, indem mehrere Nutzer an derselben Seite arbeiten und wenn drei Leute eine hohe Zahl von Ähnlichkeiten in der Transkription finden, wird sie als
+abgeschlossen markiert. Auch einzelne Zeilen können als abgeschlossen markiert und von der Liste der zu erledigenden Trankriptionen gestrichen werden; hierzu müssen fünf
+Transkribenden dieselbe Zeile transkribiert haben. ("Shakespeare's World" FAQ-Beitrag "Is the architecture of the project described anywhere?",
+https://www.zooniverse.org/projects/zooniverse/shakespeares-world/talk/229/20878?comment=43161, aufgerufen am 1. März 2016, 11:51) Das Ergebnis ist, selbst nach einer kurzen Laufzeit,
+erstaunlich hoch, siehe hierzu die Auflistung oben.
+
+Der Leser wird sich an dieser Stelle die Frage stellen, woher der große Publikumsandrang auf die Projekte stammt. Er soll an einem weiteren, viel zitierten Projekt erläutert
+werden: am "Transcribe Bentham Project", betrieben von der University College London. Der Autor: Jeremy Bentham, ein Denker, Philosoph und Reformer des englischen Rechtswesens
+(Causer & Wallace 2012, willgannon 2014). Die Herausforderung: 60 000 Manuskripte, von denen 20 000 transkribiert sind (Causer & Wallace 2012: 1). Die Leserlichkeit nimmt mit
+fortschreitden Alter des Autors ab, zumal da er die Sehkraft mehr und mehr eingebüßt hat (willgannon 2014: 3). Bei der Schaffung des Projektes im Herbst 2010 griffen die Betreiber
+auf die Erfolge von zooniverse.org zurück, allerdings war zu diesem Zeitpunkt die Transkription von Texten durch eine nichtprofessionelle Öffentlichkeit noch neu, sodass Neuland
+betreten wurde und der Ausgang des Experimentes ungewiss war. Zum Anlocken von Teilnehmern wurde eine Werbekampagne gestartet - jedoch mit einem vergleichsweise knappen Budget von
+1000 £. Diese erstreckte sich auf Printmedien (Fachzeitschriften und allgemeinere Zeitschriften), Einträgen in Mailinglisten, Aufrufe auf Seiten der Bildungseinrichtungen und
+Besuche an Bildungseinrichtungen wie Schulen. Auch eine twitter- und eine facebook-Präsenz wurde eingerichtet. (Causer & Wallace 2012: 4f.) Die Welle, die die hohe Medienpräsenz
+ausgelöst hat, erstreckte sich über die Grenzen Großbritanniens hinaus - in zwölf Länder, darunter auch Deutschland. Der Erfolg stellte sich erst spät ein, als die subventionierte
+Zeit sich dem Ende zuneigte, und zwar hauptsächlich durch einen Artikel in der New York Times (Causer & Wallace 2012: 9). Vom Projektstart am 8. September 2010 bis zum Erscheinen
+des Artikels am 27. Dezember 2010 (am 28. in Druck) wurde die Seite 5 199mal besucht, nach der Veröffentlichung bis zum Ende der Pilotphase am 8. März 2011 10 155mal. Allerdings
+gibt es einige Konzentrationen hinsichtlich der Nutzergruppen, die auf eine Umfrage über die Plattform antworten: 62 % der Befragten sind über 41 Jahre alt und verfügten über eine
+entsprechende Vorausbildung (Causer & Wallace 2012: 14).
+
+Als Nutzungsumgebung dient MediaWiki. Diese bildet die Grundlage von wikipedia, wo viele Benutzer täglich Beiträge leisten und daher die Oberfläche kennen. Allerdings verwendet
+"Transcribe Bentham" eine angepasste Version, so gibt es, nachdem sich Nutzer vermehrt über die anstrengende Arbeit der Annotation von TEI-Tags [* Text-Encoding-Initiative, eine
+Gruppe, die eine Richtilinie erarbeitet hat, welche Tags zur Transkription von Texten und Erfassen sämtlicher Elemente eines Textes definiert] beschwert haben, eine Leiste von
+Knöpfen, die eine Textpassage mit TEI-Tags versieht [* Für Zeilen-/Seitenumbrüche, Streichungen, Einschübe, usw.]
+(http://blogs.ucl.ac.uk/transcribe-bentham/2011/12/15/transcribe-bentham-faq/, zuletzt aktualisiert am 27. März 2013 und aufgerufen am 1. März 2016 11:17). Auch hat der
+Transkribend ein Abbild des Faksimiles auf dem Bildschirm, sodass er die Handschrift vergrößern, verkleinern, usw. kann. Neu entwickelt wurde außerdem im Sommer 2015 eine
+Technologie, welche Handschriften erkennt und so den Transkribenden zusätzlich unterstützen soll. (http://www.transcribe-bentham.da.ulcc.ac.uk/td/TSX_Guidelines, zuletzt geändert
+am 28. August 2015 und aufgerufen am 1. März 2016 11:25) [* Dieses Feature ist noch in der Probephase und es wird um Rückmeldungen gebeten, die den Projektbetreibern das
+Verständnis über die optimale Nutzung der Technologie vermitteln. Auch wird den Nutzern geraten, die automatische Generierung mit dem Original zu vergleichen.] Das Ergebnis,
+welches "Transcribe Bentham" am 1. März 2016 verbuchen kann, ist ebenfalls sehenswert: 35 775 angemeldete Nutzer haben 179 284 Beiträge seit Projektstart geleistet. Von 35 002 Folios
+sind 15 432 (44,09 %) transkribiert. 14 412 sind von den Projektbetreibern als richtig befunden, das sind 93 % aller eingereichten Transkribate.
+
+Der Erfolg dieser Projekte ist verschienen Faktoren zuzuschreiben. Manche sind aus dem Spiel übernommen: Interaktion zwischen den Freiwilligen, Erzeugen einer Wettbewerbssituation
+[* "Shakespeare's World" gehört zu den zooniverse.org-Projekten, die auf den Wettbewerb verzichtet haben, vgl. hierzu Greenhill et al. 2014: 4] durch Belohnungen für erreichte
+Zwischenziele und die Möglichkeit, Teil einer großen Bewegung zu sein (Causer & Wallace 2012, Greenhill et al. 2014). Der erste Punkt ist folgenderweise umgesetzt (für den zweiten
+Punkt siehe Abschnitt 1.2): in den zooniverse.org-Projekten, zu welchen auch "Shakespeare's World" gehört, gibt es ein Diskussionsforum, in dem die Teilnehmer sich untereinander
+austauschen und Objekte, die zur Transkription anstehen, besprochen werden können. Hierdurch wird der Kontakt zwischen den Transkribenden untereinander einerseits, andererseits
+zwischen Forschern und Transkribenden gefördert, wodurch das Zugehörigkeitsgefühl der Teilnehmer am Projekt gestärkt wird, Teil einer wissenschaftlichen Forschung zu sein, da sie
+direkt mit den Forschungsthemen in Verbindung stehen. Für "Old Weather", einem weiteren vielzitierten Projekt der Zooniverse-Plattform, gab ein Nutzer an:
+
+"Being part of the project and helping the researchers was rewarding in itself." (Eveleigh et al. 2013: 2)
+ 
+Darüber hinaus verfügt jedes Projekt über einen Blog, in dem Neuigkeiten und Forschungsergebnisse zu diesem bekannt gegeben werden. Denn als weitere Motivationsfaktoren zählen bei
+den Projekten das Interesse an der Disziplin oder am konkreten Fall der zu erforschenden Disziplin, sei es im Falle von "Transcribe Bentham" das Interesse an der Geschichte (dies
+zählt auch bei "Shakespeare's World") oder an der Person Benthams (oder Shakespeares) selbst. Eine Befragung der Teilnehmer des "Transcribe Bentham"-Projektes ergab folgendes Bild
+über die Motivation der Teilnehmer:
+
+"[...] they were mostly motivated to take part by a general interest in history and philosophy [...] and in Bentham himself (Figure 13)." (Causer & Wallace 2012: 16)
+
+Das Schaubild 13 des oben zitierten Bereiches sei ebenfalls näher erläutert: 23 Befragte einer Umfrage gaben den ersten Grund, Teil eines kollaborativen Projektes zu sein, als
+Motivation zur Teilnahme an. 31 Befragte bekundeten das Interesse am Thema oder der Domäne als Anstoß zum Mitwirken. Allerdings ist auch das Interesse an der Methode Crowdsourcing
+oder der Technologie, die verwendet wurde, ein nicht zu vernachlässigender Faktor. Er wurde von 22 Befragten genannt. Manche Teilnehmer fanden sogar das Transkribieren selbst nach
+einer Zeit als spaßigen Zeitvertreib:
+
+"[...] and several even found transcription fun!" (Causer & Wallace 2012: 16)
+
+"Many respondents found the intellectual challenge and puzzle-solving aspect of transcription enjoyable and highly rewarding, with several comparing deciphering Bentham's
+handwriting to solving a crossword or sudoku." (Causer & Wallace 2012: 17)
+
+Ein weiteres Element der Beliebtheitsschaffung ist in "Galaxy Zoo" und "Snapshot Serengeti" anzutreffen: in "Galaxy Zoo" ist es möglich, mittels Bilder von Galaxien Nachrichten zu
+verschicken:
+
+"Another example [...] which allows participants to create messages from photos of galaxies that resemble letters." (Greenhill et al. 2014: 5)
+
+Und in "Snapshot Serengeti" besteht ebenfalls die Möglichkeit, mit den erforschten Objekten Spaß zu haben - und so bei der Forschung dabei zu bleiben:
+
+"The team behind "Snapshot Serengeti" [...] drew on photographs that existed on the site and built a meme generator to allow contributors to create their own memes." (Greenhill et
+al. 2014: 5)
+
+So wird im oben genannten Aufsatz ein Bild eines zu lachen scheinenden Leoparden gezeigt mit der Aufschrift "LOLZ". Hierdurch sollen neue Teilnehmer zu dem Projekt hinzugewonnen
+werden, die sich in die Datenmengen stürzen, dort ihre lustigen Kleinode finden und dann ebenfalls ihre eigenen Botschaften versenden. Diese sind Elemente des Spiels, und die
+Verspielerischung - gamification genannt - kommt auch in anderen Projekten zur Geltung, wie im folgenden Abschnitt erläutert wird.
+
+1.2 Gamification - Elemente des Spiels in der "ernsten" Forschung
+
+Über den Begriff "Spiel" und was ein "Spiel" ausmacht, gibt es viele verschiedene Ansichten [* Greenhill et al. führen an, dass das Random House Dictionary 53 Definitionen für
+"Spiel" liefert] - in "Galaxy Zoo" und "Snapshot Serengeti" ist dies durch eine vom ernsten Kontext losgelösten Umgang mit den Forschungsdaten verwirklicht. Zu "Snaphot Serengeti"
+schreiben Greenhill et al. weiterhin, dass sich die Nutzer eigene Herausforderungen geschaffen haben, beispielsweise das Auffinden einer besonders seltenen Art (vgl. dazu Greenhill
+et al. 2014: 5) Auch in "Shakespeare's World", wo nach Angaben der Moderatorin und Betreiberin Victoria Van Hyning (siehe Zitat auf Seite N) auf explizite Elemente des Spiels
+verzichtet wurde, findet sich ein ähnlicher Aspekt wieder: im Talk zum Projekt gibt es einen Bereich #Recipes2Try, wo Nutzer transkribierte Rezepte nachmachen und dort ihre
+Erfahrungen berichten.
+
+Ein anderes, sehr geläufiges Element des Spiels ist die eigene Bewertung mittels eines Rangsystems: es gibt ein Spielziel, und diesen zu erreichen ergibt für den oder die Spieler
+eine Belohnung (in der Regel den Sieg). Elena Pierazzo fasst die eingesetzte Methode folgendermaßen zusammen: 
+
+"The principle is to take the user experience or problem to be solved and break it down into small tasks; once these are achieved, then users are rewarded somehow and are invited
+to proceed to the next, more complex level." (Pierazzo 2014: 38)
+
+Als zusätzlichen Belohnungsfaktor entschlossen sich einige Projekte dazu, ein Bewertungssystem einzuführen: "Old Weather" und "Transcribe Bentham" seien hier im Folgenden
+erläutert. "Old Weather" hat sich alten, handgeschriebenen Logbüchern von Schiffen verpflichtet. Die Spieler können, bei einer Anzahl transkribierter Wetterberichte aus den
+Logbüchern, vom Kadetten zum Leutnanten aufsteigen. Kapitän des Schiffes kann zusätzlich derjenige werden, der von einem Schiff die meiste Zahl von Wetterberichten transkribiert
+hat. Daraus ergibt sich auch, dass dies ein "Wanderpokal" ist - wenn der Spieler an der Spitze aufhört, zu transkribieren, so kann ein anderer kommen und ihm den Rang streitig
+machen (Eveleigh et al. 2013: 1). Auch in "Transcribe Bentham" ist ein Punktesystem eingeführt worden: an der Hauptseite werden auf einer Liste die zehn aktivsten Transkribenden
+angezeigt. Zusätzlich gibt es das "Benthamometer", das den aktuellen Fortschritt des Projektes darstellt (siehe auch Causer & Wallace 2012: 8 [* Sie beziehen sich hierbei auf das
+Bewertungssystem von "Old Weather"]). Diese Systeme sollen in den Spieler den Drang zum Zeigen von Höchstleistungen im Wettbewerb gegenüber andere Teilnehmer wecken. Auf eine
+Umfrage zu "Old Weather" gaben die Befragten folgende Antworten zum Aspekt des inneren Anspornes:
+
+"There were statistics for each ship's completion, so it felt like I was making more of an impact." (Eveleigh et al. 2013: 2)
+
+Der Nutzer bekommt ein angenehmes Gefühl, wenn er einerseits einen Löwenanteil an der Forschung ausmachen konnte, dieser wird gesteigert, wenn gerade ER diesen Anteil gemacht hat
+und die Gemeinschaft dies auch sieht und anerkennt. Dieses Gefühl ist aus herkömmlichen Onlinespielen hinlänglich bekannt: es gibt eine größere Achtung vor Spielern, die eine
+höhere Punktzahl haben, vor allem, wenn sich diese Punktzahl aus den Errungenschaften ergibt. Die Anerkennung der Errungenschaften hält auch der folgende Nutzer für ein Bedürfnis
+eines Spielers:
+
+"[...] people like to feel that their contribution has been validated just as a psychological tool." (Eveleigh et al. 2013: 2)
+
+In "Transcribe Bentham" bauten die Betreiber das Element des Wettbewerbs ein, weil:
+ 
+"Other crowdsourcing projects have considered such features to be important [...]" (Causer & Wallace 2012: 16)
+
+Es wurde allerdings von den Teilnehmern als zweitrangig angesehen. In der im vorigen Abschnitt erwähnten Befragung nannten lediglich zwei von ihnen Wettbewerb oder Anerkennung als
+Leitfaktor zur Teilnahme, wobei Causer & Terras annehmen, dass manche den Wettbewerb unterbewusst wahrnehmen:
+
+"Perhaps others were subconsciously competitive [...]" (Cause & Terras 2012: 17)
+
+Den Spieler, den sie anschließend als Beispiel anführen, hat den Reiz des Wettbewerbs erst im Laufe der Arbeit empfunden, als er plötzlich das Gefühl bekam, etwas zu verlieren zu
+haben, wenn er seine Transkriptionen nicht erledigt:
+
+"I'm usually a very noncompetitive person but [...] became inspired to do more when I find I'm losing my 'position' [on the leaderboard] - it's ridiculous! but quite fun." (Causer
+& Terras 2012: 17)
+
+Causer & Terras vertreten folgende Ansicht zum Einsatz des Wettbewerbs in ihrem Projekt: 
+
+"[...] it is clear that projects must be flexible enough to meet the motivational needs of a variety of volunteers. [...] [Organisciak 2010 [* Organisciak P. Why Bother? Examining
+the Motivations of Users in Large-Scale Crowd-Powered Online Initiatives. MA Thesis, University of Alberta 2010]: 90] notes that points systems are the best suited 'to serve the
+more dedicated contributors, giving them something to show for their dedication and something still to strive for.' [...] Perhaps contribution might be encouraged in the future by
+promoting short term goals, such as getting a set of manuscripts transcribed by a certain date." (Causer & Wallace 2012: 17, 25)
+
+Die Zweischneidigkeit des Wettbewerbsdrangs wird deutlich, dass durch ihn nur ein Teil - und zwar hauptsächlich der aktive - beflügelt wird. Er wird für seine Mühen anerkannt und
+ihm wird aufgezeigt, dass es Sinn macht, noch fleißiger zu arbeiten. Zwischen den Zeilen dringt durch, dass die Passiven - diejenigen, die nur wenig Zeit haben oder zu schnell
+aufgeben - dadurch auf der Strecke bleiben, denn das Spielziel ist zu hoch, um es noch erreichen zu können. Dieser Gegensatz wird aus der Befragung von Eveleigh et al. zu "Old
+Weather" noch deutlicher. Sie fanden heraus, dass einige Teilnehmer frustriert waren, da der Rang des Kapitäns in immer größere Ferne rückte:
+
+"I was never even close to it. It seemed like you had to transcribe 10 times as much as I was transcribing or 100 times [...] to get even towards that [...]" (Eveleigh et al. 2013:
+2)
+
+Und diejenigen, die es zum Kapitän gebracht haben, sind unter Stress geraten, diesen Rang zu halten:
+
+"I also found it quite stressful. I'm quite a competitive person, and when I got to be Captain of a ship, I wanted to stay there at any cost! And then, someone else came along that
+had more spare time, and so I would get quite stressed trying to stay ahead!" (Eveleigh et al. 2013: 3)
+
+Hier geht das Spielerische an der Tätigkeit verloren und wird ernst, denn ein erbitterter Kampf um den ersten Rang bricht aus. Die Zusammenarbeit an der Transkription geht dabei
+verloren: erstens flüchten die gefrusteten Teilnehmer auf einsame Schiffe, wo sie keinen Kampf mehr auszufechten hatten:
+
+"So then I picked a ship that no-one knew and no-one cared about." (Eveleigh et al. 2013: 3)
+
+Und zweitens herrscht Misstrauen unter den Teilnehmern:
+
+"Two interviewees had suspicions that other volunteers had cheated to remain amongst the top contributors: [...] And just to be in the top 10 or number 1." (Eveleigh et al. 2013:
+3)
+ 
+Vergleichbar ist die Stimmung, die dadurch erzeugt wird, mit einem Browsergame, in dem der Spieler ein Dorf hat, dieses aufbauen und danach mit vier Spezialeinheiten weitere
+Dörfer einnehmen muss. Bepunktet wurde die Anzahl der errichteten und ausgebauten Gebäude. Hatte ein Spieler 100 000 Punkte angehäuft, so wurden seine Dörfer für andere
+Mitstreiter interessant und um sich am Leben zu erhalten, blieb dem Spieler nichts Anderes übrig, als nach den Dörfern seiner Konkurrenten zu trachten. Gutes Timing war dabei sehr
+wichtig, denn die Spezialeinheit, die zum Erobern der Dörfer notwendig war, war sehr langsam und sehr empfindlich. Eine große Menge an Soldat-Einheiten musste daher mitgeschickt
+werden, um die hermetische Sicherung des gegnerischen Dorfes zu brechen - während man selbst sich in derselben Lage befand. Am Ende wurde es ein Rennen gegen die Zeit, denn beim
+Login ging beim Spieler die Angst umher, dass nicht plötzlich alle Dörfer von jemandem erobert wurden, der den ganzen Tag nur vor dem Browser saß und Truppen zu koordinieren. Diese
+Art des Opportunismus drückt sich in "Old Weather" auch in der Arbeit an sich aus - Quantität ging über Qualität:
+
+"people are interested only in how many weather reports they transcribe." (Eveleigh et al. 2013: 3)
+
+Derselbe Befragte führte auch an, dass andere Aspekte wie Orte oder Werdegang des Schiffes im Wettvewerb unberücksichtigt oder nicht honoriert wurden:
+
+"Events are not taken into account;" (Eveleigh et al. 2013: 3)
+
+"Others felt that the ranking system undervalued smaller contributions, or discouraged participants from submitting more detailed transcriptions including daily 'event' occurences
+(useful for historical research) in addition to the basic weather observations:" (Eveleigh et al. 2013: 3)
+
+Ein Grund, weshalb in anderen Projekten auf die Rangliste und die persönliche Bewertung verzichtet wurden - um den Fokus noch mehr auf das Material, als auf die Teilnehmer zu
+legen:
+
+"The major focus is on the research outcomes and making these texts available for anyone to read and access."
+(https://www.zooniverse.org/projects/zooniverse/shakespeares-world/talk/229/20878?comment=84129, aufgerufen am 4. März 2016 10:48)
+
+Denn andere Teilnehmer des "Old Weather"-Projektes bezeichneten die Bewertung der Beitragenden als "kindisch" und "unseriös":
+
+"Scoring is for kids ..." (Eveleigh et al. 2013: 3)
+
+und:
+
+"Within the research setting of citizen science too, competition may be viewed as running contrary to the serious scientific objectives of the project, and belittling of the
+volunteers' often considerable efforts [...]" (Eveleigh et al. 2013: 3)
+
+Die Frage, ob das Spiel die Ernsthaftigkeit der Forschung in Frage stellt, wird bei Greenhill et al. ausführlich diskutiert. Sie führen als Argumente an: erstens, dass das
+Spielerische die Qualität der Ergebnisse nicht in Frage stellt:
+
+"[...] there is an element of control in regards to the data produced by the participants as they work within a system created with them in mind. For example, the interface on
+"Galaxy Zoo" provides limited options as how galaxies can be classified [...]" (Greenhill et al. 2014: 4)
+
+Hiermit wird folgendem Gegenargument Rechnung getragen, dass mittels mangelnder Fachkenntnisse Fehler im Produkt auftreten können:
+
+"[...] lack of specialist knowledge or misclassification may result in errors within the data produced [...]" (Greenhill et al. 2014: 4)
+
+Denn es findet zusätzlich zu den bereits gesteuertem Spielfluss auch eine Qualitätskontrolle statt:
+
+"Any unusual activity is [...] filtered and flagged for further review." (Greenhill et al. 2014: 4)
+
+Hauptsächlich wird der Sinn des Spiels an der Vertraulichkeit angezweifelt - ein Spiel in einer Forschung könnte diese unglaubwürdig erscheinen (vgl. die obigen Zitate zur
+Bewertung). Im Allgemeindenken wird der Forschung und denjenigen, die sie betreiben, ein besonderer Status zuerkannt:
+
+"Apparently it is a widely held belief that there is something special about science and its methods. [...] imply some kind of merit or special kind of reliability." (Greenhill et
+al. 2014: 4)
+
+Diese Annahme über den besonderen Status der Forschung teilen auch manche der Befragten des "Old Weather"-Projektes. Die Betreiber schreiben dazu:
+
+"Some participants found the race for Captain irritating or trivializing." (Eveleigh et al. 2013: 3)
+
+Und ein Teilnehmer sagte sogar:
+
+"[this] was not an online game, this was a research project." (Eveleigh et al. 2013: 3)
+
+Dem steuern Greenhill et al. entgegen, dass es erstens Spiele gibt, die über den Zweck der reinen Unterhaltung hinaus gehen (Greenhill et al. 2014: 2) [* Müller 2015 benennt das
+sogar mit "Games with a purpose"] und zweitens die Grenze zwischen Spiel und Arbeit unscharf ist. Erstes Argument belegen die Autoren durch die Nennung von Beispielen:
+
+"the use of serious gaming could be applied to education, planning, health and even scientific exploration. Serious games are platforms that have been specifically designed to be
+a game in order to achieve a serious output." (Greenhill et al. 2014: 2)
+
+Der letzten Punkt tun die oben beschriebenen Projekte Genüge. Dass sie nicht die ersten sind, zeigen die folgenden Beispiele: Die Universty of Exeter entwickelte ein Spiel zum
+Aufdecken von Tarnungen von Vögeln. Die University of Wahington setzt ein Puzzlespiel ein, um Kombinationen von Proteinen herauszufinden, die dann bei Experimenten zum Einsatz
+gelangen könnten (Greenhill et al. 2014: 2). Sie zeigen damit, was Gamification eigentlich bedeutet: eine ernsthafte Tätigkeit, die kein Spiel ist, durch das Hinzufügen von
+spielerischen Elementen zu einem Spiel zu machen - "Verspielerischen". Andererseits - das oben erwähnte Browsergame ist ein Beispiel dafür - gibt es auch Spiele, die übermäßigen
+Einsatz erfordern und somit den Vergnügungsaspekt verlieren. Greenhill et al. zitieren hier Yee 2005:
+
+"[...] the user now can average 20 hours per week playing video games to a point where they describe their participation in terms of obligation and tedium, which are the
+antithesis of fun and enjoyment." (Greenhill et al. 2014: 3)
+
+Demnach ist es gerechtfertigt, anzunehmen, dass auch die Gegenrichtung möglich ist - so gibt es Arbeiter, die ihre Arbeit mit Spaß und Freude tun. Auch Greenhill et al. führen
+diesen Punkt an:
+
+"[...] some online gaming platforms may be seen to subtly influence the player into enjoying the work undertaken. [...] work and play are starting to become indistinguishable from
+each other." (Greenhill et al. 2013: 3)
+
+Und die Idee des Einsatzes von Spiel hat sich bewährt - die hohen Teilnehmerzahlen und die Anzahl der Publikationen, aus denen auch hier zitiert wird, belegen, dass dieses
+Einführen von Spaß und Spiel keineswegs negativen Einfluss auf die Forschungstätigkeit hat, eher im Gegenteil: die Teilnehmer stehen ständig in Kontakt miteinander, sodass ein
+reger Austausch über das Forschungsthema besteht. Die Forscher bekommen zusätzliche Impulse durch wesentlich mehr Augen, die auf das Thema schauen. 
+
+1.3 Effizienz der Öffnung der Forschung - macht sich das Einbeziehen interessierter Laien bezahlt?
+
+Die Öffnung von Projekten einem breiteren Publikum kann eine zweischneidende Sache sein - Kosten und Aufwand bei der Anwerbung potentieller Freiwilliger und diese sollten, um das
+Projekt zu einem erfolgreichen Abschluss zu bringen, auch gehalten werden, vergleiche hier dem "Transcribe Bentham Project". Auch Matthias Müller von der Universität Zürich hat
+sich mit der Effizienz dieser Massenbeteiligung beschäftigt. Er schrieb Betreiber von Projekten an, die linguistische Annotationen mittels Crowdsourcing, angereichert mit
+spielerischen Elementen, durchführten, verglich deren Auswertungen und stellte Vor- und Nachteile der verschiedenen Vorgehensweisen einander gegenüber. Als ein Nachteil führt er
+an, dass die Tätigkeit als Spiel langsam ausgeführt wird, als ohne spielerische Elemente: von sechs untersuchten Projekten erwiesen sich fünf als schneller mit reinem Crowdsourcing
+im Gegensatz zu Gamification. Das Konzept, Tätigkeiten in ein Spiel mit Zweck (Game with a purpose, vgl. Müller 2015) einzubinden, hat sich allerdings bezahlt gemacht. Ein
+Vergleich von Kosten stellt dies sehr anschaulich dar und das folgende Zitat aus einer seiner Unterhaltungen ist ein Beleg für die Effizienz der Gamification:
+
+"The GWAP approach [...] is VERY effective" (Müller 2015: 23)
+
+Als "actual total cost" beziffert Müller den Aufwand für ein "Game with a Purpose" mit weniger, als 80 000 € - diese Kosten liegen sogar unterhalb eines rein crowdgesourcten
+Projektes mit 2 000 000 Schweizer Franken.
+
+1.4 Gamification in der Lehre
+
+Bisher wurde viel über Gamification in der Forschung gesprochen. Konkret der Lehre widmet sich allerdings keines dieser Projekte - auch wenn Zooniverse.org auf der Seite
+www.zooteach.org Lehrmittel aus den erforschten Daten bereit stellt und mit zooteach die Projekte im Unterricht nahe gebracht werden sollen (vgl.
+https://www.zooniverse.org/about/education, aufgerufen am 4. März 2016 14:24). Eingangs wurde allerdings ein weiteres Problem genannt - das mangelnde Interesse von Schülern und
+Studenten, sich mit Lerninhalten konkret auseinanderzusetzen [* So blieb der Widerhall von Schulen auf das "Transcribe Bentham Project" nahezu völlig aus, vgl. Causer & Terras
+2012: 12]. Ein weiteres Problem, das die Lehrenden an den Universitäten haben, ist, dass die Studierenden sich immer weniger Mühe bei der sorgfältigen Recherche ihrer Themen geben.
+
+1.4.1 Die Studierenden aus dem Dschungel der Information herausführen - "The Defense of Hidgeon", ein erstes Spiel zur Literaturrecherche
+
+Karen Markey und ihre Forschungsgruppe an der University of Michigan führen das auf die immens gestiegene Informationsflut und die mangelnde Einweisung in die
+Recherchemöglichkeiten zurück:
+
+"Digitization is radically expanding in the information universe. [...] Bereft of expert knowledge of the disciplines, students are totally in the dark about where to start, how
+to build on a good start, how to evaluate what they find and how to navigate the complicated interrelationships between different research and discovery tools." (Markey et al.
+2008: 1-2)
+
+Sie versprachen sich Abhilfe mittels Spielen, um dort den Lerhinhalt -wie eine Literaturrecherche korrekt durchzuführen ist- in einem Anwendungskontext vermitteln zu können [* Sie
+zitieren hier James Paul Gee 2003: What video games have to teach us about learning and literacy und Steven Johnson 2006: Everything bad is good for you: How today's culture is
+actually making us smarter], denn durch ein gutes Spiel bleibt auch der Inhalt besser hängen:
+
+"What people are doing when they are playing good games is good learning [...] their ability to help us 'find order and meaning in the world and make decisions that create order.'"
+(Markey et al. 2008: 2)
+
+Und diese "Möglichkeit, Ordnung in der Welt (der Literaturrecherche) zu finden", schufen Markey et al. durch ein Brettspiel, das als Webanwendung realisiert wurde. Es trägt den
+Namen "Defense of Hidgeon" und zielt darauf ab, die Lernenden vom Allgemeinen zum Konkreten hin zu führen und hat folgende inhaltliche Struktur: zunächst werden die Methoden
+gezeigt, die einen groben Überblick über ein Thema verschaffen (Enzyklopädien, u. Ä.). Anschließend werden die Lernenden weitergeführt zu Werkzeugen, die spezifische Information
+herausholen - etwa Bibliografien, indizierende Datenbanken und Kataloge. Die wenigen Lernenden, die darüber hinaus noch Information suchen, werden abschließend zu Zitationsindizes
+geleitet, die eine sehr präzise Recherche ermöglichen (siehe Markey et al. 2008: 2). Das Spiel spielt im 14. Jahrhundert an einem Ort, an welchem Information über den Schwarzen Tod
+für das "Herzogtum von Hidgeon" beschafft werden soll. Dazu sollen Bibliotheken über Plagen der Vergangenheit, Gegenwart und Zukunft befragt werden, um dem Herzog einen genauen
+Vorgehensplan für das Herzogtum zu erarbeiten. Die Studierenden werden hierzu in Teams aufgeteilt und dasjenige gewinnt, welches am schnellsten, effizientesten und reichhaltigsten
+arbeitet.
+
+Das Spiel läuft so ab, indem die Spieler auf einen digitalen Würfel am oberen linken Rand des Bildschirmes klicken und sich auf einem Spielbrett im Browser eins bis sechs Felder im
+Uhrzeigersinn fortbewegen. 34 Felder hat das Spiel insgesamt, die mit verschiedenen Orten belegt sind:
+
+- "Monastery Library"
+
+- "Sage Advice"
+
+- "Garrison"
+
+- "Library Study"
+
+- "Oracle"
+
+- "Fox Hunt"
+
+- "Hospital"
+
+- "Manor Hourse"
+
+- "Tavern"
+
+- "Well"
+
+- "Public House"
+
+- "Hospital"
+
+- "Castle of the Duke"
+
+In einer "Monastery Library" wird dem Spieler Fragen gestellt, die er korrekt beantworten soll. Hierfür wird er mit goldenen Rollen belohnt. 18 Rollen sind pro Team zu erlangen.
+Der Spieler muss allerdings Recherche durchführen, sei es im Internet in Online-Enzyklopädien, in Büchern oder veröffentlichten Artikel, um an die richtigen Antworten zu kommen
+(siehe Markey et al. 2008: 3-4). Nach einer korrekten Antwort ist es möglich, den Zugang zu einer Bibliothek für das eigene Team zu reservieren und alle anderen Teams
+auszuschließen. Diese Möglichkeit kann allerdings von einem anderen Team wieder abgenommen werden, wenn sie eine genauere Bibliografie aufweist. Diese sind für das Spielziel jedoch
+zweitrangig, am meisten berücksichtigt bei der Bepunktung der Teams ist die Genauigkeit der Antworten.
+An weiteren Orten wurde der Frage-Antwort-Kontext verlassen und der Lerninhalt durch andere Aufgaben -stets im Kontext der Geschichte hinter dem Spiel- vermittelt. Landeten die
+Spieler nach einer "Fuchsjagd" im "Krankenhaus" wurden sie beispielsweise in eine Bibliothek auf dem Campus geschickt, wo sie von einem Bibliothekar sich die wichtigsten Funktionen
+seiner Bibliothek erklären lassen mussten.
+
+Durchgeführt wurde das Spiel vom 3. bis zum 29. November 2007 in einem Seminar zur Einführung in die Informationsverarbeitung [* SI 110 "Introduction to Information Studies"], wo
+es allerdings keinen zentralen Punkt im Curriculum bildete, sondern "nebenbei angeboten" wurde, damit die Teilnehmer des Seminars von selbst auf das Spiel kommen und es schätzen
+lernen sollten:
+
+"Our inclination was to downplay the game, preferring to gauge student's enthusiasm on the game itself, not on a special buildup." (Markey et al. 2008: 6)
+
+Dadurch sollten die Teilnehmer kein vorgezeichnetes Bild vom Spiel bekommen, sondern sich selbst erst eines machen:
+
+"she [Mrs. Markey] wanted students to develop their own ideas about what the game was teaching them."
+
+Auch eher beiläufig wurden Belohnungen zu den drei ersten Gewinnerplätzen ausgesetzt: 400 $ sollte jedes Team auf dem ersten Platz bekommen, 200 $ erhielten die Zweitplatzierten
+und 100 $ die Teams auf Rang drei. Von 75 Teilnehmern meldeten sich 29 in der Anfangsphase an, sie formten acht Teams zu je zwei bis vier Spielern. Im Laufe des Spiels wurden
+weitere Belohnungen versprochen: wenn mehr als die Fragen für 18 Rollen mit einer Genauigkeit von mindestens 40 % beantwortet wurden, bekam jeder Teilnehmer dieses Teams eine
+Verbesserung um eine halbe Note. (siehe Markey et al. 2008: 6) Hierauf meldeten sich weitere 20 Lernende an, die fünf weitere Teams bildeten. Insgesamt waren zu diesem Zeitpunkt 13
+Teams mit 49 Teilnehmern eingetragen. Bis zum 12. November, dem darauffolgenden Montag, haben sechs Teams versucht, mindestens eine Frage zu beantworten.
+
+Die Auswertung fand statt, indem die Eingaben der Teilnehmer aufgezeichnet wurden, sobald sie Fragen richtig beantworteten, es versuchten oder exklusive Rechte für Bibliotheken
+erwarben. Gemessen wurde dabei stets die verstrichene Zeit. Darüber hinaus veranstalteten die Projektleiter wöchentliche Diskussionsrunden, wo sie Teilnehmer des Kurses zu ihrem
+Spielverhalten befragten: spielten sie in der Gruppe oder eher alleine, was haben sie aus dem Spiel gelernt oder sich gar nicht erst für das Spiel angemeldet. Das Ergebnis dieser
+Befragungen führte zu folgendem Bild:
+
+Sechs Teams erbrachten die erforderlichen 40 % zur Steigerung der Note, sie werden von den Autoren als "erfolgreiche Teams" genannt. Sieben Teams erreichten diese Leitung nicht und
+wurden fortan als "nicht erfolgreiche Teams" geführt. Fünf verschiedene Verhaltensmuster stellten die Projektleiter fest: 
+
+- Teams, die von der ersten Minute an aktiv dabei waren und da es keine Mitstreiter gab, ohne Schwierigkeiten die 18 Rollen einsammelten und alle Exklusivrechte sicherten - nach
+einer Woche.
+
+- Teams, die sich zwar anmeldeten, aber an der Beantwortung der Fragen scheiterten und so kaum bis gar keine Rollen eroberten
+
+- wenig aktive Teams, die sich an das Spiel herantesteten und sich eventuell weiterentwickelten zu einen der beiden folgenden Muster:
+
+- Teams, die sich phasenweise an das Projekt klammerten und versuchten, die Notensteigerung zu ergattern. Manche dieser Teams scheiterten an diesem Versuch
+
+- Teams, die Notensteigerung sich in allerletzter Minute noch sichern wollten
+
+Die meisten der nicht erfolgreichen Teams waren solche, die herausfinden wollten, ob es sich für sie lohne, Zeit und Mühe in das Spiel zu investieren. Ein Team, das versucht hatte,
+mit allen Mühen die Belohnung zu bekommen, hatte auch technische Schwierigkeiten bekommen, weshalb es das Spiel über die Herbstferien nicht spielen konnte.
+
+Das Antwortverhalten schüsselt sich folgendermaßen auf: Erfolgreiche Teams beantworteten im Schnitt 50,9 % der Fragen richtig. Die Genauigkeiten lagen bei Webreferenzen (67 %),
+Online-Enzyklopädien (62 %) und Datenbanksuchen (62 %) am höchsten. (siehe Markey et al. 2008: 7) Deutlich weniger präzise antworteten die Spieler, bei denen die Antwort aus
+Büchern (43 %), Aufsätzen (39 %) oder Zitatdatenbanken (42 %) herauszusuchen war. Markey et al. führen die Erklärung hierfür an, dass die Teilnehmer hierfür nicht in die Bibliothek
+gehen mussten, sondern bequem von ihren eigenen Arbeitsplätzen aus die Recherche durchführen konnten [* Interessant wäre in der Smartphone-Ära ein Nachfolgeexperiment]. Dies geht
+aus deren Bewertung der Fragen hervor, wonach die Fragen zu Webressourcen als einfacher eingestuft worden sind - da die Leistung sich hier nur darauf beschränkte, den Begriff in
+Google einzukopieren und die ersten paar Links nachzuprüfen (vgl. Markey et al. 2008: 8). Im Gegensatz dazu antworteten einige Nutzer, dass sie durch andere Pflichten gehindert
+gewesen seien, in die Bibliothek zu gehen oder sich davor sträubten, in die Bibliothek zu gehen:
+
+"I just didn't feel like going to the library. [...] It's just having to get up and go somewhere where it's like ... I didn't have enough time [to go to the library]." (Markey et
+al. 2008: 8)
+
+Grundsätzlich bestand eine Ablehnung gegenüber Bücher, wie dieser Nutzer als Antwort gab:
+
+"[Why bother with books when you have] the Internet ... It is kind of ... an easy out." (Markey et al. 2008: 9)
+
+Der Nutzer entgegnete zudem die Möglichkeit, in einem elektronischen Dokument nach einem Begriff zu suchen und sich nicht mit dem Durchforsten dutzender Seiten nach einem Begriff
+abmühen zu müssen. Entsprechend niedrig war auch die Zahl der Besucher in den Bibliotheken: von 51 reservierten Werken sind lediglich fünf entliehen und selbst diese sind
+nur sechs Mal gefragt worden. Markey et al. schreiben sogar von einem "Chor von Verneinungen" (Markey et al. 2008: 8) als die Projektleiter die Studenten nach Bücher oder
+Entleihungen direkt befragten. Stattdessen gaben die Studenten Antworten zu diesen Fragen auf Geratewohl. So ist es nicht verwunderlich, dass das "Krankenhaus" sich als
+"Spielverderber" herausstellte. Die Teilnehmer berichteten den Projektleitern, dass sie ständig in der Bibliothek gefangen gewesen seien, weil sie stets einen Mitarbeiter aufsuchen
+mussten, der dann die entsprechende Auskunft gab. Da jeder Spieler selbst die Antwort auf die "Krankenhaus"-Aufgaben geben musste, ist hier auch der Gruppeneffekt verloren
+gegangen (siehe Markey et al. 2008: 9) Auch stellte sich die Vermittlung des Modells vom Allgemeinen zum Konkreten als uneffektiv heraus, da die Fragen zum Konkreten nicht in dem
+Maße berücksichtigt wurden, wie sich das die Betreiber erhofft hatten - dazu wären ja Bibliotheksrecherchen notwendig gewesen, die jedoch so gut wie nie gemacht wurden. Die
+Lernenden blieben an der Oberfläche hängen und erkannten die auf Seite N beschriebene Wegleitung nicht.
+
+Zusammenfassend schreiben die Autoren, dass der Versuch ihnen erstens das Potential von Spielen aufzeigte und zweitens sie Erkenntnisse darüber gewonnen haben, wie das Spiel
+verbessert werden könnte. Eine solche interessante Erkenntnis ist beispielsweise die, dass Spieler von der Notensteigerung viel eher beeindruckt waren, als von der finanziellen
+Belohnung:
+
+"For most of the students who played the Defense of Hidgeon, the opportunity to improve their grades was much more important than receiving a monetary award." (Markey et al. 2008:
+12)
+
+Basierend auf den Erkenntnissen aus den Befragungen stellten Karen Markey und ihre Gruppe einen Satz von Bedingungen fest, die sie für eine Weiterentwicklung des Spiels für
+unabdingbar hielten (siehe Markey et al. 2008: 11):
+
+- erstens soll der Nachfolger unmittelbarer in den Kurskontext eingebunden werden, da sie das Thema des Schwarzen Todes nicht in Zusammenhang mit der Zeilsetzung des Kurses setzen
+konnten. Die Dozenten sollten auch den Kursteilnehmern vermitteln, was sie vom Spiel des Spiels in bezug auf den Kurs mitnehmen können.
+
+- zweitens versuchte "Defense of Hidgeon" zu viel auf einmal. Die Studierenden mussten gleichzeitig den Inhalt der gefundenen Quelle verstehen, einordnen und ihre Glaubwürdigkeit
+einstufen und das ohne sich über diesen eine Vorstellung zu haben. Dies möchten die Projektbetreiber in Zukunft abändern und bei den Aufgaben den Schwerpunkt auf genau einen zu
+erlernenden Aspekt legen. Auch dachten die Autoren darüber nach, den Wettbewerb zwischen den Teams komplett zu streichen und ihn durch einen kollaborativen Zweck zu ersetzen.
+
+- drittens möchten die Betreiber in Zukunft den Besuch von Bibliotheken belohnen. Dabei sollte die Anzahl der "Krankenhausbesuche" auf beispielsweise drei beschränkt werden. Auch
+solllte es ermöglicht werden, auch diese Arbeit aufzuteilen.
+
+Für das Nachfolgemodell hielten die Autoren zusätzlich folgende Denkrichtung fest: es sollte ein großes Spiel geben mit vielen kleinen Minispielen, die die zweite Bedingung
+erfüllten und den Fokus auf genau einen Lernaspekt begrenzten. Die Minisipele sollten die Vorschläge der Teilnehmer umsetzen. Das Thema sollte vom Dozenten unmittelbar angegeben
+und die Beiträge in einem zentralen Literaturverzeichnis zusammengetragen werden. Ein Beispiel für ein solches Minispiel sah vor, die Verlässlichkeit von Quellen zu bewerten. Dazu
+sollten Quellen einigen sehr fleißigen Spielern vorgelegt werden, die dann eine begrenzte Zeit hätten, dies zu tun. So würde sofort Rückmeldung über die Qualität der Recherche der
+anderen Spieler gegeben werden und sie lernten viel über die Zuverlässigkeit der Quellen. Das Spielziel sollte nunmehr lauten: wer kann die größte und verlässlichste Literaturliste
+in einem gegebenen Zeitfenster schaffen. Belohnt werden sollten das Hinzufügen von Zitaten und noch mehr, wenn zu den angeführten Quellen auch eigentständige Zusammenfassungen
+mitgeliefert wurden. Allerdings hielten es die Autoren für schwierig, die Lernenden von den Vorteilen der Printmedien zu überzeugen - stattdessen wollten sie in einer
+anschließenden Diskussionsrunde diese Vorteile thematisieren (vgl. Markey et al. 2008: 12).
+
+1.4.2 Erbauen des Spiels, das die Studierenden spielen wollen - die Weiterentwicklung "BiblioBouts"
+
+Viele Veröffentlichungen zu dem nun folgenden Folgeprojekt zu "Defense of Hidgeon" tragen im Titel das, worauf Karen Markey und ihre Forschungsgruppe am meisten geachtet haben: die
+Beteiligung der zukünftigen Spieler, ein Aspekt, dem nicht einmal alle Autoren von herkömmlichen Computerspielen Genüge tun. Ihre Vorschläge waren auch ausschlaggebend für eine
+Weiterentwicklung des Projektes. Folgenden halten Markey et al. zunächst fest:
+
+"Primarily, students did not want game play that was apart from or unrelated to their coursework. They wanted a game that was integrated into, and that enhanced the workflow of
+the courses they were already taking." (Markey et al. 2010: 1)
+
+"Defense of Hidgeon" scheiterte an diesem Punkt durch den Kontext, der überhaput nichts mit dem Kurs zu tun hatte und die Studierenden nichts mit anzufangen wussten. Sie erkannten
+den Nutzen für ihre weitere Arbeit nicht und ließen das Spiel unbeachtet oder spielten nur halbherzig mit. Erst als die Belohnung der Notensteigerung ausgesetzt wurde, meldeten
+sich mehr Teilnehmer an. Dies gab diesen weiteren Vorschlag für das nächste Spiel:
+
+"Game players told us they would play information literacy games that helped them complete their assigned coursework and earn them course credit." (Markey et al. 2010: 1)
+
+So wird der unmittelbare Nutzen des Spiels für die Teilnehmer offensichtlich. Als weiteren Punkt nannten Spieler von "Defense of Hidgeon", dass sie das Spiel lieber unabhängig
+spielen möchten - allerdings sich gerne auf Gruppenarbeit einlassen, sofern das für das Erreichen des Spielzieles förderlich ist (siehe Markey et al. 2010: 1). Diesen drei Punkten
+tat "Defense of Hidgeon" nicht Genüge, weshalb sich die Gruppe um Karen Markey zu einem völlig neuen Spiel entschloss. Dieses trägt den Namen "BiblioBouts". Die Änderungen, die die
+Gruppe vorgenommen hat, sind radikal und entsprechen den im 2008 erschienenen Artikel zu "Defense of Hidgeon" geäußerten Voraussetzungen:
+
+- der Studierende wurde beteiligt; seine Vorschläge wurden bei der Erschaffung des neuen Spiels umgesetzt (siehe oben)
+
+- ein unmittelbarer Kontext zum Kurs, wo das Spiel eingesetzt wird, und zu dessen Lernzielen löste die fiktive Lernumgebung ab
+
+- verschiedene Mini-Spiele, die so genannten "Bouts", sollten den Schwerpunkt auf genau einen Lernaspekt setzen und nicht alles auf einmal, wie es bei den Orten von "Defense of
+Hidgeon" der Fall war. Auch sind die Spiele auf eine bestimmte Dauer beschränkt [* ...womit folgender Punkt erfüllt wird: "[...] who can build [...] in X time" (Markey et al.
+2008: 12)]
+
+Damit sind die ersten zwei Bedingungen aus Markey et al. 2008: 11 erfüllt - die Bedingung, wonach die Teilnehmer für den Besuch von Bibliotheken belohnt werden sollten, ist anders
+zur Geltung gekommen. Die "Krankenhausbesuche" sind komplett entfallen, stattdessen banden die Entwickler das Zitationsverwaltungswerkzeug "Zotero" ein und zogen die Entwickler
+dieses OpenSource-Tools einerseits, Bibliothekare andererseits hinzu. Die Spieler sollten nämlich nach Literatur im Internet suchen und die gefundene Literaturangaben und den
+dazugehörigen Volltext in Zotero abspeichern. Die Bibliothekare hatten dabei die Aufgabe, die Teilnehmer eines Kurses auf die verschiedenen Portale und Suchmöglichkeiten in und um
+das Campus einzuweisen.
+
+Das Spielziel besteht bei diesem Spiel ebenfalls daraus, eine reichhaltige Literaturliste zusammenzustellen, mit welcher die Abschlussarbeit geschrieben werden kann. Der
+Spielablauf geht aber über das bloße Zusammensuchen von Literatur hinaus, wie die Übersicht der Bouts in der Version von 2011 zeigt (siehe Markey et al. 2010: 3, Markey et al.
+2011: 633f.):
+
+In "Donor" suchen die Spieler das Web und Datenbanken nach Literatur und speichern die gefundenen Literaturhinweise und dazugehörige Volltexte in Zotero ab. Gleichzeitig läuft
+"Closer", wo die Spieler aus den gefundenen Angaben die beste Literatur heraussuchen und sicherstellen, dass die Volltexte verfügbar sind. Die Entwickler des Spiels veranschlagen
+für diese erste Phase eine Dauer von zwei Wochen. Sind diese um, beginnt "Rating & Tagging". Die Spieler müssen nun eine zufällige Quelle ihrer Mitspieler aus- und ihrer
+Verlässlichkeit nach bewerten. Auch dieses Spiel läuft zwei Wochen lang. Abschließend läuft "Best Bibliography"; für ein Thema werden hier die besten gefundenen Literaturquellen
+gemeinsam zusammengestellt. Nach dem Spiel wird eine Liste sämtlicher Quellen veröffentlicht, aus denen sich die Studierenden bedienen können, um Material für ihre
+Abschlussarbeiten zu haben.
+
+Das Projekt fand in mehreren Zeiträumen statt, vgl. Markey et al. 2010: 4:
+
+- Entwicklung der Alpha-Version von Winter 2008/'09 bis Sommer 2009
+
+- Einsatz und anschließende Auswertung der Alpha-Version von Herbst 2009 bis Frühjahr 2010
+
+- Weiterentwicklung zur Beta-Version von Winter 2009/'10 bis Herbst 2010
+
+- Einsatz und anschließende Auswertung der Beta-Version von Winter 2010/'11 bis Frühjahr 2011
+
+- Abschlussentwicklung zur Produktivversion von Winter 2011/'12 bis Frühjahr 2012
+
+Die Auswertung der Alpha-Version ergab zunächst folgende Erkenntnisse: nach dem Spiel fühlten sich die Spieler ein wenig sicherer im Umgang mit Bibiliotheksrecherchen als davor:
+
+"When students rated how challenging they thought it would be to perform various library-research tasks, their post-game ratings dropped a little over a half point [* befragt
+wurden die Spieler vor und nach dem Spiel mittels Skalen von 2 bis -2, siehe Markey et al. 2010: 5]. Thus, playing the game made students feel that various research tasks
+presented less of a challenge to them." (Markey et al. 2010: 5)
+
+Besonders positiv wurde von den Spielern das Tool Zotero aufgenommen, in dem sie nicht nur ihre eigenen Literaturangaben sammeln, diese zurückverfolgen und mit Volltexten versehen
+konnten, sondern auch mit einem großen Pool weiterer Quellen konfrontiert wurden, die ihnen zusätzliche Inspirationen für ihre Hausarbeiten boten. Allerdings ging das nicht ohne
+Schwierigkeiten, die Bedienung wurde anfänglich als schwierig empfunden:
+
+"[...] students acknowledged that setting up Zotero, synchronizing it with BiblioBouts, and learning how to use it was difficult." (Markey et al. 2010: 5)
+
+"So maybe experience with it in an earlier class would have been fine." (Markey et al. 2010: 6)
+
+Ein Lernender beschreibt seine Schwierigkeiten so:
+
+"Like once I got used to [Zotero], the learning curve was kind of steep for me. I don't know if it was I just wasn't gerring it or - I had a lot of like technical problems." [* In
+der Auswertung der Beta-Version wird von vielen technischen Schwierigkeiten mit Zotero geschrieben, vgl. Markey et al. 2013: 6] (Markey et al. 2010: 5)
+
+... und als die Schwierigkeiten beseitigt waren:
+
+"But like once you actually get it going, it's like clearly a useful thing ... I probably would [not] have been able to get all of the information that I had-like I wouldn't have
+been able to collect it all like that and Zotero made it possible." (Markey et al. 2010: 5)
+
+Signifikant ist der Erfolg, den das Spiel bei der Suche von Material jenseits Google und Wikipedia sowie bei der Bewertung des
+gefundenen Quellmaterials erzielte:
+
+"On average, post-questionnaire ratings increased between two-thirds and three-quarters of a point for the "how well" [they would be able to perform various library-research tasks]
+and "confidence" [how confident they would be performing them] questions, respecitvely." (Markey et al. 2010: 6)
+
+"Registering an increase of 1 point or more were these two skills: Where to find good information after I exhaust Google, Wikipedia and the web" (Markey et al. 2010: 6)
+
+Generell wird als sehr erfolgreicher Aspekt des Spiels gesehen, dass die Spieler über den sprichwörtlichen Tellerrand von Google und Wikipedia hinausschauen konnten. Einer schreibt
+von "viel besserem Zeugs"
+
+"I mean I just think that like usually I use Google just, you know, and like comparing the results I would get from Google to these [library] databases is a huge difference and
+like I really realize that now, that the material that I was getting was not that reliable and not that scholarly [...]" (Markey et al. 2010: 6)
+
+Dieser Nutzer geht sogar so weit, dass er die Suche in einer Bibliotheksdatenbank mit einem Gang in die Bibliothek gleichstellt:
+
+"I think I was really able to see a difference between the academic quality of sources from a database and from Google and nowadays, we don't really go to the library and get a
+hard copy of a book. So the electronic equivalent of that kind of quality could be found in a database rather than just on a Google search." (Markey et al. 2010: 6f.)
+
+Auch gaben einige Nutzer wieder, dass sie fortan strukturierter an ihre Recherchen herangehen als unorganisiert Information zusammenzusuchen und orientierungslos zurückbleiben
+(vgl. Markey et al. 2010: 7).
+
+Weiterhin wurde sehr positiv der Bezug zum Kurs aufgenommen - das Versprechen zusätzlicher Credit Points als Belohnung für das Mitspielen war sehr effektiv, um Teilnehmer für das
+Spiel zu begeistern und die Spieler bei dem Spiel zu halten (siehe Markey et al. 2010: 8). Die Motivation an sich jedoch hielt sich in Grenzen:
+
+"After playing the game, students were positive about playing the game but the intensity of their positivity was not breaking any sound barriers." (Markey et al. 2010: 7)
+
+Besonders negativ wirkte sich hier die Repetitivität von "Sorter" in Zusammenhang mit "Rating & Tagging" aus:
+
+"The Rating & Tagging bout especially put the motivation and perservance facotrs to the test, requiring students to evaluate 18 sources. Many students commented about this quota
+being too high [...], telling us how time consuming it was, suggesting the quota being reduced, and the interface simplified." (Markey et al. 2008: 7)
+
+Für die Beta-Version hielten Markey et al. sich folgende Punkte fest:
+
+- In der Folgeversion sollte aus oben genannten Gründen der "Sorter"-Bout komplett entfernt und dessen Aufgaben in "Rating & Tagging" und "Best Bibliography" untergebracht werden
+(Markey et al. 2010: 9)
+
+- es sollte eine Rangliste eingeführt und sofortige Rückmeldungen gegeben werden, sobald ein Spiel abgeschlossen wurde (Markey et al. 2010: 8). Dies begründen Markey et al. -im
+völligen Gegensatz zu Betreibern von zooniverse.org-Projekten, insbesondere solchen, die das Wettbewerbselement aus ihren Projekten ausgelassen haben- so:
+
+"Because game players want to know immediately when and why they score points [...] and the effect of the just-completed game play [...]" (Markey et al. 2010: 8)
+
+- Belohnungen für bestimmte Spielmuster wie kritischster Bewerter, erster, der ein Minispiel abgeschlossen hat, u.ä. [* im Gegensatz zu "Old Weather" sollte hier nicht nur der
+Aktivste belohnt werden, sondern auch andere Spieler für ihres hervorstechendes Verhalten im Spiel]
+
+- Alle Quellen sollten nach Abschluss des Spieles den Teilnehmern des jeweiligen Kurses zur Verfügung gestellt werden.
+
+Etwa ein dreiviertel Jahr verstrich, als die Beta-Version Ende 2010 der Öffentlichkeit präsentiert wurde. Wie schon geschrieben, ist der "Sorter"-Bout in den Bouts "Rating &
+Tagging" und "Best Bibliography" eingegliedert worden. Auch definierten die Dozenten, die sich zum Einsatz des Spiels entschlossen, die Spiele (Dauer, erforderliches Thema) nunmehr
+selbst, konnten diese nach Bedarf variieren und hatten einen Überblick über das Verhalten und den Fortschritt ihrer Spieler:
+
+"Desgining information literacy games must include administrative interfaces so that instructors can create games, edit parameters of on-going games, and evaluate students'
+game-play performance." (Markey et al. 2013: 6)
+
+Abgeschafft wurde auch die Notwendigkeit eines Eingriffes von außen, das den Spielfluss behindert hätte:
+
+"Design games that require no intervention or output from instructors during game play." (Markey et al. 2013: 6)
+
+Zusammengefasst lässt sich sagen, dass das Konzept, Literaturrecherche über ein Onlinespiel beizubringen, Erfolg hatte. Markey et al. berichten durchweg, dass die Spieler des
+Spiels von der Mehrzahl von Texten und der Zusammenarbeit an sich profitiert haben, sie sicherer geworden sind im Umgang mit den verschiedenen Plattformen und Werkzeugen der
+Literaturrecherche und dabei vielen Aspekten begegnet sind, die sie bisher nicht bedacht oder gekannt hatten. Ein Spieler fasst die Erwartungen, die sich erfüllt hatten, sehr schön
+zusammen. Auch hier soll er zitiert werden, weil es für den Einsatz von Spiel in Forschung und Lehre wegweisend ist:
+
+"I think it's good because you're not realizing at the time that you're learning about research. Like you might not want to think 'Oh, I want to go learn about library research
+today.' You're playing the game and you're learning about it without doing that." (Markey et al. 2010: 10)
+
+2 Virtuelle Forschungsumgebungen
+
+Mehrfach angeklungen in den vorherigen Abschnitten ist die Zusammenarbeit der Teilnehmer in den Projekten. Bei "Shakespeare's World" und "Transcribe Bentham" drückt sich diese sehr
+positiv in Bezug auf die Genauigkeit und die Schnelligkeit aus: mehr Texte können in weniger Zeit transkribiert werden. Vor allem aber gibt es Diskussionsplattformen, die einen
+regen Austausch über die zu transkribierenden Elemente gestatten und fördern. Ein solcher Fall sei durch "Shakespeare's World", Objekt #1168712 (vgl.
+https://www.zooniverse.org/projects/zooniverse/shakespeares-world/talk/192/19237, aufgerufen am 9. März 2016 um 12:13) beschrieben. Es handelt sich um eine Tabelle. Eine Nutzerin
+ist neugierig über den Inhalt dieser Tabelle. Acht Nutzer tauschten sich über die Bedeutung der Kürzel und Buchstaben aus. Dies und die Tatsache, dass immer größere Mengen an
+Information bewältigt werden muss (vgl. Kapitel 1!), wirft eine grundsätzliche Frage über den Umgang mit Infrastruktur auf. Die Kommission Zukunft der Informationsinfrastruktur
+veröffentlichte unter dieser Leitfrage ein "Gesamtkonzept für die Informationsinfrastruktur in Deutschland". Darin sind acht Handlungsfelder bestimmt, von denen zwei für diese
+Arbeit von Bedeutung sind:
+
+- Virtuelle Forschungsumgebungen
+
+- Informationskompetenz/Ausbildung
+
+Über Letzteres stellen die Autoren fest:
+
+"Informationskompetenz muss einen angemessenen Stellenwert in der Wissenschaft einnehmen, mit dem Ziel, ihren Nutzen im Rahmen der jeweiligen Fachwissenschaft zu verdeutlichen und
+Informationskompetenz als Schlüsselkompetenz zu einem selbstverständlichen Bestandteil der Curricula sowie des wissenschaftlichen Arbeitens auf exzellentem Niveau zu machen." (Pohl
+et al. 2011: 45)
+
+Dasselbe Ziel verfolgen auch Markey et al. durch ihren spielerischen Ansatz des Unterrichts über Literaturrecherche. Dieses hat ebenfalls starke kollaborative Züge - mehrfach
+zitiert wurde, dass die Recherche nach Literatur wesentlich fruchtbarer ist, wenn sie in Gruppen erfolgt, als alleine. Die Transkriptionsprojekte haben durch ihre
+Austauschplattformen und sozial-interaktive Komponenten einen stark sozialen Charakter. Diese sind Merkmale des ersten hier genannten Handlungsfeldes: der virtuellen
+Forschungsumgebung. Im "Landscape Report" des JISC (Joint Information Systems Committee) wird folgende Definiton eines "Virtual Research Environment" (VRE) festgehalten:
+
+"The purpose of a Virtual Research Environment (VRE) is to help researchers from all disciplines to work collaboratively by managing the increasingly complex range of tasks
+involved in carrying out research on both small and large scales." (Carusi & Reimer 2010: 13)
+
+Die KII schreibt dazu:
+
+"Flexible Infrastrukturen, die es Forschern erlauben, die Potenziale el. Medien und Technologien für das kollaborative Arbeiten zu nutzen und daraus neue Forschungsmethoden und
+-gegenstände zu generieren." (Pohl et al. 2010: 39)
+
+Der Nutzen solcher Umgebungen besteht darin, dass gleich geartete Projekte zusammengeschaltet werden können. Dies beginnt bei der gemeinsamen Nutzung von Quellen und
+Forschungsdaten und geht über den Austausch der beteiligten Forscher über Disziplin- und Landesgrenzen hinweg bis hin zu lizenzrechtlichen Erleichterungen, die bei dem angestrebten
+Ziel des "Open Access" sehr erstrebenswert sind. Die JISC nennt die Vorteile einer virtuellen Forschungsumgebung:
+
+"- support for geographically dispersed research teams
+
+- facilitation of international collaboration
+
+- support for general networking
+
+- increasing the productivity of researchers
+
+- facilitation of access to (expensive) research infrastructure
+
+- increasing speed of general communication
+
+- faster dissemination of research results, including preliminary findings
+
+- better preservation of research outputs and also the information on the process that led to them
+
+- and [...] a new quality of research outputs!" (Carusi & Reimer 2010: 16)
+
+Mittlerweile sind sogar eigens geschaffene Softwarelösungen vorhanden. Diese sind allerdings wenig zufriedenstellend, wie aus dem "Landscape Report" des JISC hervorgeht: diese sind
+"von oben herab" entwickelt, ohne nennenswerte Beteiligung der Forscher. Diese konnten sich daher nicht mit der Bedienung anfreunden oder wollten es gar nicht erst lernen.
+Entsprechend sind die Voraaussetzungen, die die KII und die JISC einstimmig festhalten:
+
+- Schaffung forschungsnaher Umgebungen, gemeinsam mit den Forschern
+
+- Förderung der Zusammenarbeit, besonders im Netz und über Disziplin- und Landesgrenzen hinweg
+
+- Wiederverwendung bereits bestehender Umgebungen, um Kosten zu sparen
+
+- Festlegen eines einheitlichen Standards
+
+Dieser Exkurs ist deshalb interessant, weil er die wegweisende Funktion der unter Kapitel 1 ausführlich beschriebenen Projekte aufzeigt. Eingangs schon beschrieben, findet unter
+Einbezug eines weltweiten Publikums ernsthafte Forschungsarbeit statt (vgl. Greenhill et al. 2014). Über Forschungsgegenstände werden lebhafte Diskussionen in Foren betrieben und
+es entstehen aus der Arbeit vieler Freiwilliger zahlreiche Publikationen. Diskussionsverläufe, Forschungsmaterial und Forschungsergebnisse sind öffentlich zugänglich. Auch die
+Lehre wurde bereits miteinbezogen, sei es durch die Plattform zooteach, die Lehrmaterialien aus den gewonnenen Forschungsdaten bereitstellt, oder durch dezidierte Lehrumgebungen,
+wie es bei "BiblioBouts" der Fall ist. Sie setzen die genannten Handlungsbedarfe der KII beispielhaft um und zukünftige Projekte sollten sich an ihnen ein Beispiel nehmen, ganz im
+Sinne der KII geäußerten Bedingung, wonach die Weiterverwendung existenter Methoden wesentlich kostengünstiger ist, als die Neuschaffung ebensolcher.
+
+3 Keleti pályaudvar - das Spiel
+
+Eine kurze Rekapitulation des bisher Behandelten: Aufgaben lassen sich schneller und interessanter verpacken, wenn sie in einen spielerischen Hintergrund eingebettet werden und es
+ein Spielziel gibt, nach dem die Spieler nacheifern können. Sie können entweder forscherischer Natur oder in der Lehre angesiedelt sein. Durch ein Spiel lassen sich auch
+zeitaufwändige und wenig reizende Tätigkeiten wie das Transkribieren von Texten oder das Verinnerlichen neuer Information leichter bewältigen, da sie aus dem abstrakten
+Lehrbuchkonzept herausgenommen und in ein konkretes Anwendungsgebiet eingebracht worden sind - und der Lernende damit etwas anzufangen weiß. Darauf baut die Idee des im Folgenden
+ausführlich vorgestellten Spieles auf. Der fremde Kontext, in dem sich Themen aus Seminaren und Unterrichtskursen wiederfinden, kommt in erster Linie vom öffentlichen
+Personennahverkehr her. Eine solche Metapher ist die Möglichkeit, Themen auf einer Karte abzubilden. Das Thema bildet die Mitte der Karte. Davon ab gehen Linien, die zu den
+einzelnen Kategorien, Subkategorien und Subsubkategorien hinführen. Diese werden immer spezieller. Man stelle sich nun eine echte Stadt vor: im Stadtkern liegt der Hauptbahnhof,
+ein zentraler Knotenpunkt. Um ihn herum rankt sich das Herz der Stadt mit den Sehenswürdigkeiten, Geschäften, Dienstleistungsunternehmen, etc. Weiter außen um die Stadt liegen
+immer mehr Wohngebiete. Ein Nahverkehrsnetz ist dementsprechend dicht im Stadtkern und die Dichte nimmt immer weiter ab, je größer die Entfernung zur Mitte hin wird. Eine weitere
+Metapher betrifft das Reiseerlebnis: wenn ein Mensch sich fortbewegt, reist er von einem Punkt A zu einem Punkt B, um dort seine Angelegenheiten zu erledigen, im weitesten Sinne
+also in seinem Leben weiterzukommen. Die (Weiter-)Bildung ist mit der Fortbewegung durchaus zu vergleichen: der Lernende hat ein gewisses Interesse, sei es aus der Notwendigkeit
+heraus, eine Prüfungsleistung zu erbringen oder aus dem eigenen Durst nach Wissen, von einem Unwissen über ein Thema in das Wissen zu "reisen". Der Weg dorthin führt nicht mit Bus
+und Bahn, sondern über Bücher. Beides gemeinsam haben beide Bewegungen, dass sie mit einem Weg verbunden sind. Im Fahrzeug legt der Reisende eine Strecke zurück und nähert sich
+seinem Reiseziel. Der Lernende legt ebenfalls eine Strecke zurück, sei es die Zahl gelesener Seiten eines Buches, Aufsatzes oder Blogartikels, ehe er an seinem Bildungsziel
+ankommt. Diese zwei Metaphern führten zur Entwicklung von so genannten "Analysestädten": dies sind gewöhnliche Städte mit Häusern, menschlichen Bewohnern und Einrichtungen, die die
+Bedürfnisse der Einwohner zufriedenstellen. Auch verfügen sie ein Verkehrsnetz von Bus, S-Bahn, Regionalbahn und, je nach Stadt, Stadtbahn für den Nahverkehr und die Hauptbahnhöfe
+sind über Fernverkehrszüge zu erreichen. Das Besondere an diesen Städten ist erstens die Benennung der Straßen und Stadtviertel: jede Analysestadt ist einem Thema gewidmet, das die
+Namen für die Orte hergibt. Zweitens halten die Gebäude Situationen für den Spieler bereit, die den Inhalt des Themas durch individuelle Metapher vermitteln. Drittens sind -im
+Gegensatz zu herkömmlichen Mindmaps- die Städte untereinander verbunden, d.h. in einer Analysestadt werden Hinweise auf eine andere Stadt gegeben, sei es durch einen konkreten
+Hinweis an einem Ort in der Stadt oder durch den Verlauf der Zugverbindungen, die die Städte verbinden.
+
+Das Spiel, das diese Städte bereisbar macht, ist ein großes Projekt und trägt den Namen "Keleti pályaudvar". Dies ist ungarisch und heißt "Ostbahnhof" - der Name rührt vom
+Budapester Ostbahnhof her, von wo die meisten internationalen Züge abfahren. Das Spielziel ist, eine Mission, die unabhängig ist von den Lerninhalten, zu erfüllen: der Spieler
+gelangt durch ein Portal in eine fiktive Haltestelle namens "Gib niemals auf", welche sich zwischen der Erde und einer fiktiven Welt mit Namen Zeidel befindet. Diese Haltestelle
+befindet sich in der so genannten Welt der Seelen und eine der Seelen gibt dem Spieler den Auftrag weiter: eine Gruppe von Sängern ist ebenfalls durch ein Portal durch die
+Haltestelle gereist und von dort aus weiter nach Zeidel. Der Zug, in welchem die Gruppe fährt, wird von Terroristen an einen unbekannten Ort entführt. Der Spieler muss sich auf die
+Spur der Entführten begeben und die Gefangenen befreien. Unter ihnen befindet sich eine Figur, die zunächst gegen den Spieler zu agieren scheint, aber in Wirklichkeit nur das
+Vertrauen des Antagonisten gewinnen will, um so dem Spieler zu helfen. Am Ende des Spiels wird diese Figur mit dem Spieler liiert. Die Entführer stellen Forderungen; sie möchten
+den aufklärenden Einfluss der Bildungsanstalten hemmen, indem sie die Kürzung der staatlichen Förderungen erpressen. Die Sache soll nicht an die Öffentlichkeit gelangen. Hinweise
+zum Aufenthaltsort und zur Möglichkeit, die Sänger zu befreien, gibt es nach erfolgreichem Abschluss der in den Analysestädten gestellten Aufgaben. Allerdings braucht der Spieler
+im Laufe des Spiels auch Geld und Gegenstände, damit er an die Hinweise gelangen kann. Hierzu muss er zwischen den Städten und in den Städten reisen.
+
+Aus Zeitgründen wird zum Zeitpunkt der Abgabe nur eine Stadt bereisbar sein; es ist angedacht, im Laufe der Jahre auch die im Folgenden beschriebenen Städte sowie weitere, hier
+noch nicht erläuterte Orte einzubinden und begehbar zu machen.
+
+3.1 Beschreibung der Handlung
+
+3.1.1 Zeidel-Stadt - Einführung in die Mission
+
+Das Spiel beginnt in "Gib niemals auf", einem Intermundium zwischen Erde (der Welt, wie sie allgemein bekannt ist) und Zeidel (einer frei erfundenen Welt). Die Haltestelle hat vier
+Gleise. Auf dem ersten kommt der Spieler über eine Stadtbahn von der Erde an. [* Als Grundlage für die Haltestelle diente eine Aktion eines Street-Art-Künstlers, der im Sommer 2013
+verschiedene Sprüche an die Hinweistafeln der Kölner Verkehrs-Betriebe klebte. "Gib niemals auf" war so für einige Zeit an der Haltestelle der Stadtbahnlinie 13 Berrenrather
+Straße/Gürtel zu sehen, wodurch die Linie 13 für das Spiel um eine Station hinter der eigentlichen Endhaltestelle Holweide Vischeringstraße "verlängert" wurde] Auf einem zweiten
+Gleis steht die Stadtbahnlinie 21. Auch diese ist für das Spiel um eine Haltestelle "verlängert" worden, sie setzt normalerweise in Zeidel an der Endhaltestelle Einkaufszentrum
+Hoyanna ein. Auf dem Bahnsteig befinden sich zusätzlich in der Mitte ein Fahrkartenautomat und ein Fahrplan von Zeidel-Stadt.
+
+Der Fahrkartenautomat hat eine besondere Aufgabe im Spiel, nämlich die Erstellung neuer Benutzeraccounts. Er bietet nur Jahreskarten für das gesamte Verbundnetz von Zeidel und
+Umgebung an - diesen braucht der Spieler für den weiteren Spielverlauf. Bezahlen muss und kann ihn der Spieler nicht, denn um die Karte zu erhalten, muss er seine Benutzerdaten
+hinterlegen (und sich so einen Account machen), damit er das Spiel spielen kann. Ab dem Moment, wo ein Account angelegt ist, kann der Spieler seinen Spielstand an jedem beliebigen
+Ort fortsetzen - denn bei jeder Bewegung wird sein momentaner Standort in der Benutzerkartei hinterlegt. Jetzt kann der Benutzer die Stadtbahnlinie 21 nehmen [* Für die Übung
+"Digitale Editionen" gibt es einen zweiten Ausgang an der Treppe, erreichbar von der Bahnsteigmitte. Dieser ist nur zum Test oder zu Präsentationszwecken verohanden]. Hierzu geht
+er zur grün-gelben Stadtbahn am rechten Bahnsteig. Er bekommt hier von einer "Seele" bezeichneten Figur die Mission genannt: eine Chorgruppe sei entführt und es ist Aufgabe des
+Spielers, diese zu befreien. Hinweise dazu erhält der Spieler im Ortsteil Weißseeviertel der Stadt Zeidel. Als Nächstes besteigt er die Stadtbahn, wo dem Benutzer die Welt und
+die Stadt Zeidel vorgestellt werden.
+
+Der nächste Ort, an den der Spieler gelangt, ist Zeidel Hauptbahnhof/Mitte, Gleis 40. Von hier aus muss er weiter in das Weißseeviertel. Die Treppe hinauf, sieht er den
+Verkaufsstand der Zeidel'schen Verkehrswerke (Z.V.W.). Dort kann ihm die Mitarbeiterin weiterhelfen, indem er ihm einen Liniennetzplan in die Hand drückt. Alternativ kann der
+Spieler auch die Aushangfahrpläne betrachten. Er findet heraus, dass ihn die Metrolinie 7 in das Weißseeviertel bringt und entschließt sich dazu, an der Haltestelle Télégraphe
+auszusteigen [* In dieser Version wird der Spieler direkt dorthin gebracht].
+
+An der Station Télégraphe schaut sich der Spieler in der Straße um und stößt bald auf eine Gruppe Studenten, die dem orientierungslos erscheinenden Spieler weiterhelfen möchten. Er
+erzählt ihnen arglos seine Mission. Die Gruppe glaubt ihm nicht, ist völlig ahnunglos - bis auf einen, der hellhörig wird und dann genauestens Bescheid weiß. Ihm wurde vorher
+nämlich auch kein Glauben geschenkt. Da der Charakter vermutet, dass unangenehme Typen in der Umgebung sein könnten (zur Verwunderung seiner Freunde und des Spielers), lädt dieser
+den Spieler zu sich nach Hause ein. Da er dem Charakter zunächst nicht recht trauen will, möchte er die Freunde dabei haben. Gemeinsam fahren sie dann in die Wohnung des
+Charakters.
+
+Dort eröffnet der Student namens Pascal, dass hinter der Entführung eine Gruppe steckt, die die Kontrolle über die Gesellschaft übernehmen will. Hierzu möchten sie sich
+einflussreiche Positionen in der Politik erpressen und dann die Kürzung der Subventionen für das Bildungswesen - durch die Gefangennahme. Pascal fragt dann nach den Prüfungen, die
+auf den Spieler zukommen. Er nennt sie. Daraufhin sucht Pascal einige Karten von Städten heraus - diese sind aber nicht aktuell. Der Spieler kann aber dennoch darum bitten, die
+Karten einzusehen. Er und die drei Begleiter bekommen die Karten zu Gesicht. Es sind die Karten der Städte Plattendorf und Kvirasim [* In dieser Version - dies ist abhängig von den
+Eingaben im Fahrkartenautomat in "Gib niemals auf"]. Die Orte, die auf den Karten abgebildet sind, sind eigenartig benannt. Pascal erklärt, dass diese Städte so genannte
+Analysestädte sind, die sich Themen aus Unterrichtskursen gewidmet und ihre Ortsteile entsprechend benannt haben. Ein Freund, der bis dahin schweigend zugehört hat, erklärt, dass
+es insgesamt zehn Analysestädte gibt [* in dieser Version werden nur zwei Städte begehbar sein und nur Kvirasim wird erläutert]:
+
+- Paris widmete sich dem Mythos der Stadt Paris auf der Erde
+
+- Nantes-la-Jolie ist die Stadt zu Didier van Cauwelaerts "Un aller simple"
+
+- Çonoi birgt das Wissen zu Sartre und dem Existentialismus
+
+- Trochpathy verpflichtete sich der französischen "Mouvement de la Résistance"
+
+- Plattendorf nannte seine Ortsteile nach Bereichen der Historisch-Vergleichenden Sprachwissenschaft
+
+- In Kvirasim findet sich alles, was ein Lernender zu den Einführungsseminaren Phonetik und Phonologie I und II, den dazugehörigen Übungen, zum Seminar Akustik und zum Grundkurs
+Prosodische Analyse wissen will
+
+- Cité d'Orcive birgt das Wissen zu Molière und dem komischen Theater
+
+- Niñaciudád ist die Stadt zum Einführungsseminar "Allgemeine Sprachwissenschaft"
+
+- Der Verwaltungskreis Eichlinghausen und die Stadt Karlstadt sind der Geschichte verschrieben. Karlstadt ist ein Bereich, der sich genau mit der Korrespondenz von und um Friedrich
+von Gentz beschäftigt
+
+Der Spieler muss danach - so sagt Pascal - sofort los, nach Kvirasim. Über Unterkunft und dergleichen solle er sich keine Gedanken machen - ihm wird geholfen, wenn er erfolgreich
+die Geheimnisse der Stadt verinnerlichen kann. Dies tut der Spieler auch, nachdem er sich erkundigt hat, wie er in diese Städte gelangt - er bricht sofort auf zum Hauptbahnhof.
+Dazu nimmt er an der Bushaltestelle "Les Écoles" die Linie 501. Dort spricht ihn plötzlich ein geheimnisvoller Mann an, der über den Spieler und seine Aufgabe bestens Bescheid zu
+wissen scheint. Mit wenigen Worten drückt er dem Spieler einen Briefumschlag in die Hand. Dieser hat keine Zeit, den Umschlag zurückzugeben - an der nächsten Haltestelle ist der
+Mann schon verschwunden. Im Briefumschlag befindet sich ein Gutschein für eine beliebige Fahrt mit jedem beliebigen Fernverkehrszug sowie 100 Zeidel'sche Euro (Z) "Startkapital".
+
+Am Hauptbahnhof angekommen, sucht sich der Spieler seinen Weg zum Reisezentrum der Bahn. Dort legt er seinen Gutschein vor und bittet um eine Fahrkarte nach Kvirasim. Die
+Verkäuferin am Schalter druckt bereitwillig eine Fahrkarte aus mit den dazugehörigen Reiseinformationen: der Spieler hat eine Fahrkarte auf eine einzelne Liegewagenkabine für den
+Schnellzug 2011 nach Metza. Der Zug wird dort mit dem Nachtschnellzug 0211 Theodor Fontane vereinigt und fährt weiter bis Cité d'Orcive. Dort muss der Spieler umsteigen auf den
+Internight 045, der den Spieler nach mehrtägiger Fahrt endlich nach Kvirasim bringt. Er tritt seine Reise an, indem er den schon bereitgestellten Zug auf Gleis 8 besteigt. In
+seiner Kabine liegt er sich sofort schlafen, er möchte alleine sein. Ihm ist alles etwas viel im Moment. In den Träumen des Spielers bekommt der Bediener einigen Vorgeschmack
+darauf, was er sehen wird und was er sich merken sollte, um die Chorgruppe zu befreien.
+
+3.1.2 Kvirasim - die Stadt der Phonetik und der Phonologie
+
+Der Lernvorgang wird jetzt mit diesem beispielhaften Bereisen einer Linie der Stadt Kvirasim illustriert: von den Momenten der Ankunft und der ersten Orientierung über die Besuche
+der Sehenswürdigkeiten bis zum Prüfungsvorgang, an dessen Ende eine Belohnung für den Spieler steht, der ihm bei der Erfüllung seiner Mission weiterhilft.
+
+Der Spieler kommt - nach mehreren traumreichen Nächten - am Hauptbahnhof in Kvirasim an. Dort schaut sich der Spieler um. Er findet eine KundenCenter des Verbundes der
+phonetisch-phonologischen Städte und Gemeinden (VPS), wo er sich zunächst eine Fahrkarte kaufen sollte. Wenn der Spieler jedoch die Begleitung akzeptiert, die sich ihm in der
+Vorhalle des Bahnhofes beim Abgang zur Stadtbahn anbietet, braucht er keine Fahrkarte mehr zu kaufen. Er wird in diesem Falle sogar einen Reiseführer haben, mit dessen Hilfe der
+Spieler in weitere Orte hineinkommt. Das Spiel ist aber auch ohne diese Begleitung lösbar.
+
+Der Spieler geht nun zur Stadtbahn und besteigt die Linie 11. Sie startet hier und fährt über Schallformstraße und Formantenweg nach Artikulationssysteme. Jedes Mal, bevor der
+Nutzer an einer Endhaltestelle eine Linie besteigen will, wird er gefragt, ob der die Linie im Entdeckungsmodus oder im Prüfungsmodus befahren will [* Der Prüfungsmodus ist in
+dieser Version nicht implementiert]. In diesem Spiel entscheidet sich der Spieler für den Enteckungsmodus. Mit der Stadtbahn fährt er nun eine Station, wo er anschließend vom
+System gefragt wird, ob er aussteigen will. Da der Spieler von Grund auf lernen möchte, steigt er an der nächsten Haltestelle - "Erzeugung von Sprache" - aus. Als
+Sehenswürdigkeiten werden ihm vom Wegweiser zwei Orte vorgeschlagen: das "Haus der Vokale" und das "Haus der Konsonanten". Er geht über den Ausgang zum "Haus der Vokale". Dort
+findet ein großes Fest statt - das "Haus der Vokale", ein zeidelweit bekanntes Chorkonservatorium, hat seinen Tag der offenen Tür. Davor aufgebaut sind verschiedene Stände. Einer
+davon bietet Werbung für verschiedene Chorgruppen an. Dieser lässt den Spieler aber kalt, er geht vielmehr weiter zu einem Tisch mit einem aufgebauten Lungenmodell. Am Zwerchfell
+befindet sich eine Kordel, an der er ziehen und so einen Unterdruck in der Lunge erzeugen kann, sodass Luft in das Modell strömt. Darüber kann er ein Modell eines Stellknorpels
+sehen und daran schrauben; je nach dem, welche Einstellung gewählt wurde, wird die Stimmqualität auf einem Bildschrim angezeigt [* In einer späteren Version werden entsprechende
+Audioaufnahmen an dieser Stelle ebenfalls eingespielt].
+
+Neben diesem Modell befindet sich ein Modell eines in der Mitte entzwei geschnittenen Kopfes. Der Spieler kann hier an drei Orten Einstellungen vornehmen:
+
+- an der Zunge
+
+- am Kiefer
+
+- an den Lippen
+
+Je nach dem, welche Konfiguration er einstellt, erscheint auf dem oben genannten Bildschirm in Lautschrift ein Vokal, der so erzeugt werden würde. Falls der Spieler mit Begleitung
+spielt, sagt dieser ihm, dass ein gleiches Modell für die Konsonanten vor dem "Haus der Konsonanten" aufgebaut ist.
+
+An dieser Stelle werden die drei Stufen der Erzeugung menschlicher Sprache vermittelt:
+
+- Initiation (das Lungenmodell)
+
+- Phonation (das Modell der Stimmlippe)
+
+- Artikulation (das Modell des Kopfes)
+
+An einem weiteren Stand wird die phonetische Lautschrift, das International Phonetic Alphabet, erklärt. Es wird eine Tastatur eingeblendet mit den verschiedenen Lauten. Wenn der
+Spieler draufklickt, erscheint der Buchstabe in Vollbild auf dem Bildschirm und darunter die so genannten artikulatorischen Parameter. Er kann allerdings umblättern und danach
+sich ein Mittsagittalschnitt des entsprechenden Lautes ausgeben lassen. Da der Spieler sich am "Haus der Vokale" befindet, sind auf der Tastatur lediglich die Vokale abgebildet.
+Für die Konsonanten, und auch das bekommt der Spieler mitgeteilt, wenn er in Begleitung ist, wende er sich an das gleichartige Modell am "Haus der Konsonanten".
+
+Der Spieler hat fürs Erste genug gesehen und entschließt sich, zur nächsten Haltestelle zu fahren - mit der Linie 11 fährt er weiter zur Haltestelle Schallformstraße. Als
+Sehenswürdigkeit hier bekommt der Spieler einen Bereich des Transportmuseums zu sehen. Er wird direkt zu einem Stadtbahnwagen Typ B geführt, wo an den beiden Köpfen des Wagens die
+nebenstehenden Einstiegstüren bedienbar sind. Zu hören bekommt der Bediener ein Türöffnungsvorgang und Türschließvorgang und auf dem Bildschirm wird ein annotiertes Oszillogramm
+gezeigt. Der eventuelle Bediener würde dem Spieler in diesem Moment auch erklären, dass es sich bei dieser Grafik um ein Oszillogramm handelt, und dass er an der Haltestelle
+Diagrammenplatz mehr über die grafischen Abbildungen des Schalls erfahren kann. In jedem Fall werden die Bereiche der Grafik annotiert mit den verschiedenen Typen des Schalls, die
+eben hörbar waren:
+
+- Explosion
+
+- Friktionsrauschen
+
+- quasi-periodischer Schall
+
+- stummer "Schall"
+
+Mehr gibt es hier vorerst nicht zu sehen, was für das Wiederholen für die Klausur von Phonetik & Phonologie 1 relevant wäre, also fährt der Spieler gleich weiter mit der Stadtbahn
+zur Haltestelle Frequenzstraße. Da gibt es keine Sehenswürdigkeit, vielmehr wird dort auf der Straße viel ein- und ausgeladen. Jemand steht daneben und zählt die Pakete. Der
+Spieler kann ihn fragen, was er zählt - woraufhin der Charakter ihm eröffnet, dass er die Frequenz der ausgeladenen Pakete ermitteln will. Hierzu nimmt er eine Zeitspanne und teilt
+diese durch die Anzahl der ausgeladenen Pakete. Die Zahl, die er erhält, ist die Frequenz - eine Zeiteinheit pro Anzahl der Elemente. Dann erklärt er dem Spieler, dass es mit dem
+Schall sich ebenso verhält: Schall entsteht dadurch, dass die Moleküle in der Luft in Bewegung versetzt werden und so bestimmte Bereiche dichter und dünner werden. Dies geschieht
+bis zu dreihundert Mal in der Sekunde bei einem normalen Gespräch. Man spricht dann von einer Tonhöhe von 300 Hertz - benannt nach Heinrich Hertz.
+
+An der Haltestelle Diagrammenplatz, die nach erneutem Besteigen der Linie 11 folgt, gibt es eine Ausstellung von Street-Art-Künstler. Gezeigt werden hier verschiedene Kurven. An
+den Bildbeschreibungen werden die unterschiedlichen Typen von Diagrammen beschrieben:
+
+- Sonagramm (Frequenz -> Amplitude)
+
+- Oszillogramm (Zeit -> Amplitude)
+
+- Spektragramm (Zeit -> Frequenz -> Lautstärke)
+
+Für die Phonetik unverzichtbar ist die Haltestelle, die der Spieler danach besichtigt: der Formantenweg. Dieser Bereich wird etwas hügelig, denn die Formanten sind, auf einem
+Sonagramm abgebildet, "Berge" in der Hüllkurve. Diese Berge stellen dar, dass bestimmte Frequenzbereiche in der menschlichen Sprache eher zu vernehmen sind, als andere. Dies steht
+auf der Rückseite des Schildes, der über dem Abgang zur Haltestelle steht. Der Abgang steht an der Kreuzung des 0. (nullten) und des Formantenweges. Der Spieler geht nun den
+Formantenweg entlang und muss erst einmal ein beträchtliches Stück bergab laufen, bis er dann wieder einen Hügel besteigt. Am Gipfel steht die Kreuzung des 1. und des
+Formantenweges. Dies wiederholt sich noch einmal, an der Kreuzung des 2. und des Formantenweges steht eine Aussichtsplattform. Eine eventuelle Begleitung hätte dem Spieler hier
+auch erklärt, dass das Auf- und Absteigen das metaphorische Beschreiten eines Spektragrammes gewesen sei und die Höhe über das Tal die Amplitude bedeutet hatte. An der
+Aussichtsplattform hat der Spieler einen Ausblick über die drei Hügel und darunter einen Bildschirm. Unter diesem auf der linken Seite befinden sich zwei Knöpfe. Der Schirm zeigt
+links ein stark vereinfachtes Spektragramm an (es sind nur drei Linien zu sehen) und daneben ein Symbol in IPA. Dies ist der Laut, der bei einer bestimmten Formantkonfiguration
+eingestellt werden würde. Neben dem Bildschirm wird das Phänomen der Formantenbildung erklärt: die Luftsäule, die aus der Lunge strömt, wird durch die Stellung des Gaumens und der
+Zunge abgedämpft. Hierdurch werden bestimmte Frequenzbereiche verstärkt und diese Resonanzen ermöglichen es dem Menschen, unterschiedliche Laute wahrzunehmen.
+
+Mehr gibt es hier auch nicht zu sehen, sodass der Spieler zur letzten Haltestelle der Linie 11 voranschreitet: der Haltestelle Artikulationssysteme. Es besteht eine
+Umsteigemöglichkeit zur Linie 12. Dies ist auch ein Bahnhof der Regionalbahn. An dieser Haltestelle ist ein großer Spielplatz, der allerdings aus einem großen Sandkasten besteht.
+Daneben befinden sich Bausteine. Bei genauerem Betrachten fällt auf, dass im Sandkasten eine große Tabelle eingeritzt ist. Die Reihen sind, von oben nach unten, mit den
+Artikulatoren beschriftet:
+
+- Lippen
+
+- Zungenspitze
+
+- Zungenrücken
+
+- Velum
+
+- Glottis
+
+Einige spielende Kinder möchten aus diesen Bauklötzen Burgen bauen. Sie wollen nun, dass der Spieler ihnen bei der Platzierung der Bauklötze hilft. Auf einem Schild stehen
+verschiedene IPA-Symbole und daneben ein Baustein, der aus dem Kasten genommen werden soll. Jetzt kann sich der Spieler die Worte zusammensetzen. Danach wird dem Spieler erklärt,
+dass die Bauklötze Bewegungen der Artikulatoren anzeigen, die von einem Schwa abweichen und dass diese in einer so genannten Gestenpartitur abgebildet werden.
+
+Für die Linie 11 kann der Spieler jetzt den Prüfungsmodus antreten - an jeder Haltestelle bekommt er nun Fragen gestellt, die genau so in einer Klausur zur Einführungsveranstaltung
+Phonetik & Phonologie 1 gestellt werden würden. Wenn er die Prüfung besteht, bekommt er in diesem Spiel den Hinweis, dass die Gruppe in Courtois gefangen gehalten wird. Wo genau
+müsse er dort erfahren - jedoch zuvor müsse er wissen, was die Bewohner hören wollen. Das ist hier jedoch erst dann der Fall, wenn er Plattendorf erfolgreich meistert.
+
+An der Station Artikulationssysteme oder auch am Hauptbahnhof hat der Spieler auch die Möglichkeit, per Regionalverkehr in ein Forschungsgebiet zu gelangen. Dazu nimmt er die
+Regionalbahn nach Gestenkoordination. Am dortigen zentralen Omnibusbahnhof stehen Überlandbusse der Regionalverkehr Kvirasim bereit, um den Spieler weiterzubefördern, so zum
+Beispiel die Linie 118 in das Gebiet des italienischen unreinen "s". Als Thema dient hier ein im Hauptseminar Gesten und Segmente behandeltes Phänomen, wonach der gesturale Status
+eines im Wortanfang stehenden Sibilanten unklar sei. Über die Aspekte der Forschung erfährt der Spieler beim Abfahren dieser Linie 118. Auch werden Stellen aus dem Paper selbst und
+dort zitierter Literatur angeführt.
+
+3.2 Die zugrunde liegende Programmarchitektur
+
+Das Programm ist eine Webanwendung auf Basis von AJAX: es besteht aus einem HTML-Frontend, das dem Spieler den jeweiligen Ort, das dortige Ereignis und die möglichen Aktionen
+über ein Steuerfeld anzeigt. [* In einer späteren Version wird statt eines starren Hintergrundbildes Videos an entsprechender Stelle gezeigt, ebenso werden Geräusche eingespielt.
+Auch eine Musik zum Spiel ist bereits in Planung.] Der Spieler bewegt sich in dem Spiel fort, indem er auf Bereiche klickt, die eine Aktion auslösen. Diese sind per SVG-Vielecke
+definiert, die mit einem Eventhandler versehen sind. Bewegt der Spieler die Maus über eines der Bereiche, verändert sich ein Teil des Fließtextes und die ausführbare Aktion wird
+angezeigt. Dahinter stehen mehrere Javascript-Skripte, die die Eingaben clientseitig verarbeiten und an den Server weitergeben sowie dessen Antworten wieder an das HTML
+zurückliefern. Der Server reagiert mittels mehrerer PHP-Skripte, die die vom Javascript übermittelten Anfragen verwalten und entsprechend Angaben aus einen oder mehreren
+XML-Dokumenten heraussuchen. Diese sind in PHP über DOMDocument-Objekte abgebildet. Die Aufteilung der Skripte und Dokumente sind wie folgt, mit der Clientseite beginnend:
+
+- ZVWAnalysespiel.html ist das HTML-Frontend. Auf ihr findet das Spiel statt: Der Ort mit den SVG-Feldern zum Anklicken wird angezeigt, ebenso ein Fließtext, der das Spielgeschehen
+beschreibt, sowie das Inventar des Spielers (sofern ein Spieleraccount angelegt ist).
+
+- town_ajax.js verwaltet die Hauptaufgaben: Laden und Ausgeben des nächsten Ortes, Definieren der verwendeten Sprache und des derzeitiger Nutzers, Anzeige von Gegenständen (wenn es
+welche gibt), Verknüpfungen der Felder mit den ausführbaren Aktionen, Überprüfung, ob ein Gegenstand zum Ausführen einer Aktion erforderlich ist und Rückmeldung an den Spieler,
+dass die Aktion hinter einem Feld noch nicht fertig gestellt ist.
+
+- user.js ist für das Benutzerspezifische zuständig: Anlegen eines neuen Benutzers, Hinzufügen von Gegenständen und Anzeigen des Inventars.
+
+- Für jede Stadt gibt es ein Skript, welches die stadtspezifischen Aktionen durchführt, beispielsweise ist karlstadt.js für das Anzeigen und Manövrieren von Faksimiles sowie die
+Suche von Dokumenten im TEI-Korpus zu Gentz zuständig.
+
+Auf der Serverseite sieht die Struktur ähnlich aus:
+
+- town.php ist die zentrale Schaltstelle für die Anfragen an die Datenbanken. Mittels AJAX ($_GET) werden die Anfragen an den Server geschickt und entsprechende if-Abfragen
+koordinieren das weitere Verhalten
+
+- town_functions.php liefert die Definitionen für die Funktionen, die zum Laden des nächsten Ortes benötigt werden: Einlesen der Stadtkartei und der Benutzerkartei, Ausgabe der
+Information über den übergebenen Ort und Ausgabe eines Eingabeformulars
+
+- user.php ist ein serverseitiges Abbild eines Nutzers. Seine Eigenschaften: Name, Interesse und Geschlecht seiner Liebe, derzeitiger Kontostand, derzeitiger Ort und die verwendete
+Sprache
+
+- user_functions.php enthält die Funktionen, die die Nutzerabfragen verarbeiten: Benutzerkartei einlesen, neuen Benutzer hinzufügen, neuen Gegenstand zum Inventar hinzufügen,
+Gegenstand aus dem Inventar entfernen oder eine nur einmal ausführbare Aktion in die Benutzerkartei vermerken
+
+- userDB.php ist ein Objekt mit einem DOMDocument-Objekt, welches die Benutzerdatenbank abbildet und einem dazu gehörigen DOMXPath-Objekt, das Abfragen in der Benutzerkartei
+ermöglicht
+
+- voyage.php übernimmt die Abfragen über eine Reise. Wenn ein Nutzer einen Bus oder einen Zug besteigt, liefert dieses Skript die entsprechenden Daten aus der Reisekartei, die die
+Reise des Spielers beschreiben.
+
+- voyageDB.php ist die DOMDocument-Abbildung, die die Reisekartei abbildet und Abfragen in ihr gestattet
+
+- Wie auf der Clientseite gibt es auch serverseitig für jede Stadt mindestens ein Skript, das die stadtbezogenen Funktionen verwaltet.
+Für Karlstadt sind dies karlstadt.php, karlstadt_function.php und karlstadt_TEIDocument.php. Zur Zeit dienen sie als Programmlogik für einen Fahrkartenautomaten in Karlstadt, die
+Abfragen im Korpus von TEI-Dokumenten gestattet. Die Suchergebnisse werden an das Javascript zurückgeliefert.
+
+Die XML-Datenbasis ist wie folgt gegliedert, beginnend mit den Städten. Validiert sind sie gegen das XML-Schema town.xsd.
+
+- Eine Stadt besteht aus mindestens einer Station
+
+- Eine Station hat einen Namen, eine eindeutige ID sowie einen Inhaltsbereich für den Entdeckungsmodus und den Prüfungsmodus. Auch ist vermerkt, wieviel zusätzliches Geld es gibt,
+wenn der Prüfungsmodus bestanden ist. In dieser Arbeit wird lediglich der Entdeckungsmodus beschreiben, da der Prüfungsmodus noch nicht umgesetzt wird
+
+- Im Enteckungsmodus ist eine Station in mehrere Felder unterteilt. Jedes Feld hat einen Fließtext, der im HTML-Frontend angezeigt wird, eine Bilddatei, die auf dem Spielfeld
+abgebildet wird und mehrere Aktionen, die auf diesem Feld durchgeführt werden können. Optional kann ein Formular hinterlegt werden, dass auf der Seite aufgerufen wird. Anstelle
+eines Bildes kann auch ein Videopfad abgelegt werden, ebenso ein Pfad zu einer Sounddatei. Auch kann ein Gegenstand angegeben werden, der dann dem Spieler bei Betreten des Feldes
+übergeben wird. Fließtext und Formular können mehrsprachig sein
+
+- Eine Aktion ist ein Bereich auf einem Bildschirm, der nach Klick eine Handlung des Spielers durchführt. Definiert ist er durch mindestens drei Koordinatenpaare. Diese müssen in
+Prozentanteil des Bildschirmes angegeben werden, da das Spielfeld den gesamten Bildschirm ausfüllt und die Felder auf die Größe angepasst werden. Außerdem definiert sind an dieser
+Stelle der auszuführende JavaScript-Befehl mit Parametern und ein Text, der angezeigt wird, wenn der Spieler die Maus über das Feld führt
+
+- Ein Formular, das nach einer Aktion in einem Feld angezeigt wird, kann folgende Elemente enthalten:
+  
+  - Texteingabe
+
+  - Auswahlfelder, von welchen entweder eine oder mehrere Möglichkeiten ausgewählt werden können
+
+  - Dropdown-Menüs
+
+  - Knöpfe
+
+  - Bestätigungsknopf zum Abschicken des Formulars
+
+- Wenn durch eine Aktion ein Gegenstand aufgehoben wird, kann das kleine Bild des Gegenstandes angezeigt werden. Hierzu sind die Koordinaten des Bildes sowie die Größe anzugeben,
+ebenfalls in Prozentanteilen des Fensters.
+
+Die Aufschlüsselung der XML-Abbildungen der Städte:
+
+- zeidel.xml bildet die Stadt Zeidel, einschließlich die Station "Gib niemals auf" und den Spielstartschirm, ab
+
+- cite_d_orcive.xml enthält derzeit nur den Hauptbahnhof Cité d'Orcive, damit der Anschluss von Zeidel nach Kvirasim hergestellt werden kann
+
+- kvirasim.xml steht für die Stadt Kvirasim
+
+- ninaciudad.xml stellt die Stadt Niñaciudád dar
+
+- karlstadt.xml ist für Karlstadt
+
+3.3 Ausblick des Projektes
+
+Zunächst sollen die bestehenden Analysekarten implementiert und mit Minispielen ausgestaltet werden. Des Weiteren stehen weitere Analysestädte an:
+
+- Rochester als Stadt zu Shakespeare, in den Vororten soll eine Verbindung zu Shakespeare's World hergestellt werden
+
+- Orpington als Stadt zum London-Mythos und ob es diesen überhaupt gibt
+
+Auch ist angedacht, weitere Spiele außerhalb der Städte selbst in so genannten Dungeons zu unterbringen. Dies sind Gewölbe, wo es entweder spukt und/oder Rätsel gelöst werden
+müssen. Die sich hier aufbietende Möglichkeit der Kombination mehrerer Fächer zur Vernetzung und Anwendung der Lerninhalte soll hier genutzt werden. Und auch soll die aus
+Zeitgründen sehr starr gehaltene Oberfläche durch Bild- und Tonaufnahmen weiter belebt werden.
+
+4. Einsatzmöglichkeiten des Spiels in Forschung und Lehre
+
+Als abschließendes Kapitel soll die Frage beantwortet werden, welche Position "Keleti pályaudvar" unter den crowdgesourcten und gamifizierten Projekten einnehmen soll. Zum Einen
+soll durch die Geschichten, die im Spiel um die Lerninhalte erzählt werden, der abstrakte Kontext aufgelockert werden. Im Unterricht bewährte sich mehrfach die Idee, Inhalte über
+Metaphern zu vermitteln - es kamen stets positive Rückmeldungen hierzu. Die Haltestellen stehen dabei ganz im Sinne von Markey et al., denn dort wird fokussiert ein Lernaspekt im
+Detail behandelt - durch die Linien wird der Zusammenhang zu den anderen Themen hergestellt. Dieses Spiel simmt sich darüber hinaus ganz auf den Spieler ab, es gibt keinen
+Wettbewerb. Eine eventuelle Möglichkeit der Kommunikation zwischen den Spieler ist allerdings nicht ausgeschlossen. Wo jedoch Kommunikation statt findet, sind die Vororte der
+Analysestädte, wo die Erfordernisse der VRE umgesetzt werden sollen: dort bekommen Forscher die Möglichkeit, Stationen oder ganze Orte in das Spiel einzuflechten, indem sie dort
+ihre Forschungsergebnisse in knapper und publikumsorientierter Form veröffentlichen und ihre Forschungsdaten verlinken. Hierfür können die bestehenden Verbindungen erweitert werden
+- genauso, wie im öffentlichen Personennahverkehr ein neuer Ort durch eine Buslinie erschlossen wird oder weitere Linien zu einer Verbindung hinzustoßen.
+
+Eingesetzt werden soll dieses Spiel in Lehrveranstaltungen oder Seminaren:
+
+- der in den Analysestädten behandelten Themen [* es ist höchst wünschenswert, wenn weitere Analysestädte hinzukommen und so die Vernetztheit der einzelnen Disziplinen weiter
+vorangetrieben werden würde]
+
+- der Schul-/Hochschuldidaktik
+
+- Forschungsthemen, wo Freiwillige gesucht werden - durch das Spiel können interessante Informationen vorvermittelt werden (nach Bereisen der Ortskerne!), die dann eventuellen
+Interessenten die Lust auf Erkundung der Vororte wecken

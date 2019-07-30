@@ -1,0 +1,28 @@
+h1.normal {
+font-size: 60px;
+font-weight: bold;
+color: #000000;
+}
+
+h2 {
+font-size: 40px;
+color: #AA00AA;
+font-style: italic;
+}
+
+p.getStation {
+color: #FFCCFF;
+font-style: italic;
+font-weight: bold;
+}
+
+body {
+background-color: #222200;
+background-image: url(http://imageshack.us/a/img651/5649/backgroundlk.jpg);
+background-repeat: repeat-y;
+}
+
+p.centeredimage{
+	padding-left: 150px;
+	padding-right: 150px;
+}

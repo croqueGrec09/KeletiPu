@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_corpus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_corpus.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Artikelkorpus für 'Power of Data' - Detailkarte X.b Karlstadt</title>
+                <author>
+                    <persName>Andreas Gálffy</persName>
+                    <idno type="matricula">5584124</idno>
+                </author>
+            </titleStmt>
+	        <publicationStmt>
+	            <p>
+	                Dieses Korpus kommt im Rahmen des Spiels 'Power of Data' - das Spiel zum Einsatz. Er kann aber auch unabhängig 
+	                weiterverwendet werden; dann ist er zur Zeit als Teil der Masterarbeit von Andreas Gálffy zu verstehen.
+	            </p>
+	            <p>
+	                Eine vollständige Zitationsübersicht ist durch Zusammensetzung aller &lt;sourceDesc&gt;-Elemente gegeben.
+	            </p>
+	        </publicationStmt>
+	        <sourceDesc>
+	            <p>
+	                Dieses Korpus setzt sich aus verschiedenen Quellen zusammen. Für jede Quellenangabe sei auf die sourceDesc 
+	                der jeweiligen Texte verwiesen.
+                </p>
+            </sourceDesc>
+        </fileDesc> 
+        <encodingDesc>
+            <projectDesc>
+                <p>
+                     Bei diesem Korpus handelt es sich um eine Zusammensetzung verschiedener Artikel aus Schnipsel, die ein Spieler
+                     sich durch die Stadt Karlstadt zusammensammeln und so die stadtinterne Mission erfüllen kann.
+                </p>
+            </projectDesc>
+            <editorialDecl>
+                <p>
+                    In diesem Korpus finden sich sechs Artikel, die der Spieler sich zusammensuchen muss. Aus Zeit-,  
+                    Relevanz- und Qualitätssicherungsgründen wird kein Artikel vollständig ausgeschrieben, sondern besteht aus 
+                    Schnipseln, die hier durch Zusammenfassungen angedeutet werden. Hier sollen keine wissenschaftliche Artikel 
+                    beschrieben, sondern Elemente für ein Spiel geschaffen werden, die zur Lösung einer fiktiven Mission 
+                    verwendet dienen.
+                </p>
+                <p>
+                    Jeder Artikel sowie seine Abschnitte werden mit Identifikatoren versehen, die aus dem Spiel heraus aus- 
+                    und dessen Inhalte abgerufen werden können. Siehe dazu den Abschnitt refsDecl.
+                </p>
+            </editorialDecl>
+            <refsDecl>
+                <p>
+                   Zur Verknüpfung mit dem Spiel wird jeder Artikel plus jeder Abschnitt mit einer ID versehen, die folgendes 
+                   Muster aufweist:
+                   stadtPräfix + "K" + fortlaufendeNummerSchlüssel
+                   heißt für Karlstadt beispielsweise:
+                   "kaK3" (dritter Schlüssel für Karlstadt),
+                   für ein Artikelabschnitt ist eine weitere fortlaufende Nummer angehängt, sodass für den Artikel kaK3 die 
+                   Teile folgendermaßen nummeriert sind:
+                </p>
+                <p>
+                    Ein vollständiges Verzeichnis der Schlüssel kann aus der Masterarbeitsdokumentation entnommen werden
+                </p>
+                <p>
+                    Pro Artikel ist unter &lt;notesStmt&gt; eine Liste der Orte aufgeführt, wo Artikelteile im Spiel gefunden werden.
+                </p>
+            </refsDecl>
+        </encodingDesc>
+    </teiHeader>
+    <TEI xml:id="kaK3">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title xml:lang="de">Über die sozialen Einflüsse der Französischen Revolution</title>
+                    <author>
+                        <persName>Andreas Gálffy</persName>
+                    </author>
+                </titleStmt>
+                <publicationStmt>
+                    <p>
+                        bis auf Weiteres ist bei Zitieren aus diesem Korpus die Masterarbeit anzugeben
+                    </p>
+                </publicationStmt>
+                <notesStmt>
+                    <note corresp="#kaK30">Archiv der Neuen Deutschen Monatsschrift (Haltestelle #9)</note>
+                    <note corresp="#kaK31">Befragung/Beobachtung der Demonstration/Diskussion auf dem Pariser Platz (Haltestelle #8)</note>
+                    <note corresp="#kaK32">Archiv des Historischen Journals (Haltestelle #15)</note>
+                </notesStmt>
+                <sourceDesc>
+                    <biblStruct corresp="#kaK30">
+                        <analytic>
+                            <author>
+                                <persName>Friedrich von Gentz</persName>
+                            </author>
+                            <title>Historisch-politische Uebersicht der Haupt-Begebenheiten des Jahres 1794.</title>
+                        </analytic>
+                        <monogr>
+                            <editor>
+                                <persName>Friedrich von Gentz</persName>
+                            </editor>
+                            <title>Neue Deutsche Monatsschrift</title>
+                            <imprint>
+                                <date>Januar 1795</date>
+                                <publisher>Freidrich Vieweg der Ältere</publisher>
+                            </imprint>
+                        </monogr>
+                        <ptr target="http://ds.ub.uni-bielefeld.de/viewer/image/1938308_001/4/LOG_0006/"/>
+                    </biblStruct>
+                    <bibl corresp="#kaK31">
+                        Aus: Zeeden, Walter. 1982. Europa im Umbruch: von 1776 bis zum Wiener Kongreß. Stuttgart: Klett-Cotta.,
+                    </bibl>
+                    <biblStruct corresp="#kaK32">
+                        <analytic>
+                            <author>
+                                <persName>Friedrich von Gentz</persName>
+                            </author>
+                            <title>Ueber den Gang der öffentlichen Meinung in Europa in Rücksicht auf die französische Revolution</title>
+                        </analytic>
+                        <monogr>
+                            <editor>
+                                <persName>Friedrich von Gentz</persName>
+                            </editor>
+                            <title>Historisches Journal</title>
+                            <imprint>
+                                <date>Januar 1799</date>
+                                <publisher>Freidrich Vieweg der Ältere</publisher>
+                            </imprint>
+                        </monogr>
+                        <ptr target="https://books.google.de/books?id=YU5BAAAAcAAJ"/>
+                    </biblStruct>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div xml:id="kaK30">
+                    <head>Ereignisübersicht</head>
+                    <p>
+                        Wie die Wellen des Meeres rollen die Eregnisse seit fünf Jahren über ein Staat, von dessem Schicksal 
+                        mittelbar das Schicksal Europas abhängt. Mit dieser Metapher beschreibt Gentz die Hauptbegebenheiten des 
+                        Jahres 1794, die in dieser Übersicht beschrieben werden, zusammen mit einer Herleitung von 1793 ausgehend.
+                    </p>
+                </div>
+                <div xml:id="kaK31">
+                    <head>Kollektiveuphorie</head>
+                    <p>
+                        Nieder mit der Aristokratie! Dieser Ruf schallte auch in den Jahren nach 1789 durch ganz Europa, in 
+                        welchen mit dem feudalen System abgerechnet werden sollte. Ein dumpfer, fast einstudiert wirkender Ruf, mit welchem 
+                        lapidar alles Alte beseitigt werden soll, da es ja für das Übel des Volkes verantwortlich sei ...
+                    </p>
+                </div>
+                <div xml:id="kaK32">
+                    <head>Die öffentliche Meinung in der Rückschau</head>
+                    <p>
+                        Eine der wahren Physionomie fremde, willkürliche, eigensinnig- und phantastisch-gebildete Meinung habe 
+                        sich über die französische Revolution gebildet. In diesem Abschnitt wird klar gestellt, woran dies liegt 
+                        und wie dies mit der übersteigerten Offenheit Neuem gegenüber und Wohlstand zusammenhängt. 
+                    </p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="kaK4">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title xml:lang="de">Die Wichtigkeit der Zubringer zur Bildung</title>
+                    <author>
+                        <persName>Andreas Gálffy</persName>
+                    </author>
+                </titleStmt>
+                <publicationStmt>
+                    <p>
+                        bis auf Weiteres ist bei Zitieren aus diesem Korpus die Masterarbeit anzugeben
+                    </p>
+                </publicationStmt>
+                <notesStmt>
+                    <note corresp="#kaK40">nach Interview in der Munizipialbibliothek (Haltestelle #10)</note>
+                    <note corresp="#kaK41">nach Interview auf dem Betriebshof neben der Munizipialbibliothek (Haltestelle #10)</note>
+                    <note corresp="#kaK42">nach Interview auf dem Betriebshof neben der Munizipialbibliothek (Haltestelle #10)</note>
+                    <note corresp="#kaK43">nach Interview auf dem Pariser Platz (Haltestelle #8)</note>
+                </notesStmt>
+                <sourceDesc>
+                    <bibl corresp="#kaK40">keine Literaturangabe, erschlossen aus KII</bibl>
+                    <bibl corresp="#kaK41">Facebook-Post vom 15. März, 13:30: https://www.facebook.com/andris.gx/posts/10209795072148044 , übersetzt von Phonthakorn Chaloeyarn</bibl>
+                    <bibl corresp="#kaK42">Facebook-Post vom 14. März, 8:45: https://www.facebook.com/andris.gx/posts/10209795107108918 , übersetzt von Phonthakorn Chaloeyarn</bibl>
+                    <bibl corresp="#kaK43">Facebook-Post vom 12. März, 6:30: https://www.facebook.com/andris.gx/posts/10209795352955064 , übersetzt von Phonthakorn Chaloeyarn</bibl>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div xml:id="kaK40">
+                    <head>Bildung und Personenbeförderung - zwei Grundbedürfnisse</head>
+                    <p>
+                        Die Karlstädter Verkehrsactiengesellschaft und die Karlstädter Munizipialbibliothek arbeiten eng 
+                        miteinander, um die Voraussetzung einer Analysestadt zu erfüllen. Dies bedeutet, dass allen Menschen ein 
+                        leichter Zugang zu Bildungsinhalten bereit gestellt werden muss. Dies äußert sich nicht nur in der 
+                        Bereitstellung der Möglichkeit, sondern auch dadurch, dass diese Möglichkeiten auch genutzt werden.
+                    </p>
+                </div>
+                <div xml:id="kaK41">
+                    <head>Ohne Infrastruktur geht nichts</head>
+                    <p>
+                        Will man Nahverkehr effizient, wirtschaftlich und zweckdienlich (nämlich dem der Personenbeförderung) 
+                        betreiben, so ist eine aktuelle, funktionstüchtige Infrastruktur unabdinglich. Am Bild eines 
+                        thailändischen Betriebshofes soll deutlich gemacht werden, wie mit gutem Beispiel vorangegangen und wie 
+                        dies in Karlstadt umgesetzt wird.
+                    </p>
+                </div>
+                <div xml:id="kaK42">
+                    <head>Qualifiziertes Personal</head>
+                    <p>
+                        Um Menschen gut zum Reiseziel zu führen, braucht es entsprechend ausgebildetes Personal. So überwacht der 
+                        Betriebsleiter die Einweisung neuer Schaffner, damit diese ihre Aufgabe gewissenhaft und zuverlässig 
+                        ausführen können. Auch in der Datenhaltung ist es wichtig, dass Personal qualifiziert eingewiesen wird, 
+                        um mit der Vielzahl an Standards umgehen und die Dienste den Nutzern entsprechend anbieten zu können. 
+                    </p>
+                </div>
+                <div xml:id="kaK43">
+                    <head>Orientierung im Reiseverkehr</head>
+                    <p>
+                        An Knotenpunkten ist viel Verkehr. Da verliert der Reisende schnell den Überblick. Der Fahrdienstleiter 
+                        stehen daher an den Knotenpunkten bereit, um den Fahrgästen weiterzuhelfen. Auch ist der Betriebsleiter 
+                        selbst vor Ort, um den Verkehr zu überwachen - ein Einsaztz, der auch bei der Bereitstellung von 
+                        Bildungsinhalten zu erwarten wäre.
+                    </p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="kaK5">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title xml:lang="de">Wie der Nationalismus zu einer Wirtschaftsquelle werden kann</title>
+                    <author>
+                        <persName>Andreas Gálffy</persName>
+                    </author>
+                </titleStmt>
+                <publicationStmt>
+                    <p>
+                        bis auf Weiteres ist bei Zitieren aus diesem Korpus die Masterarbeit anzugeben
+                    </p>
+                </publicationStmt>
+                <notesStmt>
+                    <note corresp="#kaK50">nach Befragung von John Adam Smith am Londoner Platz (Haltestelle #25), dies nach Empfehlung von Graves in Haltestelle #5</note>
+                    <note corresp="#kaK51">Archiv der Neuen Deutschen Monatsschrift (Haltestelle #9) nach Hinweis in der Napoleonischen Academie (Haltestelle #14)</note>
+                    <note corresp="#kaK52">nach Befragung von François d'Épernais am Londoner Platz (Haltestelle #25)</note>
+                    <note corresp="#kaK53">Untersuchung in der Napoleonischen Academie (Haltestelle #14)</note>
+                </notesStmt>
+                <sourceDesc>
+                    <bibl corresp="#kaK50">
+                        aus Zimmermann, Harro. 2012. Friedrich Gentz: Die Erfindung der Realpolitik. Paderborn, u.a.: Schöningh.
+                    </bibl>
+                    <biblStruct corresp="#kaK51">
+                        <analytic>
+                            <author>
+                                <persName>Friedrich von Gentz</persName>
+                            </author>
+                            <title>Historisch-politische Uebersicht der Haupt-Begebenheiten des Jahres 1794.</title>
+                        </analytic>
+                        <monogr>
+                            <editor>
+                                <persName>Friedrich von Gentz</persName>
+                            </editor>
+                            <title>Neue Deutsche Monatsschrift</title>
+                            <imprint>
+                                <date>Februar 1795</date>
+                                <publisher>Freidrich Vieweg der Ältere</publisher>
+                            </imprint>
+                        </monogr>
+                        <ptr target="http://ds.ub.uni-bielefeld.de/viewer/image/1938308_001/100/"/>
+                    </biblStruct>
+                    <biblStruct corresp="#kaK52">
+                        <monogr>
+                            <author>
+                                <persName>Francis d'Ivernois</persName>
+                            </author>
+                            <title>Tableau historique et politique des pertes que la Révolution et la guerre ont causées au peuple français dans sa population, son agriculture, ses colonies, ses manufactures et son commerce.</title>
+                            <imprint>
+                                <date>1799</date>
+                                <publisher>P. Elmsley et al.</publisher>
+                            </imprint>
+                        </monogr>
+                        <ptr target="https://books.google.de/books?id=16HGopL9P8cC"/>
+                    </biblStruct>
+                    <bibl corresp="#kaK53">
+                        Aus: Zeeden, Walter. 1982. Europa im Umbruch: von 1776 bis zum Wiener Kongreß. Stuttgart: Klett-Cotta.,
+                    </bibl>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div xml:id="kaK50">
+                    <head>Nationalreichtum</head>
+                    <p>
+                        Um mehr die Macht eines Landes verstehen zu können, ist es sinnvoll, sich bei Adam Smith die Grundlagen 
+                        desselben zu erarbeiten.
+                    </p>
+                </div>
+                <div xml:id="kaK51">
+                    <head>Das schier unerklärliche Glück der Revolutionsarmee</head>
+                    <p>
+                        Wenn nach zwei Jahren Krieg ein Land stetig Siege einfährt und dabei gegenüber ihren Kontrahenten im 
+                        Übergewicht liegt, so muss nach Gründen gesucht werden, die jenseits der gewöhnlichen Kriegsmotoren 
+                        liegen ...
+                    </p>
+                </div>
+                <div xml:id="kaK52">
+                    <head>Finanzielle Ressourcen Frankreichs im Zuge der Koalitionskriege</head>
+                    <p>
+                        Inwieweit wirken sich die Kriege auf die Ressourcen eines Landes aus, das ständig in Kampfhandlungen 
+                        verwickelt ist? In diesem Abschnitt soll Francis d'Ivernois' Aufsatz über die Verluste in Zusammenhang 
+                        mit den Wogen der revolutionären Triebe gesetzt werden.
+                    </p>
+                </div>
+                <div xml:id="kaK53">
+                    <head>Nationalismus und Gegennationalismus</head>
+                    <p>
+                        Frankreich stützt seine Eroberungen zu großen Teilen aus den Beutezügen, die die Eroberer in ihren 
+                        unterworfenen Ländern gemacht haben. Da dies nicht ohne Entbehrungen vonstatten ging, ist es zu nicht 
+                        geringer Abneigung unter den Besetzten gekommen, sodass der gleiche Gedanke - gegen die Besatzer 
+                        gerichtet - entstanden sein muss.
+                    </p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="kaK6">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title xml:lang="de">Wirtschaftliche Lage Frankreichs und Großbritanniens zu Zeit der Jahrhundertwende</title>
+                    <author>
+                        <persName>Andreas Gálffy</persName>
+                    </author>
+                </titleStmt>
+                <publicationStmt>
+                    <p>
+                        bis auf Weiteres ist bei Zitieren aus diesem Korpus die Masterarbeit anzugeben
+                    </p>
+                </publicationStmt>
+                <notesStmt>
+                    <note>nach Befragung von François d'Épernais am Londoner Platz (Haltestelle #25)</note>
+                    <note>nach Befragung von François d'Épernais am Londoner Platz (Haltestelle #25)</note>
+                </notesStmt>
+                <sourceDesc>
+                    <biblStruct corresp="#kaK60">
+                        <monogr>
+                            <author>
+                                <persName>Francis d'Ivernois</persName>
+                            </author>
+                            <title>Histoire de l'administration des finances de la république française, pendant l'année 1796.</title>
+                            <imprint>
+                                <date>1797</date>
+                                <publisher>P. F. Fauche</publisher>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                    <biblStruct corresp="#kaK61">
+                        <monogr>
+                            <author>
+                                <persName>Francis d'Ivernois</persName>
+                            </author>
+                            <title>De l'administration des finances de l'Angleterre</title>
+                            <imprint>
+                                <date>1796</date>
+                                <publisher>W. et C. Spilsbury</publisher>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <div xml:id="kaK60">
+                    <head>Finanzadministration Frankreichs</head>
+                    <p>
+                        In diesem Abschnitt wird die finanzielle Lage Frankreichs dargestellt werden, dass die Masse von Anleihen 
+                        nicht ins Unendliche steigerbar ist und die Unzufriedenheit im eigenen Lande stark angestiegen ist - und 
+                        dennoch stets Mitteln zur Rekrutierung von Armeen vorhanden ist.
+                    </p>
+                </div>
+                <div xml:id="kaK61">
+                    <head>Finanzverwaltung Großbritanniens</head>
+                    <p>
+                        Um ein Gegenpol zu Frankreich herzustellen, wird die Verwaltung Englands am Beispiel von dessen Finanzen 
+                        vorgestellt und zugleich der Verwaltung Frankreichs gegenüber gestellt werden.
+                    </p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="kaK12">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Die große Politik der preußischen Regierung</title>
+                    <author>
+                        <persName>Andreas Gálffy</persName>
+                    </author>
+                </titleStmt>
+                <publicationStmt></publicationStmt>
+                <notesStmt>
+                    <note>ist nach Lieferung von Papieren in Haltestellen ##19-21 zu erhalten</note>
+                </notesStmt>
+                <sourceDesc></sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text></text>
+    </TEI>
+    <TEI xml:id="kaK13">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title></title>
+                </titleStmt>
+                <publicationStmt></publicationStmt>
+                <notesStmt>
+                    <note>zu befragen sein werden Menschen in den Stationen ##10, 22, 23, 25 und 28 (Zusammensetzung in #28)</note>
+                </notesStmt>
+                <sourceDesc></sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text></text>
+    </TEI>
+</teiCorpus>

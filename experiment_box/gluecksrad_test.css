@@ -1,0 +1,20 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div {
+	font-family: "Futura T OT";
+}
+
+h1 {
+	font-family: "Futura T OT";
+	font-size: 80px;
+}
+
+li {
+	font-family: "Futura T OT";
+	font-size: 50px;
+}

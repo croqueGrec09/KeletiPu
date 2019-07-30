@@ -1,0 +1,6 @@
+Dies sind die Quelldateien zum Spiel "Keleti pályaudvar". Stand: 29. März 2016.
+
+Um das Spiel zum Laufen zu bringen, muss ein Webserver XAMPP installiert und der Inhalt dieser CD in das Verzeichnis htdocs (am besten in das Unterverzeichnis Kelei_pu) kopiert
+werden. Das Spiel ist sofort lauffähig. Dazu muss in einem Browser der Pfad http://localhost/Keleti_pu/analysyscities/ZVWAnalysespiel.html aufgerufen werden.
+
+Alternativ kann die stets aktualisierte Version unter http://www.studiodesessais.org/Keleti_pu/analysyscities/ZVWAnalysespiel.html abgerufen werden.

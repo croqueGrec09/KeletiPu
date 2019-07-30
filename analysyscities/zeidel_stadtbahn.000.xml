@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<happening idPrefix="zd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="happening.xsd">
+    <!-- Ereignisse ohne Steuerung -->
+    <stream id="intro" name="Linie 21">
+        <event id="i01">
+            <eventBody>
+                <image lang="all">zeidel/events/i01.jpg</image>
+                <text lang="de">
+                    Willkommen auf Zeidel, dem Planeten des ewigen Winters.!NL
+                    Es ist natürlich nicht immer überall kalt. Aber dort, wo die Kälte 
+                    über das Land zieht, trotzt die Wärme der Kleidung und der Herzen 
+                    die eisigen Temperaturen.!NL
+                    Auf Zeidel leben fast-menschliche Wesen, die die Erde verlassen 
+                    haben, weil sie genug Unrecht und Heuchelei gesehen haben. Dies 
+                    geschah vor 3015 Jahren.
+                </text>
+            </eventBody>
+            <nextEvent pointRef="i02"/>
+        </event>
+        <event id="i02">
+            <eventBody>
+                <image lang="all">zeidel/events/i02.jpg</image>
+                <text lang="de">
+                    Der Planet teilt sich in neun Regionen auf:!NL
+                    Nordwest, Nord, Nordost!NL
+                    West, Mitte-zentral, Ost!NL
+                    Südwest, Süd, und Südost!NL
+                    Die Polarregionen im Süden und Norden sind am ehesten von der Kälte betroffen, 
+                    aber aufgrund der Entfernung zur Sonne gehen die Temperaturen im Schnitt 
+                    nirgendwo über 15 °C. 
+                </text>
+            </eventBody>
+            <nextEvent pointRef="i03"/>
+        </event>
+        <event id="i03">
+            <eventBody>
+                <image lang="all">zeidel/events/i03.jpg</image>
+                <text lang="de">
+                    Du bist nicht der Einzige, der dieses Portal und auf diese Weise 
+                    Zeidel gefunden hat. Eine Gruppe von Chorsängern und Orchesterspielern von 
+                    der Erde, eingeladen, eine Tournee durch Zeidel zu machen, wurde auf ihrem 
+                    Weg nach Zeidel von bösartigen Menschen entführt. Die Zwecke sind noch 
+                    unklar und es ist an dir, sie zu befreien.
+                </text>
+            </eventBody>
+            <nextEvent pointRef="i04"/>
+            <otherHappenings>
+                <addQuest targetQuest="qzd1"/>
+            </otherHappenings>
+        </event>
+        <event id="i04">
+            <eventBody>
+                <image lang="all">zeidel/events/i04.jpg</image>
+                <text lang="de">
+                    Dein Weg führt dich nach Zeidel-Stadt, der Hauptstadt von Zeidel-Land. Dies ist 
+                    ein Schmelztiegel von zehn Millionen Einwohnern, mit den Vororten bis zu 60 Millionen, 
+                    entstanden aus einem der ersten Dörfer und groß geworden durch den Silber- und 
+                    Kupferbergbau, der in den umliegenden Bergen heute noch betrieben wird. Aber Zeidel 
+                    ist auch puliserender kultureller Ort, mit vielen Theatern, Konzerthallen und 
+                    Stadtviertel, die durch verschiedene Nationen bevölkert werden, die dort ihre Kultur 
+                    erhalten haben. Auch die Bildung wird in Zeidel groß geschrieben - zehn Universitäten 
+                    und viel mehr Hochschuleinrichtungen, Schulen und Fortbildungseinrichtungen weisen den 
+                    Weg für bildungshungrige Leute.
+                </text>
+            </eventBody>
+            <nextEvent pointRef="i05"/>
+        </event>
+        <event id="i05">
+            <eventBody>
+                <image lang="all">zeidel/events/i05.jpg</image>
+                <text lang="de">
+                    Der nächste Ort, an dem du ankommst, ist der Hauptbahnhof. Von dort aus bahne dir den 
+                    Weg weiter in das Weißseeviertel. Dort wirst du einem Studenten begegnen, der eine 
+                    eigenartige Eingebung hat und dich weiterweisen wird.
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_platform40_41noTrain</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+    <stream id="whiteSeaQuarter" name="Im Weißseeviertel">
+        <event id="ws_01">
+            <eventBody>
+                <image lang="all">zeidel/telegraphe_groupe_b.jpg</image>
+                <text lang="de">
+                    Die Freunde antworten darauf: "Nein, ich kann nicht. Ich habe keine Zeit für solche Geschichten."!NL
+                    Ein anderer will aber mitkommen: "Ich bin mir nicht mehr so sicher!"
+                    Und ein Mädchen sagt: "Ja, wir kommen mit!"
+                </text>
+            </eventBody>
+            <nextEvent pointRef="ws_02"/>
+        </event>
+        <event id="ws_02">
+            <eventBody>
+                <image lang="all">zeidel/events/bus504.jpg</image>
+                <text lang="de">
+                    Pascal nimmt euch daraufhin zu einer Bushaltestelle. "Gut, dann müssen wir mit der Buslinie 504 zur 
+                    Haltestelle Les Écoles fahren. Stelle dich schonmal darauf ein, dass du viel mit Bus und Bahn fahren musst, 
+                    um zu dein Ziel zu gelangen! Denn es gibt hier Städte, die sind eigenartig aufgebaut. Dort haben 
+                    die Stadtteile keine normalen Namen, sondern sind einem Thema gewidmet. Vielleicht kennst du Ray 
+                    Bradburys Fahrenheit 451? Das ist hier sowas Ähnliches, nur sind nicht die Bewohner die Bücher, sondern 
+                    die Stadtteile sind Teile des Kurs- oder Unterrichtsthemas, denen sie sich gewidmet haben. Die sind allemal 
+                    eine Reise wert."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="ws_03"/>
+        </event>
+        <event id="ws_03">
+            <eventBody>
+                <image lang="all">zeidel/events/sst4_salle_de_sejours.jpg</image>
+                <text lang="de">
+                    In der Wohnung von Pascal angekommen, erzählt er dir lange von deiner Mission:
+                    "Die Terroristen möchten die Bildung auf Zeidel kappen und dafür sorgen, dass die Bevölkerung 
+                    von der Bildung abgeschnitten und manipulierbar wird. Vor 735 Jahren hat sich nämlich die 
+                    Bevölkerung an den Rand des Verderbens gebracht, indem eine Schicht die breite Bevölkerung  
+                    dumm und manipulierbar gehalten hat und es stets dem Einfluss der Konsumindustrie aussetzte. 
+                    Diesen Einfluss möchten nun eine Gruppe von Terroristen wieder einführen und hierzu die 
+                    Regierungen der Verwaltungskreise unter Druck setzen. Hierfür wollten sie und haben sie offensichtlich 
+                    deine Gruppe von Leuten entführt ... von denen man dir in Gib niemals auf erzählt hat."!NL
+                    Du wunderst dich, woher er von der Seele weiß.!NL
+                    "Du wirst die Analysestädte bereisen müssen. Für welche Prüfungen musst du wiederholen? 
+                    Gib mir mal deine Fahrkarte."!NL
+                    Mit fachmännischem Blick mustert er deine Fahrkarte, gibt sie dir danach wieder und geht zu einem 
+                    Schrank, von wo er Karten herauskramt. "Verdammt!", schlägt sich Pascal danach den Kopf, "die sind 
+                    nicht aktuell! Verflixt!" Die Freunde beruhigen ihn und du schaust ihn verwundert an. Du verstehst 
+                    mittlerweile gar nichts mehr. "Einerlei. Du musst in die Analysestädte. Dort wird man dir weiterhelfen können."
+                </text>
+            </eventBody>
+            <nextEvent pointRef="ws_04"/>
+            <otherHappenings>
+                <updateQuest targetQuest="qzd1" chapter="2"/>
+            </otherHappenings>
+        </event>
+        <event id="ws_04">
+            <eventBody>
+                <image lang="all">zeidel/events/les_ecoles.jpg</image>
+                <text lang="de">
+                    Völlig verstört verlässt du das Haus, nachdem du von Pascal mit ermunternden Worten entlassen worden 
+                    bist. Die Freunde sind danach ihrer Wege gegangen. Sie merkten, dass du etwas alleine sein möchtest. 
+                    Na toll. Du wolltest eigentlich mit deinem Freund einen Abstecher durch das Kölner Stadtbahnnetz 
+                    machen, müsstest schon längst zu Hause sein und für deine Prüfungen lernen - und bist kurzerhand zum 
+                    Weltretter à la Adventure-Game ernannt worden. Nun denn. Da dir offensichtlich in den Analysestädten weitergeholfen 
+                    werden wird, bleibt dir nichts anderes übrig, als dir einen Weg dorthin zu suchen. Wie gerufen kommt 
+                    ein Bus der Linie 501 zum Hauptbahnhof. Du besteigst ihn und setzt dich auf den bequemen Stuhl und 
+                    stellst fest, dass das Reisen hier deutlich angehemer ist, als auf der Erde ...
+                </text>
+            </eventBody>
+            <nextEvent pointRef="ws_05"/>
+        </event>
+        <event id="ws_05">
+            <eventBody>
+                <image lang="all">zeidel/events/bus504.jpg</image>
+                <text lang="de">
+                    Gerade als du dich bequem gemacht hast, merkst du, dass dich ein heruntergekommener Mann mit Latzhose 
+                    sehr aufmerksam studiert. Er kommt nach einer Zeit auf dich zu und wird noch mysteriöser, als er so 
+                    schon war: "Sie kennen mich nicht, aber ich kenne Sie. Sie kommen aus Gib niemals auf und möchten die 
+                    Gruppe retten, die vor Ihnen das Portal durchquert hat. Sie sind derzeit auf dem Weg in die Analysestädte 
+                    und wissen weder ein- noch aus. Machen Sie sich da nichts draus. Ich bin auf Ihrer Seite und helfe Ihnen - 
+                    nehmen Sie diesen Briefumschlag und stellen Sie keine Fragen. Wir sehen uns später noch."!NLNach diesem 
+                    kurzen Vortrag steigt der Mann aus und verschwindet. Allerdings liegt ein Briefumschlag auf deinem Schoß, 
+                    mit 100 zeidel'schen Euro (Z) und einem Gutschein für eine Fahrkarte.!NL
+                    Kurze Zeit danach kommst du am Hauptbahnhof an.
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_busstation_noTrain</nextPlace>
+            </exitStream>
+            <otherHappenings>
+                <addItem itemID="ZVWcoupon" valid="true"/>
+                <addMoney amount="100"/>
+            </otherHappenings>
+        </event>
+    </stream>
+    <!-- Reisen -->
+    <stream id="m7" name="Metrolinie M7">
+        <event id="m701">
+            <eventBody>
+                <image lang="de">zeidel/events/m701.jpg</image>
+                <text lang="de">
+                    Du kommst nun zurück zum Hauptbahnhof, dem zentralen Knotenpunkt der Stadt.
+                    Von hier erreichst du eine große Zahl an Zielen in Nah und Fern.
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>1</nextStation>
+                <nextPlace>hbf_mitte_platform38_39e</nextPlace>
+            </exitStream>
+        </event>
+        <event id="m703">
+            <eventBody>
+                <image lang="all">zeidel/events/m703.jpg</image>
+                <text lang="de">
+                    Das Weißseeviertel, wohin dich diese Metro jetzt bringt, ist das experimentelle Viertel 
+                    Zeidels. Für jeden, der experimentelle Aufführungen sehen will oder einfach nur "feiern", 
+                    der gehe abends in dieses Viertel. Bereits an der nächsten Haltestelle, am Platz der Feste - 
+                    oder, weil hier hauptsächlich französischsprachige Einwohner wohnen - "Place des fêtes", beginnen 
+                    die Straßen und Gassen von Cafés und Bistrots sowie kleineren Theatern. 
+                </text>
+            </eventBody>
+            <nextEvent pointRef="m704"/>
+            <previousEvent pointRef="m701"/>
+        </event>
+        <event id="m704">
+            <eventBody>
+                <image lang="all">zeidel/events/m704.jpg</image>
+                <text lang="de">
+                    Vom Platz der Feste beginnt die Telegraphenstraße, die "Rue de télégraphe". Sie ist Zentrum 
+                    des Vergnügungsviertels. Hier tummeln sich Menschen, hauptsächlich Studierende, die Begleitung 
+                    suchen. Wenn du dich also mit jemandem kuscheln möchtest, findest du hier in jedem Fall 
+                    Begleitung. Allerdings ist dir zur Zeit nicht nach Kuscheln.!NL!NL
+                    Als der Wagen in die kahle Station einfährt, erlebst du ein mulmiges Gefühl, als ob dich 
+                    die Seele aus "Gib niemals auf" eingeholt hätte und dich beobachten würde ... du bist nervös und 
+                    gespannt, was hier auf dich zukommt.
+                </text>
+            </eventBody>
+            <exitStream>
+                <nextCity>zeidel</nextCity>
+                <nextStation>704</nextStation>
+                <nextPlace>telegraphe_platform1_2noTrain</nextPlace>
+            </exitStream>
+        </event>
+    </stream>
+</happening>

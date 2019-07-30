@@ -1,0 +1,56 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Übersetzungshelfer</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="translator.css"/>
+	</head>
+	<body>
+		<ul class="nav nav-tabs" id="langChooser" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="fr-tab" data-toggle="tab" href="#fr" role="tab" aria-controls="fr" aria-selected="true">Französisch</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="en-tab" data-toggle="tab" href="#en" role="tab" aria-controls="en" aria-selected="false">Englisch</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="frDone-tab" data-toggle="tab" href="#frDone" role="tab" aria-controls="frDone" aria-selected="true">Französisch - bereits übersetzt</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="enDone-tab" data-toggle="tab" href="#enDone" role="tab" aria-controls="enDone" aria-selected="false">Englisch - bereits übersetzt</a>
+			</li>
+		</ul>
+		<div id="undoneTranslationsWrapper" class="container-fluid">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+					<h1>Übersetzungstool für Power of Data</h1>
+					<h2>Für die Fremden: <a id="impressum" href="/imprint.html">Datenschutzerklärung</a></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div id="undoneTranslations" class="tab-content col-xs-6 col-sm-6 col-md-12 col-lg-12">
+					<div class="tab-pane active row" id="fr" role="tabpanel" aria-labelledby="fr-tab">
+						
+					</div>
+					<div class="tab-pane row" id="en" role="tabpanel" aria-labelledby="en-tab">
+						
+					</div>
+					<div class="tab-pane row" id="frDone" role="tabpanel" aria-labelledby="frDone-tab">
+						
+					</div>
+					<div class="tab-pane row" id="enDone" role="tabpanel" aria-labelledby="enDone-tab">
+						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><button class="btn btn-primary" id="reload">Mehr Übersetzungen laden</button></div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script src="translator.js"></script>
+	</body>
+</html>

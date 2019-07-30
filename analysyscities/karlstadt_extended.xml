@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="town.xsd">
+    <station number="0" additionalMoney="900">
+        <name>Karlstadt Hauptbahnhof</name>
+        <discoveryContent>
+            <place id="Dh151_arrival">
+                <text>Du bist soeben aus dem Zug ausgestiegen, als du sofort ein reges Streitgespräch vernimmst: !NL
+                Jemand: "Verdammt sei diese semantische Technologie, sie führt uns alle in den Wahnsinn! Wir blicken jetzt schon nicht mehr durch unsere Dokumente durch und jetzt das! Ich sage es euch: bloß keine zusätzlichen Attribute! Die TEI-Vorgabe reicht uns!"!NL
+                Da entgegnet jemand anderes: "Ach hör auf, was die sich in Zeidel da wieder zusammengereimt haben ... "!NL
+                Ein Dritter versucht zu beschwichtigen: "Mann, die haben das doch noch gar nicht festgelegt! Und wenn ihr mich fragt, macht das mit den Attributen durchaus Sinn, da das Schema unter Umständen gar nicht ausreicht."
+                Der Erste antwortet schroff: "Da sollten wir lieber gleich unser eigenes Ding aufziehen und die Briefe nach eigenem Schema kodieren." Lebhafte Zustimmung. "Die in Zeidel haben keine Ahnung!"
+                Ein Vierter, der offensichtlich angesprochen fühlt, schreit von der Gegenseite: "Das sehe ich aber anders! Nicht umsonst hat sich das Konsortium durchsetzen können! Und nun beruhigen Sie sich; Sie müssen ja nicht auf RDF-Attribute zurückgreifen!"
+                !NL !NL
+                Da dich aber das nicht recht interessiert, beschließt du, dich in der Stadt einwenig umzusehen.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_1_2_Dh_151.JPG</image>
+                <action name="toFloor" itemRequired="none" onlyOnce="false">
+                    <x1>345</x1>
+                    <y1>500</y1>
+                    <x2>500</x2>
+                    <y2>576</y2>
+                    <execute>writeStation(0,'karlstadt','floor12west')</execute>
+                    <hover>directionChange('Zum Flur')</hover>
+                </action>
+            </place>
+            <place id="floor12west">
+                <text>Hier kannst du zu den übrigen Gleisen wechseln. Von Gleisen 7-8 fahren S-Bahnen ab.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_1_2_west.JPG</image>
+                <action name="floor12ToPlatform78" itemRequired="none" onlyOnce="false">
+                    <x1>341</x1>
+                    <y1>407</y1>
+                    <x2>394</x2>
+                    <y2>444</y2>
+                    <execute>writeStation(0,'karlstadt','platform78S1')</execute>
+                    <hover>directionChange('Zu den Gleisen 7-8')</hover>
+                </action>
+            </place>
+            <place id="platform78S1">
+                <text>Es steht zufällig eine S3 nach Dokumentenübergabe bereit (was auch immer das bedeutet und der Fahrer scheint auch nicht richtig fleißig zu sein, denn auf dem Rollband steht ein falsches Zugiel.</text>
+                <sign>karlstadt/Karlstadt_Hbf.JPG</sign>
+                <image>karlstadt/karlstadt_gleise_7_8_S_1.JPG</image>
+                <action name="mountS1" itemRequired="none" onlyOnce="false">
+                    <x1>223</x1>
+                    <y1>307</y1>
+                    <x2>248</x2>
+                    <y2>398</y2>
+                    <execute>writeStation(301,'karlstadt','platform12S3')</execute>
+                    <hover>directionChange('Die S 3 nach Dokumentenübergabe besteigen')</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="301" additionalMoney="600">
+        <name>Dokumentenübergabe</name>
+        <discoveryContent>
+            <place id="platform12S3">
+                <text>Du bist jetzt an der Haltestelle Dokumentenübergabe, wo du viel Interessantes über Gentz' Briefverkehr erfahren kannst. Du hast zudem ein Forschungsfeld betreten. !NL
+                Suche dir hier den Weg zu deinem Brief ... der Fahrkartenautomat wird dir weiterhelfen können.</text>
+                <sign>karlstadt/Dokumentenuebergabe.JPG</sign>
+                <image></image>
+                <action name="a" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>0</x2>
+                    <y2>0</y2>
+                    <execute></execute>
+                    <hover></hover>
+                </action>
+            </place>
+			
+			<place id="Gentz1802021201">
+                <text>Gentz reist nach London, er hat Geldprobleme. Er ist sich zwar sicher, in London welches aufzutreiben, !NL
+				bittet Armfelt allerdings um finanzielle Hilfe (einen „Gutschein“ im Wert von 40 ₤). Armfelt tut dies auch. !NL
+				In einem darauffolgenden Brief bedankt sich Gentz für den Vorschuss von Armfelt. Er weist jedoch auch darauf hin, dass er von Armfelt noch einen weiteren Brief bekommen soll. !NL
+				„Mais veuillez-bien Vous souvenir aussi, que Vous m'avez promis une lettre pour Londres, et que tout ce qui me vient de Vous, m'est trop précieux pour que je puisse l'abandonner“. !NL
+				Gentz drückt Armfelt seine Verbundenheit aus; gleichzeitig stellt er klar, dass er die Dokumente von Armfelt dringend braucht. !NL
+				Er ist auf Armfelts Hilfe angewiesen, stellt ihn einer Art 'Schutzengel' gleich. !NL
+				„Puissiez-Vous Vous trouver en état de devenir un de ces anges tutélaires qui sauvent quelquefois la société lorsqu'elle est prête à tomber dans les derniers abymes“. !NL
+				Gentz legt sogar noch einen drauf: „et puissé-je être un instrument entre Vos mains“, was soviel heißt wie: Möge ich ein Instrument in Ihren Händen sein.</text>
+                <sign>karlstadt/Dokumentenuebergabe.JPG</sign> 
+                <image></image>
+                <action name="a" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>0</x2>
+                    <y2>0</y2>
+                    <execute></execute>
+                    <hover></hover>
+                </action>
+            </place>
+			
+			<place id="Gentz18060825">
+                <text> Diesen Brief schreibt Gentz nach einer längeren Pause, in der er keine Briefe von Armfelt bekommen hat. !NL
+				„Voici encore, Mon Général, une lettre dont on me charge pour Vous, malgré les inquiétudes !NL
+qui nous donne Votre silence prolongé.“
+				Er macht sich zwar Sorgen, dass etwas passiert sein könnte, „crainte que quelque revers n'ait dérangé notre correspondance“ !NL
+				aber eine Freundin ist da und spendet Trost. Ihre Anwesenheit ist „un baume pour mon ame“, also Balsam für seine Seele! !NL
+				</text>
+                <sign>karlstadt/Dokumentenuebergabe.JPG</sign> 
+                <image></image>
+                <action name="a" itemRequired="none" onlyOnce="false">
+                    <x1>0</x1>
+                    <y1>0</y1>
+                    <x2>0</x2>
+                    <y2>0</y2>
+                    <execute></execute>
+                    <hover></hover>
+                </action>
+            </place>
+			
+        </discoveryContent>
+    </station>
+</town>

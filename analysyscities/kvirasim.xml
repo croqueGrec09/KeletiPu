@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- detail map (analysis city) VII
+    This is the submission for the bachelor thesis - a line model to present the gamified 
+    way of learning and how subjects of learning may be presented in a metaphorical way.
+    Here is the city definition for Kvirasim, the city about phonetics and phonology.
+    
+    Kvirasim is built upon the courses "Introduction in phonetics & phonology" (lectures 
+    and exercises), "Introduction in acustics", "Base course transcription" and "Base 
+    course prosodic analysis" and avises to prepare for the exams given in the courses. 
+    It is currently in model presentation state - the line 11 shows how teaching is done 
+    in this city once it is fully implemented.
+    
+    author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+    current version: 0.701 form July 7th, 2018
+-->
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="town.xsd" idPrefix="kv">
+    <!-- station 1: Kvirasim central station -->
+    <station number="kv1" additionalMoney="1000" mapPointX="-1" mapPointY="-1">
+        <name>Kvirasim Hauptbahnhof</name>
+        <discoveryContent>
+            <place id="hbf_platform6_7a">
+                <content>
+                    <de>
+                        Du stehst derzeit am Kvirasimer Hauptbahnhof auf Gleis 6 / 7. Es steht ein unbesteigbarer Regionalzug am Bahnstieg.!NL
+                        Da du es eilig hast, rennst du zielstrebig zur Stadtbahn.
+                    </de>
+                    <fr>
+                       	Tu es pour l'instant à quai voies 6/7 de la gare centrale de Kvirasim. Un train régional est à quai qui ne prend pas de voyageurs. Comme tu te dépêches, tu cours dirèctement vers le tramway.
+                    </fr>
+                <en>You are currently at Kvirasim central station on platforms 6 / 7. There is a regional train at platform which cannot be boarded. As you are on a rush, you run purposefelly to the light railway.</en></content>
+                <imagePath lang="all">kvirasim/hbf_platform6_7a.jpg</imagePath>
+                <action name="toUnderground" coords="46.75,54.166 46.75,57.0 52.875,57.0 52.875,54.166">
+                    <execute>
+                        <movement nextStation="1" nextCity="kvirasim" nextPlace="hbf_undergroundFloor"/>
+                    </execute>
+                    <hover>
+                        <de>Zur Stadtbahn</de>
+                        <fr>Au tramway</fr>
+                    <en>To light railway</en></hover>
+                </action>
+            </place>
+            <place id="hbf_undergroundFloor">
+                <content>
+                    <de>
+	                    Du erfährst, dass kurzfristig der Verkauf von Fahrkarten eingestellt wurde und nur in dieser Version ein Gratistransport auf 
+                        der Linie 11 möglich ist. Der Betrieb auf den anderen Stadtbahnlinien wird zur nächsten Version aufgenommen.
+                    </de>
+                    <fr>
+	                   Tu apprends que la vente des billets a été arrêté à court terme et dans cette version, il n'est possible qu'un transport gratuit sur la ligne 11. Les autres lignes de tramway entreront en service lors la prochaine version.
+                    </fr>
+                <en>You find out that the sale of tickets has been cancelled at short notice and only in this version, a gratis transport on the line 11 is possible. The service on the other light railway lines will be taken up in the next version.</en></content>
+                <imagePath lang="all">kvirasim/hbf_undergroundFloor.jpg</imagePath>
+                <action name="toPhoneticsQuay" coords="23.375,53.0 44.75,53.0 45.0,49.0 44.375,44.166 42.375,39.33 39.25,37.83 33.875,37.83 28.0,40.66 25.25,45.16">
+                    <execute>
+                        <movement nextStation="1" nextCity="kvirasim" nextPlace="hbf_underground_platform1a"/>
+                    </execute>
+                    <hover>
+                        <de>Zum Bahnstieg der Phonetik</de>
+                        <fr>Au quai de la phonétique</fr>
+                    <en>To the platform of phonetics</en></hover>
+                </action>
+                <!--<action name="toStation" coords="">
+                    <execute></execute>
+                    <hover lang="de">Zu den Zügen</hover>
+                </action>-->
+            </place>
+            <place id="hbf_underground_platform1a">
+                <content>
+                    <de>In dieser Demo-Version steht hier -wie jetzt auch- die Linie 11 bereit, um einmal die Sehenswürdigkeiten der Stadt Kvirasim zu zeigen. Ab der nächsten Version wirst du an den anderen Haltestellen auch aussteigen können.</de>
+                    <fr>Dans cette version de présentation, un train de la ligne 11 est à quai pour -comme maintenant aussi- montrer une fois les curieusités de la ville de Kvirasim. Tu pourras déscendre aux autres stations dans la prochaine version.</fr>
+                <en>In this demo version is here -like now too- the line 11 ready to show once the sights of Kvirasim city. From the next version onwards, you will be able to get out at the other stations as well.</en></content>
+                <imagePath lang="all">kvirasim/hbf_underground_platform1a.jpg</imagePath>
+                <action name="mountU11" coords="80.75,46.95833 80.75,75.5833 82.65625,78.75 82.65625,45.875">
+                    <execute>
+                        <mountLine happeningBase="kvirasim_kvb" stream="u11" startID="u1101" forward="true" usedTicket="ZVWticket"/>
+                    </execute>
+                    <hover>
+                        <de>Mit der Linie 11 einmal nach Artikulation und zurück fahren</de>
+                        <fr>Aller avec la ligne 11 un fois aller-retour à Articulation</fr>
+                    <en>Ride with the line 11 once back and forth to articulation</en></hover>
+                </action>
+                <action name="toFloor" coords="19.03125,100.0 98.34375,100.0 88.781,88.25 32.8125,87.125">
+                    <execute>
+                        <movement nextStation="1" nextCity="kvirasim" nextPlace="hbf_undergroundFloor"/>
+                    </execute>
+                    <hover>
+                        <de>Zurück zum Flur</de>
+                        <fr>Retour au couloir</fr>
+                    <en>Back to floor</en></hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+</town>

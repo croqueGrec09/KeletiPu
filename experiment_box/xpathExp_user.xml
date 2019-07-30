@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../analysyscities/userData.xsd">
+    <user name="Victoria Bartetzko">
+        <love>
+            <loveFirstName>Test</loveFirstName>
+            <loveLastName>Person</loveLastName>
+            <sex>m</sex>
+        </love>
+        <currentMoney>575</currentMoney>
+        <currentPlace>
+            <town>zeidel</town>
+            <number>0</number>
+            <place>mainEntrance</place>
+        </currentPlace>
+        <inventory>
+        <item id="bag">
+                <name>Rucksack</name>
+                <description>Dein überdimensionaler Rucksack zum Transportieren von
+                    nötigen Dingen wie Proviant, Pässe, Geld - und unnötigen, wie
+                    Kosmetika, Smartphones oder schlechten Klausuren.</description>
+            </item>
+            <item id="jacket">
+                <name>Lederjacke</name>
+                <description>Victorias Lederjacke jetzt als PHP-Objekt</description>
+            </item>
+		<item id="gloves"><name>Lederhandschuhe</name><description>Butterweiche schwarze Lederhandschuhe, unbedingt nötig für warme Hände!</description></item>
+        <item id="lpgprospect"><name>Prospekt des LPG</name><description>Dieses Werbeprospekt zeigt die plomoische Stadt Blaubach mit seinem sagenumwobenen Portal nach Goreysic. Leider kannst du jetzt noch nicht daran denken, Zeidel zu verlassen.</description></item>
+        </inventory>
+        <memory>
+            <actionsPassed>
+            </actionsPassed>
+        </memory>
+    </user>
+</userData>

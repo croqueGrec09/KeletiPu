@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This is the repository file for the quests. It is divided into mandatory and optional quest sections. The identifiers are built up as follows:
+'q'+townPrefix+additional prefix+running number starting from zero.
+
+See the associated XSD schema to see the general structure of the quest repository.
+
+author: András Gálffy, andrisgalffy@gmail.com, matricula number #5584124
+current version: 0.701 from July 7th, 2018
+-->
+<questData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="questData.xsd">
+    <mandatory>
+        <quest id="qzd0">
+            <name>
+                <de>Eine Fahrkarte kaufen</de>
+                <hu>Jegyet venni</hu>
+                <fr>Acheter un billet</fr>
+                <en>Purchase a ticket</en>
+            </name>
+            <chapter n="1">
+                <description>
+                    <de>
+                        Kaum beginnt das Spiel, schon gibt es den ersten Quest: gehe in die Mitte 
+                        des Bahnsteiges und ziehe dir dort am Fahrkartenautomaten eine Fahrkarte.
+                    </de>
+                    <hu>
+                        Alig kezdődött el a játék, máris van feladatod: menj a peron közepére és 
+                        vegyél a jegyautomatából egy jegyet.
+                    </hu>
+                    <fr>
+                        Le jeu a juste commencé et tu as tout de suite une tâche : va au milieu 
+                        du quai et achète-toi un billet de la machine à vendre des billets.
+                    </fr>
+                    <en>
+                        The game has just started and you have a task at once: go to the middle 
+                        of the platform and buy a ticket from the ticket machine.
+                    </en>
+                </description>
+            </chapter>
+        </quest>
+        <quest id="qzd1">
+            <name>
+                <de>Befreiung des chœur PSL</de>
+                <hu>A chœur PSL kiszabadítása</hu>
+                <fr>La libération du chœur PSL</fr>
+                <en>The liberation of chœur PSL</en>
+            </name>
+            <chapter n="1">
+                <description>
+                    <de>
+                        In Gib niemals auf hast du soeben erfahren, dass eine Gruppe von Musikern entführt wurde und es dir 
+                        zuteil wird, diese zu befreien. Weitere Informationen sollst du angeblich an der Haltestelle Télégraphe 
+                        erhalten ...!NL
+                        Wenn du eine Karte ansiehst, wird dir der zu erreichende Punkt gelb auf der Karte markiert.
+                    </de>
+                    <hu>
+                        Ne add soha fel megállóhelyen megtudtad, hogy egy csoport zenészt elraboltak és hogy rád esett a feladat, 
+                        hogy őket kiszabadítsd. A Télégraphe állomásnál, úgy mondják, tovább segíthetnek ...!NL
+                        Ha megnézel egy térképet, akkor a pont, ahová küldenek, sárgán meg van jelölve.
+                    </hu>
+                    <fr>
+                        À Ne renonce jamais, tu as appris qu'un groupe de musiciens a été enlevé et que c'est à toi de les libérer. 
+                        On t'a dit que tu reçoives plus de renseignements à la station Télégraphe... !NL
+                        Si tu regardes une carte, le point auquel tu as été envoyé est marqué jaune.
+                    </fr>
+                    <en>
+                        At Never give up, you just learned that a group of musicians just got abducted and that it's up to you to 
+                        free them. You've been told that you'll get further information at Télégraphe station ... maybe.!NL
+                        If you look at a map, the point you've been sent to is marked with a yellow point.
+                    </en>
+                </description>
+                <place>zd704</place>
+                <reward>
+                    <item>notebook</item>
+                </reward>
+            </chapter>
+            <chapter n="2">
+                <description>
+                    <de>
+                        Im Weißseeviertel hast du nun die Aufgabe bekommen, die dich durch das ganze Spiel hindurch geleiten wird: 
+                        Reise durch die "Analysestädte". Scheinbar ist an diesen Orten mehr über die Hintergründe der Entführung zu 
+                        erfahren.
+                    </de>
+                    <hu>
+                        A fehér tó negyedben megkaptad azt a feladatot, amely az egész játék folyamán kísérni fog: utazás az 
+                        "elemzővárosokban". Előfordulhat, hogy ezeken a helyeken többet lehet megtudni a rablásról.
+                    </hu>
+                    <fr>
+                        Dans le quarter du lac blanc, tu as reçu le devoir qui te raccompagnera par tout le jeu : le voyage par les 
+                        « villes d'analyse ». Semblerait qu'on apprend plus sur les arrières de l'enlevement à ces lieux.
+                    </fr>
+                    <en>
+                        In the white lake quarter, you got the quest which guides you throughout the game: travel through the 
+                        "analysiscities". It seems that there is more information about the abduction at those places.
+                    </en>
+                </description>
+            </chapter>
+            <reward>
+                <item>finalTicketToTraumdorf</item>
+            </reward>
+            <fail>
+                <money>80000</money>
+            </fail>
+        </quest>
+        <quest id="qzdAn7">
+            <name>
+                <de>Besuch von Kvirasim</de>
+                <fr>Visite de Kvirasim</fr>
+                <en>Visiting Kvirasim</en>
+            </name>
+            <chapter n="1">
+                <description>
+                    <de>
+                        Um mehr Spuren über die Entführung zu finden, wurde dir geraten, 
+                        Kvirasim zu besuchen, wo unter den Phonetikern und Phonologen sich 
+                        ein weiterer Informant verbergen soll ...
+                    </de>
+                    <fr>
+                        Pour trouver plus de traces de l'enlèvement, on t'a conseillé de visiter Kvirasim, où parmi les 
+                        phonéticiens et les phonologues un autre informant se cacherait ...
+                    </fr>
+                    <en>
+                        To find more clues about the abduction, you were conselled to visit Kvirasim where among the 
+                        phoneticians and phonologists, another informant should hide himself ...
+                    </en>
+                </description>
+            </chapter>
+        </quest>
+        <quest id="qzdAn102">
+            <name>
+                <de>Besuch von Karlstadt</de>
+                <fr>Visite de Karlstadt</fr>
+                <en>Visiting Karlstadt</en>
+            </name>
+            <chapter n="1">
+                <description>
+                    <de>
+                        Die in "Gib niemals auf" angekündigten Helfershelfer haben dir die 
+                        Stadt Karlstadt genannt, wo eine Gruppe junger aufstrebender 
+                        Redakteure etwas Großes vor hat, um aufzuklären ... im 
+                        Hauptbahnhof werden sie sich treffen.
+                    </de>
+                    <fr>
+                        Les personnes annonçées à « Ne renonce jamais » t'ont nommé la ville de Karlstadt où un groupe de 
+                        jeunes rédacteurs a avisé un grand projet pour éclairer... ils vont se réunir à la gare centrale.
+                    </fr>
+                    <en>
+                        The helpers announced in "Never give up" named you the city of Karlstadt where a group of young editors 
+                        have a great project to enlighten ... they will meet at the central station.
+                    </en>
+                </description>
+            </chapter>
+        </quest>
+    </mandatory>
+    <optional>
+        <quest id="qka1">
+            <name>
+                <de>Besuch des Theaters</de>
+                <hu>A színház látogatása</hu>
+                <fr>Visite du théâtre</fr>
+                <en>Theatre visit</en>
+            </name>
+            <chapter n="1">
+                <description>
+                    <de>
+                        Prokesch-Westen erzählte dir, dass im Werksviertel Lesungen zu Gentz' Werken und Gentz' Rezensionen stattfinden. Vielleicht ergeben sich da neue Gesprächspartner?! Um mit Kantianern ins Gespräch zu 
+                        kommen, ist eine eingehende Beschäftigung mit der Literatur jedenfalls unumgänglich ...
+                    </de>
+                    <hu>
+                        Prokesch-Westen azt meséli, hogy a munka negyedi színházban olvassák Gentz mukáit és recenzióit. Talán ott akad még több beszélgetőtárs?! Hogy Kant követőivel beszélgethess, ahoz legalább is nagyon 
+                        is ajánlatos lenne, hogy az írodalommal behatóan foglalkozzál ...
+                    </hu>
+                    <fr>
+                        Prokech de l'Ouest t'a raconté que dans le quartier des œuvres, on lit les travaux et les récensions de Gentz. Peut-être tu y trouves encore des interlocuteurs ?! Pour que tu puisses entrer en 
+                        discussion avec les Kantiens, il est fort recommandé que tu t'occupes profondément avec la littérature...
+                    </fr>
+                    <en>
+                        Prokesch-West told you that in the works quarter theatre, Gentz's works and recensions are being read. Maybe you find there even more discussion partners?! To get in touch with the Kantians in 
+                        every case, it is strongly recommended that you get in touch with the literature first ...
+                    </en>
+                </description>
+            </chapter>
+        </quest>
+    </optional>
+</questData>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="userData.xsd">
+    <user name="TestPerson" userLang="de" useName="true">
+        <firstname>Hase</firstname>
+        <lastname>Cäsar</lastname>
+        <love>
+            <loveInterest>Geschichte</loveInterest>
+            <sex>w</sex>
+        </love>
+        <currentMoney>0</currentMoney>
+        <currentPlace>
+            <town>zeidel</town>
+            <number>0</number>
+            <place>ticketAutomat</place>
+        </currentPlace>
+        <inventory>
+            <item id="bag" valid="none"/>
+            <item id="gloves" valid="none"/>
+        </inventory>
+        <memory>
+            <notes>
+                <mapNotes></mapNotes>
+                <notebookNotes>
+                    <note noteTitle="Test note">
+                        A test note. This will be used for documentation purposes as well.
+                        The notebook is separated into map pins and notebook entries. The 
+                        notebook entries are served by AJAX and can be manipulated like- 
+                        wise. The data has to be sent by POST and properly escaped.
+                    </note>
+                </notebookNotes>
+            </notes>
+            <actionsPassed/>
+            <questsMandatory>
+                <quest currChapter="1" completed="no">qzd0</quest>
+            </questsMandatory>
+            <questsOptional/>
+            <townsToVisit>
+                <townToVisit>zeidel</townToVisit>
+            </townsToVisit>
+        </memory>
+    </user>
+</userData>

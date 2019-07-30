@@ -1,0 +1,1992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_corpus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_corpus.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Gentz-Briefe</title>
+                <author>author</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <TEI xml:id="Gentz-412" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title type="mashed">Brief Nr. 412 Friedrich von Gentz an Joseph Anton von Pilat, 15. Oktober 1822</title>
+                <title type="detailled">
+                    <idno>412</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename> 
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Verona</placeName>
+                    </persName>
+                    <persName role="receiver"> 
+                        <forename>Joseph Anton</forename>
+                        <surname>von Pilat</surname>
+                        <placeName type="receiver">Wien</placeName>
+                    </persName>
+                    <date when="1822-10-15">15. Oktober 1822</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="412"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date> 
+            </publicationStmt>
+            <notesStmt>  
+                <note></note>
+            </notesStmt>
+            <sourceDesc corresp="unbekannt" n="original">   
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_4043271-3">Austria</country>
+                        <settlement>Wien</settlement>
+                        <institution>?</institution>
+                        <repository>?</repository>
+                        <collection>?</collection>
+                        <idno>?</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>4 pages</extent>
+                                <condition><p>Das Papier ist an den Rändern beschädigt.</p></condition>
+                            </supportDesc>
+                        </objectDesc>  
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc n="firstprint">
+                <biblStruct>
+                    <monogr>
+                        <title>Briefe von Friedrich von Gentz an Pilat</title>
+                        <title>Ein Beitrag zur Geschichte Deutschlands im XlX. Jahrhundert</title>
+                        <imprint>
+                            <biblScope type="vol">Zweiter Band</biblScope>                
+                            <pubPlace>Leipzig</pubPlace>
+                            <publisher>Dr. Karl Mendelssohn-Bartholdy</publisher>
+                            <date when="1868">1868</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Erzeugung einer digitalen Edition der Korrespondenzen Gentz</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1822-10-15">15. Oktober 1822</date>
+                <rs type="city">Verona, Italien</rs>
+            </creation>           
+            <langUsage>
+                <language ident="DE">deutsch</language>
+            </langUsage> 
+            <textClass> 
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Diplomatie</term>
+                    <term>Gentz</term>
+                    <term>Türkische Nachrichten</term>
+                    <term>Corfu</term>
+                    <term>Wien</term>
+                    <term>Zante</term>
+                    <term>Graf Sedlnitzky</term>
+                    <term>Kaiser</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/> 
+                <derivation type="original"/> 
+                <domain type="private"/> 
+                <factuality type="fact"/> 
+                <interaction type="partial"/> 
+                <preparedness type="unprepared"/>  
+                <purpose type="inform"/> 
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Gentz</name>
+                        </item>
+                        <item xml:id="Pi">
+                            <name>Pilat</name>
+                        </item>
+                    </list>
+                </p>
+                <p>im Brief erwähnte Menschen
+                    <list>
+                        <item>
+                            <name xml:id="Se">Graf Sedlintszky</name>
+                        </item>
+                        <item>
+                            <name xml:id="Fr">Kaiser Franz</name>
+                        </item>
+                    </list> 
+                </p>
+            </particDesc> 
+            <settingDesc>
+                <setting>
+                    <name>Verona, Italien</name>
+                    <time when="1822-10-15">Dienstag, der 15. Oktober 1822</time>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>  
+            <listChange>
+                <change when="2013-12-04" who="#edAG #edMS" status="draft">Weitere Auszeichnung</change>
+                <change when="2013-01-01" who="#edAG #edMS" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen transkription</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000005.jpg" xml:id="seite1"/>
+        <graphic url="00000006.jpg" xml:id="seite2"/>
+        <graphic url="00000007.jpg" xml:id="seite3"/>
+        <graphic url="00000008.jpg" xml:id="seite4"/>
+        <graphic url="00000009.jpg" xml:id="Umschlag"/>
+    </facsimile>
+    <text type="letter">
+        <body>
+            <div>
+                <head><placeName><settlement>Verona</settlement></placeName> 15. Oktober</head>
+                <opener>Ich erhalte so eben Ihre beyden Schreiben vom <date>10 und 11ten</date>; und da die Post noch 
+                    nicht abgegangen ist, melde ich Ihnen in der Eil folgendes.</opener>
+                <p>Ich erhalte so eben Ihre <sic>beyden</sic> Schreiben vom <date>10 und 11ten</date>; und da die Post noch 
+                    nicht abgegangen ist, melde ich Ihnen in der Eil folgendes. </p>
+                <p>Ich weiß nichts von dem was die Berichte von<placeName><settlement>Zante</settlement></placeName> vom <date>31ten August</date> 
+                    - denn der von mir bearbeitete ist vom <date> 17 September</date> - noch, was die Berichte von <placeName><settlement>Corfu</settlement></placeName> 
+                    enthalten; ja, leider, weiß ich in diesem Moment nicht einmal ob wir sie hier haben. So viel steht mir aber fest, und ich freue mich aus Ihrem 
+                    Briefe zu sehen, daß <rs type="person" ref="#130150630">Graf Sedlnitzky</rs> derselben <sic>Meynung</sic> zu <sic>seyn</sic> scheint: So unangenehm 
+                    auch die Verzögerung seyn mag - am besten ist es immer daß, ( in der Regel wenigstens) 
+                    die Türkischen Artikel hier redigirt werden. Laßen Sie Sich einmal in <placeName><settlement>Wien</settlement></placeName> darauf ein, so ist, 
+                    da wir hier nicht wißen können, was Sie dort geschrieben haben, die größte <sic>Confusion</sic> zu besorgen. 
+                    Ich stehe Ihnen dafür, daß ich immer darauf halten werde, der Nachrichten aus der <placeName><country>Türkey</country></placeName> ohne 
+                    allen Zeitverlust habhaft zu werden, und ohne allen Zeitverlust - <foreign rendition="french">toute autre affaire cessante</foreign>
+                    - zu bearbeiten; und da, wenn wenigstens erst die <sic>Kayserlichen</sic> Estaffetten im Gange sind, die 
+                    Sendungen promter gehen werden - Ihren Brief vom <date>11ten</date> erhielt ich denn doch per estaffette am 
+                    5ten Tage - auch <sic>bey</sic> wichtigen Sachen Couriere uns zu Gebot stehen, so wird der Aufenthalt, den 
+                    ich übrigens so bitter bedaure wie Sie, doch nicht übermäßig <sic>seyn?</sic></p> 
+                <p>Tragen Sie nur das Ihrige bey, und bitten Sie <rs type="person" ref="#130150630">Seine Excellentz den Grafen Sedlnitzky</rs> ausdrücklich, dafür zu sorgen, daß 
+                    die in <placeName><settlement>Wien</settlement></placeName> eingehenden Türkischen Nachrichten dort nicht eine Stunde länger als nötig ist, 
+                    zurückgehalten werden. 
+                    Hier muß ich schließen. Dies Post-Scriptum schrieb ich unter dem Geläute 
+                    aller Glocken, welches den Einzug des <rs type="person" ref="#118534955"><sic>Kaysers</sic></rs> ankündigt. - So eben fährt er unter meinen Fenstern vorbey. 
+                </p>
+                <closer>
+                    Adieu 
+                    <signed rend="right"><rs type="person" ref="#118538489">GZ</rs></signed>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
+<TEI xml:id="Gentz-426" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title type="mashed">Brief Nr. 412 Friedrich von Gentz an Joseph Anton von Pilat, 21. Oktober 1822</title>
+                <title type="detailled">
+                    <idno>426</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename> 
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Verona</placeName>
+                    </persName>
+                    <persName role="receiver"> 
+                        <forename>Joseph Anton</forename>
+                        <surname>von Pilat</surname>
+                        <placeName type="receiver">Wien</placeName>
+                    </persName>
+                    <date when="1822-10-21">21. Oktober 1822</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="421"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date> 
+            </publicationStmt>
+            <notesStmt>  
+                <note></note>
+            </notesStmt>
+            <sourceDesc corresp="unbekannt" n="original">   
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Austria</country>
+                        <settlement>unbekannt</settlement>
+                        <institution>unbekannt</institution>
+                        <repository>unbekannt</repository>
+                        <collection>unbekannt</collection>
+                        <idno>unbekannt</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>4 pages</extent>
+                                <condition><p>Das Papier ist an den Rändern beschädigt.</p></condition>
+                            </supportDesc>
+                        </objectDesc>  
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc n="firstprint">
+                <biblStruct>
+                    <monogr>
+                        <title>Briefe von Friedrich von Gentz an Pilat</title>
+                        <title>Ein Beitrag zur Geschichte Deutschlands im XlX. Jahrhundert</title>
+                        <imprint>
+                            <biblScope type="vol">Zweiter Band</biblScope>                
+                            <pubPlace>Leipzig</pubPlace>
+                            <publisher>Dr. Karl Mendelssohn-Bartholdy</publisher>
+                            <date when="1868">1868</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Erzeugung einer digitalen Edition der Korrespondenzen Gentz</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1822-10-21">21. Oktober 1822</date>
+                <rs type="city">Verona, Italien</rs>
+            </creation>           
+            <langUsage>
+                <language ident="DE">deutsch</language>
+            </langUsage> 
+            <textClass> 
+                <keywords scheme="">
+                        <term>Brief</term>
+                        <term>Urlaubserlebnisse</term>
+                        <term>Diplomatie</term>
+                        <term>Gentz</term>
+                        <term>Verona</term>
+                </keywords> 
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/> 
+                <derivation type="original"/> 
+                <domain type="private"/> 
+                <factuality type="fact"/> 
+                <interaction type="partial"/> 
+                <preparedness type="unprepared"/>  
+                <purpose type="inform"/> 
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Gentz</name>
+                        </item>
+                        <item xml:id="Pi">
+                            <name>Pilat</name>
+                        </item>
+                    </list>
+                </p>
+                <p>im Brief erwähnte Menschen
+                    <list>
+                        <item>
+                            <name xml:id="Me">Metternich</name>
+                        </item>
+                        <item>
+                            <name xml:id="Vi">Victor</name>
+                        </item>
+                        <item>
+                            <name xml:id="Zi">Zichy</name>
+                        </item>
+                        <item>
+                            <name xml:id="Str">Strangford</name>
+                        </item>
+                        <item>
+                            <name xml:id="Sod">Sodmaniczky</name>
+                        </item>
+                        <item>
+                            <name xml:id="vSt">vonStürmer</name>
+                        </item>
+                        <item>
+                            <name xml:id="Cha">Chateaubriand</name>
+                        </item>
+                        <item>
+                            <name xml:id="Roth">Rothschild</name>
+                        </item>
+                        <item>
+                            <name xml:id="Hü">Hülsemann</name>
+                        </item>
+                        <item>
+                            <name xml:id="M">Müller</name>
+                        </item>
+                        <item>
+                            <name xml:id="Wit">Wittgenstein</name>
+                        </item>
+                        <item>
+                            <name xml:id="Nu">Nuncius</name>
+                        </item>
+                        <item>
+                            <name xml:id="DdR">Duc de Ranzau</name>
+                        </item>
+                        <item>
+                            <name xml:id="Po">Pozzo</name>
+                        </item>
+                        <item>
+                            <name xml:id="Jo">Job</name>
+                        </item>
+                    </list> 
+                </p>
+            </particDesc> 
+            <settingDesc> 
+                <setting>
+                    <name>Verona, Italien</name>
+                    <time when="1822-10-21">Montag, der 21. Oktober 1822</time>
+                    <activity>Gentz schreibt diesen Brief</activity>
+                </setting>
+                <setting>
+                    <name>Verona</name>
+                    <activity>Gentz macht eine Exkursion und besucht das Amphitheater</activity>
+                    <activity>Der Umgang mit Strangford versüt Gentz den Aufenthalt</activity>
+                </setting>
+                <setting>
+                    <name><choice><orig>Turkey</orig><reg>Türkei</reg></choice></name>
+                    <activity>Herkunft der Berichte</activity>
+                </setting>
+                <setting>
+                    <name><choice><orig>Bucarest</orig><reg>Bukarest</reg></choice></name>
+                    <activity>Herkunft eines Haupt-Berichts</activity>
+                </setting>
+                <setting>
+                    <name>Wien</name>
+                    <activity>Vermuthlich hat Herr Baron von Stürmer den Bericht aus Bucarest zurückbehalten.</activity>
+                    <activity>Vorheriges Treffen von Gentz mit Strangford</activity>
+                </setting>
+                <setting>
+                    <name>Preußen</name>
+                    <activity>Adam Müller hegt Abneigung gegen Preußen</activity>
+                    <activity>Gentz betrachtet den König von Preußen als den Retter von Deutschland und Europa.</activity>
+                </setting>
+                <setting>
+                    <name>Ungarn</name>
+                    <activity>Herkunft von Sodmaniczky</activity>
+                </setting>
+                <setting>
+                    <name>Paris</name>
+                    <activity>Sodmaniczky war Liquidations-Commißär</activity>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>  
+            <listChange>
+                <change when="2013-12-16" who="#MK" status="draft">Weitere Auszeichnungen</change>
+                <change when="2013-12-15" who="#MH" status="draft">Weitere Auszeichnungen</change>
+                <change when="2013-12-12" who="#MK" status="draft">Weitere Auszeichnungen</change>
+                <change when="2013-12-04" who="#MK #MH" status="draft">Weitere Auszeichnungen</change>
+                <change when="2013-11-06" who="#MK #MH" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen Transkription</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader> 
+   <facsimile> 
+      <graphic url="00000019.jpg" xml:id="seite1"/>
+      <graphic url="00000020.jpg" xml:id="seite2"/>
+      <graphic url="00000021.jpg" xml:id="seite3"/>
+      <graphic url="00000022.jpg" xml:id="seite4"/>
+      <graphic url="00000023.jpg" xml:id="seite5"/>
+      <graphic url="00000025.jpg" xml:id="seite6"/>
+   </facsimile>
+   <text>
+      <body>
+         <!-- keine Angaben, die nicht aus den Dokumenten kommen. Höchsten als zusätzliche Angaben -->
+         <div>
+            <pb facs="#seite1"/>
+            <head> 
+            15. <origPlace>Verona.</origPlace><origDate>Montag 21 Oktober.</origDate> 
+            </head>
+            <p>
+               Ich habe gestern dem <rs type="person" ref="#118581465">Fürsten</rs> in einer ruhigen Stunde Ihre Inhalts-Anzeige des Beobachters2
+               vorgelegt, und er hat mir aufgetragen, Ihnen in den verbindlichsten Ausdrücken seine Zufriedenheit 
+               mit dieser mühsamen und höchst nützlichen Arbeit zu erkennen zu geben. Er wünscht, wie ich, daß             
+               Sie solche unverdrossen fortsetzen, und, ohne das Ende des Jahrganges abzuwarten, das, was davon 
+               fertig wird, immer gleich zum Druck befördern mögen. Der <rs type="person" ref="#118581465">Fürst</rs> hat sich <choice><orig>bey</orig><reg>bei</reg></choice> dieser Gelegenheit             
+               über Ihre Treue, <choice><orig>Thätigkeit</orig><reg>Tätigkeit</reg></choice>, und sonstige löbliche Eigenschaften auf eine höchst vortheilhafte, mir            
+               unendlich willkommne Art geäußert, und Sie können Sich wohl vorstellen, daß ich <choice><orig>bey</orig><reg>bei</reg></choice> solchen             
+               <choice><orig>Aeußerungen</orig><reg>Äußerungen</reg></choice> keine stumme Rolle gespielt habe.
+            </p>
+            <p>
+               Auch habe ich mich gestern, weil ich dem Wunsche des <rs type="person" ref="#118581465">Fürsten</rs> nicht widerstehen konnte,             
+               entschließen <choice><orig>müßen</orig><reg>müssen</reg></choice>, das berühmte Amphitheater zu besuchen, und zwar über eine Unzahl             
+               steinerner Stufen bis auf die Höhe desselben zu steigen. Das Hinaufsteigen ging erträglich; <choice><orig>beym</orig><reg>beim</reg></choice>             
+               Herabsteigen ward mir etwas bange; aber der <rs type="person" ref="#118581465">Fürst</rs> hat mich, recht eigentlich wie ein Kind, in             
+               seiner Hand herunter gegängelt; er wollte mich nicht einmal <persName><forename>Victor</forename></persName> oder <persName><forename>Zichy</forename></persName>, die mit uns waren,
+               <!-- Wie sollen Victor und Zichy ausgewiesen werden? Wie soll man eine Person referenzieren, wenn man nicht weiß wer gemeint ist? -->
+               anvertrauen. Der Anblick ist majestätisch und einzig und führt zu ernsten Reflexionen über die            
+               Zeiten und die Menschen, die solche Werke bereiten konnten. Die Freiheit war es wahrhaftig             
+               nicht, was <pb facs="#seite2"/>sie schuf; die Gewalt der Herrschaft - die überhaupt das <choice><orig>Alterthum</orig><reg>Altertum</reg></choice> weit mehr             
+               auszeichnet als die eingebildete Kraft der Freiheit - die <choice><orig>muß</orig><reg>muss</reg></choice> man bewundern. <choice><orig>Uebrigens</orig><reg>Übrigens</reg></choice> mache ich             
+               diese Expedition nicht zum <choice><orig>zweytenmale</orig><reg>zweiten Mal</reg></choice>, und bin recht froh, sagen zu können, <choice><orig>daß</orig><reg>dass</reg></choice> ich nun das <choice><orig>bey</orig><reg>bei</reg></choice>             
+               weitem merkwürdigste, was <placeName><settlement>Verona</settlement></placeName> darbietet, <choice><orig>abgethan</orig><reg>abgetan</reg></choice> habe.
+            </p>     
+            <p>           
+               Unter den Berichten aus der <placeName><country><choice><orig>Türkey</orig><reg>Türkei</reg></choice></country></placeName> vermisse ich einen Haupt-Bericht aus <placeName><settlement><choice><orig>Bucarest</orig><reg>Bukarest</reg></choice></settlement></placeName>3, wovon            
+               <rs type="person" ref="#100782639">Strangford</rs> uns viel gesprochen hat, und der eine Menge interessanter Details über die Ankunft             
+               des <rs type="person" ref="#118581465">Fürsten</rs>4, und seine ersten, wie man versichert, sehr zweckmäßigen Maßregeln5 enthalten soll. 
+            </p>
+            <p>
+               <choice><orig>Vermuthlich</orig><reg>Vermutlich</reg></choice> hat <rs type="person" ref="#119393298">Herr Baron von Stürmer</rs>6, diesen Bericht, um davon Gebrauch zu machen, in <placeName><settlement>Wien</settlement></placeName> zurückbehalten. Fragen Sie doch mit Bescheidenheit <choice><orig>bey</orig><reg>bei</reg></choice> ihm an, ob er nicht einen Auszug             
+               daraus für das Publikum verfertigen <choice><orig>laßen</orig><reg>lassen</reg></choice> will7. Ein andrer, kurzer Bericht von Hackenau8 i s t
+               angekommen; und <rs type="person" ref="#100782639">Strangford</rs>'s Erzählung könnte auf einer Verwechselung beruhen; ich glaube
+               es aber nicht, weil er zu sehr <choice><orig>insistirt</orig><reg>insistiert</reg></choice>, und er hat, wie Sie <choice><orig>wißen</orig><reg>wissen</reg></choice>, einen scharfen und richtigen Blick.            
+               - <rs type="person" ref="#100782639">Strangford</rs>, den ich nun immer näher kennen lerne9, hat seine Fehler, wie alle Menschen; aber er
+               steht hoch auf der Leiter. Obgleich ein großer Geschäftsmann,ist er doch noch weit mehr Genie als
+               Geschäftsmann, voll Originalität, voll lebendiger Wärme, und über die Maßen liebenswürdig. Der 
+               <pb facs="#seite3"/>Umgang mit ihm versüßt mir <placeName><settlement>Verona</settlement></placeName>, und ist mir lieber als alle Theater und Amphitheater der Welt.            
+               In <placeName><settlement>Wien</settlement></placeName> hatte ich ihn noch nicht einmal recht betrachtet10; hier finde ich, <choice><orig>daß</orig><reg>dass</reg></choice> er das geistreichste            
+               Gesicht hat, welches man sehen kan. <rs type="person" ref="#118520237">Chateaubriand</rs> scheint mir gegen ihn eine wahre <choice><orig>Carricatur</orig><reg>Karrikatur</reg></choice>. 
+            </p>
+            <p>
+               <rs type="person" ref="#11879132X">Rothschild</rs>11 ist gestern Mittag hier angekommen, und hat mir Ihr Paket vom 14ten gebracht.           
+               Was Sie mir von einem gewissen Minister schreiben, ist ganz interessant; ich werde aber (aus           
+               Gründen welche ich Ihnen mündlich vorbehalte) keinen Gebrauch davon machen.
+            </p>
+            <p>
+               Sie verstehen den Brief von <!-- Hülsemann --><rs type="person" ref="#">Hülsemann</rs>12 nicht; ich desto besser; und ich kann Ihnen keinen                                                                    
+               bessern <choice><orig>Commentar</orig><reg>Kommentar</reg></choice> zu seinen Worten geben, als <choice><orig>beyliegenden</orig><reg>beiliegenden</reg></choice> Auszug eines Berichtes von <!-- Adam Müller? --><rs type="person" ref="#">Adam Müller</rs>        
+               13. Sie kennen seine Abneigung gegen <placeName><region>Preußen</region></placeName>; wenn e r14 in solchem Tone spricht (und            
+               das stärkste des Berichts <choice><orig>kan</orig><reg>kann</reg></choice> ich Ihnen nicht einmal <choice><orig>mittheilen</orig><reg>mitteilen</reg></choice>) so <choice><orig>muß</orig><reg>muss</reg></choice> doch wohl die Kraft            
+               der Wahrheit ihn überwältiget haben. So wie er schreibt, denke und spreche ich, und habe dem            
+               <!-- Fürst Wittgenstein --><rs type="person" ref="#">Fürsten Wittgenstein</rs>15 in der ersten Unterredung gesagt, was mein innerstes Gefühl ist, <choice><orig>daß</orig><reg>dass</reg></choice> ich            
+               den <!-- Friedrich Wilhelm III ?! --><rs type="person" ref="#">König von Preußen</rs> als den Retter von Deutschland und Europa betrachte. - Sie sind in dieser             
+               Frage, wenn gleich nicht ganz so wie <!-- Adam Müller --><rs type="person" ref="#">Müller</rs>, doch sehr befangen, und ich habe mich daher             
+               nie recht mit Ihnen darüber <choice><orig>einlaßen</orig><reg>einlassen</reg></choice> mögen. Ich aber sah längst mit stiller Verwunderung den             
+               ungeheuren Fortschritten zum Guten zu, welche <placeName><region>Preußen</region></placeName> seit 3 oder 4 Jahren macht. Es fehlt             
+               diesem <pb facs="#seite4"/>Staate nichts als katholisch zu <choice><orig>seyn</orig><reg>sein</reg></choice>; und er ist neben uns die kräftigste Stütze der Welt.             
+               Kehren Sie Sich gar nicht mehr an einzelne störende Erscheinungen; die sind nichts als die letzten             
+               Zuckungen der elenden <choice><orig>Partey</orig><reg>Partei</reg></choice>, die den armen, moralisch <choice><orig>todten</orig><reg>toten</reg></choice> <!-- Wer war der Kanzler? --><rs type="person" ref="#">Kanzler</rs>16 umgiebt, den der <!-- König von Preußen, Freidrich Wilhelm III ?! --><rs type="person" ref="#">König</rs>            
+               aus <choice><orig>Gutmüthigkeit</orig><reg>Gutmütigkeit</reg></choice> nicht ganz zur Ruhe setzen will. In dem Augenblick, wo der <!-- Kanzler --><rs type="person" ref="#"></rs>Kanzler von der             
+               Bühne abtritt, wird sich zeigen, was <placeName><region>Preußen</region></placeName> geworden ist.
+            </p>
+            <p>
+               <placeName><settlement>Eodem</settlement></placeName> am <time>4 Uhr Nach-Mittag</time>
+            </p>
+            <p>
+               Ich habe heute dem <rs type="person" ref="#118581465">Fürsten</rs> das kleine Billet von Job17 vorgelesen, welches ein eben so            
+               erfreuliches als wichtiges Resultat ankündigt. - Auch einen <choice><orig>Theil</orig><reg>Teil</reg></choice> der mir übersendeten Predigt             
+               habe ich (für mich allein) bereits gelesen, und bitte Sie, dem würdigen Herrn zu sagen, <choice><orig>daß</orig><reg>dass</reg></choice> ich im             
+               höchsten Grade davon erbaut bin, und sie sicher ganz lesen werde. 
+            </p>
+            <p>
+              In den <choice><orig>Beylagen</orig><reg>Beilagen</reg></choice> erhalten Sie einige Zettel, worauf einzelne Notata stehen, die ich, um sie nicht             
+               wieder zu vergessen, im Augenblick, wo sie sich darbieten, nieder schreibe. Gegenwärtiges Paket             
+               übernimmt mein Freund <rs type="person" ref="#11879132X">Rothschild</rs>, in dessen Händen alles gut aufgehoben ist. Wenn Sie mir etwas             
+               Geheimes zu melden haben, so <choice><orig>kan</orig><reg>kann</reg></choice> ich Ihnen dazu ebenfalls keinen <choice><orig>bessern</orig><reg>besseren</reg></choice> Weg anweisen als den             
+               durch seine dortige Leute. Leben Sie wohl.  
+            </p>
+            <closer>
+               <signed rend="right">
+                  <persName key="#118538489">Gentz</persName> .
+               </signed>
+            </closer>
+            <postscript>
+               <p>NB. Meinem <!-- Sollte man den Jäger auch auszeichnen? -->Jäger <choice><orig>ertheile</orig><reg>erteile</reg></choice> ich den Befehl, die für mich bestimmten Briefe und Pakete nie anders             
+               als durch Sie - oder durch die Rothschildianer gehen zu laßen. Kein Reisender, kein Courier,             
+               keine <choice><orig>Staatskanzley</orig><reg>Staatskanzlei</reg></choice>, es <choice><orig>sey</orig><reg>sei</reg></choice> denn, <choice><orig>daß</orig><reg>dass</reg></choice> Sie ins Mittel träten. Es fehlen offenbar schon <choice><orig>verschiedne</orig><reg>verscchiedene</reg></choice>             
+               Briefe. Die Ihrigen habe ich alle sehr regelmäßig erhalten.</p>
+               <p> 
+               Der einfältige <!-- Nuncius ? --><rs type="person" ref="#">Nuncius</rs>18 ist gestern hier angekommen, um die Zahl der hiesigen Müßiggänger            
+               zu vermehren. Es sind jetzt schon 28 Französische Diplomaten in <placeName><settlement>Verona</settlement></placeName>. Was sollen wir  
+               mit all diesem Volk !</p>
+               <p><pb facs="#seite5"/>
+               Ich habe mich neulich über das Äußere von <rs type="person" ref="#118520237">Chateaubriand</rs> zu honett ausgedrückt20 So eben
+               war er bei mir; er ist ganz und gar <choice><orig>bucklicht</orig><reg>bucklig</reg></choice>, sieht aus, wie ein gewisser Sodmaniczky             
+               aus <placeName><country>Ungarn</country></placeName>, der <choice><orig>Liquidations-Commißär</orig><reg>Liquidations-Komissar</reg></choice> in <placeName><settlement>Paris</settlement></placeName> war21. - Von dern andern Seite gestehe ich aber,          
+               <choice><orig>daß</orig><reg>dass</reg></choice> ich wieder sehr mit ihm zufrieden war. Das seltsamste ist immer, <choice><orig>daß</orig><reg>dass</reg></choice> er, - ich weiß nicht             
+               wie und warum - mir die Cour macht, anstatt <choice><orig>daß</orig><reg>dass</reg></choice> ich geglaubt hätte, vor ihm in <choice><orig>Anbethung</orig><reg>Anbetung</reg></choice>             
+               zerfließen zu <choice><orig>müßen</orig><reg>müssen</reg></choice>. Er war mit einem jungen <!-- Duc? --><rs type="person" ref="#">Duc de Ranzau</rs>22 bei mir, den er <pb facs="#seite6"/>offenbar mit Fleiß            
+               mitgebracht hatte. Er ist schlau und <choice><orig>calculirend</orig><reg>kalkulierend</reg></choice>, - gar micht enthusiastisch, auch im gewöhnlichen             
+               Gespräch gar nicht eloquent. <!-- Pozzo?? --><rs type="person" ref="#">Pozzo</rs> stößt in einer halben Stunde mehr große Pracht-Phrasen aus, als             
+                  <rs type="person" ref="#118520237">Chateaubriand</rs> in 8 Tagen. -</p>
+            </postscript>
+         </div>
+      </body>
+   </text>
+</TEI>
+<TEI xml:id="Gentz-428" xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt> 
+                    <title type="mashed">Brief Nr. 428 Gentz an Pilat, 26. Oktober 1822</title>
+                    <title type="detailled">
+                        <idno>428</idno>
+                        <persName role="sender">
+                            <forename>Friedrich</forename> 
+                            <surname>von Gentz</surname>
+                            <roleName role="general">General</roleName>
+                            <placeName type="sender">Verona</placeName>
+                        </persName>
+                        <persName role="receiver"> 
+                            <forename>Joseph Anton</forename>
+                            <surname>von Pilat</surname>
+                            <placeName type="receiver">Wien</placeName> 
+                        </persName>
+                        <date when="1822-10-26">26. Oktober 1822</date>
+                    </title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Gentz-Editions-Team</publisher>
+                    <pubPlace>Cologne</pubPlace>
+                    <distributor>University of Cologne</distributor>
+                    <idno type="Gentz-Edition-Number" n="0000"/>
+                    <idno type="Briefnummer" n="428"/>
+                    <availability>
+                        <licence>CC-BY-SA</licence>
+                    </availability>
+                    <date when="2013-12-10">10. Dezember 2013</date> 
+                </publicationStmt>
+                <notesStmt>
+                    <note></note>
+                </notesStmt>
+                <sourceDesc corresp="unbekannt" n="original"> 
+                    <msDesc>
+                        <msIdentifier xml:lang="DE">
+                            <country key="GND_4043271-3">Austria</country>
+                            <settlement>Wien</settlement>
+                            <institution>Wienbibliothek im Rathaus</institution>
+                            <repository>Handschriftensammlung</repository>
+                        </msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <extent>4 pages</extent>
+                                    <condition><p>Das Papier ist an den Rändern beschädigt.</p></condition>
+                                </supportDesc>
+                            </objectDesc> 
+                        </physDesc>
+                    </msDesc>
+                </sourceDesc>
+                <sourceDesc n="firstprint">
+                    <biblStruct>
+                        <monogr>
+                            <title>Briefe von Friedrich von Gentz an Pilat</title>
+                            <title>Ein Beitrag zur Geschichte Deutschlands im XlX. Jahrhundert</title>
+                            <imprint>
+                                <biblScope type="vol">Zweiter Band</biblScope>                
+                                <pubPlace>Leipzig</pubPlace>
+                                <publisher>Dr. Karl Mendelssohn-Bartholdy</publisher>
+                                <date when="1868">1868</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                </sourceDesc>
+                <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                    <msDesc>
+                        <msIdentifier xml:lang="DE">
+                            <country key="GND_ 4011882-4">Germany</country>
+                            <settlement>Cologne</settlement>
+                            <institution>University of Cologne</institution>
+                        </msIdentifier>
+                    </msDesc>
+                </sourceDesc>
+            </fileDesc>
+            <encodingDesc>
+                <projectDesc>
+                    <p>Erzeugung einer digitalen Edition der Korrespondenzen Gentz</p>
+                </projectDesc>
+            </encodingDesc>
+            <profileDesc>
+                <creation>
+                    <date when="1822-10-25">25. Oktober 1822</date>
+                    <rs type="city">Verona, Italien</rs>
+                </creation>           
+                <langUsage>
+                    <language ident="DE">deutsch</language>
+                </langUsage> 
+                <textClass> 
+                    <keywords>
+                        <term>Brief</term>
+                        <term>Pilat</term>
+                        <term>Diplomatie</term>
+                        <term>Gentz</term>
+                        <term>Congreß</term>
+                        <term>Konferenz</term>
+                        <term>Fürst Metternich</term>
+                        <term>Luxus-Gesetz</term>
+                    </keywords>
+                </textClass>
+                <textDesc n="letter">
+                    <channel mode="w">manuscript</channel> 
+                    <constitution type="single"/> 
+                    <derivation type="original"/>
+                    <domain type="private"/> 
+                    <factuality type="fact"/> 
+                    <interaction type="partial"/> 
+                    <preparedness type="unprepared"/>  
+                    <purpose type="inform"/>
+                </textDesc>
+                <particDesc>
+                    <p>Autor und Adressat
+                        <list>
+                            <item xml:id="Gen">
+                                <name>Gentz</name>
+                            </item>
+                            <item xml:id="Pl">
+                                <name>Platon</name>
+                            </item>
+                        </list>
+                    </p>
+                    <p>im Brief erwähnte Menschen
+                        <list>
+                            <item>
+                                <name xml:id="Kr">Kress</name>
+                            </item>
+                            <item>
+                                <name xml:id="Se">Graf Sedlintszky</name>
+                            </item>
+                            <item>
+                                <name xml:id="Fe">Ferman</name>
+                            </item>
+                            <item>
+                                <name xml:id="Wer">Werner</name>
+                            </item>
+                            <item>
+                                <name xml:id="Fue">Fürst Metternich</name>
+                            </item>
+                            <item>
+                                <name xml:id="Ber">Bernstroff</name>
+                            </item>
+                            <item>
+                                <name xml:id="Str">Strangford</name>
+                            </item>
+                            <item>
+                                <name xml:id="Bey">Bey von Maina</name>
+                            </item>
+                            <item>
+                                <name xml:id="Yi">Yila</name>
+                            </item>
+                        </list> 
+                    </p>
+                </particDesc> 
+                <settingDesc>
+                    <setting>
+                        <name>Verona, Italien</name>
+                        <time>Freytag den 25., 8Uhr Abends</time>
+                    </setting>
+                    <setting>
+                        <name>Morea</name>
+                        <activity>militärische Ereignisse</activity>
+                    </setting>
+                    <setting>
+                        <name>Wien</name>
+                        <activity>Konferenz</activity>
+                    </setting>
+                    <setting>
+                        <name>Verona</name>
+                        <activity>Verhandlungen</activity>
+                    </setting>
+                    <setting>
+                        <name>Negropont</name>
+                        <activity>Festung wurde blockiert von Yila</activity>
+                    </setting>
+                    <setting>
+                        <name>Epirus</name>
+                        <activity>Sohn des Bey von Maina dort geblieben</activity>                   
+                    </setting>
+                    <setting>
+                        <name>Zante</name>
+                        <activity>Sohn des Bey von Maina begraben</activity>
+                    </setting>
+                    <setting>
+                        <name>Constantinopel</name>
+                        <activity>Consternation herrscht dort</activity>
+                    </setting>
+                </settingDesc>
+            </profileDesc>
+            <revisionDesc> 
+                <listChange>
+                    <change when="2013-12-04" who="#edKB #edAS" status="draft">Weitere Auszeichnung</change>
+                    <change when="2013-01-01" who="#edKB #edAS" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen transkription</change>
+                </listChange>
+            </revisionDesc>
+        </teiHeader>
+        <facsimile>
+            <graphic url="000000051.jpg" xml:id="seite1"/>
+            <graphic url="000000052.jpg" xml:id="seite2"/>
+            <graphic url="000000053.jpg" xml:id="seite3"/>
+            <graphic url="000000054.jpg" xml:id="seite4"/>
+            <graphic url="000000055.jpg" xml:id="seite5"/>
+            <graphic url="000000056.jpg" xml:id="seite6"/>
+            <graphic url="000000057.jpg" xml:id="seite7"/>
+            <graphic url="000000058.jpg" xml:id="seite8"/>
+        </facsimile>
+        <text> 
+            <body>
+                <div>
+             <head><placeName>Verona</placeName> <date>Freytag den 25.</date> <time>Abends um 8 Uhr.</time></head>
+                
+              <p>  Ich schreibe Ihnen diesen Abend, weil ich nicht weiß, ob ich morgen vor Abgang der Post irgend 
+                
+                Zeit dazu finden würde. Viel habe ich Ihnen ohnehin nicht zu sagen; indessen rechne ich mir 
+                
+                zur Pflicht, Ihnen wenigstens alle zwey Tage zu schreiben, damit mein Stillschweigen Sie nicht 
+                
+                beunruhige.
+                
+                Ich habe diesen Morgen Ihre Sendung vom <date>17ten</date> durch <rs type="person">Kress</rs> erhalten, so daß ich jetzt bis zum <date>18ten</date>
+                
+                inclusiv alles, was Sie mir zugeschickt, vollständig besitze.
+                
+                Etwas aufgefallen ist es mir allerdings, mit welcher Zuversicht nicht nur Sie, sondern auch 
+                
+                <rs type="person" ref="#130150630">Graf Sedlnitzky</rs> erwarteten, "daß ein Artikel über die letzten militärischen Ereignisse in <placeName><settlement>Morea</settlement></placeName> 
+                
+                schon unterwegens seyn müßte." Da die Berichte, aus welchen ein solcher Artikel fabrizirt werden 
+                
+                mußte, sämmtlich durch des <rs type="person" ref="#130150630">Grafen Sedlnitzkys</rs> Hände gegangen sind, so mögte ich wißen, wo 
+                
+                Er darin d e n S t o f f zu einem solchen Artikel gefunden hat. Wenn ich, trotz der Dürftigkeit 
+                
+                meiner Materialien einen Artikel dieser Art wirklich geliefert habe, so war er die Frucht der größten 
+                
+                Anstrengung, die man mir je zumuthen konnte, oder besser, die ich selbst mir je zugemuthet habe; 
+                
+                ihn zu erwarten hatte man in der That kein Recht; ob der von mir eingesendete Sie befriediget 
+                
+                haben wird, weiß ich nicht. Ich aber habe sicher gethan, was in meiner hiesigen Lage, ohne den 
+                
+                geringsten Beystand, oder die geringste Ermunterung (denn außer mir dachte ja Niemand an 
+                
+                Türkische Artikel) nur wahrer Eifer für die Sache, und beständige Rücksicht auf das, was h i n t e r 
+                
+                uns zu beachten ist, möglich machen konnte.
+                
+                Ich schicke Ihnen hier einen von Strangford m i r mitgetheilten Bericht , immer noch 
+                
+                vom <date>25 Septembre</date> - woraus Sie sehen werden, wie wenig sich über den gegenwärtigen Stand 
+                
+                der Dinge zwischen Türken und Griechen sagen läßt; die Erklärung der Unfälle in <placeName><settlement>Morea</settlement></placeName>, die 
+                
+                in diesem Bericht gegeben wird, ist wahrscheinlich die richtige; aber dürfen w i r sie dem 
+                
+                Publikum vorsetzen ? Die Maßregeln zur Wiederherstellung der Sache sind, wie es scheint, 
+                
+                ganz zweckmäßig; sollen w i r aber auch nur Erwähnung davon thun, da unsre Feinde keinen 
+                
+                andern Schluß daraus ziehen würden, als daß es heute wenigstens mit den Türken in <placeName><settlement>Morea</settlement></placeName> sehr
+                
+                mittelmäßig steht ? Wie müßen schweigen, und ich fürchte, wir werden jetzt ziemlich lange
+                
+                schweigen müßen, es müßte denn die Post vom <date>10ten Oktober</date> ganz unerwartete Aufschlüsse
+                
+                bringen.
+                
+                Sie bitten mich, ich soll Ihnen so viel als möglich v o m C o n g r e ß zuwenden. Es ist Ihr 
+                
+                und mein Interesse, über diesen Punkt alle falsche Hoffnungen zu beseitigen. Es wäre thörigt, von 
+                
+                den letzten Resultaten dieses Congresses jetzt sprechen zu wollen; aber der Gang, den er nimmt, 
+                
+                ist ein solcher, daß an öffentliche Mittheilungen sicher sobald nicht zu denken zu seyn wird. Sie 
+                
+                müßen Sich die hiesigen Conferenzen nicht anders vorstellen als die welche in <placeName><settlement>Wien</settlement></placeName> am Ahorn-
+                Tische in dem Arbeits-Zimmer des Fürsten Statt fanden. Das Unglück ist, daß, Dank sey es der
+                
+                Unzahl der hier zusammen gepackten großen und kleinen Diplomaten, vermuthlich nächstens 
+                
+                grundfalsche Gerüchte über die Verhandlungen in <placeName><settlement>Verona</settlement></placeName> in Umlauf kommen werden. Diesem 
+                
+                Unglück ist aber v o r h e r nicht zu begegnen; ob, und wie man ihm zu seiner Zeit wird abhelfen 
+                
+                können, das muß sich in der Folge ergeben. Die Lage der Geschäfte ist von der Art, daß sie zu 
+                
+                gewagten Conjekturen reichlichen Stoff darbieten wird. Sie, und andre vernünftige Leute, werden 
+                
+                sich hoffentlich zu übereilten Urteilen nicht hinreißen laßen. Mehr kan ich Ihnen wahrlich für jetzt 
+                
+                nicht sagen.
+                
+                
+                
+                Indem ich die Augen auf meinen Voluten-Zettel werfe, bemerke ich, daß der  <rs type="person">Ferma
+                    
+                    n</rs>  w i d e r   d e n   L u x u s darauf steht. Diese Verordnung zu geben, halte ich, schon ihrer
+                
+                bestialischen Redaction wegen, für ganz unzuläßig; ich werde Ihnen aber, mit meinem nächsten 
+                
+                Briefe, und vielleicht (wenn es mir gelingt) noch mit diesem, einige kurze, und nicht uninteressante 
+                
+                Bemerkungen darüber mittheilen. Ich habe die Piece nicht hier, will jedoch gleich Morgen früh zu
+                
+                <rs type="person">Werner</rs> schicken, damit er sie mir schaffe. Sie sehen wenigstens, daß meine Bereitwilligkeit sich
+                
+                nie verleugnet.
+                
+                Wie können Sie  m i r  einen Flötenspieler adressiren ?  Was kan  i c h  für einen Menschen 
+                
+                dieser Art thun ? - <rs type="person" ref="#118581465">Der Fürst</rs> will auch nicht viel von ihm hören, hat jedoch versprochen, im Fall er
+                
+                ein Conzert geben wollte - ihm beyzustehen.
+                
+                Diesen Abend ist die erste große Soiree beym <rs type="person" ref="#118581465">Fürsten</rs>, mit Musik und Gesang. Die halbe Stadt
+                
+                fährt eben unter meinen Fenstern vorbey. Ich habe heute einen schweren Tag gehabt, den <rs type="person">Fürsten</rs>
+                
+                erst <date>kirz vor 8Uhr</date> verlaßen, und nicht die entfernteste Neigung an der Soirée Theil zu nehmen.
+                
+                Ich war einige Tage sehr leidend an meinen Gliedern; seit gestern wieder weniger; und Appetit und 
+                
+                Schlaf bleiben, Gottlob, vortreflich. Meine einzige Cur ist, mich vor aller  ä u ß e r n  Bewegung
+                
+                und Agitation möglichst zu bewahren, des Abends nie auszugehen, und sehr früh zu Bette. Von
+                
+                dem ganzen Schwall der hier versammelten Menschen sind <rs type="person">Bernstorff</rs> und <rs type="person">Strangford</rs>, ohnehin die
+                
+                einzigen, die ich suchen würde, wenn sie nicht die Güte hätten, zu mir zu kommen. Da ich aber
+                
+                einen großen Theil des Tages beym <rs type="person" ref="#118581465">Fürsten</rs> zubringe, so sehe ich dort freylich alles, was ich, gern
+                
+                oder nicht gern, sehen mag.
+                
+                <origDate>26 Septembre.</origDate>
+                
+                Ich habe gestern richtig vorausgesehen, daß ich heute nichts mehr würde schreiben können. Es
+                
+                bleibt mir nichts übrig als diesen Brief schnell zumachen zu laßen.
+              </p>
+                  <closer>
+                      <signed rend="right">
+                          <persName>G.</persName>
+                      </signed>
+                  </closer>
+                
+               <postscript> 
+                   <p>Anlage 
+                T u r c i c a.
+                
+                1. Der Kopf des Sohnes des <rs type="person">Bey von Maina</rs>,  <rs type="person">Ylia</rs> wurde auf dem Serail ausgesteckt, mit einem 
+                
+                Yafta, woraus ergeht, "daß er mit 4 bis 5000 Mann die Festung Kisil-Hissar in <placeName><settlement>Negropont</settlement></placeName> blockirt
+                
+                hatte, von dem Gouverneur derselben aber total geschlagen, gefangen, und enthauptet worden 
+                
+                (NB. Ist zu vergleichen mit dem, was von einem Sohne desselben <rs type="person">Beys von Maina</rs> der in <placeName><settlement>Epirus</settlement></placeName>
+                
+                geblieben, in <placeName><settlement>Zante</settlement></placeName>  b e g r a b e n  seyn sollte, gesagt worden ist. Der <rs type="person">Bey</rs> kan  m e h r e r e  Söhne
+                
+                gehabt haben).
+                
+                2. Während die Türken von den Persern viel gelitten, hat doch der Gouverneur von <placeName><settlement>Ahiska</settlement></placeName> 
+                
+                (wahrscheinlicher <placeName><settlement>Alkadzize</settlement></placeName> oder so etwas an der Russisch-Persischen Gränze) die Festung  E r i v
+                
+                a n eingenommen, die bekanntlich fast ganz von <placeName><country>Russischem Gebiet</country></placeName> umschlossen ist.
+                
+                3. Sollte nicht etwas über das neue  L u x u s - G e s e t z gesagt werden ?  Der <rs type="person">Ferman</rs> selbst ist zu
+                
+                bestialisch stylisirt, als daß man ihn abdrucken könnte. Aber die Sache ist höchst merkwürdig. Das 
+                
+                Haupt-Verbot ist gegen  P e l z w e r k e  <placeName><country>(Rußland)</country></placeName> - und  <placeName><settlement>S h a w l s</settlement></placeName>  (England) gerichtet, und bey
+                
+                dieser Gelegenheit ergiebt sich das sonderbare Faktum daß in der <placeName><country>Türkey</country></placeName>- d. i. in dem Lande aus 
+                
+                welchem wir andern unsre besten Shawls kommen laßen - 7/8 aller Shawls von Englischer Fabrik
+                
+                sind; denn während die Türkischen und Indischen Shawls auch dort viel Geld kosten liefern sie
+                
+                die Engländer in ungeheuren Quantitäten, das Stück im Durchschnitt zu 36 Shilling. - Man glaubt
+                
+                übrigens, daß dieses Luxus-Gesetz von keiner langen Dauer seyn wird. Die Consternation die
+                
+                darüber in <placeName><settlement>Constantinopel</settlement></placeName> herrscht, ist nicht zu beschreiben. 
+                   </p>
+               </postscript>
+                </div>    
+            </body>
+        </text>
+    </TEI>
+<TEI xml:id="Gentz-1802021201" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mashed">Brief Nr. 000 Friedrich von Gentz an Heinrich Frölich, 12. Februar 1802</title>
+                <title type="detailed">
+                    <idno>1802021201</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename>
+                        <surname>von Gentz</surname>
+                        <roleName type="general">General</roleName>
+                        <placeName type="sender">London</placeName>
+                    </persName>
+                    <persName role="receiver">
+                        <forename>Heinrich</forename>
+                        <surname>Frölich</surname>
+                        <placeName type="receiver">Berlin</placeName>
+                    </persName>
+                    <date when="1802-02-12">12. Februar 1802</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="1802021201"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date>
+            </publicationStmt>
+            <notesStmt>
+                <note>Gentz berichtet von einem Buch, das ihm ein englischer Kurier überbracht hat.
+                    Darin sind Briefe gesammelt, die den Frieden zwischen England und Frankreich aus
+                    Sicht eines Friedensgegners behandeln. Gentz plant eine Übersetzung der Briefe.
+                    Außerdem möchte er ihnen eine eigene Abhandlung voranstellen, die auf den
+                    gesamtpolitischen Zustand Europas Bezug nehmen wird. Dies schreibt er dem Verleger
+                    und Buchhändler Heinrich Frölich, da er damit die Hoffnung verbindet, diesem "etwas
+                    Brauchbares zu liefern". Gleichzeitig erbittet Gentz sich einen Vorschuss von 20
+                    Friedrichsdor, nach denen er bereits zuvor verlangt hatte.</note>
+            </notesStmt>
+            <sourceDesc corresp="GStA_PK_I_HA_Rep_94_IV_N_b_2" n="original">
+                <msDesc>
+                    <msIdentifier xml:lang="de">
+                        <country key="GND_4011882-4">Deutschland</country>
+                        <settlement>Berlin (Dahlem)</settlement>
+                        <institution>Stiftung Preußischer Kulturbesitz</institution>
+                        <repository>Geheimes Staatsarchiv Preußischer Kulturbesitz</repository>
+                        <collection>I. HA Rep 94</collection>
+                        <idno>Kleine Erwerbungen, IV. N. b. 2, Bl. 34r-35v</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc material="paper">
+                                <extent n="2">2 Seiten</extent>
+                                <foliation>nachträgliche Foliierung mit Bleistift</foliation>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <measure n="227 x 187">Format: 227 mm x 187 mm</measure>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Kodierung in TEI-konformem XML.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1802-02-12">12. Februar 1802</date>
+                <rs type="city">London, United Kingdom</rs>
+            </creation>
+            <langUsage>
+                <language ident="DE">deutsch</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Bettelbrief</term>
+                    <term>Gentz</term>
+                    <term>Frölich</term>
+                    <term>Diplomatie</term>
+                </keywords>
+            </textClass>
+            <textDesc>
+                <channel mode="w">manuscript</channel>
+                <constitution type="single"/>
+                <derivation type="original"/>
+                <domain type="private"/>
+                <factuality type="fact"/>
+                <interaction type="partial"/>
+                <preparedness type="prepared"/>
+                <purpose type="persuade"/>
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat <list>
+                    <item xml:id="gen">
+                        <name>Friedrich von Gentz</name>
+                    </item>
+                    <item xml:id="froe">
+                        <name>Heinrich Frölich</name>
+                    </item>
+                </list>
+                </p>
+                <p>im Brief erwähnte Menschen <list>
+                    <item>
+                        <name xml:id="EC">Englischer Courier</name>
+                    </item>
+                </list>
+                </p>
+            </particDesc>
+            <settingDesc>
+                <setting>
+                    <name>England</name>
+                    <activity>Friedenserwägungen</activity>
+                </setting>
+                <setting>
+                    <name>Frankreich</name>
+                    <activity>Friedenserwägungen</activity>
+                </setting>
+                <setting>
+                    <name>Europa</name>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2013-12-10" who="#edMS #edTG" status="draft">Erstanlage des TEI-Files mit
+                Einfügung der vorhandenen Transkription</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <facsimile>
+        <graphic url="00000099.jpg" xml:id="seite1"/>
+        <graphic url="000000100.jpg" xml:id="seite2"/>
+        <graphic url="000000101.jpg" xml:id="seite3"/>
+    </facsimile>
+    <text>
+        <body>
+            <div>
+                <head></head>
+                <pb facs="#seite1"/>
+                <p>Ich habe gestern das beikommende Buch<lb/> durch einen <rs ref="#EC">Englischen
+                    Courier</rs> erhalten. Es<lb/> sind Briefe über den Frieden zwischen <rs
+                        type="country" ref="GND_4018145-5">Frankreich</rs><lb/> und <rs type="country"
+                            ref="GND_4014770-8">England</rs>, geschrieben von einem Gegner<lb/> dieses
+                    Friedens, aber voll tiefer Einsichten<lb/> und in einem großen Sinne. Die
+                    meisten<lb/> Ideen dieses Buches stimmen mit den<lb/> <choice><orig>meinigen</orig><reg>meinen</reg></choice> überein; doch glaube
+                    ich noch<lb/> weiter ausführen zu können, was hier<lb/> zum <choice><orig>Theil</orig><reg>Teil</reg></choice> nur flüchtig
+                    angedeutet wurde.<lb/> Ich will diese Briefe, ganz oder im<lb/> Auszuge (wie es sich
+                    bei der Arbeit<lb/> näher ergeben wird) übersetzen, und<lb/> ihnen eine Abhandlung
+                    über diesen wich<lb/>tigen Gegenstand, die ihrer Natur nach<lb/> ein Raisonnement
+                    über den ganzen<lb/> politischen Zustand von <rs type="continent" ref="GND_4015701-5"
+                        >Europa</rs> seyn<lb/> wird, voranschicken. Es soll <choice><orig>gewiß</orig><reg>gewiss</reg></choice> <lb/> ein sehr
+                    interessanter <choice><orig>Meß</orig><reg>Mess</reg></choice>-Artikel<lb/> werden, und ich will, da diese Briefe<pb
+                        facs="#seite2"/> mich von neuem <choice><orig>electrisirt</orig><reg>elektrisiert</reg></choice> haben, sogleich<lb/> daran gehen.
+                    -</p>
+                <p>Ich sehe dies als eine erwünschte<lb/> Begebenheit an, um Ihnen etwas
+                    Brauchbares<lb/> zu liefern, und mich in meiner Verlegenheit<lb/> zu soulagiren. Ich
+                    verlange auch für<lb/> diese Arbeit durchaus nichts; ich betrachte<lb/> sie wie ein Mittel, den
+                    Schaden den<lb/> ich Ihnen zugefügt, einigermaßen gut zu<lb/> machen. Die 20 <choice>
+                        <abbr>Frdor</abbr>
+                        <expan>Friedrichsdor</expan>
+                    </choice> um welche<lb/> ich Sie gebeten, sollen ein bloßer<lb/> <choice><orig>Vorschuß</orig><reg>Vorschuss</reg></choice> <choice><orig>seyn</orig><reg>sein</reg></choice>, den ich Ihnen
+                    in<lb/> kurzem <choice><orig>baar</orig><reg>bar</reg></choice> erstatten werde. Nur<lb/> um diesen <choice><orig>Vorschuß</orig><reg>Vorschuss</reg></choice> bitte ich Sie nochmals<lb/> aufs
+                    dringendste. Verweisen Sie mich nicht<lb/> auf den morgenden Tag. Sie vervielfachen<lb/> den
+                    Dienst den Sie mir leisten, wenn<lb/> Sie ihn ohne Aufschub leisten. Es ist<lb/> nicht zu
+                    berechnen, was Sie mir heute<lb/> damit helfen. Mehr sage ich nun nicht;<lb/> und so groß meine
+                    Verlegenheit auch<pb facs="#seite3"/> <choice><orig>seyn</orig><reg>sein</reg></choice> mag, ich hätte selbst dieses nicht mehr
+                    gesagt,<lb/> wenn ich es Ihnen nicht, begleitet von jenem<lb/> Vorschlage, der wenigstens
+                    meinen guten Willen<lb/> zeigt, noch einmal hätte sagen können.</p>
+                <closer>
+                    <signed rend="right">
+                        <persName key="">Gentz</persName>
+                        <date when="1802-02-12">12 Februar 1802</date>
+                    </signed>
+                </closer>
+            </div>
+            <div>
+                <p>Gentz</p>
+                <p><date when="1802-02-12">12 Februar 1802</date></p>
+            </div>
+        </body>
+    </text>
+</TEI>
+<TEI xml:id="Gentz-1824050501" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title type="mashed">Brief Nr. 1824050501 Friedrich von Gentz an Franz von Ottenfels-Gschwind, 05. Mai 1824</title>
+                <title type="detailled">
+                    <idno>1824050501</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename> 
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Wien</placeName>
+                    </persName>
+                    <persName role="receiver"> 
+                        <forename>Franz</forename>
+                        <surname>von Ottenfels-Gschwind</surname>
+                        <placeName type="receiver">Konstantinopel</placeName> 
+                    </persName>
+                    <date when="1824-05-05">05. Mai 1824</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="1824050501"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date>
+            </publicationStmt>
+            <notesStmt>
+                <note>
+                    Friedrich von Gentz schreibt einen Brief an Franz von Ottenfels-Geschwind in dem er dem Adressaten mitteilt, dass er ihm bestimmte Unterlagen zukommen lasen wird.
+                    Des weiteren beschreibt er einen Austausch mit Lord Strangford und analysiert dessen Lebenssituation vor dem Hintergrund aktueller Geschehnisse.
+                </note>
+            </notesStmt>
+            <sourceDesc corresp="unbekannt" n="original">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key=" GND:4073841-3">Kroatien</country>
+                        <settlement>Zagreb</settlement>
+                        <institution>Hrvatski Državni Arhiv</institution>
+                        <repository>FA Ottenfels, Karton 14</repository>
+                        <collection>Konvult 1824.g.</collection>
+                        <idno>Bl. 75-76</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>2 1/2 Seiten</extent>
+                                <condition>einghd. beschr. Seiten</condition>
+                            </supportDesc>
+                        </objectDesc> 
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>        
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Schaffung einer wissenschaftlich kritischen digitalen Edition aller Briefe von Friedrich von Gentz.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1824-05-05">05. Mai 1824</date>
+                <rs type="city">Wien</rs>
+            </creation>           
+            <langUsage>
+                <language ident="DE">deutsch</language>
+                <language ident="FR">französisch</language>
+            </langUsage> 
+            <textClass> 
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Diplomatie</term>
+                    <term>Gentz</term>
+                    <term>Depeschen</term>
+                    <term>Lord Strangford</term>
+                    <term>Ottenfels-Gschwind</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/> 
+                <derivation type="original"/>
+                <domain type="private"/> 
+                <factuality type="fact"/> 
+                <interaction type="partial"/> 
+                <preparedness type="unprepared"/>  
+                <purpose type="inform"/>
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Friedrich von Gentz</name>
+                        </item>
+                        <item xml:id="Fra">
+                            <name>Franz von Ottenfels-Geschwind</name>
+                        </item>
+                    </list>
+                </p>
+                <p>Im Brief erwähnte Menschen
+                    <list>
+                        <item>
+                            <name xml:id="Hen">Sir Henry Wellesley</name>
+                        </item>
+                        <item>
+                            <name xml:id="Co">Courier</name>
+                        </item>
+                        <item>
+                            <name xml:id="Str">Lord Strangford</name>
+                        </item>
+                        <item>
+                            <name xml:id="Sta">Obersten Stanhope</name>
+                        </item>
+                        <item>
+                            <name xml:id="Can">Canning</name>
+                        </item>
+                    </list> 
+                </p>
+            </particDesc> 
+            <settingDesc>
+                <setting>
+                    <name>Wien</name>
+                    <time>Mittwoch, 05. Mai, 1824</time>
+                </setting>
+                <setting>
+                    <name>Konstantinopel</name>
+                    <activity>Ankunftsort der Depeschen</activity>
+                </setting>
+                <setting>
+                    <name>London</name>
+                    <activity>Herkunftsort der Depeschen</activity>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc> 
+            <listChange>
+                <change when="2013-12-10" who="#edPH" status="draft">Briefeditierung</change>
+                <change when="2013-12-10" who="#edDA" status="draft">Briefeditierung</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000072.jpg" xml:id="seite1"/>
+        <graphic url="00000073.jpg" xml:id="seite2"/>
+        <graphic url="00000074.jpg" xml:id="seite3"/>
+    </facsimile>
+    <text>
+        
+        
+        
+        <body>
+            <div>
+                <pb facs="#seite1"/>
+                <head rend="right">Wien, am 5ten Mai 1824</head>
+                
+                <p><rs type="person" ref="GND:116706198">Sir Henry Wellesley</rs> schickt die heute aus <rs type="city" ref="GND:4074335-4">London</rs> erhaltnen Depeschen durch einen <rs type="person">eignen Courier</rs> nach <rs type="city" ref="GND:4073697-0">Constantinopel</rs>. 
+                    Ich war einen Augenblick versucht, <mentioned sameAs="Franz von Ottenfels-Geschwind">Mein <choice><orig>Theuerster</orig><reg>teuerster</reg></choice> Freund</mentioned>, Ihnen mein heutiges – <hi rend="underline">s e h r  s t a r k e s</hi> Paket durch diese Gelegenheit zu übermachen, <add>Noch</add> da natürlich der <rs type="person">Englische Courier</rs> dem gewöhnlichen um mehrere Tage zuvor laufen wird. 
+                    Nach näherer<choice><orig>Ueberlegung</orig><reg>Überlegung</reg></choice> aber habe ich dies Verfahren wieder aufgegeben, und mich <add>aus</add> mehrern guten Gründen entschlossen, dem alten erprobten <choice><orig>Communications-Wege</orig><reg> Kommunikationswege</reg></choice> nicht untreu zu werden. 
+                    Dagegen benutze ich den <rs type="person">Englischen Courier</rs>, um <rs type="person">Lord Strangford</rs> auf einen gestern von ihm erhaltnen höchst interessanten Brief zu antworten.
+                    <lb/>Unter andern habe ich ihn gebeten, sich von Ihnen ein kleines kurzes Aktenstück, welches Sie unter dem Titel:<foreign sameAs="Gliederung der notwendigen Operationen, um den Frieden / / für Griechenland zu bringen" rendition="franzoesisch">Esquisse des opérations nécessaires pour amener la pacification <pb facs="#seite2"/> 
+                        de la Gréce</foreign> in meinem Paket finden werden, auszubitten. 
+                    Da er dies vielleicht früher <choice><orig>thun</orig><reg>tun</reg></choice> könnte, als Sie Selbst das Papier empfangen hatten, so will ich Sie hiermit davon benachrichtiget haben.
+                    <lb/>Die <choice><orig>Instructionen</orig><reg>Instruktionen</reg></choice> aus <rs type="city" ref="GND:4074335-4">London</rs> werden <rs type="person">Lord Strangford´s</rs> Stellung nicht sonderlich verbessern. 
+                    Mir scheinen sie unzureichend, kalt, und verlegen. 
+                    Außer der Zurückberufung des Obersten Stanhope dessen Mitwirkung denn doch auch eine gar zu flagrante Verletzung des Völker-Rechtes war, (der <add>es</add> aber vielleicht darauf ankommen <choice><orig>laßen</orig><reg>lassen</reg></choice> wird, aus der Armee-Liste gestrichen zu werden) – und außer einigen kahlen Entschuldigungen – ist in diesen <choice><orig>Instructionen</orig><reg>Instruktionen</reg></choice> nichts befriedigendes für die Pforte. 
+                    Vielleicht wirken <rs type="person">Lord Strangford´s</rs> <hi rend="underline">l e t z t e</hi> Berichte, unter welchen besonders einer sich durch großen <choice><orig>Muth</orig><reg>Mut</reg></choice> und kraftvoll ausgesprochne Wahrheiten sehr auszeichnet, stärker auf das Englische <choice><orig>Cabinet</orig><reg>Kabinett</reg></choice>. 
+                    Ich verspreche mir aber wenig Sie dürfen nur die Parlaments-Debatten der letzten Monate lesen, um zu sehen, wie <pb facs="#seite3"/> 
+                    sehr das System der Condescendenz, der <choice><orig>Schmeicheleyen</orig><reg>Schmeicheleien</reg></choice>, und der Caressen gegen die <choice><orig>Oppositions-Partey</orig><reg>Oppositionsparteien</reg></choice> <choice><orig>bey</orig><reg>bei</reg></choice>den Ministern die Oberhand gewonnen hat. 
+                    <hi rend="underline">W i e</hi> <rs type="person" ref="GND:118668234">Canning</rs> sich früher oder später aus der Griechischen Verwicklung zu ziehen gedenkt, davon habe ich noch keine Vorstellung.
+                    <lb/><rs type="person">Der Fürst</rs> war gestern Willens Ihnen zu schreiben, hauptsächlich auch wegen des anrückenden Guilleminot. 
+                    Heute war aber ein so unruhiger Tag, daß der <choice><orig>gewiß</orig><reg>gewiss</reg></choice>nicht dazu gekommen ist, er <choice><orig>müßte</orig><reg>müsste</reg></choice> denn den <rs type="person">Courier</rs> bis Morgen Mittag aufhalten können.
+                    Leben Sie wohl, und bleiben Sie mir gewogen!</p>
+                <closer>
+                    <signed rend="right">
+                        <persName key="">Gentz</persName>
+                        <date when="1824-05-05">05 Mai 1824</date>
+                    </signed>
+                </closer>
+            </div>
+            <div>
+                <p>Gentz</p>
+                <p><date when="1824-05-05">05 Mai 1824</date></p>
+            </div>
+        </body>
+    </text>
+</TEI>
+<TEI xml:id="Gentz-1824041701" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title type="mashed">Brief Nr. 1824041701 Friedrich von Gentz an Franz von Ottenfels-Gschwind, 17. April 1824</title>
+                <title type="detailled">
+                    <idno>1824041701</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename> 
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Wien</placeName>
+                    </persName>
+                    <persName role="receiver"> 
+                        <forename>Franz</forename>
+                        <surname>von Ottenfels-Gschwind</surname>
+                        <placeName type="receiver">Konstantinopel</placeName>
+                    </persName>
+                    <date when="1824-04-17">17. April 1824</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="1824041701"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date> 
+            </publicationStmt>
+            <notesStmt>  
+                <note></note>
+            </notesStmt>
+            <sourceDesc corresp="unbekannt" n="original">   
+                <msDesc>
+                    <msIdentifier xml:lang="EN">
+                        <country key="GND:4073841-3">Kroatien</country>
+                        <settlement>Zagreb</settlement>
+                        <institution>Hrvatski Državni Arhiv</institution>
+                        <repository>FA Ottenfels, Katon 14</repository>
+                        <collection>Konvult 1824.g.</collection>
+                        <idno>Bl. 29-29v.</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>2 Seiten</extent>
+                                <condition>einghd. beschr. Seiten</condition>
+                            </supportDesc>
+                        </objectDesc>  
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="en">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Erzeugung einer digitalen Edition der Korrespondenzen Gentz</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1824-04-17">17. April 1824</date>
+                <rs type="city">Wien, Österreich</rs>
+            </creation>           
+            <langUsage>
+                <language ident="DE">deutsch</language>
+            </langUsage> 
+            <textClass> 
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Diplomatie</term>
+                    <term>Gentz</term>
+                    <term>Türkische Nachrichten</term>
+                    <term>Corfu</term>
+                    <term>Wien</term>
+                    <term>Zante</term>
+                    <term>Graf Sedlnitzky</term>
+                    <term>Kaiser</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/> 
+                <derivation type="original"/> 
+                <domain type="private"/> 
+                <factuality type="fact"/> 
+                <interaction type="partial"/> 
+                <preparedness type="unprepared"/>  
+                <purpose type="inform"/> 
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Gentz</name>
+                        </item>
+                        <item xml:id="Ott">
+                            <name>Ottenfels-Gschwind</name>
+                        </item>
+                    </list>
+                </p>
+                <p>im Brief erwähnte Menschen
+                    <list>
+                        <item>
+                            <name xml:id="Se">Graf Sedlintszky</name>
+                        </item>
+                        <item>
+                            <name xml:id="Fr">Kaiser Franz</name>
+                        </item>
+                    </list> 
+                </p>
+            </particDesc> 
+            <settingDesc>
+                <setting>
+                    <name>Wien, Österreich</name>
+                    <time when="1824-04-17">17. April 1824, Sonnabend</time>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>  
+            <listChange>
+                <change when="2013-12-04" who="#edAG #edMS" status="draft">Weitere Auszeichnung</change>
+                <change when="2013-01-01" who="#edAG #edMS" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen transkription</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000066.jpg" xml:id="seite1"/>
+        <graphic url="00000067.jpg" xml:id="seite2"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="writingDate"><docDate when="1802-02-12"/>
+                <head><placeName><settlement>Wien</settlement></placeName>, <origDate>17. April 1824</origDate>, Sonnabend</head>
+                
+                <pb facs="#seite1"/>
+                <p>  Ihr Courier vom <date when="1824-03-25">25<hi rend="sup">ten</hi></date>, Mein Theuerster Freund,<lb n="1"/>
+                    ist nicht angekommen. Ich bedaure es nicht sehr, da wir <lb/>
+                    Nachrichten bis zum 21ten hatten;  was kan zwischen dem <lb/>
+                    21 und 25 großes vorgegangen seyn ?  Ich nehme dies auch <lb/>
+                    nicht zum Vorwand, um die Dürftigkeit meines heutigen <lb/>
+                    Schreibens zu beschönigen, gestehe lieber aufrichtig, daß ich <lb/>
+                    <del hand="#Gentz" rend="punktiert">nicht</del> zum Schreiben heute nicht sonderlich aufgelegt bin. Ich war seit ein Paar Tagen nicht bey sehr guter 
+                    Laune, unzufrieden mit verschiednen Dingen, auch etwas unwohl. Endlich würde ich Ihnen nur Klagen über den äußerst langsamen Gang Ihrer dortigen 
+                    Verhandlungen zu adressieren haben. Ich besorge immer mehr und mehr, daß Strangford muthwillig zögert, und jede fremde Thätigkeit zu lähmen und 
+                    auszuschließen sucht. Ich mögte wissen, ob Sie seinen fulminanten Bericht an Canning - datirt vom 25ten Februar, aber erst am 10 März expedirt, gesehen 
+                    haben. 
+                    Der Bericht ist  h ö c h s t  merkwürdig, und muß zu Schritten führen, 
+                    die uns großes Licht geben werden.
+                    In diesen Bericht erklärt er 
+                    sich nun, wenn Canning ihm <abbr>nicht</abbr> sofort zu Hülfe kömmt, für gänzlich bankrutt; und doch, nachdem er seinen und Englands Credit bey der 
+                    Pforte, als fast erloschen geschildert, setzt er hinzu: "Unter solchen Umständen sollte mir die Lust wohl vergehen, die Frage wegen der Evacuation zur 
+                    Sprache zu bringen; <pb facs="#seite2"/> da indessen Fürst Metternich darauf besteht, daß sie coute qui coute abordirt werden müße, so werde  i c h  sehen, 
+                    was ich in der nächsten Woche etwa thun kan." Ich habe Hackenau ausdrücklich gebeten, Ihnen Strangfords letztes Schreiben, wegen Verwendung des 
+                    Fürsten Ghika für Villara mitzutheilen, wenn er es nicht von selbst gethan haben sollte. Eine größre  M o n s t r u o s i t ä t  als dieses Schreiben ist Ihnen 
+                    gewiß noch nicht zu Gesicht gekommen.</p>
+                <p>  Ein Courier aus Petersburg vom 31ten März langte vorgestern an. Lebzeltern ist von einer schweren Krankheit genesen. Heute geht von unsrer Seite ein Courier an ihn ab, mit unsrer Erklärung über das Russische Memoire sur la pacification de la Grèce. Ich hätte Ihnen beyde Piecen bereits abschreiben laßen, wenn der einzige Mensch, dem ich sie anvertrauen kan, nicht zu sehr mit Arbeit beladen wäre,  u n d  besonders, wenn ich nicht fürchtete, daß solche Ihnen auf andern Wegen zugekommen sind, und also meine Abschriften en pure perte gemacht würden.</p>
+                <p>  Uebrigens ist der Kayser Alexander entschlossen in diesem Jahre keine Reise ins Ausland zu unternehmen. Hiedurch ist unsre Freiheit und Ruhe für den Sommer völlig gesichert. Ich sehne mich nach Weinhaus; noch aber haben wir - most astonishing - seit dem 16 Februar nicht einen einzigen schönen Tage gehabt. Dies unfreundliche Wetter trägt auch zu meiner Verstimmung bey, die sich jedoch nie auf meine herzliche Liebe zu Ihnen erstreckt.</p>
+                <closer>
+                    <salute>Gentz</salute>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
+<TEI xml:id="Gentz-1800030801" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mashed">Brief Nr. 000 Friedrich von Gentz an Robert B. Jenkinson Lord Hawkesbury in London</title>
+                <title type="detailled">
+                    <idno>1800030801</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename>
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Berlin</placeName>
+                    </persName>
+                    <persName role="receiver">
+                        <forename>Robert Banks</forename>
+                        <surname>Jenkinson</surname>
+                        <roleName>Second Earl of <placeName><settlement>Liverpool</settlement></placeName></roleName>
+                    </persName>
+                    <date when="1800-03-08">08. März 1800</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="1800030801"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date>
+            </publicationStmt>
+            <notesStmt>  
+                <note></note>
+            </notesStmt>
+            <sourceDesc corresp="BL_MS_LP_Add38234" n="original">
+                <msDesc>
+                    <msIdentifier xml:lang="en">
+                        <country key="GND_4022153-2">United Kingdom</country>
+                        <settlement>London</settlement>
+                        <institution>British Library</institution>
+                        <repository>Manuscript Department</repository>
+                        <collection>Liverpool-Papers</collection>
+                        <idno>Add. 38234</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>2 Seiten</extent>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p> Briefsammlung von Gentz</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1800-03-08">03. März 1800</date>
+                <rs type="city">Berlin, Germany</rs>
+            </creation>
+            <langUsage>
+                <language ident="FR">Französisch</language>
+            </langUsage> 
+            <textClass>
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Diplomatie</term>
+                    <term>Gentz</term>
+                    <term>Hawkesbury</term>
+                    <term>Aufklärung</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/>
+                <derivation type="original"/>
+                <domain type="public"/> 
+                <factuality type="fact"/> 
+                <interaction type="partial"/> 
+                <preparedness type="prepared"/>  
+                <purpose type="inform"/> 
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Gentz</name>
+                        </item> 
+                    </list>
+                    <list>
+                        <item xml:id="Jen">
+                            <name>Robert B. Jenkinson</name>
+                            <note>Lord Hawkesbury</note>
+                        </item>
+                    </list>
+                </p> 
+            </particDesc> 
+            <settingDesc>
+                <setting>
+                    <name>England</name>          
+                </setting>         
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change when="2013-12-04" who="#edCB #edYP" status="draft">Weitere Auszeichnung</change>
+                <change when="2013-01-01" who="#edCB #edYP" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen Transkription</change>
+                <change when="2013-12-10" who="#edCB #edYP" status="draft">Bearbeitung der Auszeichnung in TEI</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000089.jpg" xml:id="Transkription"/>
+        <graphic url="00000090.jpg" xml:id="Original"/>
+        <graphic url="00000091.jpg" xml:id="Referenz"/>
+        <graphic url="00000092.jpg" xml:id="Essay"/>   
+    </facsimile>
+    <text>
+        <body>
+            <div>
+                <head>
+                    
+                </head>
+                <opener>
+                    <salute>My <rs type="person" ref="#133739791">Lord</rs>!</salute>
+                </opener>
+                <p>Le foible essai que je <choice><orig>prens</orig><reg>prends</reg></choice> la liberté de <rs type="person" ref="#GND_133739791">Vous</rs> présenter a été composé dans l'idée de mettre à 
+                    
+                    la place des erreurs et des préjugés que l'ignorance et la mauvaise-foi ont répandu parmi mes 
+                    
+                    compatriotes sur l'état interieur et les ressources de l'<rs type="place" ref="#GND_4022153-2">Angleterre</rs>, quelque notions plus exactes 
+                    
+                    et plus dignes de la grandeur de l'objet. C'est sous ce rapport seul, qu'un homme-d'état de Vos 
+                    
+                    lumières et de <rs type="person" ref="#GND_133739791">Votre</rs> caractère peut honorer cet ouvrage d'un regard favorable: c'est sous ce 
+                    
+                    rapport seul que j'ai pu concevoir l'idée de <rs type="person" ref="#GND_133739791">Vous</rs> le présenter.
+                </p>
+                <p>J'ai l'honneur d'etre avec la plus-haute considération</p>
+                <closer>
+                    <salute>My Lord</salute>
+                    <salute>Votre très-humble et très-dévoué serviteur</salute>
+                    <signed rend="right">
+                        <persName key="A002068">Gentz</persName>
+                    </signed>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
+<TEI xml:id="Gentz-1802093001" xmlns="http://www.tei-c.org/ns/1.0">         
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title type="mashed">Brief Nr. 000 Friedrich von Gentz an Gustav Mauritz Armfelt, 30. September 1802</title>
+                <title type="detailled">
+                    <idno>1802093001</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename> 
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Dresden</placeName>
+                    </persName>
+                    <persName role="receiver">
+                        <forename>Gustav Mauritz</forename>
+                        <surname>Armfelt</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="receiver">Unbekannt</placeName>
+                    </persName>
+                    <date when="1820-09-30">30. September 1820</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-11-13">13. November 2013</date>
+            </publicationStmt>
+            <notesStmt>  
+                <note></note>
+            </notesStmt>
+            <sourceDesc corresp="I/23" n="original">
+                <msDesc>
+                    <msIdentifier xml:lang="en">
+                        <country key="GND_4017243-0">Finland</country>
+                        <settlement>Helsinki</settlement>
+                        <institution>Finnisches Reichsarchiv</institution>
+                        <collection>Nachlaß Armfelt</collection>
+                        <idno>I/23</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>2 Bl., F: 180mm x 113mm; 1 eighd. beschr. Seite.</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc corresp="XXXI,45" n="firstPrint" >
+                <biblStruct>
+                    <monogr>
+                        <title>Deux adversaires de Napoléon</title>
+                        <idno>31</idno>
+                        <imprint>
+                            <biblScope type="pp">45</biblScope>
+                            <publisher>Harry Donner</publisher>
+                            <pubPlace>Helsingfors</pubPlace>
+                            <date when="1939-04-17">17. April 1939</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Transkription eines Briefes</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>                  
+                <date when="1822-10-26">26. Oktober 1822</date>                   
+                <rs type="city">Dresden, Deutschland</rs>
+            </creation>           
+            <langUsage>
+                <language ident="FR">französich</language>
+            </langUsage> 
+            <textClass> 
+                <keywords scheme="">
+                    <term>Brief</term>
+                    <term>Bettelbrief</term>                  
+                    <term>Diplomatie</term>
+                    <term>Armfelt</term>
+                    <term>Gentz</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel> 
+                <constitution type="single"/> 
+                <derivation type="original"/> 
+                <domain type="private"/>
+                <factuality type="fact"/> 
+                <interaction type="partial"/>
+                <preparedness type="prepared"/> 
+                <purpose type="inform"/>
+            </textDesc>
+            <particDesc>
+                <p>Autor und Adressat
+                    <list>
+                        <item xml:id="Gen">
+                            <name>Gentz</name>
+                        </item>
+                        <item xml:id="Arm">
+                            <name>Armfelt</name>
+                        </item>
+                    </list>
+                </p>
+            </particDesc> 
+            <settingDesc>
+                <setting>
+                    <name>Vienne, Austria</name>
+                    <activity>Konferenz</activity>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc> 
+            <listChange>
+                <change when="2013-12-04" who="#edAG #edMS" status="draft">Weitere Auszeichnung</change>
+                <change when="2013-01-01" who="#edAG #edMS" status="draft">Erstanlage des TEI-Files mit Einfügung der vorhandenen Transkription</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000103.jpg" xml:id="seite01"/>
+        <graphic url="00000104.jpg" xml:id="seite02"/>
+        <graphic url="00000105.jpg" xml:id="seite03"/>
+        <graphic url="00000106.jpg" xml:id="seite04"/>
+        <graphic url="00000107.jpg" xml:id="seite05"/>
+        <graphic url="00000108.jpg" xml:id="seite06"/>
+        <graphic url="00000109.jpg" xml:id="seite07"/>
+        <graphic url="00000110.jpg" xml:id="seite08"/>
+        <graphic url="00000111.jpg" xml:id="seite09"/>
+    </facsimile>
+    <text>
+        <body> 
+            <div>
+                <p>
+                    <emph>Nr.  000  An Gustaf Mauritz Armfelt in <region>Dresden</region>
+                        <date when="1802-09-30"> 30 Septb 1802.</date></emph>
+                    <choice><orig>Pardonnez</orig><reg>Permettez</reg></choice>, Mon Général que je Vous présente ci-joint le recépisse pour la lettre de crédit que Vous m'avez envoyée avec tant de graces et de bonté; acceptez-en l'expression de ma profonde réconnoissance. Mais veuillez-bien Vous souvenir aussi, que Vous m'avez promis une lettre pour Londres, et que tout ce qui me vient de Vous, m'est trop précieux pour que je puisse l'abandonner. Je ne saurois Vous dire combien je me trouve heureux, combien je bénis  mon sort, quand je pense, que quoiqu'il m'arrive à <region>Vienne</region>, il y aura un homme de Votre caractère, de Votre force, de Vos lumières, de Vos talens, et, j'ose ajouter, de Votre extrême amabilité, qui m'accordera toujours sa conversation, ses conseils, et sa bienveillance. Puissiez-Vous Vous trouver en état de devenir un de ces anges tutélaires qui sauvent quelquefois la société lorsqu'elle est // prête à tomber dans les derniers abymes; et puissé-je être un instrument entre Vos mains. C'est le plus grand titre de gloire que j'ambitionnerois jamais.
+                    Agréez, Mon<choice><sic>General</sic><corr>Général</corr></choice>, les hommages d'un dévouement aussi inviolable, <corr>[et]</corr> que respectueux, avec lequel j'ai l'honneur d'être
+                    
+                    Votre tres humble 
+                    et très fidèle serviteur
+                    
+                    <region>Dresden</region> <date when="1802-09-30"> 30 Septb 1802.</date> 
+                    <emph>
+                        Adresse auf Seite 4: A Son Excellence / Monsieur le Baron / d'Armfeld.
+                        Siegel auf Seite 4.                 
+                        H: Finnisches Reichsarchiv, Helsinki.
+                        Nachlaß Armfelt, I / 23.
+                        2 Bl., F: 251mm x 200mm; 1 ¾ eighd. beschr. Seiten.
+                        D: Donner, Deux adversaires, Nr. II, 23. 
+                    </emph>
+                </p>
+            </div>
+        </body>
+    </text>
+    
+</TEI>
+<TEI xml:id="Gentz-1806082501" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mashed">Brief Nr. 000 Von Friedrich von Gentz an Gustav Mauritz Armfelt, 25. August 1806</title>
+                <title type="detailled">
+                    <idno>1806082501</idno>
+                    <persName role="sender">
+                        <forename>Friedrich</forename>
+                        <surname>von Gentz</surname>
+                        <roleName role="general">General</roleName>
+                        <placeName type="sender">Dresden</placeName>
+                    </persName>
+                    <persName role="receiver">
+                        <forename>Gustav Mauritz</forename>
+                        <surname>Armfelt</surname>
+                        <placeName type="receiver">Stralsund</placeName>
+                    </persName>
+                    <date when="1806-08-25">25. August 1806</date>
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Gentz-Editions-Team</publisher>
+                <pubPlace>Cologne</pubPlace>
+                <distributor>University of Cologne</distributor>
+                <idno type="Gentz-Edition-Number" n="0000"/>
+                <idno type="Briefnummer" n="1806082501"/>
+                <availability>
+                    <licence>CC-BY-SA</licence>
+                </availability>
+                <date when="2013-12-10">10. Dezember 2013</date>
+            </publicationStmt>
+            <notesStmt>
+                <note></note>
+            </notesStmt> 
+            <sourceDesc corresp="I/24" n="original">
+                <msDesc>
+                    <msIdentifier xml:lang="en">
+                        <country key="GND_4017243-0">Finland</country>
+                        <settlement>Helsinki</settlement>
+                        <institution>Finnisches Reichsarchiv</institution>
+                        <collection>Nachlaß Armfelt</collection>
+                        <idno>I/24</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <p>2 Bl., F: 180mm x 113mm; 1 eighd. beschr. Seite.</p>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc corresp="XXXI,45" n="firstPrint" >
+                <biblStruct>
+                    <monogr>
+                        <title>Deux adversaires de Napoléon</title>
+                        <idno>31</idno>
+                        <imprint>
+                            <biblScope type="pp">45</biblScope>
+                            <publisher>Harry Donner</publisher>
+                            <pubPlace>Helsingfors</pubPlace>
+                            <date when="1939-04-17">17. April 1939</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+            <sourceDesc corresp="#tbd" n="handwrittentranscription">
+                <msDesc>
+                    <msIdentifier xml:lang="DE">
+                        <country key="GND_ 4011882-4">Germany</country>
+                        <settlement>Cologne</settlement>
+                        <institution>University of Cologne</institution>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Erstellung einer digitalen Edition von Gentz-Briefen, zur Analyse, Weiterverarbeitung u.a.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="1806-08-25">25. August 1806</date>
+                <rs type="city">Dresden, Deutschland</rs>
+            </creation>
+            <langUsage>
+                <language ident="f">französisch</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="list-of-terms">
+                    <term>Brief</term>
+                    <term>Lettre</term>
+                    <term>Mademoiselle L.</term>
+                    <term>Gentz</term>
+                    <term>Armfelt</term>
+                    <term>Dresden</term>
+                    <term>Dresde</term>
+                </keywords>
+            </textClass>
+            <textDesc n="letter">
+                <channel mode="w">manuscript</channel>
+                <constitution type="single"/>
+                <derivation type="original"/>
+                <domain type="private"/>
+                <factuality type="fact"/>
+                <interaction type="inapplicable"/>
+                <preparedness type="unprepared"/>
+                <purpose type="inform"/>
+            </textDesc>
+            <particDesc>
+                <p>Sender und Adressat
+                    <list>
+                        <item xml:id="Gen">Gentz</item>
+                        <item xml:id="Arm">Armfelt</item>
+                    </list>
+                </p>
+            </particDesc>
+            <settingDesc>
+                <setting>
+                    <name>Dresde</name>
+                    <time>Ce 25 Août</time>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change when="2013-12-10" who="#edAG" status="unfinished">Ergänzung der TEI-relevanten Informationen (soweit möglich)</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="00000112.jpg" xml:id="ubTranskription"/>
+        <graphic url="00000113.jpg" xml:id="donner45"/>
+        <graphic url="00000114.jpg" xml:id="donnerTitelei"/> 
+        <graphic url="00000118.jpg" xml:id="manuskript"/>
+    </facsimile>
+    <text>
+        <body>
+            <div>
+                <p>Voici encore, mon <rs type="person" ref="#116341254">Général</rs>, une lettre dont on me charge pour Vous, malgré les inquiétudes
+                    qui nous donne Votre silence prolongé. Tout en consolant l'excellente <rs type="person" ref="#9000001">amie</rs>, dont la présence
+                    est un <choice><orig>beaume</orig><corr>baume</corr></choice> pour mon âme, déchirée de tant de malheurs, je me livre un peu moi-même à la
+                    crainte que quelque revers n'ait dérangé notre correspondance. C'est pour cela aussi, que je ne
+                    veux rien ajouter à ces lignes; Vous connoissez les sentiments invariables de</p>
+            </div>
+            <closer>
+                <salute>Votre fidèle serviteur</salute>
+                <dateline><placeName><settlement>Dresden</settlement></placeName> Ce 25 Août</dateline>
+                <signed rend="right">G.</signed>
+            </closer>
+            <epigraph><span from="">NB. Mes deux dernières Lettres étoient du 10 et du 18. -</span></epigraph>
+        </body>
+    </text>
+</TEI>
+</teiCorpus>

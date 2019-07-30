@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Proseminar HKI I, Andreas Gálffy, Februar/März 2013, 5584124 -->
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" idPrefix="zd" xsi:noNamespaceSchemaLocation="town.xsd">
+    <station number="zd0" additionalMoney="0" mapPointX="59.6" mapPointY="68.4">
+        <name>Gib niemals auf</name>
+        <!-- Startfeld -->
+        <discoveryContent>
+            <place id="startupScreenGerman" monolingual="true">
+                 <content lang="de">
+                     "Und, was habe ich dir gesagt?" sagt dir dein Kumpel, der dich auf eine, wie er sagte, 
+                     "ungewöhnliche Stadtrundfahrt" eingeladen hatte.!NL
+                     "Hier kannst du die Stadtbahn nach Zeidel nehmen - und ein neues Spiel anfangen. Löse dazu 
+                     eine Fahrkarte am Automaten."!NL
+                     Kaum hatte er das gesagt, schon fährt auf dem anderen Gleis ein Zug ab.!NL 
+                     "Oh, verdammt, der fährt mitten ins Verderben! Ich muss sie einholen und das Stellwerk warnen, 
+                     ehe es zu spät ist!" Mit diesen Worten ist dein Freund verschwunden und du bleibst alleine 
+                     zurück.!NL
+                     Folge den grünen Feldern, um dich durch das Gebiet zu bewegen. "Gib niemals auf!" - etwas, was 
+                     du in diesen Zeiten sehr gerne tun würdest, angesichts deiner sonstigen Probleme ... und 
+                     suche jetzt auch noch deinen Kumpel.
+                 </content>
+                 <imagePath lang="de">zeidel/stadtbahn/gibniemalsauf_arrivee.JPG</imagePath>
+                 <action name="stepToPlaceB" coords="0.0,0.0 0.0,100.0 22.0,100.0 22.0,0.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="de">Hier kannst du zur Bahnsteigmitte.</hover>
+                 </action>
+            </place>
+            <!-- französisches Startfeld -->
+            <place id="startupScreenFrench" monolingual="true">
+                <content lang="fr">
+                    « Ça va être beau, ça va bien se passer ! » disait le chef de chœur très enthusiaste.!NL
+                    Ensuite, il a disparu avec toute l'équipe, parmi autres ton amour très cher. Ils font une 
+                    tournée par Zeidel et remontent la voiture. Tu essaies de les joindre mais echoues, la porte 
+                    se ferme devant tes yeux.!NL
+                    Tu ne peux faire que regarder autour de toi, partout, il y a "Ne renonce jamais !" en 
+                    allemand. Tu ne perds pas le sentiment qu'un malheur va arriver au train.!NL
+                    Si tu cliques sur l'image, tu verras prochainement des champs verts qui te permettent de faire 
+                    des actions.
+                </content>
+                <imagePath lang="fr">zeidel/stadtbahn/nerenoncejamais_arrivee.jpg</imagePath>
+                <action name="changeQuayFr" coords="0.0,0.0 0.0,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="fr">Changer le quai</hover>
+                </action>
+            </place>
+            <!-- englisches Startfeld -->
+            <place id="startupScreenEnglish" monolingual="true">
+                <content lang="en">
+                    
+                </content>
+                <imagePath lang="en">zeidel/stadtbahn/nevergiveup_arrival.jpg</imagePath>
+                <action name="changePlatformEn" coords="0.0,0.0 0.0,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="en">change platform</hover>
+                </action>
+            </place>
+            <!-- Linie 13 -->
+            <place id="placeA">
+                <content lang="de">
+                    Nun stehst du vor Stadtbahnwagen B 2032, der bald auf der regulären Kölner Linie 13 zum Sülzgürtel 
+                    verkehrt und niemand mehr vom Zusatzhalt wissen wird ...
+                </content>
+                <content lang="fr">
+                    Maintenant, tu es devant le tramway B 2103, qui rentrera bientôt à sa ligne 13 régulaire vers !NL
+                    Sülzgürtel et personne ne saura plus de son arrêt supplémentaire...
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/gibniemalsauf_u13.JPG</imagePath>
+                <action name="stepToPlaceB" coords="16.125,45.5 29.875,74.33 30.0,50.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="de">Zur Bahnsteigmitte</hover>
+                    <hover lang="fr">Au centre du quai</hover>
+                </action>
+                <action name="lookPlanA" coords="35.6875,56.166 35.6875,73.25 41.25,71.416 41.375,57.166">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="plan"/></execute>
+                    <hover lang="de">Zum Fahrplan</hover>
+                    <hover lang="fr">Au plan des horaires</hover>    
+                </action>
+                <condAction>
+                    <if name="pickUpGloves" coords="85.375,90.25 87.125,94.2083 90.84375,92.625 88.90625,88.9166">
+                        <execute><itemPickup triggeredItem="gloves" triggeredValidity="none"/></execute>
+                        <hover lang="de">Handschuhe aufnehmen</hover>
+                        <hover lang="fr">Prendre les gants</hover>
+                        <actionImage src="zeidel/stadtbahn/gloves.png" cx1="84.5625" cy1="88.5416" xl="6.84375" yl="5.83"/>
+                        <condition>
+                            <checkItem triggeredItem="gloves" itemInInventory="false"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <!-- Bahnstiegmitte -->
+            <place id="placeB">
+                <content lang="de">
+                    Hier hast du gleich vier Aktionen zur Auswahl. Probiere die Benutzeroberfläche aus, 
+                    um zu sehen, was geschehen wird.!NL
+                    Eine Fahrkarte solltest du dir auch kaufen ...!NL 
+                    Vielleicht schaust du dir auch die Linie 13 nochmal genauer an ...
+                </content>
+                <content lang="fr">                    Ici, tu as tout de suite la choix entre quatres actions. Essaie la surface pour voir !NL                    ce qui se passera.&lt;br&gt;
+                    Tu devrais t'acheter un billet aussi...&lt;br&gt;
+                    Peut-être tu regarderas le tramway U13 à ta gauche de plus près...&lt;br&gt;
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/gibniemalsauf_u13_u21.JPG</imagePath>
+                <action name="stepToPlaceA" coords="0.0,33.0 0.0,61.0 30.0,61.0 30.0,33.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeA"/></execute>
+                    <hover lang="de">Hier kannst du zur Linie 13.</hover>
+                    <hover lang="fr">Ici, tu peux aller à la ligne 13.</hover>
+                </action>
+                <action name="stepToPlaceC" coords="69.0,34.0 69.0,62.0 100.0,62.0 100.0,34.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeC"/></execute>
+                    <hover lang="de">Hier kannst du zur Linie 21.</hover>
+                    <hover lang="fr">Accède ici au tramway ligne 21.</hover>
+                </action>
+                <action name="lookPlanB" coords="59.0,32.0 59.0,59.0 65.0,66.0 65.0,26.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="plan"/></execute>
+                    <hover lang="de">Hier kannst du den Fahrplan anschauen.</hover>
+                    <hover lang="fr">Regarde les horaires ici.</hover>
+                </action>
+                <!--<action name="toBusStation" itemRequired="ZVWticket" onlyOnce="true" coords="35.0,29.0 32.0,46.0 34.0,47.0 31.0,49.0 31.0,53.0 31.0,54.0 51.0,54.0 51.0,33.0 52.0,31.0 57.0,31.0 58.0,30.0 59.0,29.0">
+                    <execute><movement nextStation="1" nextCity="karlstadt" nextPlace="Dh153_arrival"/></execute>
+                    <hover lang="de">Direkt nach Karlstadt (nur für Übung Digitale Editionen!)</hover>
+                    <hover lang="fr">Aller directement à Karlstadt (seulement pour le séminaire éditions numériques !)</hover>
+                </action>-->
+                <condAction>
+                    <if name="toTicketAutomat" coords="52.0,32.0 51.0,34.0 51.0,65.0 52.0,68.0 58.0,68.0 58.0,32.0">
+                        <execute><movement nextStation="0" nextCity="zeidel" nextPlace="ticketAutomat"/></execute>
+                        <hover lang="de">Hier kannst du eine Fahrkarte für die Z.V.W. lösen.</hover>
+                        <hover lang="fr">Achete ici un billet pour le Z.V.W.</hover>
+                        <condition>
+                            <checkItem triggeredItem="ZVWticket" itemInInventory="false"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <!-- Linie 21 -->
+            <place id="placeC">
+                <content lang="de">
+                    Hier stehst du vor der Linie 21 Richtung Zeidel Hbf./Mitte. Eine Passantin kommt 
+                    daraufhin auf dich zu:!NL
+                    "Du möchtest deine Prüfungen bestehen und danach groß herauskommen ... du hast Streß 
+                    bzw. Angst vor deinen nächsten Klausuren und müsstest eigentlich ganz woanders sein. 
+                    Aber die KVB haben dir erneut einen Streich gespielt, wie sie es so oft und gerne machen. 
+                    Aber du solltest dich freuen, denn DIESE Bahn hier führt dich dorthin, wo du Abhilfe 
+                    gegen Lernstreß, Prüfungsangst - und sogar Liebeskummer - findest. Und die Passagiere im 
+                    Zug, der gerade abgefahren ist und die du ganz doll vermisst, auch sie brauchen dich, das 
+                    heißt du wirst groß rauskommen ... fahre dazu in das WEISZSEEVIERTEL in Zeidel-Stadt, Haltestelle
+                    Télégraphe.!NL
+                    Aber zunächst: hast du denn eine Fahrkarte?"!NL!NL
+                    Eine Fahrkarte kannst du am Fahrkartenautomaten in der Mitte des Bahnstiegs "kaufen".!NL
+                    Durck Klick auf das Feld unter dem Fenster links neben der Tür gelangst du zurück.
+                </content>
+                <content lang="fr">
+                    Tu te trouves ici devant la ligne 21 en direction de Zeidel Centrale. Une passante vient 
+                    chez toi :!NL
+                    « Tu manques énormément les gens, même si tu ne chantes pas personellement, qui sont 
+                    partis avec le train. Je te dis : sois content de ne pas être avec eux. Un très grand 
+                    malheur va les attrapper. Mais ne t'inquiète pas : tu ne resteras pas seul et sur ton 
+                    chemin, tu trouveras aussi ton amour, ton partenaire parfaît d'echange. Si tu as déjà un 
+                    billet, prends ce tramway-ci. Dirige-toi vers le LAC BLANC à Zeidel-Ville. Il faut que tu 
+                    sauves le chœur réputé de l'association Paris Sciences et Lettres afin que le terrorisme ne 
+                    puisse pas envahir l'éducation ! »!NL
+                    Mais d'abord, tu auras besoin d'un billet - tu peux t'en acheter un au millieu du quai.!NL
+                    Tu peux retourner en cliquant sur le champ sous la fenêtre à gauche de la porte.
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/gibniemalsauf_u21.JPG</imagePath>
+                <action name="stepToPlaceB" coords="0.0,83.3 0.0,100.0 50.5,100.0 50.5,83.3">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="de">Zur Bahnsteigmitte</hover>
+                    <hover lang="fr">Au centre du quai</hover>
+                </action>
+                <action name="mountU21" coords="51.125,21.583 51.125,99.16 92.375,97.5 93.0,24.83">
+                    <execute>
+                        <mountLine happeningBase="zeidel_stadtbahn" stream="intro" startID="i01" usedTicket="ZVWticket" forward="true"/>
+                    </execute>
+                    <hover lang="de">Die Stadtbahnlinie 21 Richtung Zeidel Hauptbahnhof/Mitte besteigen</hover>
+                    <hover lang="fr">Monter la ligne 21 à destination de Zeidel Centrale</hover>
+                </action>
+            </place>
+            <!-- Fahrplan -->
+            <place id="plan">
+                <content lang="de">
+                    Hier siehst du einen Beispielfahrplan, wie er dir noch oft vorkommen wird.!NL
+                    Dies ist das Stadtbahnnetz von Zeidel-Stadt, der Stadt, die du bald betreten wirst. 
+                    Klicke auf die Karte, um die Karte zu vergrößern und deinen derzeitigen Standort 
+                    anzuzeigen.!NL
+                    In anderen Städten wirst du auf solchen Karten wichtige Informationen zu prüfungsrelevanten 
+                    sowie weiterführenden Themen erhalten.!NL
+                    Probiere das Fortbewegen hier mal ohne die grüne Markierung aus.
+                </content>
+                <content lang="fr">
+                    Voici un éxemple d'une affiche des horaires, tu vas encore souvent en rencontrer.!NL
+                    C'est le plan de métro léger de Zeidel-Ville, de la ville, que tu vas entrer tout de 
+                    suite. Clique sur le plan, pour agrandir la carte et pour afficher ta position.!NL
+                    Dans des autres villes, tu vas trouver sur telles cartes des informations importantes pour 
+                    des partiels, ensuite pour des sujets approfondissants.!NL
+                    Essaie de bouger sans les repères vertes.                        
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/gibniemalsauf_fahrplan.JPG</imagePath>
+                <action name="planToPlaceA" coords="0.0,0.0 0.0,19.58 19.58,0.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeA"/></execute>
+                    <hover lang="de">Zur Linie 13</hover>
+                    <hover lang="fr">Au ligne 13</hover>
+                </action>
+                <action name="planToPlaceB" coords="80.42,100.0 100.0,100.0 100.0,80.42">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="de">Zur Bahnsteigmitte</hover>
+                    <hover lang="fr">Au centre du quai</hover>
+                </action>
+                <action name="showPlan" coords="34.4,26.9 34.4,90.7 98.3,90.7 98.3,26.9">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan von Zeidel-Stadt ansehen</hover>
+                    <hover lang="fr">Élargir le plan de réseau de Zeidel-ville</hover>
+                </action>
+            </place>
+            <!-- Fahrkartenautomat -->
+            <place id="ticketAutomat">
+                <content lang="de">
+                    In dieser Station ist alles verwunderlich, so ist es erstaunlich, dass es überhaupt einen 
+                    Fahrkartenautomaten gibt. Denn dein Semesterticket gilt natürlich nicht auf den Strecken der 
+                    Zeidel'schen Verkehrswerke (Z.V.W.) - aber doch merkwürdig ist, dass dieser Automat nur eine 
+                    Option, nämlich Jahreskarten (Knopf T10), anbietet, und statt Münzen oder Scheine persönliche 
+                    Daten von dir einfordert. Aber ohne Fahrkarte geht es offensichtlich auch hier nicht weiter ...    
+                </content>
+                <content lang="fr">
+                    Tout t'étonne dans cette station, alors aussi qu'il y a du tout un automat de billets. Car ton 
+                    pass Navigo n'est pas valide sur les réseaux du Zeidel'sche Verkehrswerke (Z.V.W.).
+                    Il est aussi drôle que cette machine ne connait qu'une seule option, à savoir des billets annuels 
+                    (bouton T10), et il te demande au lieu de l'argent des données personnelles. Mais sans billet 
+                    on n'avance ici pas non plus...
+                </content>
+                <form fname="register" lang="de">
+                    <textInput label="userFirstName" size="40">Vorname:</textInput>
+                    <textInput label="userLastName" size="40">Nachname (Vor- und Nachname müssen nicht echt sein; es ist nur, dass die Charaktere dich ansprechen können):</textInput>
+                    <textInput label="userName" size="40">Benutzername:</textInput>
+                    <textInput label="loveInterests" size="128">Wofür sich deine Liebe interessieren soll (natürlich außer Sex, Macht und Kohle ;) ) - Begriffe bitte mit Komma oder Semikolon trennen!</textInput>
+                    <radio name="useName">
+                        <label>Sollen dich die Charaktere bei deinem Vor-/Nachnamen oder deinem Benutzernamen ansprechen?</label>
+                        <choice value="true">Vor-/Nachnamen</choice>
+                        <choice value="false">Benutzernamen</choice>
+                    </radio>
+                    <radio name="loveSex">
+                        <label>Geschlecht deiner Liebe:</label>
+                        <choice value="m">männlich</choice>
+                        <choice value="w">weiblich</choice>
+                    </radio>
+                    <checkbox name="interests">
+                        <label>Deine Lernziele - welche Themen möchtest du wiederholen?</label>
+                        <!--<choice value="paris">Paris - mythe et réalité</choice>
+                        <choice value="nantes-la-jolie">Didier van Caeuwelaert : Un aller simple</choice>
+                        <choice value="conoi">Jean-Paul Sartre : Huis clos</choice>
+                        <choice value="trochpathy">Mouvement de la Résistance</choice>
+                        <choice value="plattendorf">Historisch-Vergleichende Sprachwissenschaft / Sprachgeschichte</choice>-->
+                        <choice value="kvirasim">Phonetik + Phonologie / Transkription / Akustik</choice>
+                        <!--<choice value="cite_d_orcive">Molière : Le malade imaginaire / comédie-ballet / l'homme honnêt</choice>
+                        <choice value="ninaciudad">Allgemeine Sprachwissenschaft</choice>
+                        <choice value="eichlinghausen">Geschichte / Geschichtswissenschaften</choice>-->
+                        <choice value="karlstadt">Friedrich von Gentz - Briefe</choice>
+                    </checkbox>
+                    <finish label="Neuen Benutzer hinzufügen" name="finish" onclick="addUser"/>
+                </form>
+                <form fname="register" lang="fr">
+                    <textInput label="userFirstName" size="40">Prénom :</textInput>
+                    <textInput label="userLastName" size="40">Nom de famille (prénom et nom de famille ne doivent pas être réels ; c'est juste pour que les charactères dans le jeu puissent t'appeller):</textInput>
+                    <textInput label="userName" size="40">Nom d'utilisateur :</textInput>
+                    <textInput label="loveInterests" size="128">À quoi s'intéresse-t-il ton amour (bien sûr sauf sex, puissance et argent ;) ) - sépare les termes avec point-virgule s'il te plaît !</textInput>
+                    <radio name="useName">
+                        <label>Est-ce que tu veux que les charactères au jeu t'appellent sur ton pseudo ou sur ton prénom et nom de famille ?</label>
+                        <choice value="true">Prénom et nom de famille</choice>
+                        <choice value="false">Nom d'utilisateur</choice>
+                    </radio>
+                    <radio name="loveSex">
+                        <label>Ton amour, est-il :</label>
+                        <choice value="m">un homme</choice>
+                        <choice value="w">une femme</choice>
+                    </radio>
+                    <checkbox name="interests">
+                        <label>Quelles matières et sujets voudrais-tu reviser ou faire connaissance ?</label>
+                        <!--<choice value="paris">Paris - mythe et réalité</choice>
+                        <choice value="nantes-la-jolie">Didier van Caeuwelaert : Un aller simple</choice>
+                        <choice value="conoi">Jean-Paul Sartre : Huis clos</choice>
+                        <choice value="trochpathy">mouvement de la Résistance</choice>
+                        <choice value="plattendorf">linguistique historique et comparative / histoire de la langue générale</choice>-->
+                        <choice value="kvirasim">phonétique et phonologie / transcription / acoustique</choice>
+                        <!--<choice value="cite_d_orcive">Molière : Le malade imaginaire / comédie-ballet / l'homme honnêt</choice>
+                        <choice value="ninaciudad">linguistique générale</choice>
+                        <choice value="eichlinghausen">Histoire / sciences de l'Histoire</choice>-->
+                        <choice value="karlstadt">Friedrich von Gentz - correspondance</choice>
+                    </checkbox>
+                    <finish label="ajoute nouvel utilisateur" name="finish" onclick="addUser(document.getElementsByName('register')[0])"/>
+                </form>
+                <imagePath lang="de">zeidel/stadtbahn/gibniemalsauf_automat.JPG</imagePath>
+                <imagePath lang="fr">zeidel/stadtbahn/nerenoncejamais_automat.JPG</imagePath>
+                <action name="register" coords="70.5,85.16 70.5,88.83 73.125,88.83 73.125,85.16">
+                    <execute><seekForm city="zeidel" formID="register"/></execute>
+                    <hover lang="de">Jahreskarte kaufen - einen neuen Benutzeraccount erstellen</hover>
+                    <hover lang="fr">Acheter un billet annuel - créer une nouvelle compte</hover>
+                </action>
+                <action name="leave" coords="0.0,90.0 0.0,100.0 100.0,100.0 100.0,90.0">
+                    <execute><movement nextStation="0" nextCity="zeidel" nextPlace="placeB"/></execute>
+                    <hover lang="de">Zurück</hover>
+                    <hover lang="fr">Retour</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <!-- Zeidel Hauptbahnhof/Mitte -->
+    <station number="zd1" additionalMoney="100" mapPointX="46.0" mapPointY="48.0">
+        <name>Zeidel Hauptbahnhof/Mitte</name>
+        <discoveryContent>
+            <!-- Eisenbahn -->
+            <place id="hbf_mitte_eingang">
+                <content lang="de">
+                    Du stehst nun vor dem Haupteingang des Hauptbahnhofes Zeidel-Stadt. Wenn du dich umdrehst, gelangst du zum Bushof.
+                </content>
+                <content lang="fr">Tu es maintenant devant l'entrée principale de la gare centrale de Zeidel-ville. Si tu te tournes, tu arrives à la gare.</content><imagePath lang="all">zeidel/hbf_mitte_eingang.jpg</imagePath>
+                <action name="enterStationC" coords="28.5,85.5 28.78125,100.0 50.375,100.0 50.375,84.583">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_a"/></execute>
+                    <hover lang="de">Den Bahnhof betreten und zu den Gleisen 7-14</hover>
+                    <hover lang="fr">Entrer la gare vers les voies 7 à 14</hover>
+                </action>
+                <action name="enterStationB" coords="70.78125,100.0 70.96875,84.0 50.375,84.583 50.375,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">Den Bahnhof betreten und zu den Gleisen 15-20</hover>
+                </action>
+                <action name="turnLeft" coords="0.0,51.5 0.0,100.0 2.0,100.0 2.0,51.5">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_busstation_noTrain"/></execute>
+                    <hover lang="de">nach links umdrehen</hover>
+                </action>
+                <action name="turnRight" coords="98.375,38.4375 98.375,100.0 100.0,100.0 100.0,38.4375">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_busstation_noTrain"/></execute>
+                    <hover lang="de">nach rechts umdrehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_haupthalle_a">
+                <content lang="de">
+                    Hier befindest du dich in der Haupthalle des Hauptbahnhofes. Links liegen die Gleise 1-10.!NL
+                    Vor dir sind die Gleise 7-14.!NL
+                    Nach rechts gelangst du zu den Gleisen 15-35 sowie zur Treppe, die dich zur Metro führt.!NL
+                    Zur Stadtbahn gelangst du, wenn du nach rückwärts gehst.!NL
+                    Das Reisezentrum ist am Ende des Ganges, hinter der Treppe.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_haupthalle_a.jpg</imagePath>
+                <action name="exitStation" coords="0.0,88.36805555555556 0.0,99.82638888888889 99.86979166666666,99.65277777777779 99.86979166666666,88.71527777777779 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_eingang"/></execute>
+                    <hover lang="de">Zum Bushof</hover>
+                </action>
+                <action name="toPlatform8" coords="24.348958333333336,43.05555555555556 24.21875,58.68055555555556 33.33333333333333,59.02777777777778 33.59375,43.57638888888889 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_platform8_Dh2011"/></execute>
+                    <hover lang="de">Auf Gleis 8</hover>
+                </action>
+                <action name="toPlatform13" coords="85.15625,37.5 82.29166666666666,38.36805555555556 80.46875,40.625 78.515625,43.40277777777778 77.86458333333334,51.388888888888886 80.33854166666666,51.388888888888886 80.59895833333334,51.21527777777778 82.68229166666666,50.34722222222222 80.98958333333334,49.47916666666667 81.38020833333334,47.04861111111111 82.29166666666666,44.27083333333333 83.46354166666666,42.88194444444444 85.02604166666666,41.66666666666667 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_platform13_Dh153"/></execute>
+                    <hover lang="de">Auf Gleis 13</hover>
+                </action>
+                <action name="toHallB" coords="96.09375,0.0 96.875,99.82638888888889 99.73958333333334,99.82638888888889 99.609375,0.1736111111111111 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">nach rechts gehen</hover>
+                </action>
+                <action name="toUndergroundStation" coords="0.0,41.14583333333333 0.0,62.326388888888886 3.7760416666666665,52.43055555555556 3.6458333333333335,42.70833333333333 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_undergroundFloor"/></execute>
+                    <hover lang="de">Zur Stadtbahn</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_haupthalle_b">
+                <content lang="de">
+                    Vor dir nun die Gleise 15-20, rechts ist der Zugang zum Außenbereich, Gleise 21-35.!NL
+                    Beide Bereiche sind aus baubetrieblichen Gründen nicht zu erreichen - der Entwickler braucht mehr Zeit.!NL
+                    Nach vorn geht es in das Reisezentrum und zur Treppe zur Metro.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_haupthalle_b.jpg</imagePath>
+                <action name="toHallA" coords="0.0,0.3472222222222222 0.0,99.82638888888889 5.598958333333334,99.65277777777779 4.817708333333334,0.3472222222222222 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_a"/></execute>
+                    <hover lang="de">nach links gehen</hover>
+                </action>
+                <action name="exitStation" coords="35.80729166666667,88.36805555555556 35.28645833333333,99.65277777777779 99.609375,99.65277777777779 99.73958333333334,88.54166666666666 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_eingang"/></execute>
+                    <hover lang="de">Zum Bushof</hover>
+                </action>
+                <action name="toHallC" coords="88.671875,86.63194444444444 99.86979166666666,84.54861111111111 99.609375,28.29861111111111 95.05208333333334,31.25 91.92708333333334,36.63194444444444 90.36458333333334,42.1875 88.54166666666666,55.03472222222222 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_c"/></execute>
+                    <hover lang="de">Zum Reisezentrum / Metro</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_haupthalle_c">
+                <content lang="de">
+                    Du stehst vor dem Reisezentrum und dem Abgang zur Metro. Nach rechts befindet sich der Ausgang zum Bushof.!NL
+                    Rückwärts gelangst du zu den Zügen zurück.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_haupthalle_c.jpg</imagePath>
+                <action name="toHallB" coords="0.0,0.0 0.0,99.47916666666666 2.734375,99.47916666666666 3.2552083333333335,0.3472222222222222 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">Zu den Zügen</hover>
+                </action>
+                <action name="exitStation" coords="94.79166666666666,0.0 94.140625,83.50694444444444 96.875,84.72222222222221 98.046875,89.23611111111111 97.78645833333334,93.22916666666666 95.3125,95.3125 95.3125,99.47916666666666 99.86979166666666,99.65277777777779 99.73958333333334,0.1736111111111111 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_eingang"/></execute>
+                    <hover lang="de">Zum Bushof</hover>
+                </action>
+                <action name="toTravelCenter" coords="2.083333333333333,49.13194444444444 4.036458333333334,72.74305555555556 13.802083333333334,73.09027777777779 16.145833333333336,69.27083333333334 19.921875,68.75 22.005208333333336,69.79166666666666 23.046875,72.22222222222221 24.088541666666664,72.56944444444444 28.255208333333332,56.59722222222222 25.260416666666668,48.4375 21.09375,44.79166666666667 13.411458333333334,42.53472222222222 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_reisezentrum_eingang"/></execute>
+                    <hover lang="de">Zum Reisezentrum</hover>
+                </action>
+                <action name="toMetro" coords="7.942708333333333,76.04166666666666 2.34375,81.59722222222221 2.734375,90.27777777777779 6.380208333333333,90.79861111111111 9.635416666666668,86.28472222222221 12.109375,85.41666666666666 15.885416666666666,82.46527777777779 14.322916666666666,80.38194444444444 13.28125,76.5625 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor"/></execute>
+                    <hover lang="de">Zur Metro</hover>
+                </action>
+            </place>
+            <!-- Gleis 8 -->
+            <place id="hbf_mitte_platform8_Dh2011">
+                <content lang="de">
+                    Du stehst hier vor Gleis 8. Bereit steht ein Zug in Richtung Cité d'Orcive über Tiefensyburg, Metza und Ville Julie.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform8_Dh2011.jpg</imagePath>
+                <action name="toTrain" coords="43.359375,17.1875 45.96354166666667,22.743055555555554 46.22395833333333,27.083333333333332 50.520833333333336,27.256944444444443 51.5625,28.29861111111111 51.822916666666664,29.51388888888889 51.953125,50.69444444444444 49.47916666666667,51.736111111111114 49.86979166666667,56.59722222222222 57.421875,70.65972222222221 58.203125,99.65277777777779 77.60416666666666,99.65277777777779 77.60416666666666,65.625 77.60416666666666,44.44444444444444 72.78645833333334,31.59722222222222 68.22916666666666,26.73611111111111 62.369791666666664,22.743055555555554 56.380208333333336,19.270833333333336 53.90625,17.881944444444446 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_Dh2011_doors"/></execute>
+                    <hover lang="de">Zum Zug</hover>
+                </action>
+                <action name="turnLeft" coords="0.0,0.0 0.0,53.125 20.125,59.5 20.125,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_a"/></execute>
+                    <hover lang="de">Nach links drehen</hover>
+                </action>
+                <action name="turnRight" coords="84.125,0.0 84.125,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">Nach rechts drehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_Dh2011_doors">
+                <content lang="de">
+                    Du stehst nun vor dem Schnellzug 2011 nach Cité d'Orcive, zu deiner Linken ein Schlafwagen, zu deiner Rechten ein Liegewagen.!NL
+                    Nach rechts kannst du zurück.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_Dh2011_doors.jpg</imagePath>
+                <action name="toStation" coords="80.0,0.0 80.0,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_platform8_Dh2011"/></execute>
+                    <hover lang="de">Zurück</hover>
+                </action>
+                <action name="mountDh2011" coords="72.625,27.16 72.825,75.16 81.25,75.0 86.0,76.0 87.75,76.0 88.5,28.0">
+                    <execute><mountLine happeningBase="zvw_intervilles" stream="Dh2011" startID="ZDKV01" usedTicket="ticketToKvirasim" forward="true"/></execute>
+                    <hover lang="de">Den Zug nach Cité d`Orcive (Kvirasim) besteigen</hover>
+                </action>
+            </place>
+            <!-- Gleis 13 -->
+            <place id="hbf_mitte_platform13_Dh153">
+                <content lang="de">
+                    Du stehst hier vor Gleis 13. Bereit steht ein Zug in Richtung Karlstadt über Zeid-Ruhrota.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform13_Dh153.jpg</imagePath>
+                <action name="toTrain" coords="14.453125,20.833333333333336 8.072916666666668,30.90277777777778 5.989583333333334,37.67361111111111 3.7760416666666665,58.15972222222222 40.625,59.201388888888886 41.40625,44.27083333333333 40.49479166666667,31.770833333333332 35.80729166666667,23.09027777777778 29.817708333333332,18.57638888888889 22.916666666666664,16.84027777777778 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_Dh153_doors"/></execute>
+                    <hover lang="de">Zum Zug</hover>
+                </action>
+                <action name="turnLeft" coords="0.0,0.0 0.0,53.125 20.125,59.5 20.125,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_a"/></execute>
+                    <hover lang="de">Nach links drehen</hover>
+                </action>
+                <action name="turnRight" coords="84.125,0.0 84.125,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">Nach rechts drehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_Dh153_doors">
+                <content lang="de">
+                    Du stehst nun vor dem Schnellzug 153 nach Karlstadt.!NL
+                    Nach rechts kannst du zurück.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_Dh153_doors.jpg</imagePath>
+                <action name="toStation" coords="81.11979166666666,0.0 80.859375,99.82638888888889 99.86979166666666,99.82638888888889 99.73958333333334,0.0 ">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_platform13_Dh153"/></execute>
+                    <hover lang="de">Zurück</hover>
+                </action>
+                <action name="mountDh153" coords="16.015625,28.47222222222222 15.104166666666666,85.24305555555556 69.921875,91.31944444444444 71.35416666666666,28.993055555555557 ">
+                    <execute><mountLine happeningBase="zvw_intervilles" stream="Dh153" startID="ZDKA00" usedTicket="ticketToKarlstadt" forward="true"/></execute>
+                    <hover lang="de">Den Zug nach Karlstadt besteigen</hover>
+                </action>
+            </place>
+            <!-- Reisezentrum -->
+            <place id="hbf_mitte_reisezentrum_eingang">
+                <content lang="de">
+                    Hier ist der Eingang zum Reisezentrum. Nach unten gelangst du zu den Zügen.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_reisezentrum_eingang.jpg</imagePath>
+                <action name="enterTravelCenter" coords="36.0,39.833 27.625,55.5 23.625,69.833 34.75,68.833 64.25,68.66 74.125,68.83 71.5,50.66 69.125,44.5 64.875,39.5">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_reisezentrum"/></execute>
+                    <hover lang="de">Reisezentrum betreten</hover>
+                </action>
+                <action name="stepBackward" coords="0.0,64.0625 0.0,100.0 100.0,100.0 100.0,64.0625">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_c"/></execute>
+                    <hover lang="de">Zurück</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_reisezentrum">
+                <content lang="de">
+                    Hier ist das Reisezentrum. Du bist an der Reihe! Sprich mit der Mitarbeiterin, die dich freundlich anschaut.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_reisezentrum.jpg</imagePath>
+                <action name="speakVendor" coords="0.0,0.0 0.0,68.0 36.75,72.0 78.875,72.66 100.0,72.33 100.0,0.0">
+                    <execute><dialog dialogBase="zeidel_dialog" character="ZVWvendor" stream="0" point="0"/></execute>
+                    <!-- dependency: other stream if player has already a ticket! -->
+                    <hover lang="de">Mit der Mitarbeiterin reden</hover>
+                </action>
+                <action name="leave" coords="0.0,68.0 0.0,100.0 100.0,100.0 100.0,72.33 78.875,72.66 36.75,72.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_reisezentrum_eingang"/></execute>
+                    <hover lang="de">Zurück</hover>
+                </action>
+            </place>
+            <!-- Metro -->
+            <place id="hbf_mitte_metroFloor">
+                <content lang="de">
+                    Hier ist der Zugang zur Metrohaltestelle, Gleise 36-37 für die Nord-Süd-Richtung und 38-39 für Ost-West.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_metroFloor.jpg</imagePath>
+                <action name="metroToPlatform3637" coords="25.8125,53.5 24.875,58.666 25.875,63.166 69.875,65.333 71.25,54.8333 70.375,53.166 30.875,52.333">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Zu den Gleisen 36 und 37</hover>
+                </action>
+                <action name="metroToPlatform3839" coords="48.563,41.042 48.469,41.042 71.9375,49.5833 72.566,45.583 75.8133,43.125 75.75,40.9166">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Zu den Gleisen 38 und 39</hover>
+                </action>                
+                <action name="metroTurnLeft" coords="0.0,0.0 0.0,100.0 10.625,100.0 9.26,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">nach links umdrehen</hover>
+                </action>
+                <action name="metroTurnRight" coords="89.5,0.0 90.625,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">nach rechts umdrehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_metroFloor_b">
+                <content lang="de">
+                    Hier ist der Zugang zur Metrohaltestelle. Du blickst derzeit auf die Übergänge zur Stadtbahn und zur Eisenbahn.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_metroFloor_b.jpg</imagePath>
+                <action name="metroToRailway" coords="24.625,40.333 25.875,60.166 61.875,59.0 62.375,40.5">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_b"/></execute>
+                    <hover lang="de">Zur Eisenbahn</hover>
+                </action>
+                <action name="metroToUnderground" coords="6.625,31.0 8.125,89.166 32.125,83.5 31.625,30.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_undergroundFloor"/></execute>
+                    <hover lang="de">Zur Stadtbahn</hover>
+                </action>                
+                <action name="metroTurnLeft" coords="0.0,0.0 0.0,100.0 8.25,100.0 6.75,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor"/></execute>
+                    <hover lang="de">nach links umdrehen</hover>
+                </action>
+                <action name="metroTurnRight" coords="89.5,0.0 90.625,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor"/></execute>
+                    <hover lang="de">nach rechts umdrehen</hover>
+                </action>
+            </place>
+            <!-- Gleis 36 -->
+            <place id="hbf_mitte_platform36_37noTrain">
+                <content lang="de">
+                    Du bist auf dem Nord-Süd-Bahnstieg der Metro, Gleise 36 und 37.!NL
+                    Derzeit ist kein Zug in der Station.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform36_37noTrain.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,100.0 41.75,100.0 26.675,94.833 26.375,62.166 50.8125,58.0 51.625,100.0 100.0,100.0 100.0,55.66 87.125,56.6 86.25,44.0 100.0,40.833 100.0,0.0 91.2875,0.0 29.6875,27.9166 92.0,30.375 90.125,31.33 21.4675,53.25 19.656,53.2075 19.25,52.25 19.375,35.125 19.6875,34.25 19.96875,33.79175 73.125,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Warten</hover>
+                </action>
+                <action name="platform36_37toPlatform38_39" coords="86.25,44.0 87.125,56.6 100.0,55.66 100.0,40.833">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Zu den Gleisen 38 und 39</hover>
+                </action>
+                <action name="platform36_37toMetroFloor" coords="73.125,0.0 19.96875,33.79175 19.6875,34.25 19.375,35.125 19.25,52.25 19.6566,53.2075 21.4675,53.25 90.125,31.33 92.0,30.375 92.6875,27.9166 91.21875,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <action name="platform36_37toPlan" coords="51.625,100.0 50.8125,58.0 26.375,62.166 26.675,94.833 41.75,100.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_platform36_37a">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 1 in Richtung Nordbahnhof! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform36_37a.jpg</imagePath>
+                <action name="mountM1" coords="22.375,49.667 22.5,54.375 25.53125,54.375 25.375,49.833">
+                    <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m1&quot; startID=&quot;idToSet&quot; forward=&quot;false&quot;"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+                <action name="platform36toPlan" coords="77.0,47.33 77.0,56.66 83.3,57.66 83.25,47.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.66 11.625,41.5 41.5,41.5 100.0,16.66 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="0.2"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform36toMetroFloor" coords="0.0,31.66 11.625,41.5 24.375,41.833 24.375,58.0 48.125,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_platform36_37b">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 3 in Richtung Lairef! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform36_37b.jpg</imagePath>
+                <action name="mountM3" coords="22.375,49.667 22.5,54.375 25.53125,54.375 25.375,49.833">
+                    <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m3&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+                <action name="platform36toPlan" coords="77.0,47.33 77.0,56.66 83.3,57.66 83.25,47.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.66 11.625,41.5 41.5,41.5 100.0,16.66 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform36toMetroFloor" coords="0.0,31.66 11.625,41.5 24.375,41.833 24.375,58.0 48.125,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+            </place>
+            <!-- Gleis 37 -->
+            <place id="hbf_mitte_platform36_37c">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 1 in Richtung Mairieville! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform36_37c.jpg</imagePath>
+                <action name="mountM1" coords="23.0625,44.29125 23.0625,51.0 27.125,51.125 26.96875,44.25 24.96875,44.0">
+                    <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m1&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.0 13.375,39.6 36.75,39.6 100.0,10.166 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform37toMetroFloor" coords="0.0,31.0 13.375,39.6 23.75,39.6 23.75,52.166 48.75,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+            </place>
+            <!-- Gleis 36 -->
+            <place id="hbf_mitte_platform36_37d">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 16 in Richtung Kleinhallen! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform36_37d.jpg</imagePath>
+                <action name="mountM16" coords="22.375,49.667 22.5,54.375 25.53125,54.375 25.375,49.833">
+                    <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m16&quot; startID=&quot;idToSet&quot; forward=&quot;false&quot;"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+                <action name="platform36toPlan" coords="77.0,47.33 77.0,56.66 83.3,57.66 83.25,47.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.66 11.625,41.5 41.5,41.5 100.0,16.66 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform36toMetroFloor" coords="0.0,31.66 11.625,41.5 21.625,41.66 21.625,55.5 48.125,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+            </place>
+            <!-- Gleis 38 -->
+            <place id="hbf_mitte_platform38_39noTrain">
+                <content lang="de">
+                    Du bist auf dem Ost-West-Bahnstieg der Metro, Gleise 38 und 39.!NL
+                    Derzeit ist kein Zug in der Station.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39noTrain.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,100.0 41.75,100.0 26.675,94.833 26.375,62.166 50.8125,58.0 51.625,100.0 100.0,100.0 100.0,55.66 87.125,56.6 86.25,44.0 100.0,40.833 100.0,0.0 91.2875,0.0 92.6875,27.9166 92.0,30.375 90.125,31.33 21.4675,53.25 19.656,53.2075 19.25,52.25 19.375,35.125 19.6875,34.25 19.96875,33.79175 73.125,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Warten</hover>
+                </action>
+                <action name="platform38_39toPlatform36_37" coords="86.25,44.0 87.125,56.6 100.0,55.66 100.0,40.833">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform36_37" situationCount="4" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">Zu den Gleisen 36 und 37</hover>
+                </action>
+                <action name="platform38_39toMetroFloor" coords="73.125,0.0 19.96875,33.79175 19.6875,34.25 19.375,35.125 19.25,52.25 19.6566,53.2075 21.4675,53.25 90.125,31.33 92.0,30.375 92.6875,27.9166 91.21875,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <action name="platform38_39toPlan" coords="51.625,100.0 50.8125,58.0 26.375,62.166 26.675,94.833 41.75,100.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_platform38_39a">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 7 in Richtung Chargy! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39a.jpg</imagePath>
+                
+                <action name="platform38toPlan" coords="77.0,47.33 77.0,56.66 83.3,57.66 83.25,47.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.66 11.625,41.5 41.5,41.5 100.0,16.66 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform38toMetroFloor" coords="0.0,31.66 11.625,41.5 21.625,41.66 21.625,55.5 48.125,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <action name="mountM7" coords="22.375,49.667 22.5,54.375 25.53125,54.375 25.375,49.833">
+                    <execute><mountLine happeningBase="zeidel_stadtbahn" stream="m7" startID="m703" usedTicket="ZVWticket" forward="true"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+            </place>
+            <!-- Gleis 39 -->
+            <place id="hbf_mitte_platform38_39b">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 2 in Richtung Ostbahnhof! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39b.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,31.0 13.375,39.6 36.75,39.6 100.0,10.166 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform39toMetroFloor" coords="0.0,31.0 13.375,39.6 23.75,39.6 23.75,52.166 48.75,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <action name="mountM2" coords="23.0625,44.29125 23.0625,51.0 27.125,51.125 26.96875,44.25 24.96875,44.0">
+                    <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m2&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                    <hover lang="de">einfahrenden Zug besteigen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_platform38_39c">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 6 in Richtung Kürzenich Süd! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39c.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,31.0 13.375,39.6 36.75,39.6 100.0,10.166 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform39toMetroFloor" coords="0.0,31.0 13.375,39.6 23.75,39.6 23.75,52.166 48.75,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <condAction>
+                    <if name="mountM6" coords="23.0625,44.29125 23.0625,51.0 27.125,51.125 26.96875,44.25 24.96875,44.0">
+                        <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m6&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                        <hover lang="de">einfahrenden Zug besteigen</hover>
+                        <condition>
+                            <checkItem triggeredItem="ZVWticket" itemInInventory="true"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <!-- Gleis 38 -->
+            <place id="hbf_mitte_platform38_39d">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 20 in Richtung Mártonliget! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39d.jpg</imagePath>
+                <action name="platform38toPlan" coords="77.0,47.33 77.0,56.66 83.3,57.66 83.25,47.0">
+                    <execute><showMap mapFile="zeidel/stadtbahn/zvw_nahverkehr_15_16.jpg"/></execute>
+                    <hover lang="de">Liniennetzplan ansehen</hover>
+                </action>
+                <action name="wait" coords="0.0,0.0 0.0,31.66 11.625,41.5 41.5,41.5 100.0,16.66 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform38toMetroFloor" coords="0.0,31.66 11.625,41.5 21.625,41.66 21.625,55.5 48.125,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <condAction>
+                    <if name="mountM20" coords="22.375,49.667 22.5,54.375 25.53125,54.375 25.375,49.833">
+                        <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m20&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                        <hover lang="de">einfahrenden Zug besteigen</hover>
+                        <condition>
+                            <checkItem triggeredItem="ZVWticket" itemInInventory="true"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <!-- Gleis 39 -->
+            <place id="hbf_mitte_platform38_39e">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 7 in Richtung Unter Lederhandschuhmacher! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39e.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,31.0 13.375,39.6 36.75,39.6 100.0,10.166 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform39toMetroFloor" coords="0.0,31.0 13.375,39.6 23.75,39.6 23.75,52.166 48.75,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <condAction>
+                    <if name="mountM7" coords="23.0625,44.29125 23.0625,51.0 27.125,51.125 26.96875,44.25 24.96875,44.0">
+                        <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m7&quot; startID=&quot;m701&quot; forward=&quot;false&quot;"/></execute>
+                        <hover lang="de">einfahrenden Zug besteigen</hover>
+                        <condition>
+                            <checkItem triggeredItem="ZVWticket" itemInInventory="true"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <place id="hbf_mitte_platform38_39f">
+                <content lang="de">
+                    Hier fährt ein Zug der Linie 16 in Richtung Pettenkof Raum-/Flughafen! Besteige den Zug, indem du auf ihn klickst.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform38_39f.jpg</imagePath>
+                <action name="wait" coords="0.0,0.0 0.0,31.0 13.375,39.6 36.75,39.6 100.0,10.166 100.0,0.0">
+                    <execute><random station="1" city="zeidel" platformGroup="hbf_mitte_platform38_39" situationCount="6" probabilityOfArrival="2.0E-1"/></execute>
+                    <hover lang="de">weiterwarten</hover>
+                </action>
+                <action name="platform39toMetroFloor" coords="0.0,31.0 13.375,39.6 23.75,39.6 23.75,52.166 48.75,100.0 0.0,100.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor_b"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <condAction>
+                    <if name="mountM16" coords="23.0625,44.29125 23.0625,51.0 27.125,51.125 26.96875,44.25 24.96875,44.0">
+                        <execute><noAction whatShouldHappen="happening happeningBase=&quot;zeidel_stadtbahn&quot; stream=&quot;m16&quot; startID=&quot;idToSet&quot; forward=&quot;true&quot;"/></execute>
+                        <hover lang="de">einfahrenden Zug besteigen</hover>
+                        <condition>
+                            <checkItem triggeredItem="ZVWticket" itemInInventory="true"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <!-- U-Stadtbahn -->
+            <place id="hbf_mitte_platform40_41noTrain">
+                <content lang="de">
+                    Hier stehst du nun am Bahnstieg zu Gleise 40 und 41 von Zeidel Hauptbahnhof/Mitte.!NL
+                    Derzeit steht kein Zug am Gleis.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_platform40_41noTrain.jpg</imagePath>
+                <action name="visitZHD" coords="36.5,49.04 36.21,67.71 42.59,66.625 42.71,50.25">
+                    <execute><callLink linkToCall="https://www.zhd-workshops.uni-koeln.de/all_courses.php"/></execute>
+                    <hover lang="de">Die Angebote des Zentrums für Hochschuldidaktik betrachten</hover>
+                </action>
+                <action name="platformToUndergroundFloor" coords="0.0,77.0 0.0,100.0 73.34,100.0 72.53,99.0 69.5625,98.71 31.4375,94.125 28.34375,93.66 18.46875,92.5 17.0625,92.875">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_undergroundFloor"/></execute>
+                    <hover lang="de">Zu den anderen Gleisen</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_undergroundFloor">
+                <content lang="de">
+                    Du befindest dich auf dem Zugang zur Stadtbahnhaltestelle, Gleise 40-41. 
+                    Hier halten die Linien 21, 39 und 45.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_undergroundFloor.jpg</imagePath>
+                <action name="undergroundToPlatform4041" coords="47.25,37.875 46.875,59.5 81.75,58.25 82.781,38.625">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_platform40_41noTrain"/></execute>
+                    <hover lang="de">Zur Stadtbahn auf den Gleisen 40 und 41</hover>
+                </action>
+                <action name="undergroundToMetroFloor" coords="11.71875,36.5 12.0,58.375 42.375,59.0 42.844,37.375">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_metroFloor"/></execute>
+                    <hover lang="de">Zur Metro auf den Gleisen 36-39</hover>
+                </action>
+                <action name="undergroundToRailway" coords="0.0,62.5 0.0,100.0 100.0,100.0 100.0,62.5">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_haupthalle_a"/></execute>
+                    <hover lang="de">Zur Eisenbahn auf den Gleisen 1-35</hover>
+                </action>
+                <action name="undergroundToUndergroundCounter" coords="3.28125,39.5 3.375,49.875 9.84375,47.875 10.03125,41.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_undergroundCounter"/></execute>
+                    <hover lang="de">Zur Auskunft der Zeidel`schen Verkehrswerke (Z.V.W.)</hover>
+                </action>
+            </place>
+            <place id="hbf_mitte_undergroundCounter">
+                <content lang="de">Die Mitarbeiterin am Schalter erblickt dich und lächelt dich freundlich an.</content>
+                <imagePath lang="all">zeidel/hbf_mitte_undergroundCounter.jpg</imagePath>
+                <action name="counterToUndergroundFloor" coords="0.0,83.3 0.0,100.0 100.0,100.0 100.0,83.3">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_undergroundFloor"/></execute>
+                    <hover lang="de">Zurück zum Flur</hover>
+                </action>
+                <action name="speakCounterAssistant" coords="50.625,32.0 64.125,33.125 44.25,39.375 34.03125,76.5 34.21875,79.0 60.46875,79.0 60.1875,67.5 59.625,61.5 61.96875,59.875 61.40625,53.0 59.4375,40.375 58.03125,35.625 56.4375,32.375 54.75,31.375 52.59375,32.875">
+                    <execute><dialog dialogBase="zeidel_dialog" character="HbfMitteUndergroundCounterAssistant" stream="0" point="0"/></execute>
+                    <hover lang="de">Mit der Mitarbeiterin sprechen</hover>
+                </action>
+                <condAction>
+                    <if name="takeZeidelPlan" coords="13.5,57.25 12.84375,76.5 22.4066,73.25 22.5,57.625">
+                        <execute><itemPickup triggeredItem="zeidelNetworkPlan" triggeredValidity="none"/></execute>
+                        <hover lang="de">Einen Liniennetzplan der Stadt Zeidel nehmen</hover>
+                        <condition>
+                            <checkItem triggeredItem="zeidelNetworkPlan" itemInInventory="false"/>
+                        </condition>
+                    </if>
+                </condAction>
+                <condAction>
+                    <if name="takeKarlstadtPlan" coords="12.9375,51.625 12.9375,57.125 22.313,57.5 22.125,53.0">
+                        <execute><itemPickup triggeredItem="karlstadtNetworkPlan" triggeredValidity="none"/></execute>
+                        <hover lang="de">Einen Liniennetzplan der Stadt Karlstadt nehmen</hover>
+                        <condition>
+                            <checkItem triggeredItem="karlstadtNetworkPlan" itemInInventory="false"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <place id="hbf_mitte_busstation_noTrain">
+                <content lang="de">
+                    Hier stehst du am zentralen Omnibusbahnhof von Zeidel-Stadt. Im Zuge der Fahrplanneuordnung fahren 
+                    hier derzeit nur Linien in den Nordwesten (500er-Linien), Norden und Nordosten (100er-Linien). Die Z.V.W. 
+                    bemühen sich, die restlichen Linien baldestmöglich einzurichten.!NL
+                    Dementsprechend steht derzeit kein Bus im Bahnhof.
+                </content>
+                <imagePath lang="all">zeidel/hbf_mitte_busstation_noTrain.jpg</imagePath>
+                <action name="toMainEntrance" coords="0.0,0.0 0.0,100.0 39.40625,60.625 39.53125,51.0 39.0,51.0 39.0,40.2075 39.65625,46.2075 39.65625,43.625 38.15625,39.625 35.96875,39.5 35.90625,39.79175 35.46875,39.79175 36.46875,32.29175 30.875,32.2075 30.6875,33.29175 25.03125,33.29175 25.34375,23.625 23.9375,23.625 23.65625,24.0 22.84375,24.0 19.125,5.625 11.53125,5.4166 10.25,6.25 9.0,6.25 9.0,0.0">
+                    <execute><movement nextStation="1" nextCity="zeidel" nextPlace="hbf_mitte_eingang"/></execute>
+                    <hover lang="de">Zum Bahnhofsgebäude</hover>
+                </action>
+                <!-- 
+                <action name="wait" coords="9.0,0.0 9.0,6.25 10.25,6.25 11.53125,5.4166 19.125,5.625 22.84375,24.0 23.65625,24.0 23.9375,23.625 25.34375,23.625 25.03125,33.29175 30.6875,33.29175 30.875,32.2075 36.46875,32.29175 35.46875,39.79175 35.90625,39.79175 35.96875,39.5 38.15625,39.625 38.5625,43.625 98.625,44.5833 98.6875,40.9166 100.0,40.5 100.0,0.0">
+                    <execute>random(1,'zeidel','hbf_mitte_busstation_',MISSING!)</execute>
+                    <hover lang="de">directionChange('Warten')</hover>
+                </action>                
+                -->
+            </place>
+        </discoveryContent>
+    </station>
+    <!-- Télégraphe -->
+    <station number="zd704" additionalMoney="100" mapPointX="40.5" mapPointY="42.3">
+        <name>Télégraphe</name>
+        <discoveryContent>
+            <place id="telegraphe_platform1_2noTrain">
+                <content lang="de">
+                    Du befindest dich am Bahnstieg der Metrostation Télégraphe.!NL!NL
+                    Derzeit befindet sich kein Zug im Bahnhof.
+                </content>
+                <imagePath lang="all">zeidel/telegraphe_platform1_2noTrain.jpg</imagePath>
+                <action name="toFloor" coords="0.0,0.0 0.0,100.0 16.125,100.0 16.125,0.0">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_metro_floor"/></execute>
+                    <hover lang="de">Zum Flur</hover>
+                </action>
+                <action name="wait" coords="0.0,87.0 0.0,100.0 100.0,100.0 100.0,87.0">
+                    <execute>
+                        <random station="704" city="zeidel" platformGroup="telegraphe_platform1_2" situationCount="1" probabilityOfArrival="0.1"/>
+                    </execute>
+                    <hover lang="de">Warten</hover>
+                </action>
+            </place>
+            <place id="telegraphe_platform1_2a">
+                <content lang="de">
+                    Du befindest dich am Bahnstieg der Metrostation Télégraphe.!NL!NL
+                    Ein Zug der Linie fährt in Richtung Unter Lederhandschuhmacher!
+                </content>
+                <imagePath lang="all">zeidel/telegraphe_platform1_2a.jpg</imagePath>
+                <action name="wait" coords="0.0,87.0 0.0,100.0 100.0,100.0 100.0,87.0">
+                    <execute>
+                        <random station="704" city="zeidel" platformGroup="telegraphe_platform1_2" situationCount="1" probabilityOfArrival="0.1"/>
+                    </execute>
+                    <hover lang="de">Warten</hover>
+                </action>
+                <action name="mountM7" coords="24.8,3.2 25.3,87.0 74.3,87.0 74.0,2.5 49.4,2.5">
+                    <execute><mountLine happeningBase="zeidel_stadtbahn" stream="m7" startID="m703" usedTicket="ZVWticket" forward="false"/></execute>
+                    <hover lang="de">Den Zug in Richtung Unter Lederhandschuhmacher besteigen</hover>
+                </action>
+            </place>
+            <place id="telegraphe_metro_floor">
+                <content lang="de">
+                    Hier ist die Zwischenebene - nach links geht es zum Bahnsiteg, die rechte Treppe führt nach oben.
+                </content>
+                <imagePath lang="all">zeidel/telegraphe_floor.jpg</imagePath>
+                <action name="exitStation" coords="87.75,25.166 88.375,62.66 96.0,59.33 95.625,27.33">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_metro_entree"/></execute>
+                    <hover lang="de">Zur Straße</hover>
+                </action>
+                <action name="toPlatform" coords="0.0,0.0 0.0,87.5 15.125,87.5 15.125,1.66">
+                    <execute><random station="704" city="zeidel" platformGroup="telegraphe_platform1_2" situationCount="1" probabilityOfArrival="0.1"/></execute>
+                    <hover lang="de">Zum Bahnstieg</hover>
+                </action>
+            </place>
+            <place id="telegraphe_metro_entree">
+                <content lang="de">
+                    Du bist auf der "Rue de Falguière", zumindest sagt das das Straßenschild (sowas gibt es außerhalb der Erde?!).
+                    Du weißt nicht, worüber du eher schmollen sollst - dass du nicht weißt, ob du auf der Erde bist oder nicht - 
+                    oder darüber, dass du kein Französisch kannst. Sag dem Entwickler Bescheid, dass er hier einen Abzweig 
+                    einzubauen hat ...!NL
+                    Auf der Straße stehen einige junge Leute, die sich angeregt unterhalten.
+                </content>
+                <imagePath lang="all">zeidel/telegraphe_station_entree.jpg</imagePath>
+                <action name="enterStation" coords="67.0,41.66 66.75,65.66 80.125,70.5 80.125,38.0">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_metro_floor"/></execute>
+                    <hover lang="de">Station betreten</hover>
+                </action>
+                <action name="toGroupA" coords="52.0,51.16 52.0,67.3 64.5,67.33 64.5,51.16">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_gens_groupeA"/></execute>
+                    <hover lang="de">Zur Gruppe von jungen Frauen</hover>
+                </action>
+                <condAction>
+                    <if name="toGroupB" coords="81.75,52.5 81.125,82.16 100.0,82.166 100.0,52.5">
+                        <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_gens_groupeB"/></execute>
+                        <hover lang="de">Zur gemischten Gruppe</hover>
+                        <actionImage src="zeidel/telegraphe_groupeB.png" cx1="81.75" cy1="52.5" xl="18.25" yl="30"/>
+                        <condition>
+                            <checkQuest triggeredQuest="qzd1" questCompleted="no" currentChapter="1"/>
+                        </condition>
+                    </if>
+                </condAction>
+            </place>
+            <place id="telegraphe_gens_groupeA">
+                <content lang="de">
+                    Die Mädchen bemerken dich nicht. Sie unterhalten sich angeregt weiter:!NL
+                    "Ich weiß nicht, weshalb ich das mitmache - immer, wenn ein ganz bestimmter Typ kommt, muss ich einen ganz bestimmten Text sprechen."
+                    Die Andere fragt: "Welchen Text?"
+                    "Weiß nicht, den, den ich hier vorlabere? Wer hat ihn eigentlich geschrieben?"
+                </content>
+                <imagePath lang="all">zeidel/telegraphe_groupe_a.jpg</imagePath>
+                <action name="exit" coords="0.0,0.0 0.0,100.0 5.875,100.0 4.375,94.0 6.625,83.66 7.5,65.33 3.625,64.66 3.25,62.166 6.875,56.16 10.125,42.0 11.125,37.5 14.625,34.66 17.375,34.33 19.375,42.833 20.125,49.5 19.625,54.5 19.625,60.5 18.25,66.33 16.5,67.83 18.5,73.33 20.625,64.83 20.375,59.166 25.875,38.166 31.5,32.5 36.375,35.33 40.125,58.166 39.125,62.0 37.0,63.0 39.75,63.833 43.5,86.0 40.5,90.166 41.5,98.0 40.375,100.0 51.75,100.0 49.0,84.66 55.125,63.5 54.0,61.16 58.875,42.16 63.25,34.166 67.875,34.833 72.625,52.16 73.125,56.66 74.0,61.3 72.25,62.16 74.25,81.66 71.0,100.0 79.0,100.0 79.75,83.166 79.0,81.0 79.75,70.833 76.625,65.833 79.5,55.16 84.0,36.0 87.0,34.16 90.25,36.0 94.635,46.0 97.0,68.5 95.875,70.33 92.625,71.166 93.375,89.0 95.875,100.0 100.0,100.0 100.0,0.0">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_metro_entree"/></execute>
+                    <hover lang="de">Gruppe verlassen</hover>
+                </action>
+                <action name="speakGroupA1" coords="15.375,34.3 11.5,37.16 10.125,40.0 6.375,57.166 3.0,63.66 4.125,65.5 8.0,65.66 6.625,84.0 4.25,95.16 5.875,100.0 40.375,100.0 41.375,98.33 40.375,90.16 43.5,85.83 39.75,63.83 36.875,63.0 39.25,61.83 40.0,58.0 36.375,35.5 32.125,32.5 30.375,32.5">
+                    <execute><dialog dialogBase="zeidel_dialog" character="TelegrapheGroupA1" stream="0" point="0"/></execute>
+                    <hover lang="de">Mit den Frauen links reden</hover>
+                </action>
+                <action name="speakGroupA2" coords="63.375,34.33 58.625,43.66 54.0,61.0 54.875,63.83 49.0,63.3 51.75,100.0 95.875,100.0 93.5,88.83 92.625,71.16 96.75,70.0 97.25,66.16 94.875,46.16 90.5,35.83 87.25,34.3 68.0,35.16">
+                    <execute><dialog dialogBase="zeidel_dialog" character="TelegrapheGroupA2" stream="0" point="0"/></execute>
+                    <hover lang="de">Mit den Frauen rechts reden</hover>
+                </action>
+            </place>
+            <place id="telegraphe_gens_groupeB">
+                <content lang="de">
+                    Hier findet ein sehr interessantes Gespräch statt.!NL
+                    "Im Free-Steelworks-Association? Allen Ernstes?" "Ja, die gastieren die nächste Zeit in Zeidel. Ist 
+                    echt sehenswert, dieses neue Stück." "Welches?" "Ja, das, das die Krise der Erde darstellt. Die Heuchelei 
+                    der Bewohner kommt sehr gut rüber. Sie helfen den anderen nur, damit sie ihr eigenes schlechtes Gewissen ..."
+                    Da bemerken sie dich und schauen dich freundlich-verwundert an.
+                </content>
+                <imagePath lang="de">zeidel/telegraphe_groupe_b.jpg</imagePath>
+                <action name="exit" coords="0.0,0.0 0.0,100.0 10.0,100.0 7.25,93.83 2.125,91.0 8.375,70.5 11.875,48.5 17.375,41.16 20.375,40.0 30.75,51.5 31.625,62.33 24.625,70.833 28.375,85.66 28.125,100.0 27.875,90.66 36.25,57.5 41.75,54.16 40.0,52.166 39.0,48.0 39.125,37.0 46.375,26.33 52.0,23.6 62.625,35.166 62.625,48.0 59.75,54.3 65.625,59.66 70.125,100.0 80.875,100.0 81.75,97.33 75.625,90.66 74.0,90.833 73.25,89.166 77.75,77.5 77.875,74.166 84.875,68.66 90.125,67.833 95.125,70.166 97.875,74.833 100.0,84.33 100.0,0.0">
+                    <execute><movement nextStation="704" nextCity="zeidel" nextPlace="telegraphe_metro_entree"/></execute>
+                    <hover lang="de">Gruppe verlassen</hover>
+                </action>
+                <action name="speakGroupB" coords="52.0,24.0 46.625,26.0 38.875,37.0 38.625,47.66 40.25,52.833 41.625,54.166 36.0,58.3 27.625,91.0 28.125,100.0 69.125,100.0 65.25,60.0 58.375,54.33 62.25,43.5 62.375,34.833 57.125,27.66">
+                    <execute><dialog dialogBase="zeidel_dialog" character="TelegrapheGroupB" stream="0" point="0"/></execute>
+                    <hover lang="de">Mit der Gruppe reden</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <!-- Hauptmenü -->
+    <station number="zd9999" additionalMoney="0" mapPointX="-1" mapPointY="-1">
+        <name>Language chooser</name>
+        <discoveryContent>
+            <place id="languageChooser" monolingual="true">
+                <content lang="en">
+                    Choose here a language; move the mouse over the screen below to see the different options. 
+                    Pay attention - if you move over an action, the content below may change!
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/generique.jpg</imagePath>
+                <action name="german" coords="0.0,0.0 0.0,50.0 50.0,50.0 50.0,0.0">
+                    <execute><setLang lang="de"/></execute>
+                    <hover lang="en">Hier klicken, um das Spiel auf deutsch zu spielen!</hover>
+                </action>
+                <action name="hungarian" coords="50.0,0.0 50.0,50.0 100.0,50.0 100.0,50.0">
+                    <execute><noAction whatShouldHappen="hungarianVersion"/></execute>
+                    <hover lang="en">Kattints ide, hogy magyarul játszd a játékot (nem aktiv)!</hover>
+                </action>
+                <action name="french" coords="0.0,50.0 0.0,100.0 50.0,100.0 50.0,50.0">
+                    <execute><setLang lang="fr"/></execute>
+                    <hover lang="en">Clique ici pour jouer le jeu en français!</hover>
+                </action>
+                <action name="english" coords="50.0,50.0 50.0,100.0 100.0,100.0 100.0,50.0">
+                    <execute><noAction whatShouldHappen="englishVersion"/></execute>
+                    <hover lang="en">Click here to play the game in English (not active)!</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="zd9998" additionalMoney="0" mapPointX="-1" mapPointY="-1">
+        <name>Spiel starten - deutsches Hauptmenü (Geldernstraße/Parkgürtel)</name>
+        <discoveryContent>
+            <place id="introde" monolingual="true">
+                <content lang="de">
+                    Willkommen zu Power of Data - die Macht der Daten - das Spiel!NL
+                    Steig ein und nimm die Linie 13 nach "Gib niemals auf".
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/introScreen.JPG</imagePath>
+                <action name="startGame" coords="0.0,0.0 0.0,100.0 100.0,100.0 100.0,0.0">
+                    <execute><askUser/></execute>
+                    <hover lang="de">Hier klicken, um das Spiel zu starten!</hover>
+                </action>
+            </place>      
+        </discoveryContent>
+    </station>
+    <station number="zd9996" additionalMoney="0" mapPointX="-1" mapPointY="-1">
+        <name>Démarrer jeu - menu principal français (Paris St. Lazare)</name>
+        <discoveryContent>
+            <place id="introfr" monolingual="true">
+                <content lang="fr">
+                    Bienvenue à Power of Data - la puissance des données - le jeu !NL
+                    Suis à la gare PSL le chœur PSL et prends le Transilien spécial à destination de "Ne renonce jamais" !
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/introScreenFrench.jpg</imagePath>
+                <action name="startGame" coords="0.0,0.0 0.0,100.0 100.0,100.0 100.0,0.0">
+                    <execute><askUser/></execute>
+                    <hover lang="fr">Cliquer ici pour démarrer le jeu !</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+    <station number="zd9995" additionalMoney="0" mapPointX="-1" mapPointY="-1">
+        <name>Start game - English main menu (London King's Cross)</name>
+        <discoveryContent>
+            <place id="introen" monolingual="true">
+                <content lang="en">
+                    Welcome to Power of Data - the game!
+                    Hop on and take the National Rail to "Never give up"!
+                </content>
+                <imagePath lang="all">zeidel/stadtbahn/introScreenEnglish.jpg</imagePath>
+                <action name="startGame" coords="0.0,0.0 0.0,100.0 100.0,100.0 100.0,100.0">
+                    <execute><askUser/></execute>
+                    <hover lang="en">Click here to start game!</hover>
+                </action>
+            </place>
+        </discoveryContent>
+    </station>
+</town>

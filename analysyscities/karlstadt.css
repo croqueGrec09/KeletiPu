@@ -1,0 +1,150 @@
+html, body, img, #automatOutput table {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: "courier", "courier new", "sans-serif";
+	overflow: hidden;
+}
+
+input {
+	font-family: "courier", "courier new", "sans-serif";
+	text-decoration: none;
+}
+
+#automatOutput thead, #automatOutput tfoot, .dataTables_info {
+	height: 15%;
+	background-color: #ffffff;
+}
+
+div.DTS tbody td, div.DTS tbody th {
+	white-space: normal;
+	width: 50%;
+}
+
+.categoryCloud {
+	font-size: 11px;
+	border: 2px solid lightpink;
+	background-color: ghostwhite;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.categoryCloud.active {
+	border: 2px solid orchid;
+	background-color: violet;
+	color: white;
+}
+
+.categoryCloud.highlighted {
+	border: 2px solid orchid;
+	background-color: palevioletred;
+}
+
+.hidden {
+	display: none;
+}
+
+.link {
+	height: 35%;
+	background-color: rgba(255,255,255,0.2);
+	padding: 6.25%;
+}
+
+.navLink {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.tab {
+	background-color: rgba(255,255,255,0.2);
+	width: 50%;
+}
+
+.tableWrapper {
+	height: 100%;
+}
+
+.link:hover, .navLink:hover, .tab:hover {
+	background-color: rgba(204,102,255,0.2);
+	cursor: pointer;
+}
+
+#automatOutput {
+	position: absolute;
+	top: 28%;
+	left: 14%;
+	width: 70%;
+	height: 66%;
+}
+
+#automatOutput h1, #automatOutput h2, #automatOutput h3, #automatOutput h4 {
+	font-size: initial;
+	color: black;
+	font-family: inherit;
+}
+
+#entityWrapper .dataTables_wrapper, #worksWrapper .dataTables_wrapper {
+	height: 75%;
+}
+
+table#nav {
+	height: 10%;
+}
+
+#searchWrapper, #search, #search table {
+	height: 100%;
+	display: block;
+}
+
+#search thead, #search tfoot {
+	display: block;
+	height: 5%;
+}
+
+#search tr {
+	background-color: rgba(255,255,255,0.2);
+}
+
+#search tbody {
+	overflow-y: scroll;
+	display: block;
+	height: 80%;
+}
+
+#search #submit {
+	padding-left: 45%;
+	display: block;
+	cursor: pointer;
+}
+
+#search tfoot tr {
+	display: block;
+}
+
+#search #submit:hover {
+	background-color: rgba(204,102,255,0.2);
+}
+
+#search #submit.highlighted {
+	background-color: palevioletred;
+}
+
+#singleLetter {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#subWrapper {
+	height: 70%;
+	overflow-y: scroll;
+}
+
+#worksWrapper, #entityWrapper {
+	height: 100%;
+}
+
+#worksWrapper #letterListTable, #entityWrapper #letterListTable {
+	height: 90%;
+	overflow-y: scroll;
+	display: block;
+}

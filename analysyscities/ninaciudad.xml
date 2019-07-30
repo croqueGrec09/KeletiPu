@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<town xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="town.xsd">
+    <!-- Definition der Haltestellen und Bahnhöfe -->
+    <!-- Stationen, die von mehreren Linien bedient werden, sind fortlaufend und bei 0 beginnend nummeriert, 
+    Stationen, die von einer einzigen S-Bahn-Linie bedient werden, haben als erste Ziffer ihre Nummer! -->
+    <station number="0" additionalMoney="100">
+        <name>Niñaciudad Central</name>
+        <discoveryContent>
+                <place id="firstPlatformArrival">
+                    <!-- "!NL" wird zur Markierung eines neuen Absatzes gekennzeichnet. XSLT kann nicht verwendet werden,
+                    da die Datenbank nicht direkt ausgegeben sondern abgefragt wird! -->
+                    <text>
+                        Kaum aus dem Intercity ausgestiegen, begrüßt dich ein junges Mädchen lautstark:
+                        "Hallo Wanderer! Bist du neu in der Stadt? Lass mich die schönsten Sehenswürdigkeiten 
+                        zeigen und dir ein unvergessliches Erlebnis bereiten, sodass du die ALLGEMEINE SPRACHWISSENSCHAFT
+                        für immer mögen wirst! Oh, ich habe mich noch gar nicht vorgestellt: Ich heiße Nina, bin so alt wie du,
+                        und studiere in Cherbourgville Romanistik und Linguistik. Aber jetzt habe ich einwenig Ferien und 
+                        möchte für die Klausur so lernen, indem ich meine Heimatstadt für Fremde zeige und ihnen alles 
+                        erkläre, was sie über uns wissen wollen. Wir haben uns nämlich dazu verpflichtet, alle Geheimnisse 
+						in unserer Stadt stets weiterleben zu lassen, sodass jeder, der die Stadt kennt, auch das Thema kennt, dem 
+						wir uns verpflichtet haben."
+                        !NL
+                        Ihr geht ein Stück.
+                        !NL
+                        "Du darfst alle S-Bahn-, Regionalbahn- und Stadtexpress-Linien nehmen; ich habe einen Ferienfahrschein 
+                        von meiner Uni ausgestellt bekommen, damit ich interaktiv lernen kann. Eigentlich heißt der Stadtexpress 
+                        ja Regionalexpress, so siehst du den auch im Fahrplan, aber selbst der Mann an der Durchsage sagt 
+                        Stadtexpress und mir gefällt der Name besser. Es hat die gleiche so genannte "Ostension", das ist eine 
+                        Straße hier und somit auch ein Thema und steht für ein Objekt in der Wirklichkeit. Aber das zeige ich dir dort."
+                        !NL
+                        "Jetzt aber möchte ich dich nicht weiter belästigen, du hast sicher eine lange Fahrt hinter dir. Zeige mir, 
+                        wohin du gehen willst."
+                    </text>
+                    <sign>
+                        ninaciudad/Hauptbahnhof.jpg
+                    </sign>
+                    <image>
+                        ninaciudad/ninaciudad_gleis_6_IC_23.JPG
+                    </image>
+                    <action itemRequired="none" name="movementStairs" onlyOnce="false">
+                        <x1>565</x1>
+                        <y1>88</y1>
+                        <x2>715</x2>
+                        <y2>225</y2>
+                        <execute>writeStation(0,'ninaciudad','icPlatform',true)</execute>
+                        <hover>directionChange('Zur Treppe')</hover>
+                    </action>
+                </place>
+                <place id="icPlatform">
+                    <text>
+                        "Wir sind jetzt auf einem Fernverkehrsgleis. Die Gleise sind zur Zeit leer.
+                        Durch Klick auf den linken Bereich gelangen wir in den Flur Richtung Stadtmitte, durch den rechten
+                        Flur können wir zu den S- oder Regionalbahnen wechseln.
+                        Speichern oder laden kannst du im Reisezentrum, später, wenn du die Stadt durch hast, kannst du dort auch
+                        Fahrkarten für die Fernverkehrszüge lösen." 
+                        !NL
+                        (Fernverkehrszüge sind, in aufsteigender Reihenfolge: Eilzug, Schnellzug, Intercity, Nachtschnellzug (NÐ), Internight und Durchgangszug)
+                    </text>
+                    <sign>ninaciudad/Hauptbahnhof.jpg</sign>
+                    <image>ninaciudad/ninaciudad_abgang_IC_gleis6.JPG</image>
+                    <action itemRequired="none" name="movementWest" onlyOnce="false">
+                        <x1>175</x1>
+                        <y1>270</y1>
+                        <x2>430</x2>
+                        <y2>505</y2>
+                        <execute>writeStation(0,'ninaciudad','floorWest',true)</execute>
+                        <hover>directionChange('Zum Flur nach Westen')</hover>
+                    </action>
+                    <action itemRequired="none" name="movementEast" onlyOnce="false">
+                        <x1>431</x1>
+                        <y1>271</y1>
+                        <x2>655</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorEast',true)</execute>
+                        <hover>directionChange('Zum Flur nach Osten')</hover>
+                    </action>
+                </place>
+                <place id="voyage10S7false">
+                    <text>"Es folgt die Endstation Hauptbahnhof, von hier aus können wir viele Linien nehmen oder in die Jugendherberge gehen."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/train_voyage.JPG</image>
+                    <action itemRequired="none" name="speakNina" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>65</y1>
+                        <x2>465</x2>
+                        <y2>345</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Mit Nina unterhalten (nicht implementiert)')</hover>
+                    </action>
+                    <action name="lookMap" itemRequired="none" onlyOnce="false">
+                        <x1>565</x1>
+                        <y1>60</y1>
+                        <x2>600</x2>
+                        <y2>100</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Karte ansehen (nicht implementiert)')</hover>
+                    </action>
+                </place>
+                <place id="floorWest">
+                    <text>"Geradeaus geht es hinaus, in der Nähe ist eine Jugendherberge. (In Version 1 wird sie implementiert) Links oben geht es zu den Gleisen 1-2,
+                        weiter unten zu den Gleisen 5-6. Dort fahren aber in erster Linie Fernverkehrszüge ab."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_flur1.JPG</image>
+                    <action name="exitStation" itemRequired="none" onlyOnce="false">
+                        <x1>330</x1>
+                        <y1>330</y1>
+                        <x2>555</x2>
+                        <y2>430</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Bahnhof verlassen (nicht implementiert)')</hover>
+                    </action>
+                    <action name="toPlatform1_6" itemRequired="none" onlyOnce="false">
+                        <x1>580</x1>
+                        <y1>300</y1>
+                        <x2>640</x2>
+                        <y2>430</y2>
+                        <execute>writeStation(0,'ninaciudad','platform1_6',true)</execute>
+                        <hover>directionChange('Zu den Gleisen 1-6')</hover>
+                    </action>
+                    <action name="turnToEast" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>540</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorEast',true)</execute>
+                        <hover>directionChange('Umdrehen')</hover>
+                    </action>
+                </place>
+                <place id="floorEast">
+                    <text>"Zu den S-Bahnen geht es hier entlang. Von Gleisen 9-10 können wir den Stadtexpress oder die Regionalbahn nehmen, zu den Gleisen 11-14
+                        müssen wir durch, wenn wir die S-Bahnen nehmen wollen. Na, wie sieht's aus?"</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_flur2.JPG</image>
+                    <action name="toPlatform9_10" itemRequired="none" onlyOnce="false">
+                        <x1>470</x1>
+                        <y1>300</y1>
+                        <x2>670</x2>
+                        <y2>470</y2>
+                        <execute>writeStation(0,'ninaciudad','platform9_10a',true)</execute>
+                        <hover>directionChange('Zu den Gleisen 9 und 10')</hover>
+                    </action>
+                    <action name="toPlatform11_14" itemRequired="none" onlyOnce="false">
+                        <x1>140</x1>
+                        <y1>360</y1>
+                        <x2>420</x2>
+                        <y2>450</y2>
+                        <execute>writeStation(0,'ninaciudad','platform11_14',true)</execute>
+                        <hover>directionChange('Zu den Gleisen 11-14')</hover>
+                    </action>
+                    <action name="eastToPlatform15_16" itemRequired="none" onlyOnce="false">
+                        <x1>140</x1>
+                        <y1>320</y1>
+                        <x2>410</x2>
+                        <y2>370</y2>
+                        <execute>noAction('writeStation(0,!ninaciudad!,!platform15_16!,true)')</execute>
+                        <hover>directionChange('Zu den Gleisen 15 und 16 (nicht implementiert)')</hover>
+                    </action>
+                    <action name="turnToWest" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>540</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorWest',true)</execute>
+                        <hover>directionChange('Umdrehen')</hover>
+                    </action>
+                </place>
+                <place id="platform1_6">
+                    <text>"Hier geht es zu den Fernverkehrszügen - falls du uns mal verlassen solltest, bitte schreibe mir! Links die tagsüber ferkehrenden Züge, rechts zu den Nachtzügen."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_flur3.JPG</image>
+                    <action name="toPlatform1_2" itemRequired="none" onlyOnce="false">
+                        <x1>70</x1>
+                        <y1>140</y1>
+                        <x2>480</x2>
+                        <y2>360</y2>
+                        <execute>writeStation(0,'ninaciudad','platform1_2',true)</execute>
+                        <hover>directionChange('Zu den Gleisen 1 und 2')</hover>
+                    </action>
+                    <action name="toPlatform5_6" itemRequired="none" onlyOnce="false">
+                        <x1>520</x1>
+                        <y1>100</y1>
+                        <x2>720</x2>
+                        <y2>200</y2>
+                        <execute>writeStation(0,'ninaciudad','platform5_6',true)</execute>
+                        <hover>directionChange('Zu den Gleisen 5 und 6')</hover>
+                    </action>
+                    <action name="returnToWestPl1" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>540</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorWest',true)</execute>
+                        <hover>directionChange('Zurueck zum Hauptflur')</hover>
+                    </action>    
+                </place>
+                <place id="platform11_14">
+                    <text>"Welche soll's denn sein? Gleise 11-12 oder 13-14? Sie führen alle zu schönen Sehenswürdigkeiten wie Pragmatik-Stadt oder IPA ... über die Bildmitte
+                        geht es zu den Gleisen 15-16."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_flur4.JPG</image>
+                    <action name="toPlatform11_12" itemRequired="none" onlyOnce="false">
+                        <x1>540</x1>
+                        <y1>100</y1>
+                        <x2>650</x2>
+                        <y2>320</y2>
+                        <execute>noAction('writeStation(0,!ninaciudad!,!platform11_12!,true)')</execute>
+                        <hover>directionChange('Zu den Gleisen 11 und 12 (nicht implementiert)')</hover>
+                    </action>
+                    <action name="toPlatform13_14" itemRequired="none" onlyOnce="false">
+                        <x1>170</x1>
+                        <y1>100</y1>
+                        <x2>270</x2>
+                        <y2>320</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('Zu den Gleisen 13 und 14')</hover>
+                    </action>
+                    <action name="toPlatform15_16" itemRequired="none" onlyOnce="false">
+                        <x1>350</x1>
+                        <y1>100</y1>
+                        <x2>480</x2>
+                        <y2>380</y2>
+                        <execute>noAction('writeStation(0,!ninaciudad!,!platform15_16!,true)')</execute>
+                        <hover>directionChange('Zu den Gleisen 15 und 16 (nicht implementiert)')</hover>
+                    </action>
+                    <action name="returnToEastPl11_14" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>540</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorEast',true)</execute>
+                        <hover>directionChange('Zurueck zum Hauptflur')</hover>
+                    </action>
+                </place>
+                <place id="platform13_14noTrain">
+                    <text>"Zur Zeit steht kein Zug auf dem Bahnsteig." Mit einem Klick auf den Himmel wird die Zeit jedoch vorgespult.</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_gleis_13_noTrain.JPG</image>
+                    <action name="toStairs13_14NoTrain" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>530</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','platform13_14stairs',true)</execute>
+                        <hover>directionChange('Zur Treppe')</hover>
+                    </action>
+                    <action name="waitPlatform13_14NoTrain" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>230</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                </place>
+                <place id="platform13_14stairs">
+                    <text>"Hier können wir zu den anderen Gleisen wechseln."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/ninaciudad_abgang_gleis13.JPG</image>
+                    <action name="toTrains13_14" itemRequired="none" onlyOnce="false">
+                        <x1>95</x1>
+                        <y1>1</y1>
+                        <x2>670</x2>
+                        <y2>170</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('Zu den Zuegen')</hover>
+                    </action>
+                    <action name="platform13_14toFloorWest" itemRequired="none" onlyOnce="false">
+                        <x1>200</x1>
+                        <y1>285</y1>
+                        <x2>430</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorWest',true)</execute>
+                        <hover>directionChange('Zum Flur westwärts')</hover>
+                    </action>
+                    <action name="platform13_14toFloorEast" itemRequired="none" onlyOnce="false">
+                        <x1>431</x1>
+                        <y1>285</y1>
+                        <x2>655</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','floorEast',true)</execute>
+                        <hover>directionChange('Zum Flur ostwärts')</hover>
+                    </action>
+                </place>
+                <place id="platform13_14a">
+                    <text>"Schau mal! Da kommt gerade eine S4 Richtung Unterschiede zwischen Mensch und Tier! Wenn wir die Linie nehmen, können wir sehen, 
+                        was Sprache eigentlich ist und wie unterschiedliche Formen der Kommunikation aussehen! Wir können aber auch gerne weiterwarten."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/NinaciudadCentralGleis1314_1.JPG</image>
+                    <action name="toStairs13_14A" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>530</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','platform13_14stairs',true)</execute>
+                        <hover>directionChange('Zur Treppe')</hover>
+                    </action>
+                    <action name="waitPlatform13_14A" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>230</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                    <action name="mountS4South_0" itemRequired="none" onlyOnce="false">
+                        <x1>600</x1>
+                        <y1>315</y1>
+                        <x2>640</x2>
+                        <y2>415</y2>
+                        <execute>noAction('mountLine(!ninaciudad!,S4,0,true)')</execute>
+                        <hover>directionChange('S 4 Richtung Mensch und Tier besteigen')</hover>
+                    </action>
+                </place>
+                <place id="platform13_14b">
+                    <text>"Jetzt haben wir die Wahl: wir nehmen entweder die S4 zur Pragmatik-Straße oder die S6 nach Modellierung. !NL 
+                        Wenn wir die S 4 nehmen, werden wir die verschiedenen Ebenen von Sprache bzw. sprachlichen Mitteln entdecken. Auch die S7 
+                        fährt dieses Thema durch, allerdings von einer anderen Richtung.
+                        !NL
+                        Mit der S6 können wir die unterschiedlichen Modelle der Kommunikation besichtigen, eine meiner Lieblingsthemen!
+                        !NL Oder wir können warten."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/NinaciudadCentralGleis1314_2.JPG</image>
+                    <action name="toStairs13_14B" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>530</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','platform13_14stairs',true)</execute>
+                        <hover>directionChange('Zur Treppe')</hover>
+                    </action>
+                    <action name="waitPlatform13_14B" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>230</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                    <action name="mountS4North_0" itemRequired="none" onlyOnce="false">
+                        <x1>130</x1>
+                        <y1>300</y1>
+                        <x2>180</x2>
+                        <y2>420</y2>
+                        <execute>noAction('mountLine(!ninaciudad!,S4,0,false)')</execute>
+                        <hover>directionChange('S 4 Richtung Pragmatikstraße besteigen')</hover>
+                    </action>
+                    <action name="mountS6South_0" itemRequired="none" onlyOnce="false">
+                        <x1>640</x1>
+                        <y1>315</y1>
+                        <x2>680</x2>
+                        <y2>430</y2>
+                        <execute>mountLine('ninaciudad','S6',0,true)</execute>
+                        <hover>directionChange('S 6 Richtung Modellierung Bf. besteigen')</hover>
+                    </action>
+                </place>
+                <place id="platform13_14c">
+                    <text>"Ah, da kommt eine Bahn - eine S7 nach Ausdruck über sprachliche Ebenen - wie die S4 können wir hier die Kommunikation erkunden - nur
+                        fahren wie in das Jakobson-Viertel, welches sich Roman Jakobson verpflichtet hat!
+                        !NL Wir können aber auch gerne weiterwarten."</text>
+                    <sign>ninaciudad/Hauptbahnhof.JPG</sign>
+                    <image>ninaciudad/NinaciudadCentralGleis1314_3.JPG</image>
+                    <action name="toStairs13_14C" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>530</y1>
+                        <x2>799</x2>
+                        <y2>599</y2>
+                        <execute>writeStation(0,'ninaciudad','platform13_14stairs',true)</execute>
+                        <hover>directionChange('Zur Treppe')</hover>
+                    </action>
+                    <action name="waitPlatform13_14C" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>230</y2>
+                        <execute>random(0,'ninaciudad','platform13_14')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                    <action name="mountS7South_0" itemRequired="none" onlyOnce="false">
+                        <x1>650</x1>
+                        <y1>300</y1>
+                        <x2>690</x2>
+                        <y2>430</y2>
+                        <execute>mountLine('ninaciudad','S7',0,true)</execute>
+                        <hover>directionChange('S 7 Richtung Ausdruck besteigen')</hover>
+                    </action>
+                </place>                
+            
+        </discoveryContent>
+        <examQuestions>
+            <question answerFields="1" number="1" hasExamples="false"></question>
+        </examQuestions>
+    </station>
+    <station number="1" additionalMoney="20">
+        <name>Kommunikation</name>
+        <discoveryContent>
+                <place id="voyage01S6true">
+                    <text>"Super, wir fahren Richtung Modellierung! Ich mag diese Strecke immer wieder, auch wenn ich schon oft genug da gewesen war ... Kommunikation 
+                        ist einfach immer wieder spannend!"
+                    !NL Durch Klick auf Nina kannst du dich mit ihr unterhalten, in der Ferne, oben rechts kannst du die Karte aufrufen.</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/train_voyage.JPG</image>
+                    <action name="speakNina" itemRequired="none" onlyOnce="false">
+                        <x1>1</x1>
+                        <y1>65</y1>
+                        <x2>465</x2>
+                        <y2>345</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Mit Nina unterhalten (nicht implementiert)')</hover>
+                    </action>
+                    <action name="lookMap" itemRequired="none" onlyOnce="false">
+                        <x1>565</x1>
+                        <y1>60</y1>
+                        <x2>600</x2>
+                        <y2>100</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Karte ansehen (nicht implementiert)')</hover>
+                    </action>
+                </place>
+                <place id="arrivalS6true">
+                    <text>Nächste Station: Kommunikation.!NLRichtung Synonym und Austausch bitte in die Linie S 1 umsteigen.
+                        !NLRichtung Lautregeln, Transkription und IPA bitte in die Linie S 2 umsteigen.
+                        !NLRichtung konkrete Formen, Dialektologie und Unterschiede zwischen Mensch und Tier bitte in die Linie S 4 umsteigen.
+                        !NLRichtung Lautsysteme und Phonem bitte in die Linien S 12 oder S 13 umsteigen.
+                        !NLEs besteht Anschluss zur Stadtbahn. Ausstieg in Fahrtrichtung rechts.
+                        !NL!NL
+                        "Komm, lass uns hier aussteigen! Hier können wir verschiedene Formen der Kommunikation beobachten!"</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/kommunikation_arrivee_S6_S7.JPG</image>
+                    <action name="leaveS6" itemRequired="none" onlyOnce="false">
+                        <x1>420</x1>
+                        <y1>500</y1>
+                        <x2>485</x2>
+                        <y2>599</y2>
+                        <execute>askExit(1,'ninaciudad','platform7_8','S6',true)</execute>
+                        <hover>directionChange('In Kommunikation aussteigen(nicht implementiert)')</hover>
+                    </action>
+                </place>
+                <place id="platform7_8noTrain">
+                    <text>"Zur Zeit ist kein Zug da; solange kann ich dir etwas über Kommunikation erzählen. !NL Schau dir diese Menschen an. 
+                        Sie alle befinden sich, auch wenn sie nicht reden, in Interaktion. Sie tauschen Informationen übereinander aus: der eine
+                        teilt dem anderen mit, wie es ihm geht, was er so ungefähr fühlt ... das siehst du an ihren Gesichtern. Sie teilen dir 
+                        jetzt zum Beispiel mit, dass sie auf den Zug warten. !NL Diese Mitteilung hat einen Sender, nämlich denjenigen, der gerade 
+                        wartet, den Empfänger, den Zug beispielsweise, und den Appell, das ist eine Bitte oder eine Absicht: der Sender will, dass 
+                        der Empfänger etwas macht. In diesem Falle endlich mal kommen."</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/kommunikation_gleis8_noTrain.JPG</image>
+                    <action name="waitPlatform7_8NoTrain" itemRequired="none" onlyOnce="false">
+                        <x1>400</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>180</y2>
+                        <execute>random(1,'ninaciudad','platform7_8')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                </place>
+                <place id="platform7_8a">
+                    <text>"Da kommt ein Zug! Er fährt Richtung Hauptbahnhof zurück."!NL Auf das leere Gleis klicken, um weiterzuwarten.</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/KommunikationGleis78_1.JPG</image>
+                    <action name="mountS6S7North_1" itemRequired="none" onlyOnce="false">
+                        <x1>125</x1>
+                        <y1>320</y1>
+                        <x2>200</x2>
+                        <y2>440</y2>
+                        <execute>mountLine('ninaciudad','S6',1,false)</execute>
+                        <hover>directionChange('Zug Richtung Hauptbahnhof besteigen')</hover>
+                    </action>
+                    <action name="waitPlatform7_8A" itemRequired="none" onlyOnce="false">
+                        <x1>220</x1>
+                        <y1>0</y1>
+                        <x2>230</x2>
+                        <y2>799</y2>
+                        <execute>random(1,'ninaciudad','platform7_8')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                </place>
+                <place id="platform7_8b">
+                    <text>"Komm, lass uns die S 7 nach Ausdruck nehmen, sie wird uns zu den Jakobson-Hochhäusern fühlen, wo du ganz fein und detailliert das 
+                        Jakobson-Modell sehen kannst! !NL Andernfalls kannst du einen Intercity vorbeifahren sehen; seine Scheinwerfer kommunizieren auch mit uns: 
+                        der Triebwagenführer (ja, so heißt der Lokführer nunmal richtig) zeigt an, dass sein Zug im Anmarsch ist und bittet seine Empfänger, das sind wir,
+                        dass da ein Zug auf uns zukommt und appelliert an uns, dass wir Acht geben sollen. Die Scheinwerfer sind somit Zeichen."</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/KommunikationGleis78_2.JPG</image>
+                    <action name="mountS7South_1" itemRequired="none" onlyOnce="false">
+                        <x1>675</x1>
+                        <y1>290</y1>
+                        <x2>710</x2>
+                        <y2>410</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Die S 7 nach Ausdruck besteigen (Linie nicht fertig)')</hover>
+                    </action>
+                    <action name="waitPlatform7_8B" itemRequired="none" onlyOnce="false">
+                        <x1>150</x1>
+                        <y1>1</y1>
+                        <x2>799</x2>
+                        <y2>110</y2>
+                        <execute>random(1,'ninaciudad','platform7_8')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                </place>
+                <place id="platform7_8c">
+                    <text>"Soeben ist eine S 6 nach Modellierung gekommen, lass uns die nehmen!" !NL Auf die Treppe klicken, um weiterzuwarten (da soll später der Abgang sein).</text>
+                    <sign>ninaciudad/Kommunikation.JPG</sign>
+                    <image>ninaciudad/KommunikationGleis78_3.JPG</image>
+                    <action name="mountS6South_1" itemRequired="none" onlyOnce="false">
+                        <x1>610</x1>
+                        <y1>315</y1>
+                        <x2>640</x2>
+                        <y2>415</y2>
+                        <execute>noAction()</execute>
+                        <hover>directionChange('Die S 6 nach Modellierung besteigen (Linie nicht fertig)')</hover>
+                    </action>
+                    <action name="waitPlatform7_8C" itemRequired="none" onlyOnce="false">
+                        <x1>200</x1>
+                        <y1>530</y1>
+                        <x2>570</x2>
+                        <y2>599</y2>
+                        <execute>random(1,'ninaciudad','platform7_8')</execute>
+                        <hover>directionChange('einige Minuten warten')</hover>
+                    </action>
+                </place>
+            
+        </discoveryContent>
+        <examQuestions>
+            <question answerFields="1" number="1" hasExamples="false">1: Wozu dient Kommunikation?</question>
+            <question answerFields="1" number="2" hasExamples="false">2: Welches Prinzip wird bei der Kommunikation befolgt?</question>
+            <question answerFields="1" number="3" hasExamples="false">3: Was geschieht, wenn einige von den Kommunikationsmaximen nicht befolgt werden?</question>
+            <question answerFields="4" number="4" hasExamples="false">4: Welche Maximen gibt es?</question>
+            <question answerFields="4" number="5" hasExamples="true">5: Welche der Maximen werden hier klar missachtet?
+                <example>"Weißt du noch, wo Anja wohnt?" "Erm ... irgendwo in der Nähe von Poll, aber wo GENAU ...?"</example>
+                <example>"Kommunikation ist, wenn mich nicht alles trügt, das, wie sich Menschen verstehen, um sich auszutauschen, das machen sie, um ..." (und so geht es einige Minuten weiter)</example>
+                <example>"Ich habe den Zug verpasst!" "Tja, du MUSSTEST aber auch unbedingt in die Stadt ..."</example>
+                <example>"Vor einer Klausur: "Das werde ich nicht mehr überleben! Aus diesem Raum komme ich nicht mehr lebend raus!"</example>
+            </question>
+        </examQuestions>
+    </station>
+</town>
