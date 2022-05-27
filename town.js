@@ -15,7 +15,7 @@ currUser = new User();
 //variable for the description text saving
 descriptionText = null;
 //the main path for the game, if incorrectly set, the application will not work!
-gameRoot = "/PowerOfData/";
+gameRoot = "/Keleti_pu/";
 //the subpath for the analysis cities, the misspelling of analysiscities is historical and a change will cause loading malfunction
 analysiscitiesPath = gameRoot+"analysyscities/";
 //the current place at which the player currently is

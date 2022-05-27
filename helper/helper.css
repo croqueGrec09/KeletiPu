@@ -1,0 +1,22 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 60%;
+}
+
+li:hover {
+	color: #ccffff;
+	cursor: pointer;
+}
+
+textarea {
+	width: 60%;
+	height: 40%;
+}
+
+.initialHidden {
+	display: none;
+}

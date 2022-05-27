@@ -13,7 +13,6 @@ if(pwd.indexOf("PowerOfData") > 0)
 	serverContext = "http://studiodesessais.org:8080/GentzApp";
 else {
 	//local mode
-	analysiscitiesPath = "../analysyscities/";
 	loadHome("karlstadt/kvag_automat.jpg");
 }
 
