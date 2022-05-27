@@ -1,0 +1,30 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Koordinateneingabehelfer</title>
+		<link rel="stylesheet" type="text/css" href="helper.css"/>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="helper.js"></script>
+	</head>
+	<body>
+		<div id="field" class="initialHidden">
+			<img id="scene" src="analysyscities/empty.JPG" />
+		</div>
+		<h1>Alle Aktionen ohne Koordinatenzuweisungen, bitte Element aus der Liste wählen:</h1>
+		<h2>Für die Fremden: <a id="impressum" href="/imprint.html">Datenschutzerklärung</a></h2>
+		<div id="unassignedActionsWrapper">
+			<ul id="unassignedActions">
+				
+			</ul>
+		</div>
+		<div id="entryForm" class="initialHidden">
+			<textarea id="coordsField"></textarea>
+			<p>
+				<button id="clearImage">Zur Liste</button>
+				<button id="clearField">Löschen</button>
+				<button id="enter">Absenden</button>
+			</p>
+		</div>
+	</body>
+</html>

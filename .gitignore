@@ -1,0 +1,6 @@
+userData.xml
+*.bak
+analysyscities/*/*.bak
+documentation
+experiment_box
+twigjs
